@@ -1,0 +1,286 @@
+﻿namespace ERP_Maaz_Oil.Forms.Reporting
+{
+    partial class frm_StockReport_Custom
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_StockReport_Custom));
+            this.pnlHEADER = new System.Windows.Forms.Panel();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.lblHEADING = new System.Windows.Forms.Label();
+            this.grpCASHBOOK = new System.Windows.Forms.GroupBox();
+            this.itemList = new System.Windows.Forms.CheckedListBox();
+            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbBrand = new SergeUtils.EasyCompletionComboBox();
+            this.dtpTo = new System.Windows.Forms.DateTimePicker();
+            this.lblFROM = new System.Windows.Forms.Label();
+            this.btnSHOW = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pnlHEADER.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            this.grpCASHBOOK.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pnlHEADER
+            // 
+            this.pnlHEADER.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHEADER.BackgroundImage = global::ERP_Maaz_Oil.Properties.Resources.header;
+            this.pnlHEADER.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlHEADER.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlHEADER.Controls.Add(this.pictureBox15);
+            this.pnlHEADER.Controls.Add(this.pictureBox14);
+            this.pnlHEADER.Controls.Add(this.lblHEADING);
+            this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
+            this.pnlHEADER.Name = "pnlHEADER";
+            this.pnlHEADER.Size = new System.Drawing.Size(348, 46);
+            this.pnlHEADER.TabIndex = 36;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox15.TabIndex = 25;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox14.TabIndex = 24;
+            this.pictureBox14.TabStop = false;
+            // 
+            // lblHEADING
+            // 
+            this.lblHEADING.AutoSize = true;
+            this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
+            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 11.75F);
+            this.lblHEADING.ForeColor = System.Drawing.Color.White;
+            this.lblHEADING.Location = new System.Drawing.Point(3, 17);
+            this.lblHEADING.Name = "lblHEADING";
+            this.lblHEADING.Size = new System.Drawing.Size(117, 18);
+            this.lblHEADING.TabIndex = 23;
+            this.lblHEADING.Text = "STOCK REPORT";
+            // 
+            // grpCASHBOOK
+            // 
+            this.grpCASHBOOK.Controls.Add(this.label3);
+            this.grpCASHBOOK.Controls.Add(this.txtSearch);
+            this.grpCASHBOOK.Controls.Add(this.itemList);
+            this.grpCASHBOOK.Controls.Add(this.dtpFrom);
+            this.grpCASHBOOK.Controls.Add(this.label2);
+            this.grpCASHBOOK.Controls.Add(this.label1);
+            this.grpCASHBOOK.Controls.Add(this.cmbBrand);
+            this.grpCASHBOOK.Controls.Add(this.dtpTo);
+            this.grpCASHBOOK.Controls.Add(this.lblFROM);
+            this.grpCASHBOOK.Controls.Add(this.btnSHOW);
+            this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.grpCASHBOOK.Location = new System.Drawing.Point(1, 52);
+            this.grpCASHBOOK.Name = "grpCASHBOOK";
+            this.grpCASHBOOK.Size = new System.Drawing.Size(343, 610);
+            this.grpCASHBOOK.TabIndex = 37;
+            this.grpCASHBOOK.TabStop = false;
+            this.grpCASHBOOK.Text = "STOCK REPORT ITEM / DATE WISE";
+            // 
+            // itemList
+            // 
+            this.itemList.FormattingEnabled = true;
+            this.itemList.Location = new System.Drawing.Point(6, 102);
+            this.itemList.Name = "itemList";
+            this.itemList.Size = new System.Drawing.Size(331, 404);
+            this.itemList.TabIndex = 125;
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.CustomFormat = "dd/MM/yyyy";
+            this.dtpFrom.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFrom.Location = new System.Drawing.Point(98, 514);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Size = new System.Drawing.Size(231, 23);
+            this.dtpFrom.TabIndex = 123;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(49, 547);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(26, 15);
+            this.label2.TabIndex = 124;
+            this.label2.Text = "TO:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(12, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 15);
+            this.label1.TabIndex = 122;
+            this.label1.Text = "SELECT BRAND:";
+            // 
+            // cmbBrand
+            // 
+            this.cmbBrand.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cmbBrand.Items.AddRange(new object[] {
+            "--SELECT SUPPLIER--",
+            "AUTOMART"});
+            this.cmbBrand.Location = new System.Drawing.Point(110, 31);
+            this.cmbBrand.Name = "cmbBrand";
+            this.cmbBrand.Size = new System.Drawing.Size(219, 25);
+            this.cmbBrand.TabIndex = 121;
+            this.cmbBrand.SelectedIndexChanged += new System.EventHandler(this.cmbBrand_SelectedIndexChanged);
+            // 
+            // dtpTo
+            // 
+            this.dtpTo.CustomFormat = "dd/MM/yyyy";
+            this.dtpTo.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTo.Location = new System.Drawing.Point(98, 543);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Size = new System.Drawing.Size(231, 23);
+            this.dtpTo.TabIndex = 1;
+            // 
+            // lblFROM
+            // 
+            this.lblFROM.AutoSize = true;
+            this.lblFROM.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.lblFROM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblFROM.Location = new System.Drawing.Point(49, 518);
+            this.lblFROM.Name = "lblFROM";
+            this.lblFROM.Size = new System.Drawing.Size(43, 15);
+            this.lblFROM.TabIndex = 118;
+            this.lblFROM.Text = "FROM:";
+            // 
+            // btnSHOW
+            // 
+            this.btnSHOW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(68)))), ((int)(((byte)(2)))));
+            this.btnSHOW.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSHOW.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnSHOW.ForeColor = System.Drawing.Color.White;
+            this.btnSHOW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSHOW.ImageIndex = 5;
+            this.btnSHOW.ImageList = this.imageList1;
+            this.btnSHOW.Location = new System.Drawing.Point(98, 572);
+            this.btnSHOW.Name = "btnSHOW";
+            this.btnSHOW.Size = new System.Drawing.Size(231, 25);
+            this.btnSHOW.TabIndex = 3;
+            this.btnSHOW.Text = "SHOW";
+            this.btnSHOW.UseVisualStyleBackColor = false;
+            this.btnSHOW.Click += new System.EventHandler(this.btnINTER_SAVE_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "icons8-Save as Filled-100.png");
+            this.imageList1.Images.SetKeyName(1, "icons8-Cancel Filled-100.png");
+            this.imageList1.Images.SetKeyName(2, "icons8-Future Filled-50 (1).png");
+            this.imageList1.Images.SetKeyName(3, "icons8-Marker-48.png");
+            this.imageList1.Images.SetKeyName(4, "icons8-Traffic Jam Filled-100.png");
+            this.imageList1.Images.SetKeyName(5, "icons8-show-property-filled-50.png");
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(110, 62);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(219, 25);
+            this.txtSearch.TabIndex = 126;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged_1);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(50, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 15);
+            this.label3.TabIndex = 127;
+            this.label3.Text = "SEARCH:";
+            // 
+            // frm_StockReport_Custom
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(348, 664);
+            this.Controls.Add(this.grpCASHBOOK);
+            this.Controls.Add(this.pnlHEADER);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frm_StockReport_Custom";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "STOCK REPORT";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_Account_Ledger_FormClosed);
+            this.Load += new System.EventHandler(this.frm_ControlAccountLedger_Load);
+            this.pnlHEADER.ResumeLayout(false);
+            this.pnlHEADER.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            this.grpCASHBOOK.ResumeLayout(false);
+            this.grpCASHBOOK.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel pnlHEADER;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.Label lblHEADING;
+        private System.Windows.Forms.GroupBox grpCASHBOOK;
+        private System.Windows.Forms.Button btnSHOW;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Label lblFROM;
+        private System.Windows.Forms.DateTimePicker dtpTo;
+        private SergeUtils.EasyCompletionComboBox cmbBrand;
+        private System.Windows.Forms.DateTimePicker dtpFrom;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckedListBox itemList;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtSearch;
+    }
+}

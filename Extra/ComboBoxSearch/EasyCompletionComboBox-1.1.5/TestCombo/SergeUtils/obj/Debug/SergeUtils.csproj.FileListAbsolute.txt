@@ -1,0 +1,12 @@
+D:\Projects\StoveManagementSystem\Extra\ComboBoxSearch\EasyCompletionComboBox-1.1.5\TestCombo\SergeUtils\bin\Debug\SergeUtils.dll
+D:\Projects\StoveManagementSystem\Extra\ComboBoxSearch\EasyCompletionComboBox-1.1.5\TestCombo\SergeUtils\bin\Debug\SergeUtils.pdb
+D:\Projects\StoveManagementSystem\Extra\ComboBoxSearch\EasyCompletionComboBox-1.1.5\TestCombo\SergeUtils\obj\Debug\SergeUtils.csprojAssemblyReference.cache
+D:\Projects\StoveManagementSystem\Extra\ComboBoxSearch\EasyCompletionComboBox-1.1.5\TestCombo\SergeUtils\obj\Debug\SergeUtils.csproj.CoreCompileInputs.cache
+D:\Projects\StoveManagementSystem\Extra\ComboBoxSearch\EasyCompletionComboBox-1.1.5\TestCombo\SergeUtils\obj\Debug\SergeUtils.dll
+D:\Projects\StoveManagementSystem\Extra\ComboBoxSearch\EasyCompletionComboBox-1.1.5\TestCombo\SergeUtils\obj\Debug\SergeUtils.pdb
+D:\Projects\BrokerManagement\Extra\ComboBoxSearch\EasyCompletionComboBox-1.1.5\TestCombo\SergeUtils\bin\Debug\SergeUtils.dll
+D:\Projects\BrokerManagement\Extra\ComboBoxSearch\EasyCompletionComboBox-1.1.5\TestCombo\SergeUtils\bin\Debug\SergeUtils.pdb
+D:\Projects\BrokerManagement\Extra\ComboBoxSearch\EasyCompletionComboBox-1.1.5\TestCombo\SergeUtils\obj\Debug\SergeUtils.csprojAssemblyReference.cache
+D:\Projects\BrokerManagement\Extra\ComboBoxSearch\EasyCompletionComboBox-1.1.5\TestCombo\SergeUtils\obj\Debug\SergeUtils.csproj.CoreCompileInputs.cache
+D:\Projects\BrokerManagement\Extra\ComboBoxSearch\EasyCompletionComboBox-1.1.5\TestCombo\SergeUtils\obj\Debug\SergeUtils.dll
+D:\Projects\BrokerManagement\Extra\ComboBoxSearch\EasyCompletionComboBox-1.1.5\TestCombo\SergeUtils\obj\Debug\SergeUtils.pdb

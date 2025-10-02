@@ -1,0 +1,19 @@
+*1. GST Setup in Sales and auto entry of GST
+*2. GST Setup in S/R and auto entry of GST
+*3. Delivery Challan Print of Sales
+*4. Service Invoice Form
+5. Service Invoice Profit Report
+*6. Sales Invoice Posting check
+*7. Stock report correction
+*8. Add Services Form
+*9. Services Invoice Print
+*10. Showing Product Code and Name in Product drop down
+11. Remove Vehicle No columns from report
+*12. Cash Receive and Payment Form
+*13. Bank Receive and Payment Form
+*14. Update Journal Voucher Form
+15. Review Financial Reports
+*16. Option to add new entry of products and account through drop down
+17. Reports Reviews
+*18. Show Cost Rate in Sales against selected product
+*19. Add cost in database
