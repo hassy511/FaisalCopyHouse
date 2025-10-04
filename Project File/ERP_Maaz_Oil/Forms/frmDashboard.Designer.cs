@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.accountsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chartOfAccountsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -138,9 +139,9 @@
             this.toolStripMenuItem3,
             this.inventoryToolStripMenuItem,
             this.purchasesToolStripMenuItem1,
+            this.toolStripMenuItem4,
             this.reportsToolStripMenuItem,
             this.vouchersToolStripMenuItem,
-            this.toolStripMenuItem4,
             this.salesToolStripMenuItem,
             this.financialStatementsToolStripMenuItem,
             this.toolStripMenuItem1,
@@ -328,6 +329,7 @@
             this.pURCHASESORDERToolStripMenuItem.Name = "pURCHASESORDERToolStripMenuItem";
             this.pURCHASESORDERToolStripMenuItem.Size = new System.Drawing.Size(231, 24);
             this.pURCHASESORDERToolStripMenuItem.Text = "Purchases Order";
+            this.pURCHASESORDERToolStripMenuItem.Visible = false;
             this.pURCHASESORDERToolStripMenuItem.Click += new System.EventHandler(this.pURCHASESORDERToolStripMenuItem_Click_1);
             // 
             // pURCHASESToolStripMenuItem
@@ -742,6 +744,7 @@
             this.invoicePaymentToolStripMenuItem.Name = "invoicePaymentToolStripMenuItem";
             this.invoicePaymentToolStripMenuItem.Size = new System.Drawing.Size(247, 24);
             this.invoicePaymentToolStripMenuItem.Text = "Invoice Payment";
+            this.invoicePaymentToolStripMenuItem.Visible = false;
             this.invoicePaymentToolStripMenuItem.Click += new System.EventHandler(this.invoicePaymentToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
@@ -763,6 +766,7 @@
             this.quotationToolStripMenuItem.Name = "quotationToolStripMenuItem";
             this.quotationToolStripMenuItem.Size = new System.Drawing.Size(249, 24);
             this.quotationToolStripMenuItem.Text = "Quotation";
+            this.quotationToolStripMenuItem.Visible = false;
             this.quotationToolStripMenuItem.Click += new System.EventHandler(this.quotationToolStripMenuItem_Click);
             // 
             // salesToolStripMenuItem1
@@ -777,6 +781,7 @@
             this.printingSalesToolStripMenuItem.Name = "printingSalesToolStripMenuItem";
             this.printingSalesToolStripMenuItem.Size = new System.Drawing.Size(249, 24);
             this.printingSalesToolStripMenuItem.Text = "Printing Sales";
+            this.printingSalesToolStripMenuItem.Visible = false;
             this.printingSalesToolStripMenuItem.Click += new System.EventHandler(this.printingSalesToolStripMenuItem_Click);
             // 
             // salesReturnToolStripMenuItem2
@@ -791,6 +796,7 @@
             this.printingSalesProfitReportToolStripMenuItem.Name = "printingSalesProfitReportToolStripMenuItem";
             this.printingSalesProfitReportToolStripMenuItem.Size = new System.Drawing.Size(249, 24);
             this.printingSalesProfitReportToolStripMenuItem.Text = "Printing Sales Profit Report";
+            this.printingSalesProfitReportToolStripMenuItem.Visible = false;
             this.printingSalesProfitReportToolStripMenuItem.Click += new System.EventHandler(this.printingSalesProfitReportToolStripMenuItem_Click);
             // 
             // salesToolStripMenuItem
@@ -1001,10 +1007,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDashboard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDashboard_FormClosed);
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.menuStrip1.ResumeLayout(false);

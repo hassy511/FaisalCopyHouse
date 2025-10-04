@@ -57,16 +57,6 @@
             this.cmbProducts = new SergeUtils.EasyCompletionComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.gridProducts = new System.Windows.Forms.DataGridView();
-            this.productId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gstValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.netTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtNetTotal = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnViewInvoice = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -78,20 +68,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.rdbCash = new System.Windows.Forms.RadioButton();
             this.rdbCredit = new System.Windows.Forms.RadioButton();
-            this.chkSO = new System.Windows.Forms.CheckBox();
-            this.cmbSO = new SergeUtils.EasyCompletionComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtBillNo = new System.Windows.Forms.TextBox();
-            this.txtGST = new System.Windows.Forms.TextBox();
-            this.GST = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
-            this.btnDeliveryChallan = new System.Windows.Forms.Button();
-            this.txtCostRate = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.chkPosted = new System.Windows.Forms.CheckBox();
-            this.cmbReference = new SergeUtils.EasyCompletionComboBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.productId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridProducts)).BeginInit();
             this.pnlHEADER.SuspendLayout();
@@ -130,7 +113,7 @@
             this.grdSearch.Name = "grdSearch";
             this.grdSearch.ReadOnly = true;
             this.grdSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdSearch.Size = new System.Drawing.Size(910, 154);
+            this.grdSearch.Size = new System.Drawing.Size(910, 275);
             this.grdSearch.TabIndex = 2;
             this.grdSearch.TabStop = false;
             this.grdSearch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdSearch_CellClick);
@@ -171,14 +154,12 @@
             // 
             // cmbCustomer
             // 
-            this.cmbCustomer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbCustomer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCustomer.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbCustomer.FormattingEnabled = true;
             this.cmbCustomer.Items.AddRange(new object[] {
             "--SELECT SUPPLIER--",
             "AUTOMART"});
-            this.cmbCustomer.Location = new System.Drawing.Point(100, 297);
+            this.cmbCustomer.Location = new System.Drawing.Point(100, 416);
             this.cmbCustomer.Name = "cmbCustomer";
             this.cmbCustomer.Size = new System.Drawing.Size(280, 25);
             this.cmbCustomer.TabIndex = 1;
@@ -190,7 +171,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(10, 302);
+            this.label9.Location = new System.Drawing.Point(10, 421);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(69, 15);
             this.label9.TabIndex = 227;
@@ -199,7 +180,7 @@
             // dtpDate
             // 
             this.dtpDate.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-            this.dtpDate.Location = new System.Drawing.Point(100, 268);
+            this.dtpDate.Location = new System.Drawing.Point(100, 387);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(280, 23);
             this.dtpDate.TabIndex = 0;
@@ -209,7 +190,7 @@
             this.lblInvoice.AutoSize = true;
             this.lblInvoice.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblInvoice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(215)))));
-            this.lblInvoice.Location = new System.Drawing.Point(100, 245);
+            this.lblInvoice.Location = new System.Drawing.Point(100, 364);
             this.lblInvoice.Name = "lblInvoice";
             this.lblInvoice.Size = new System.Drawing.Size(58, 15);
             this.lblInvoice.TabIndex = 298;
@@ -220,7 +201,7 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDate.Location = new System.Drawing.Point(10, 272);
+            this.lblDate.Location = new System.Drawing.Point(10, 391);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(39, 15);
             this.lblDate.TabIndex = 297;
@@ -231,7 +212,7 @@
             this.lblV.AutoSize = true;
             this.lblV.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblV.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblV.Location = new System.Drawing.Point(10, 245);
+            this.lblV.Location = new System.Drawing.Point(10, 364);
             this.lblV.Name = "lblV";
             this.lblV.Size = new System.Drawing.Size(34, 15);
             this.lblV.TabIndex = 296;
@@ -241,7 +222,7 @@
             // 
             this.txtDescription.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtDescription.Location = new System.Drawing.Point(100, 446);
+            this.txtDescription.Location = new System.Drawing.Point(99, 502);
             this.txtDescription.MaxLength = 32000;
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
@@ -253,7 +234,7 @@
             this.lblAcc.AutoSize = true;
             this.lblAcc.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblAcc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAcc.Location = new System.Drawing.Point(10, 451);
+            this.lblAcc.Location = new System.Drawing.Point(9, 507);
             this.lblAcc.Name = "lblAcc";
             this.lblAcc.Size = new System.Drawing.Size(83, 15);
             this.lblAcc.TabIndex = 300;
@@ -263,7 +244,7 @@
             // 
             this.txtCreditDays.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCreditDays.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtCreditDays.Location = new System.Drawing.Point(100, 415);
+            this.txtCreditDays.Location = new System.Drawing.Point(99, 471);
             this.txtCreditDays.MaxLength = 11;
             this.txtCreditDays.Name = "txtCreditDays";
             this.txtCreditDays.Size = new System.Drawing.Size(280, 25);
@@ -276,7 +257,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(10, 420);
+            this.label2.Location = new System.Drawing.Point(9, 476);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 15);
             this.label2.TabIndex = 304;
@@ -286,7 +267,7 @@
             // 
             this.txtRate.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRate.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtRate.Location = new System.Drawing.Point(100, 569);
+            this.txtRate.Location = new System.Drawing.Point(99, 594);
             this.txtRate.MaxLength = 11;
             this.txtRate.Name = "txtRate";
             this.txtRate.Size = new System.Drawing.Size(211, 25);
@@ -299,7 +280,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(10, 574);
+            this.label3.Location = new System.Drawing.Point(9, 599);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 15);
             this.label3.TabIndex = 306;
@@ -309,7 +290,7 @@
             // 
             this.txtQty.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtQty.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtQty.Location = new System.Drawing.Point(100, 539);
+            this.txtQty.Location = new System.Drawing.Point(99, 564);
             this.txtQty.MaxLength = 11;
             this.txtQty.Name = "txtQty";
             this.txtQty.Size = new System.Drawing.Size(280, 25);
@@ -323,7 +304,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(10, 544);
+            this.label1.Location = new System.Drawing.Point(9, 569);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 15);
             this.label1.TabIndex = 343;
@@ -331,14 +312,12 @@
             // 
             // cmbProducts
             // 
-            this.cmbProducts.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbProducts.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbProducts.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbProducts.FormattingEnabled = true;
             this.cmbProducts.Items.AddRange(new object[] {
             "--SELECT SUPPLIER--",
             "AUTOMART"});
-            this.cmbProducts.Location = new System.Drawing.Point(100, 508);
+            this.cmbProducts.Location = new System.Drawing.Point(99, 533);
             this.cmbProducts.Name = "cmbProducts";
             this.cmbProducts.Size = new System.Drawing.Size(280, 25);
             this.cmbProducts.TabIndex = 6;
@@ -350,7 +329,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(10, 513);
+            this.label11.Location = new System.Drawing.Point(9, 538);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 15);
             this.label11.TabIndex = 341;
@@ -380,10 +359,7 @@
             this.productName,
             this.qty,
             this.rate,
-            this.total,
-            this.gstValue,
-            this.netTotal,
-            this.costRate});
+            this.total});
             this.gridProducts.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
@@ -393,99 +369,16 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridProducts.DefaultCellStyle = dataGridViewCellStyle6;
-            this.gridProducts.Location = new System.Drawing.Point(386, 240);
+            this.gridProducts.Location = new System.Drawing.Point(386, 364);
             this.gridProducts.Name = "gridProducts";
             this.gridProducts.ReadOnly = true;
             this.gridProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridProducts.Size = new System.Drawing.Size(530, 380);
+            this.gridProducts.Size = new System.Drawing.Size(530, 287);
             this.gridProducts.TabIndex = 16;
             this.gridProducts.TabStop = false;
             this.gridProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProducts_CellClick);
             this.gridProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProducts_CellClick);
             this.gridProducts.ColumnNameChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.gridProducts_ColumnNameChanged);
-            // 
-            // productId
-            // 
-            this.productId.HeaderText = "PRODUCT ID";
-            this.productId.Name = "productId";
-            this.productId.ReadOnly = true;
-            this.productId.Visible = false;
-            this.productId.Width = 117;
-            // 
-            // productName
-            // 
-            this.productName.HeaderText = "PRODUCT";
-            this.productName.Name = "productName";
-            this.productName.ReadOnly = true;
-            this.productName.Width = 99;
-            // 
-            // qty
-            // 
-            this.qty.HeaderText = "QUANTITY";
-            this.qty.Name = "qty";
-            this.qty.ReadOnly = true;
-            this.qty.Width = 103;
-            // 
-            // rate
-            // 
-            this.rate.HeaderText = "RATE";
-            this.rate.Name = "rate";
-            this.rate.ReadOnly = true;
-            this.rate.Width = 66;
-            // 
-            // total
-            // 
-            this.total.HeaderText = "TOTAL";
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
-            this.total.Width = 74;
-            // 
-            // gstValue
-            // 
-            this.gstValue.HeaderText = "GST";
-            this.gstValue.Name = "gstValue";
-            this.gstValue.ReadOnly = true;
-            this.gstValue.Width = 60;
-            // 
-            // netTotal
-            // 
-            this.netTotal.HeaderText = "NET TOTAL";
-            this.netTotal.Name = "netTotal";
-            this.netTotal.ReadOnly = true;
-            this.netTotal.Width = 104;
-            // 
-            // costRate
-            // 
-            this.costRate.HeaderText = "COST RATE";
-            this.costRate.Name = "costRate";
-            this.costRate.ReadOnly = true;
-            this.costRate.Visible = false;
-            this.costRate.Width = 106;
-            // 
-            // txtNetTotal
-            // 
-            this.txtNetTotal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNetTotal.Enabled = false;
-            this.txtNetTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtNetTotal.Location = new System.Drawing.Point(768, 627);
-            this.txtNetTotal.MaxLength = 11;
-            this.txtNetTotal.Name = "txtNetTotal";
-            this.txtNetTotal.ReadOnly = true;
-            this.txtNetTotal.Size = new System.Drawing.Size(148, 25);
-            this.txtNetTotal.TabIndex = 345;
-            this.txtNetTotal.TabStop = false;
-            this.txtNetTotal.Text = "0";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(695, 632);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 15);
-            this.label5.TabIndex = 346;
-            this.label5.Text = "NET TOTAL";
             // 
             // btnAdd
             // 
@@ -495,7 +388,7 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.ImageIndex = 0;
-            this.btnAdd.Location = new System.Drawing.Point(312, 569);
+            this.btnAdd.Location = new System.Drawing.Point(311, 594);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(68, 25);
             this.btnAdd.TabIndex = 9;
@@ -511,9 +404,9 @@
             this.btnViewInvoice.ForeColor = System.Drawing.Color.White;
             this.btnViewInvoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnViewInvoice.ImageIndex = 2;
-            this.btnViewInvoice.Location = new System.Drawing.Point(723, 657);
+            this.btnViewInvoice.Location = new System.Drawing.Point(698, 657);
             this.btnViewInvoice.Name = "btnViewInvoice";
-            this.btnViewInvoice.Size = new System.Drawing.Size(193, 25);
+            this.btnViewInvoice.Size = new System.Drawing.Size(218, 25);
             this.btnViewInvoice.TabIndex = 14;
             this.btnViewInvoice.TabStop = false;
             this.btnViewInvoice.Text = "VIEW SALES INVOICE";
@@ -529,7 +422,7 @@
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClear.ImageIndex = 1;
             this.btnClear.ImageList = this.imageList1;
-            this.btnClear.Location = new System.Drawing.Point(255, 630);
+            this.btnClear.Location = new System.Drawing.Point(255, 626);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(124, 25);
             this.btnClear.TabIndex = 10;
@@ -547,7 +440,7 @@
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.ImageIndex = 0;
             this.btnSave.ImageList = this.imageList1;
-            this.btnSave.Location = new System.Drawing.Point(99, 630);
+            this.btnSave.Location = new System.Drawing.Point(99, 626);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(124, 25);
             this.btnSave.TabIndex = 10;
@@ -601,7 +494,7 @@
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.ImageIndex = 1;
             this.btnDelete.ImageList = this.imageList1;
-            this.btnDelete.Location = new System.Drawing.Point(99, 661);
+            this.btnDelete.Location = new System.Drawing.Point(99, 657);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(280, 25);
             this.btnDelete.TabIndex = 347;
@@ -615,7 +508,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(10, 391);
+            this.label6.Location = new System.Drawing.Point(9, 447);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 15);
             this.label6.TabIndex = 351;
@@ -625,7 +518,7 @@
             // 
             this.rdbCash.AutoSize = true;
             this.rdbCash.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.rdbCash.Location = new System.Drawing.Point(100, 389);
+            this.rdbCash.Location = new System.Drawing.Point(99, 445);
             this.rdbCash.Name = "rdbCash";
             this.rdbCash.Size = new System.Drawing.Size(56, 19);
             this.rdbCash.TabIndex = 2;
@@ -638,7 +531,7 @@
             this.rdbCredit.AutoSize = true;
             this.rdbCredit.Checked = true;
             this.rdbCredit.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.rdbCredit.Location = new System.Drawing.Point(177, 389);
+            this.rdbCredit.Location = new System.Drawing.Point(176, 445);
             this.rdbCredit.Name = "rdbCredit";
             this.rdbCredit.Size = new System.Drawing.Size(65, 19);
             this.rdbCredit.TabIndex = 3;
@@ -647,83 +540,12 @@
             this.rdbCredit.UseVisualStyleBackColor = true;
             this.rdbCredit.CheckedChanged += new System.EventHandler(this.rdbCredit_CheckedChanged);
             // 
-            // chkSO
-            // 
-            this.chkSO.AutoSize = true;
-            this.chkSO.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.chkSO.Location = new System.Drawing.Point(10, 362);
-            this.chkSO.Name = "chkSO";
-            this.chkSO.Size = new System.Drawing.Size(93, 19);
-            this.chkSO.TabIndex = 354;
-            this.chkSO.TabStop = false;
-            this.chkSO.Text = "QUOTATION";
-            this.chkSO.UseVisualStyleBackColor = true;
-            this.chkSO.CheckedChanged += new System.EventHandler(this.chkPO_CheckedChanged);
-            // 
-            // cmbSO
-            // 
-            this.cmbSO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbSO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbSO.Enabled = false;
-            this.cmbSO.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.cmbSO.FormattingEnabled = true;
-            this.cmbSO.Location = new System.Drawing.Point(100, 358);
-            this.cmbSO.Name = "cmbSO";
-            this.cmbSO.Size = new System.Drawing.Size(280, 25);
-            this.cmbSO.TabIndex = 355;
-            this.cmbSO.TabStop = false;
-            this.cmbSO.SelectedIndexChanged += new System.EventHandler(this.cmbPO_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(190, 245);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 15);
-            this.label4.TabIndex = 356;
-            this.label4.Text = "BILL #:";
-            // 
-            // txtBillNo
-            // 
-            this.txtBillNo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBillNo.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtBillNo.Location = new System.Drawing.Point(238, 240);
-            this.txtBillNo.MaxLength = 11;
-            this.txtBillNo.Name = "txtBillNo";
-            this.txtBillNo.Size = new System.Drawing.Size(141, 25);
-            this.txtBillNo.TabIndex = 357;
-            // 
-            // txtGST
-            // 
-            this.txtGST.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtGST.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtGST.Location = new System.Drawing.Point(100, 477);
-            this.txtGST.MaxLength = 11;
-            this.txtGST.Name = "txtGST";
-            this.txtGST.Size = new System.Drawing.Size(280, 25);
-            this.txtGST.TabIndex = 358;
-            this.txtGST.Text = "0";
-            this.txtGST.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCreditDays_KeyPress);
-            // 
-            // GST
-            // 
-            this.GST.AutoSize = true;
-            this.GST.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.GST.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.GST.Location = new System.Drawing.Point(10, 482);
-            this.GST.Name = "GST";
-            this.GST.Size = new System.Drawing.Size(29, 15);
-            this.GST.TabIndex = 359;
-            this.GST.Text = "GST";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(390, 631);
+            this.label7.Location = new System.Drawing.Point(390, 662);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 15);
             this.label7.TabIndex = 361;
@@ -734,7 +556,7 @@
             this.txtTotal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtTotal.Location = new System.Drawing.Point(438, 626);
+            this.txtTotal.Location = new System.Drawing.Point(438, 657);
             this.txtTotal.MaxLength = 11;
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
@@ -743,84 +565,41 @@
             this.txtTotal.TabStop = false;
             this.txtTotal.Text = "0";
             // 
-            // btnDeliveryChallan
+            // productId
             // 
-            this.btnDeliveryChallan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(24)))), ((int)(((byte)(38)))));
-            this.btnDeliveryChallan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDeliveryChallan.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnDeliveryChallan.ForeColor = System.Drawing.Color.White;
-            this.btnDeliveryChallan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeliveryChallan.ImageIndex = 2;
-            this.btnDeliveryChallan.Location = new System.Drawing.Point(393, 657);
-            this.btnDeliveryChallan.Name = "btnDeliveryChallan";
-            this.btnDeliveryChallan.Size = new System.Drawing.Size(193, 25);
-            this.btnDeliveryChallan.TabIndex = 362;
-            this.btnDeliveryChallan.TabStop = false;
-            this.btnDeliveryChallan.Text = "VIEW DELIVERY CHALLAN";
-            this.btnDeliveryChallan.UseVisualStyleBackColor = false;
-            this.btnDeliveryChallan.Click += new System.EventHandler(this.button1_Click);
+            this.productId.HeaderText = "PRODUCT ID";
+            this.productId.Name = "productId";
+            this.productId.ReadOnly = true;
+            this.productId.Visible = false;
+            this.productId.Width = 117;
             // 
-            // txtCostRate
+            // productName
             // 
-            this.txtCostRate.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCostRate.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtCostRate.Location = new System.Drawing.Point(100, 599);
-            this.txtCostRate.MaxLength = 11;
-            this.txtCostRate.Name = "txtCostRate";
-            this.txtCostRate.ReadOnly = true;
-            this.txtCostRate.Size = new System.Drawing.Size(279, 25);
-            this.txtCostRate.TabIndex = 363;
-            this.txtCostRate.Text = "0";
+            this.productName.HeaderText = "PRODUCT";
+            this.productName.Name = "productName";
+            this.productName.ReadOnly = true;
+            this.productName.Width = 99;
             // 
-            // label8
+            // qty
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(10, 604);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 15);
-            this.label8.TabIndex = 364;
-            this.label8.Text = "COST RATE";
+            this.qty.HeaderText = "QUANTITY";
+            this.qty.Name = "qty";
+            this.qty.ReadOnly = true;
+            this.qty.Width = 103;
             // 
-            // chkPosted
+            // rate
             // 
-            this.chkPosted.AutoSize = true;
-            this.chkPosted.Checked = true;
-            this.chkPosted.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkPosted.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.chkPosted.Location = new System.Drawing.Point(10, 633);
-            this.chkPosted.Name = "chkPosted";
-            this.chkPosted.Size = new System.Drawing.Size(56, 19);
-            this.chkPosted.TabIndex = 365;
-            this.chkPosted.TabStop = false;
-            this.chkPosted.Text = "POST";
-            this.chkPosted.UseVisualStyleBackColor = true;
+            this.rate.HeaderText = "RATE";
+            this.rate.Name = "rate";
+            this.rate.ReadOnly = true;
+            this.rate.Width = 66;
             // 
-            // cmbReference
+            // total
             // 
-            this.cmbReference.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbReference.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbReference.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.cmbReference.FormattingEnabled = true;
-            this.cmbReference.Items.AddRange(new object[] {
-            "--SELECT SUPPLIER--",
-            "AUTOMART"});
-            this.cmbReference.Location = new System.Drawing.Point(100, 328);
-            this.cmbReference.Name = "cmbReference";
-            this.cmbReference.Size = new System.Drawing.Size(280, 25);
-            this.cmbReference.TabIndex = 366;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(10, 333);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 15);
-            this.label10.TabIndex = 367;
-            this.label10.Text = "REFERENCE";
+            this.total.HeaderText = "TOTAL";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            this.total.Width = 74;
             // 
             // frm_Sales
             // 
@@ -828,27 +607,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(920, 695);
-            this.Controls.Add(this.cmbReference);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.chkPosted);
-            this.Controls.Add(this.txtCostRate);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.btnDeliveryChallan);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtTotal);
-            this.Controls.Add(this.txtGST);
-            this.Controls.Add(this.GST);
-            this.Controls.Add(this.txtBillNo);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.cmbSO);
-            this.Controls.Add(this.chkSO);
             this.Controls.Add(this.rdbCredit);
             this.Controls.Add(this.rdbCash);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtNetTotal);
             this.Controls.Add(this.gridProducts);
             this.Controls.Add(this.txtQty);
             this.Controls.Add(this.label1);
@@ -918,34 +683,17 @@
         private SergeUtils.EasyCompletionComboBox cmbProducts;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView gridProducts;
-        private System.Windows.Forms.TextBox txtNetTotal;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RadioButton rdbCash;
         private System.Windows.Forms.RadioButton rdbCredit;
-        private System.Windows.Forms.CheckBox chkSO;
-        private SergeUtils.EasyCompletionComboBox cmbSO;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtBillNo;
-        private System.Windows.Forms.TextBox txtGST;
-        private System.Windows.Forms.Label GST;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.Button btnDeliveryChallan;
-        private System.Windows.Forms.TextBox txtCostRate;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox chkPosted;
         private System.Windows.Forms.DataGridViewTextBoxColumn productId;
         private System.Windows.Forms.DataGridViewTextBoxColumn productName;
         private System.Windows.Forms.DataGridViewTextBoxColumn qty;
         private System.Windows.Forms.DataGridViewTextBoxColumn rate;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gstValue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn netTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costRate;
-        private SergeUtils.EasyCompletionComboBox cmbReference;
-        private System.Windows.Forms.Label label10;
     }
 }

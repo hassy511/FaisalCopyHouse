@@ -3744,16 +3744,13 @@ namespace ERP_Maaz_Oil.Classes
                                 dgv.Rows.Clear();
 
 
-                                         query = @"SELECT A.ITEM_ID,   
-                                                   B.PRODUCT_NAME AS [PRODUCT], 
-                                                   A.QTY,
-                                                   A.RATE, 
-                                                   A.GST,
-                                                   (A.QTY * A.RATE) AS [TOTAL], 
-                                                   (A.QTY * A.RATE) + ((A.QTY * A.RATE) * (A.GST / 100)) AS [NET TOTAL],
-                                                   A.COST_RATE
-                                                   FROM SALE_DETAIL A
-                                                   INNER JOIN PRODUCT_MASTER B ON A.ITEM_ID = B.PM_ID
+                                                    query = @"	SELECT A.ITEM_ID,   
+                                                    B.PRODUCT_NAME AS [PRODUCT], 
+                                                    A.QTY,
+                                                    A.RATE, 
+                                                    (A.QTY * A.RATE) AS [TOTAL]
+                                                    FROM SALE_DETAIL A
+                                                    INNER JOIN PRODUCT_MASTER B ON A.ITEM_ID = B.PM_ID
                                                    WHERE A.SALE_MASTER_ID = '" + rawId + @"'";
 
 
@@ -3769,7 +3766,7 @@ namespace ERP_Maaz_Oil.Classes
                     {
                         // Add TOTAL_WITH_GST to the DataGridView
                         dgv.Rows.Add(dr["ITEM_ID"].ToString(),dr["PRODUCT"].ToString(),dr["QTY"].ToString(),
-                        dr["RATE"].ToString(),dr["TOTAL"].ToString(),dr["GST"].ToString(),dr["NET TOTAL"].ToString(), dr["COST_RATE"].ToString());
+                        dr["RATE"].ToString(),dr["TOTAL"].ToString());
                     }
                 }
             }
@@ -3840,9 +3837,7 @@ namespace ERP_Maaz_Oil.Classes
                                                    B.PRODUCT_NAME AS [PRODUCT], 
                                                    A.QTY,
                                                    A.RATE, 
-                                                   A.GST,
-                                                   (A.QTY * A.RATE) AS [TOTAL], 
-                                                   (A.QTY * A.RATE) + ((A.QTY * A.RATE) * (A.GST / 100)) AS [NET TOTAL]
+                                                   (A.QTY * A.RATE) AS [TOTAL]
                                                    FROM SALE_RETURN_DETAIL A
                                                    INNER JOIN PRODUCT_MASTER B ON A.ITEM_ID = B.PM_ID
                                                    WHERE A.SALE_RETURN_MASTER_ID = '" + id + @"'";
@@ -3860,7 +3855,7 @@ namespace ERP_Maaz_Oil.Classes
                     {
                         // Add TOTAL_WITH_GST to the DataGridView
                         dgv.Rows.Add(dr["ITEM_ID"].ToString(), dr["PRODUCT"].ToString(), dr["QTY"].ToString(),
-                        dr["RATE"].ToString(), dr["TOTAL"].ToString(), dr["GST"].ToString(), dr["NET TOTAL"].ToString());
+                        dr["RATE"].ToString(), dr["TOTAL"].ToString());
                     }
                 }
             }

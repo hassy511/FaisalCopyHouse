@@ -869,6 +869,12 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Forms\Reporting\Reports\rptSaleInvoiceThermal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSaleInvoiceThermal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\Reporting\Reports\rptStockIssuance.cs">
       <DependentUpon>rptStockIssuance.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -2000,6 +2006,10 @@
     <EmbeddedResource Include="Forms\Reporting\Reports\rptJobOrder.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptJobOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reporting\Reports\rptSaleInvoiceThermal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSaleInvoiceThermal.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reporting\Reports\rptStockIssuance.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

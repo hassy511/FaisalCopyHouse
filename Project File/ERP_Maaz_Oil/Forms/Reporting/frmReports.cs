@@ -365,8 +365,8 @@ namespace ERP_Maaz_Oil.Forms.Reporting
             }
             else if (reportName == "SalesInvoice")
             {
-                Reports.GeneralOrderSupply rpt = new Reports.GeneralOrderSupply();
-                rpt.SetDataSource(ds.Tables["GeneralOrderSupply"]);
+                Reports.rptSaleInvoiceThermal rpt = new Reports.rptSaleInvoiceThermal();
+                rpt.SetDataSource(ds.Tables["SaleInvoice"]);
                 crystalReportViewer1.ReportSource = rpt;
             }
             else if (reportName == "DeliveryChallan")

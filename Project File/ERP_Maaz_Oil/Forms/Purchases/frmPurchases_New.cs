@@ -29,7 +29,7 @@ namespace ERP_Maaz_Oil.Forms
         {
             classHelper.query = @" SELECT A.PURCHASE_MASTER_ID AS [ID],A.INVOICE_NO AS [INVOICE #],
             A.[DATE],B.COA_NAME AS [SUPPLIER],A.[DESCRIPTION],
-            A.CREDIT_DAYS,A.SUPPLIER_ID,TERM,PO_ID
+            A.CREDIT_DAYS,A.SUPPLIER_ID,TERM
             FROM PURCHASE_MASTER A
             INNER JOIN COA B ON A.SUPPLIER_ID = B.COA_ID
             ORDER BY PURCHASE_MASTER_ID DESC";
@@ -60,11 +60,6 @@ namespace ERP_Maaz_Oil.Forms
             id = 0;
             isEdit = false;
             gridProducts.Rows.Clear();
-            chkPO.Checked = false;
-
-            if (cmbPO.Items.Count > 0) {
-                cmbPO.SelectedIndex = 0;
-            }
 
             rdbCredit.Checked = true;
             LoadGrid();
@@ -100,11 +95,6 @@ namespace ERP_Maaz_Oil.Forms
                     if (rdbCredit.Checked == true) {
                         term = '1';
                     }
-
-                    int poId = 0;
-                    if (chkPO.Checked == true && cmbPO.SelectedValue.ToString().Equals("0")) {
-                        poId = Convert.ToInt32(cmbPO.SelectedValue.ToString());
-                    }
                 
                 classHelper.query = @"BEGIN TRY 
                     BEGIN TRANSACTION ";
@@ -115,17 +105,17 @@ namespace ERP_Maaz_Oil.Forms
                      SUPPLIER_ID = '" + cmbSupplier.SelectedValue.ToString() + @"',
                      DESCRIPTION = '" + classHelper.AvoidInjection(txtDescription.Text) + @"',
                      CREDIT_DAYS = '" + classHelper.AvoidInjection(txtCreditDays.Text) + @"',
-                     TERM = '" + term+ @"',PO_ID = '"+cmbPO.SelectedValue+@"',
+                     TERM = '" + term+ @"',
                      MODIFICATION_DATE = GETDATE(),MODIFIED_BY = '" + Classes.Helper.userId + @"'
                      WHERE PURCHASE_MASTER_ID = '" + id + @"';
                  END
                  ELSE
                  BEGIN
-                     INSERT INTO PURCHASE_MASTER (DATE,SUPPLIER_ID,DESCRIPTION,CREDIT_DAYS,TERM,CREATION_DATE,CREATED_BY,INVOICE_NO,PO_ID) 
+                     INSERT INTO PURCHASE_MASTER (DATE,SUPPLIER_ID,DESCRIPTION,CREDIT_DAYS,TERM,CREATION_DATE,CREATED_BY,INVOICE_NO) 
                      VALUES ('" + dtpDate.Value.ToString() + "','" + cmbSupplier.SelectedValue.ToString() + @"',
                      '" + classHelper.AvoidInjection(txtDescription.Text) + @"',
                      '" + classHelper.AvoidInjection(txtCreditDays.Text) + "', '" + term + @"', GETDATE(),'" + Classes.Helper.userId + @"',
-                     '" + lblInvoice.Text + @"','"+poId+@"');
+                     '" + lblInvoice.Text + @"');
                  END
 
                 DELETE FROM LEDGERS WHERE REF_ID = " + id + @" AND ENTRY_OF = 'PURCHASES'
@@ -166,11 +156,11 @@ namespace ERP_Maaz_Oil.Forms
                     {
                         classHelper.ShowMessageBox("Record Saved Successfully.", "Information");
 
-                        DialogResult dialogResult = MessageBox.Show("Print Invoice?", "Purchases Invoice", MessageBoxButtons.YesNo);
-                        if (dialogResult == DialogResult.Yes)
-                        {
-                            PrintInvoice();
-                        }
+                        //DialogResult dialogResult = MessageBox.Show("Print Invoice?", "Purchases Invoice", MessageBoxButtons.YesNo);
+                        //if (dialogResult == DialogResult.Yes)
+                        //{
+                        //    PrintInvoice();
+                        //}
                         Clear();
                     }
                 }
@@ -218,15 +208,6 @@ namespace ERP_Maaz_Oil.Forms
                 txtDescription.Text = row.Cells["DESCRIPTION"].Value.ToString();
                 txtCreditDays.Text = row.Cells["CREDIT_DAYS"].Value.ToString();
 
-                if (row.Cells["PO_ID"].Value.ToString().Equals("0"))
-                {
-                    chkPO.Checked = false;
-                }
-                else {
-                    chkPO.Checked = true;
-                    cmbPO.SelectedValue = row.Cells["PO_ID"].Value.ToString();
-                }
-
                 if (row.Cells["TERM"].Value.ToString().Equals("0"))
                 {
                     rdbCash.Checked = true;
@@ -263,7 +244,6 @@ namespace ERP_Maaz_Oil.Forms
         {
             grdSearch.Columns["SUPPLIER_ID"].Visible = false;
             grdSearch.Columns["TERM"].Visible = false;
-            grdSearch.Columns["PO_ID"].Visible = false;
         }
 
         private void btnCLEAR_Click(object sender, EventArgs e)
@@ -468,29 +448,6 @@ namespace ERP_Maaz_Oil.Forms
 	        WHERE A.PO_ID = '" + poId + @"'
 	        ORDER BY [PRODUCT NAME]";
             classHelper.LoadPurchaseOrderDetail(classHelper.query,gridProducts);
-        }
-
-        private void cmbPO_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbPO.SelectedIndex > 0)
-            {
-                LoadPODetails(Convert.ToInt32(cmbPO.SelectedValue.ToString()));
-            }
-        }
-
-        private void chkPO_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkPO.Checked == true)
-            {
-                classHelper.LoadProductPurchaseOrder(cmbPO, Convert.ToInt32(cmbSupplier.SelectedValue.ToString()), isEdit);
-                cmbPO.Enabled = true;
-
-            }
-            else
-            {
-                cmbPO.SelectedIndex = 0;
-                cmbPO.Enabled = false;
-            }
         }
 
         private void cmbSupplier_Leave(object sender, EventArgs e)

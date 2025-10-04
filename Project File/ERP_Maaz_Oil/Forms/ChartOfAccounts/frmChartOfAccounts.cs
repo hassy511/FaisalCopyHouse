@@ -243,16 +243,6 @@ namespace ERP_Maaz_Oil.Forms
                     classHelper.ShowMessageBox("Account name field is blank.", "Warning");
                     txtAccountName.Focus();
                 }
-                else if (txtMOBILE.Text.Trim().Equals(""))
-                {
-                    classHelper.ShowMessageBox("Mobile field is blank.", "Warning");
-                    txtMOBILE.Focus();
-                }
-                else if (txtEMAIL.Text.Trim().Equals(""))
-                {
-                    classHelper.ShowMessageBox("Email field is blank.", "Warning");
-                    txtEMAIL.Focus();
-                }
                 else if (cmbCITY.SelectedIndex == 0)
                 {
                     classHelper.ShowMessageBox("City is not selected, please select city.", "Warning");
@@ -262,11 +252,6 @@ namespace ERP_Maaz_Oil.Forms
                 {
                     classHelper.ShowMessageBox("Area is not selected, please select Area.", "Warning");
                     cmbArea.Focus();
-                }
-                else if (txtCreditDays.Text.Trim().Equals(""))
-                {
-                    classHelper.ShowMessageBox("Credit Days field is blank.", "Warning");
-                    txtCreditDays.Focus();
                 }
                 else
                 {
@@ -534,6 +519,11 @@ namespace ERP_Maaz_Oil.Forms
         private void gridSearch_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void txtCreditDays_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            classHelper.CheckNumber(e);
         }
     }
 }

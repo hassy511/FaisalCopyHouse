@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChartOfAccounts));
             this.cmbControlAccount = new SergeUtils.EasyCompletionComboBox();
             this.lblControlAccount = new System.Windows.Forms.Label();
@@ -80,8 +80,6 @@
             // 
             // cmbControlAccount
             // 
-            this.cmbControlAccount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbControlAccount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbControlAccount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbControlAccount.FormattingEnabled = true;
             this.cmbControlAccount.Location = new System.Drawing.Point(125, 471);
@@ -106,8 +104,6 @@
             // 
             // cmbGroupAccount
             // 
-            this.cmbGroupAccount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbGroupAccount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbGroupAccount.Enabled = false;
             this.cmbGroupAccount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbGroupAccount.FormattingEnabled = true;
@@ -195,8 +191,6 @@
             // 
             // cmbDebitCredit
             // 
-            this.cmbDebitCredit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbDebitCredit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbDebitCredit.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbDebitCredit.FormattingEnabled = true;
             this.cmbDebitCredit.Items.AddRange(new object[] {
@@ -212,30 +206,30 @@
             // 
             this.grdSEARCH.AllowUserToAddRows = false;
             this.grdSEARCH.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.grdSEARCH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.grdSEARCH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.grdSEARCH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grdSEARCH.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grdSEARCH.BackgroundColor = System.Drawing.Color.White;
             this.grdSEARCH.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdSEARCH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdSEARCH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.grdSEARCH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdSEARCH.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle6;
             this.grdSEARCH.Location = new System.Drawing.Point(8, 87);
             this.grdSEARCH.Name = "grdSEARCH";
             this.grdSEARCH.ReadOnly = true;
@@ -415,8 +409,6 @@
             // 
             // cmbArea
             // 
-            this.cmbArea.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbArea.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbArea.Enabled = false;
             this.cmbArea.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbArea.FormattingEnabled = true;
@@ -438,8 +430,6 @@
             // 
             // cmbCITY
             // 
-            this.cmbCITY.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbCITY.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCITY.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbCITY.FormattingEnabled = true;
             this.cmbCITY.Location = new System.Drawing.Point(456, 533);
@@ -499,6 +489,7 @@
             this.txtCreditDays.Size = new System.Drawing.Size(231, 25);
             this.txtCreditDays.TabIndex = 10;
             this.txtCreditDays.Text = "0";
+            this.txtCreditDays.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCreditDays_KeyPress);
             // 
             // label10
             // 
@@ -587,7 +578,7 @@
             this.Controls.Add(this.lblControlAccount);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1284, 703);
+            this.MaximumSize = new System.Drawing.Size(1106, 659);
             this.Name = "frmChartOfAccounts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CHART OF ACCOUNTS";

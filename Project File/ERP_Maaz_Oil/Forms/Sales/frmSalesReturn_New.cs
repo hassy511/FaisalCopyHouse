@@ -33,7 +33,7 @@ namespace ERP_Maaz_Oil.Forms
         {
             classHelper.query = @" SELECT A.SALE_RETURN_MASTER_ID AS [ID],A.INVOICE_NO AS [INVOICE #],
             A.[DATE],B.COA_NAME AS [CUSTOMER],A.[DESCRIPTION],
-            A.CUSTOMER_ID,TERM,SI_ID
+            A.CUSTOMER_ID,TERM
             FROM SALE_RETURN_MASTER A
             INNER JOIN COA B ON A.CUSTOMER_ID = B.COA_ID
             ORDER BY SALE_RETURN_MASTER_ID DESC";
@@ -58,18 +58,11 @@ namespace ERP_Maaz_Oil.Forms
             cmbProducts.SelectedIndex = 0;
             txtQty.Text = "0";
             txtRate.Text = "0";
-            txtGST.Text = "0";
-            txtNetTotal.Text = "0";
             txtTotal.Text = "0";
             txtSearch.Clear();
             id = 0;
             isEdit = false;
             gridProducts.Rows.Clear();
-            chkSI.Checked = false;
-            if (cmbSI.Items.Count > 0)
-            {
-                cmbSI.SelectedIndex = 0;
-            }
             rdbCredit.Checked = true;
             LoadGrid();
         }
@@ -102,13 +95,7 @@ namespace ERP_Maaz_Oil.Forms
                     {
                         term = '1';
                     }
-
-                    int salesId = 0;
-                    if (chkSI.Checked == true && cmbSI.SelectedValue.ToString().Equals("0"))
-                    {
-                        salesId = Convert.ToInt32(cmbSI.SelectedValue.ToString());
-                    }
-
+                    
                     classHelper.query = @"BEGIN TRY 
                     BEGIN TRANSACTION ";
 
@@ -117,38 +104,28 @@ namespace ERP_Maaz_Oil.Forms
                      UPDATE SALE_RETURN_MASTER SET DATE = '" + dtpDate.Value.ToString() + @"',  
                      CUSTOMER_ID = '" + cmbCustomer.SelectedValue.ToString() + @"',
                      DESCRIPTION = '" + classHelper.AvoidInjection(txtDescription.Text) + @"',
-                     TERM = '" + term + @"',SI_ID = '" + cmbSI.SelectedValue + @"',
+                     TERM = '" + term + @"',
                      MODIFICATION_DATE = GETDATE(),MODIFIED_BY = '" + Classes.Helper.userId + @"'
                      WHERE SALE_RETURN_MASTER_ID = '" + id + @"';
                  END
                  ELSE
                  BEGIN
-                     INSERT INTO SALE_RETURN_MASTER (DATE,CUSTOMER_ID,DESCRIPTION,TERM,CREATION_DATE,CREATED_BY,INVOICE_NO,SI_ID) 
+                     INSERT INTO SALE_RETURN_MASTER (DATE,CUSTOMER_ID,DESCRIPTION,TERM,CREATION_DATE,CREATED_BY,INVOICE_NO) 
                      VALUES ('" + dtpDate.Value.ToString() + "','" + cmbCustomer.SelectedValue.ToString() + @"',
                      '" + classHelper.AvoidInjection(txtDescription.Text) + @"',
                      '" + term + @"', GETDATE(),'" + Classes.Helper.userId + @"',
-                     '" + lblInvoice.Text + @"','" + salesId + @"');
+                     '" + lblInvoice.Text + @"');
                  END
 
                 DELETE FROM LEDGERS WHERE REF_ID = " + id + @" AND ENTRY_OF = 'SALES RETURN'
 
                 INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                 VALUES('" + dtpDate.Value.ToString() + "','" + Classes.Helper.salesReturnId +
-                            "'," + masterId + ",'SALES RETURN','" + lblInvoice.Text + @"', '" + txtNetTotal.Text + "',0,'S.R # " + lblInvoice.Text + ")','" + Classes.Helper.userId + @"',GETDATE(),1);
+                            "'," + masterId + ",'SALES RETURN','" + lblInvoice.Text + @"', '" + txtTotal.Text + "',0,'S.R # " + lblInvoice.Text + ")','" + Classes.Helper.userId + @"',GETDATE(),1);
 
                 INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                 VALUES('" + dtpDate.Value.ToString() + "','" + cmbCustomer.SelectedValue.ToString() + "'," + masterId + ",'SALES RETURN','" + lblInvoice.Text + @"',
-                0,'" + txtNetTotal.Text + "','S.R # " + lblInvoice.Text + ")','" + Classes.Helper.userId + @"',GETDATE(),1);
-
-                INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
-                VALUES('" + dtpDate.Value.ToString() + "','" + Classes.Helper.gstTaxId +
-                "'," + masterId + ",'SALES RETURN','" + lblInvoice.Text + @"', 0,'" + (Convert.ToDecimal(txtNetTotal.Text) - Convert.ToDecimal(txtTotal.Text)).ToString() + "','S.R # " + lblInvoice.Text + ")','" + Classes.Helper.userId + @"',GETDATE(),1);
-
-                INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
-                VALUES('" + dtpDate.Value.ToString() + "','" + cmbCustomer.SelectedValue.ToString() + "'," + masterId + ",'SALES RETURN','" + lblInvoice.Text + @"',
-                '" + (Convert.ToDecimal(txtNetTotal.Text) - Convert.ToDecimal(txtTotal.Text)).ToString() + "',0,'GST on S.R # " + lblInvoice.Text + ")','" + Classes.Helper.userId + @"',GETDATE(),1);
-
-";
+                0,'" + txtTotal.Text + "','S.R # " + lblInvoice.Text + ")','" + Classes.Helper.userId + @"',GETDATE(),1);";
 
                     if (rdbCash.Checked == true)
                     {
@@ -165,10 +142,9 @@ namespace ERP_Maaz_Oil.Forms
 
                     foreach (DataGridViewRow rows in gridProducts.Rows)
                     {
-                        classHelper.query += @" INSERT INTO SALE_RETURN_DETAIL (SALE_RETURN_MASTER_ID,ITEM_ID,QTY,RATE,GST) 
+                        classHelper.query += @" INSERT INTO SALE_RETURN_DETAIL (SALE_RETURN_MASTER_ID,ITEM_ID,QTY,RATE) 
                             VALUES (" + masterId + ",'" + rows.Cells["productId"].Value.ToString() + "','"
-                        + rows.Cells["qty"].Value.ToString() + @"','" + rows.Cells["rate"].Value.ToString() + @"','"
-                      + rows.Cells["gstValue"].Value.ToString() + @"');";
+                        + rows.Cells["qty"].Value.ToString() + @"','" + rows.Cells["rate"].Value.ToString() + @"');";
                     }
 
                     classHelper.query += @" COMMIT TRANSACTION 
@@ -204,17 +180,7 @@ namespace ERP_Maaz_Oil.Forms
                 dtpDate.Text = row.Cells["DATE"].Value.ToString();
                 cmbCustomer.SelectedValue = row.Cells["CUSTOMER_ID"].Value.ToString();
                 txtDescription.Text = row.Cells["DESCRIPTION"].Value.ToString();
-
-                if (row.Cells["SI_ID"].Value.ToString().Equals("0"))
-                {
-                    chkSI.Checked = false;
-                }
-                else
-                {
-                    chkSI.Checked = true;
-                    cmbSI.SelectedValue = row.Cells["SI_ID"].Value.ToString();
-                }
-
+                
                 if (row.Cells["TERM"].Value.ToString().Equals("0"))
                 {
                     rdbCash.Checked = true;
@@ -260,7 +226,6 @@ namespace ERP_Maaz_Oil.Forms
         {
             grdSearch.Columns["CUSTOMER_ID"].Visible = false;
             grdSearch.Columns["TERM"].Visible = false;
-            grdSearch.Columns["SI_ID"].Visible = false;
         }
 
         private void btnCLEAR_Click(object sender, EventArgs e)
@@ -280,9 +245,6 @@ namespace ERP_Maaz_Oil.Forms
         {
             try
             {
-                txtNetTotal.Text = gridProducts.Rows.Cast<DataGridViewRow>()
-                    .Sum(t => Convert.ToDecimal(t.Cells["netTotal"].Value)).ToString();
-
                 txtTotal.Text = gridProducts.Rows.Cast<DataGridViewRow>()
                     .Sum(t => Convert.ToDecimal(t.Cells["total"].Value)).ToString();
 
@@ -294,13 +256,13 @@ namespace ERP_Maaz_Oil.Forms
         }
 
 
-        private decimal CalculateTotalWithGST(decimal quantity, decimal rate, decimal gst)
-        {
-            decimal total = quantity * rate;
-            decimal totalWithGST = total * (1 + gst / 100);
-            return totalWithGST;
+        //private decimal CalculateTotalWithGST(decimal quantity, decimal rate, decimal gst)
+        //{
+        //    decimal total = quantity * rate;
+        //    decimal totalWithGST = total * (1 + gst / 100);
+        //    return totalWithGST;
 
-        }
+        //}
 
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -321,20 +283,11 @@ namespace ERP_Maaz_Oil.Forms
                 txtRate.Focus();
             }
 
-            else if (txtGST.Text.Equals("")) // Check if GST is provided
-            {
-                classHelper.ShowMessageBox("Please add GST value.", "Warning");
-                txtGST.Focus();
-            }
             else
             {
                 gridProducts.Rows.Add(cmbProducts.SelectedValue.ToString(), cmbProducts.Text, classHelper.AvoidInjection(txtQty.Text),
                 classHelper.AvoidInjection(txtRate.Text),
-                Convert.ToDecimal(classHelper.AvoidInjection(txtQty.Text)) * Convert.ToDecimal(classHelper.AvoidInjection(txtRate.Text)),
-                classHelper.AvoidInjection(txtGST.Text),
-                (Convert.ToDecimal(classHelper.AvoidInjection(txtQty.Text)) * Convert.ToDecimal(classHelper.AvoidInjection(txtRate.Text))) +
-
-                (((Convert.ToDecimal(classHelper.AvoidInjection(txtQty.Text)) * Convert.ToDecimal(classHelper.AvoidInjection(txtRate.Text)))) * (Convert.ToDecimal(classHelper.AvoidInjection(txtGST.Text)) / 100)));
+                Convert.ToDecimal(classHelper.AvoidInjection(txtQty.Text)) * Convert.ToDecimal(classHelper.AvoidInjection(txtRate.Text)));
 
                 TotalSum();
                 cmbProducts.SelectedIndex = 0;
@@ -441,7 +394,6 @@ namespace ERP_Maaz_Oil.Forms
                 cmbProducts.SelectedValue = row.Cells["productId"].Value.ToString();
                 txtQty.Text = row.Cells["qty"].Value.ToString();
                 txtRate.Text = row.Cells["rate"].Value.ToString();
-                txtGST.Text = row.Cells["gstValue"].Value.ToString();
                 gridProducts.Rows.RemoveAt(e.RowIndex);
                 TotalSum();
             }
@@ -469,47 +421,6 @@ namespace ERP_Maaz_Oil.Forms
         private void rdbCredit_CheckedChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void LoadSODetails(int salesId)
-        {
-            classHelper.query = @"	SELECT B.ITEM_ID,C.PRODUCT_NAME as [PRODUCT NAME],B.QTY,B.RATE,B.GST
-                FROM SALE_MASTER A
-                INNER JOIN SALE_DETAIL B ON A.SALE_MASTER_ID = B.SALE_MASTER_ID
-                INNER JOIN PRODUCT_MASTER C ON B.ITEM_ID = C.PM_ID
-                LEFT JOIN (
-                SELECT B.ITEM_ID,SUM(B.QTY) AS [QTY]
-                FROM SALE_RETURN_MASTER A
-                INNER JOIN SALE_RETURN_DETAIL B ON A.SALE_RETURN_MASTER_ID = B.SALE_RETURN_MASTER_ID 
-                WHERE A.SI_ID = '" + salesId + @"'
-                GROUP BY B.ITEM_ID
-                ) D ON B.ITEM_ID = D.ITEM_ID
-                WHERE A.SALE_MASTER_ID = '" + salesId + @"'
-                ORDER BY [PRODUCT NAME]";
-            classHelper.LoadSalesInvoiceDetail(classHelper.query, gridProducts);
-        }
-
-        private void cmbPO_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbSI.SelectedIndex > 0)
-            {
-                LoadSODetails(Convert.ToInt32(cmbSI.SelectedValue.ToString()));
-            }
-        }
-
-        private void chkPO_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkSI.Checked == true)
-            {
-                classHelper.LoadProductSalesInvoice(cmbSI, Convert.ToInt32(cmbCustomer.SelectedValue.ToString()), isEdit);
-                cmbSI.Enabled = true;
-
-            }
-            else
-            {
-                cmbSI.SelectedIndex = 0;
-                cmbSI.Enabled = false;
-            }
         }
 
         private void txtQty_TextChanged(object sender, EventArgs e)
@@ -566,5 +477,20 @@ namespace ERP_Maaz_Oil.Forms
                     }
                 }
             }
+
+        private void txtDescription_TextChanged(object sender, EventArgs e)
+        {
+
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblAcc_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
     }
