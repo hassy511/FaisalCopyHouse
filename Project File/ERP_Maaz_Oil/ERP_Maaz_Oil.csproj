@@ -1531,6 +1531,12 @@
     <Compile Include="Forms\Vouchers\frm_BankVoucher.Designer.cs">
       <DependentUpon>frm_BankVoucher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Vouchers\frm_PaymentReceiveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vouchers\frm_PaymentReceiveForm.Designer.cs">
+      <DependentUpon>frm_PaymentReceiveForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Vouchers\frm_CashPaymentReceive.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2395,6 +2401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Vouchers\frm_BankVoucher.resx">
       <DependentUpon>frm_BankVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vouchers\frm_PaymentReceiveForm.resx">
+      <DependentUpon>frm_PaymentReceiveForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Vouchers\frm_CashPaymentReceive.resx">
       <DependentUpon>frm_CashPaymentReceive.cs</DependentUpon>

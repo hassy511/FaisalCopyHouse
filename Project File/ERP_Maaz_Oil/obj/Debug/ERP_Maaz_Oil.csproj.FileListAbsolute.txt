@@ -470,3 +470,4 @@ D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.csp
 D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.csproj.CopyComplete
 D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.exe
 D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.pdb
+D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frm_PaymentReceiveForm.resources

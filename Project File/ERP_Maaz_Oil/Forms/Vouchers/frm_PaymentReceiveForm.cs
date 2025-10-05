@@ -264,11 +264,11 @@ namespace ERP_Maaz_Oil.Forms
         {
             try
             {
-                txtTotalRecGrid.Text = grdRecSummary.Rows.Cast<DataGridViewRow>()
-                    .Sum(t => Convert.ToDecimal(t.Cells["TOTAL"].Value)).ToString();
+                //txtTotalRecGrid.Text = grdRecSummary.Rows.Cast<DataGridViewRow>()
+                //    .Sum(t => Convert.ToDecimal(t.Cells["TOTAL"].Value)).ToString();
 
-                txtTotalPayGrid.Text = grdPaySummary.Rows.Cast<DataGridViewRow>()
-                    .Sum(t => Convert.ToDecimal(t.Cells["TOTAL"].Value)).ToString();
+                //txtTotalPayGrid.Text = grdPaySummary.Rows.Cast<DataGridViewRow>()
+                //    .Sum(t => Convert.ToDecimal(t.Cells["TOTAL"].Value)).ToString();
 
             }
             catch (Exception ex)
@@ -449,31 +449,31 @@ namespace ERP_Maaz_Oil.Forms
 
         private void dtp_DATE_ValueChanged(object sender, EventArgs e)
         {
-            try
-            {
-                if (isEdit) return;
+            //try
+            //{
+            //    if (isEdit) return;
                 
-                txtTotalPayGrid.Text = "0";
-                txtTotalRecGrid.Text = "0";
+            //    txtTotalPayGrid.Text = "0";
+            //    txtTotalRecGrid.Text = "0";
 
-                classHelper.LoadCashVoucherGrid(grdSearch, dtpDate.Value.Date);
+            //    classHelper.LoadCashVoucherGrid(grdSearch, dtpDate.Value.Date);
 
-             //   txtOpenBalance.Text = classHelper.GetAccountBalance(dtpDate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59), Classes.Helper.cashId);
+            // //   txtOpenBalance.Text = classHelper.GetAccountBalance(dtpDate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59), Classes.Helper.cashId);
 
-                txtBalance.Text = classHelper.GetAccountBalance(dtpDate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59), Classes.Helper.cashId);
+            //    txtBalance.Text = classHelper.GetAccountBalance(dtpDate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59), Classes.Helper.cashId);
 
-                LoadPaymentTotalGrid();
-                LoadReceiptTotalGrid();
+            //    LoadPaymentTotalGrid();
+            //    LoadReceiptTotalGrid();
 
 
-                if (grdRecSummary.DataSource != null)
-                    grdRecSummary.Columns[0].Width = 190;
+            //    if (grdRecSummary.DataSource != null)
+            //        grdRecSummary.Columns[0].Width = 190;
 
-                if (grdPaySummary.DataSource != null)
-                    grdPaySummary.Columns[0].Width = 190;
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //    if (grdPaySummary.DataSource != null)
+            //        grdPaySummary.Columns[0].Width = 190;
+            //}
+            //catch (Exception ex) { MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
         }
 
         private void grdRecSummary_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

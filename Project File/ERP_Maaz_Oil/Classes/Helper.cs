@@ -246,6 +246,35 @@ namespace ERP_Maaz_Oil.Classes
             }
         }
 
+        public void LoadReceivingPaymentVoucherGrid(DataGridView dg, DateTime dtpDate)
+        {
+            query = @" SELECT A.ID,A.[DATE],CASE WHEN A.VOUCHER_TYPE = 'R' THEN 'RECEIPT' ELSE 'PAYMENT' END AS [VOUCHER TYPE],A.VOUCHER_NUMBER,A.ACCOUNT_ID,
+            B.COA_NAME AS [ACCOUNT NAME],A.[DESCRIPTION],A.AMOUNT
+            FROM CASH_VOUCHER A
+            INNER JOIN COA B ON A.ACCOUNT_ID = B.COA_ID
+            WHERE A.[DATE] BETWEEN '" + dtpDate + @"' AND '" + dtpDate.AddHours(23).AddMinutes(59).AddSeconds(59) + @"'
+            ORDER BY [DATE] DESC";
+
+            try
+            {
+                if (Classes.Helper.conn.State == ConnectionState.Closed)
+                    Classes.Helper.conn.Open();
+
+                cmd = new SqlCommand(query, Classes.Helper.conn);
+                dr = cmd.ExecuteReader();
+                dt = new DataTable();
+                dt.Load(dr);
+                dg.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Classes.Helper.conn.Close();
+            }
+        }
 
         public void LoadCashVoucherGrid(DataGridView dg, DateTime dtpDate)
         {
