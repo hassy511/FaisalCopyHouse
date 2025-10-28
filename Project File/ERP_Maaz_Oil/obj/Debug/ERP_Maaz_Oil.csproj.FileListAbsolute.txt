@@ -471,3 +471,8 @@ D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.csp
 D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.exe
 D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.pdb
 D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frm_PaymentReceiveForm.resources
+D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\bin\Debug\Microsoft.MSXML.dll
