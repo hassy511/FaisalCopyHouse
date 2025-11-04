@@ -328,9 +328,9 @@ namespace ERP_Maaz_Oil.Forms
             classHelper.query = @" BEGIN TRY 
                              BEGIN TRANSACTION ";
 
-            classHelper.query += @" DELETE FROM LEDGERS WHERE REF_ID = '" + id + @"' AND ENTRY_OF = 'PURCHASE_MASTER ';
-            DELETE FROM MATERIAL_ITEM_LEDGER WHERE REF_NO = '" + id + @"' AND ENTRY_FROM = 'PURCHASE_MASTER ';
-            DELETE FROM PRODUCT_ITEM_LEDGER WHERE REF_NO = '" + id + @"' AND ENTRY_FROM = 'PURCHASE_MASTER ';
+            classHelper.query += @" DELETE FROM LEDGERS WHERE REF_ID = '" + id + @"' AND ENTRY_OF = 'PURCHASES ';
+            DELETE FROM MATERIAL_ITEM_LEDGER WHERE REF_NO = '" + id + @"' AND ENTRY_FROM = 'PURCHASES ';
+            DELETE FROM PRODUCT_ITEM_LEDGER WHERE REF_NO = '" + id + @"' AND ENTRY_FROM = 'PURCHASES ';
             DELETE FROM PURCHASE_DETAIL WHERE PURCHASE_MASTER_ID = '" + id + @"';            
             DELETE FROM PURCHASE_MASTER WHERE PURCHASE_MASTER_ID = '" + id + @"'";
 
