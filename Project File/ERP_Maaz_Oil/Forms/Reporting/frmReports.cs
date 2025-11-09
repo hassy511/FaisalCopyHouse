@@ -368,6 +368,8 @@ namespace ERP_Maaz_Oil.Forms.Reporting
                 Reports.rptSaleInvoiceThermal rpt = new Reports.rptSaleInvoiceThermal();
                 rpt.SetDataSource(ds.Tables["SaleInvoice"]);
                 crystalReportViewer1.ReportSource = rpt;
+                rpt.Refresh();
+                rpt.PrintToPrinter(1, false, 0, 0);
             }
             else if (reportName == "DeliveryChallan")
             {

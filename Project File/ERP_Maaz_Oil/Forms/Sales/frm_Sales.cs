@@ -166,11 +166,12 @@ namespace ERP_Maaz_Oil.Forms
                     {
                         classHelper.ShowMessageBox("Record Saved Successfully.", "Information");
 
-                        DialogResult dialogResult = MessageBox.Show("Print Invoice?", "Purchases Invoice", MessageBoxButtons.YesNo);
-                        if (dialogResult == DialogResult.Yes)
-                        {
-                            PrintSalesInvoice();
-                        }
+                        //DialogResult dialogResult = MessageBox.Show("Print Invoice?", "Purchases Invoice", MessageBoxButtons.YesNo);
+                        //if (dialogResult == DialogResult.Yes)
+                        //{
+                        //    PrintSalesInvoice();
+                        //}
+                        PrintSalesInvoice();
                         Clear();
                     }
                 }
@@ -204,7 +205,7 @@ namespace ERP_Maaz_Oil.Forms
             
             classHelper.rpt = new ERP_Maaz_Oil.Forms.Reporting.frmReports();
             classHelper.rpt.GenerateReport("SalesInvoice", classHelper.mds);
-            classHelper.rpt.ShowDialog();
+            //classHelper.rpt.ShowDialog();
 
         //    classHelper.mds.Tables["SaleInvoice"].Clear();
         //    while (classHelper.dr.Read())
