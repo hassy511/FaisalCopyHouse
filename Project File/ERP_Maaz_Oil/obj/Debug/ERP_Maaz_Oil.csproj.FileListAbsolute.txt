@@ -476,3 +476,6 @@ D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\bin\Debug\Microsoft.Visual
 D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
 D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\bin\Debug\Microsoft.MSXML.dll
 D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.csprojAssemblyReference.cache
+D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.Reporting.frm_VoucherReportThermal.resources
+D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.Reporting.frm_SalesReturnReportThermal.resources
+D:\Projects\FaisalCopyHouse\Project File\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.Reporting.frm_SalesReportThermal.resources

@@ -732,7 +732,8 @@ namespace ERP_Maaz_Oil.Forms
 
         private void stockReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Reporting.frm_StockReport frm = new Reporting.frm_StockReport();
+            frm.ShowDialog();
         }
 
         private void finishedStockReportToolStripMenuItem_Click(object sender, EventArgs e)
@@ -874,6 +875,24 @@ namespace ERP_Maaz_Oil.Forms
         private void invoicePaymentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_SalesInvoiceClear frm = new frm_SalesInvoiceClear();
+            frm.ShowDialog();
+        }
+
+        private void salesReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reporting.frm_SalesReportThermal frm = new Reporting.frm_SalesReportThermal();
+            frm.ShowDialog();
+        }
+
+        private void sRReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reporting.frm_SalesReturnReportThermal frm = new Reporting.frm_SalesReturnReportThermal();
+            frm.ShowDialog();
+        }
+
+        private void vouchersReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reporting.frm_VoucherReportThermal frm = new Reporting.frm_VoucherReportThermal();
             frm.ShowDialog();
         }
     }

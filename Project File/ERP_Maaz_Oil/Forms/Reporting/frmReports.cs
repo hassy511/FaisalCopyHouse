@@ -34,6 +34,7 @@ namespace ERP_Maaz_Oil.Forms.Reporting
                 rpt.SetDataSource(ds.Tables["ReceivablesSummary"]);
                 crystalReportViewer1.ReportSource = rpt;
             }
+
             else if (reportName == "PrintingSalesProfit")
             {
                 Reports.ServiceSales rpt = new Reports.ServiceSales();
@@ -362,6 +363,30 @@ namespace ERP_Maaz_Oil.Forms.Reporting
                 Reports.QuotationPrint rpt = new Reports.QuotationPrint();
                 rpt.SetDataSource(ds.Tables["GeneralOrderSupply"]);
                 crystalReportViewer1.ReportSource = rpt;
+            }
+            else if (reportName == "VoucherReportThermal")
+            {
+                Reports.rptVoucherReportThermal rpt = new Reports.rptVoucherReportThermal();
+                rpt.SetDataSource(ds.Tables["SaleInvoice"]);
+                crystalReportViewer1.ReportSource = rpt;
+                rpt.Refresh();
+                rpt.PrintToPrinter(1, false, 0, 0);
+            }
+            else if (reportName == "SalesReportThermal")
+            {
+                Reports.rptSaleReportThermal rpt = new Reports.rptSaleReportThermal();
+                rpt.SetDataSource(ds.Tables["SaleInvoice"]);
+                crystalReportViewer1.ReportSource = rpt;
+                rpt.Refresh();
+                rpt.PrintToPrinter(1, false, 0, 0);
+            }
+            else if (reportName == "SalesReturnReportThermal")
+            {
+                Reports.rptSaleReturnReportThermal rpt = new Reports.rptSaleReturnReportThermal();
+                rpt.SetDataSource(ds.Tables["SaleInvoice"]);
+                crystalReportViewer1.ReportSource = rpt;
+                rpt.Refresh();
+                rpt.PrintToPrinter(1, false, 0, 0);
             }
             else if (reportName == "SalesInvoice")
             {

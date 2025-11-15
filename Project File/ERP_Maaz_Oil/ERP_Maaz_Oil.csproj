@@ -407,6 +407,24 @@
     <Compile Include="Forms\Reporting\frm_RawReport.Designer.cs">
       <DependentUpon>frm_RawReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Reporting\frm_VoucherReportThermal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reporting\frm_VoucherReportThermal.Designer.cs">
+      <DependentUpon>frm_VoucherReportThermal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reporting\frm_SalesReturnReportThermal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reporting\frm_SalesReturnReportThermal.Designer.cs">
+      <DependentUpon>frm_SalesReturnReportThermal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reporting\frm_SalesReportThermal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reporting\frm_SalesReportThermal.Designer.cs">
+      <DependentUpon>frm_SalesReportThermal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Reporting\frm_StockReport_Custom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -865,6 +883,24 @@
     </Compile>
     <Compile Include="Forms\Reporting\Reports\rptJobOrder.cs">
       <DependentUpon>rptJobOrder.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Forms\Reporting\Reports\rptVoucherReportThermal.cs">
+      <DependentUpon>rptVoucherReportThermal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Forms\Reporting\Reports\rptSaleReturnReportThermal.cs">
+      <DependentUpon>rptSaleReturnReportThermal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Forms\Reporting\Reports\rptSaleReportThermal.cs">
+      <DependentUpon>rptSaleReportThermal.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
@@ -1735,6 +1771,15 @@
     <EmbeddedResource Include="Forms\Reporting\frm_RawReport.resx">
       <DependentUpon>frm_RawReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reporting\frm_VoucherReportThermal.resx">
+      <DependentUpon>frm_VoucherReportThermal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reporting\frm_SalesReturnReportThermal.resx">
+      <DependentUpon>frm_SalesReturnReportThermal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reporting\frm_SalesReportThermal.resx">
+      <DependentUpon>frm_SalesReportThermal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reporting\frm_StockReport_Custom.resx">
       <DependentUpon>frm_StockReport_Custom.cs</DependentUpon>
     </EmbeddedResource>
@@ -2012,6 +2057,18 @@
     <EmbeddedResource Include="Forms\Reporting\Reports\rptJobOrder.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptJobOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reporting\Reports\rptVoucherReportThermal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVoucherReportThermal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reporting\Reports\rptSaleReturnReportThermal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSaleReturnReportThermal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reporting\Reports\rptSaleReportThermal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSaleReportThermal.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reporting\Reports\rptSaleInvoiceThermal.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
