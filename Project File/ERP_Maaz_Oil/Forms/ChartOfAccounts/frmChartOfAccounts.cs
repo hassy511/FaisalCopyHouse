@@ -22,17 +22,18 @@ namespace ERP_Maaz_Oil.Forms
         string accountName = "";
         int drCr = 0;
 
-        private void LoadParameterForm() {
-            
+        private void LoadParameterForm()
+        {
+
             cmbControlAccount.SelectedValue = this.controlId;
             cmbGroupAccount.SelectedValue = this.branchId;
             txtAccountName.Text = this.accountName;
             cmbDebitCredit.SelectedIndex = this.drCr;
-            cmbCITY.Text = "N/A";
-            cmbArea.Text = "N/A";
-            txtMOBILE.Text = "-";
-            txtEMAIL.Text = "-";
-            txtADDRESS.Text = "-";
+            //cmbCITY.Text = "N/A";
+            //cmbArea.Text = "N/A";
+            //txtMOBILE.Text = "-";
+            //txtEMAIL.Text = "-";
+            //txtADDRESS.Text = "-";
         }
 
         public frmChartOfAccounts()
@@ -66,41 +67,41 @@ namespace ERP_Maaz_Oil.Forms
                 txtOpeningBalance.Text = "0";
                 accountId = 0;
                 chkDeActive.Checked = false;
-                txtADDRESS.Clear();
-                txtCreditDays.Text = "0";
-                txtEMAIL.Clear();
-                txtMOBILE.Clear();
-                cmbCITY.SelectedIndex = 0;
-                cmbArea.SelectedIndex = 0;
+                //txtADDRESS.Clear();
+                //txtCreditDays.Text = "0";
+                //txtEMAIL.Clear();
+                //txtMOBILE.Clear();
+                //cmbCITY.SelectedIndex = 0;
+                //cmbArea.SelectedIndex = 0;
                 LoadGrid();
             }
             catch (Exception ex) { classHelper.ShowMessageBox(ex.ToString(), "Exception"); }
         }
 
-        private void LoadArea()
-        {
-            try
-            {
-                classHelper.query = @"SELECT 0 AS [ID],'--SELECT AREA--' AS [NAME] 
-                                    UNION ALL 
-                                    SELECT AREA_ID AS [ID],AREA_NAME AS [NAME] FROM AREA 
-                                    WHERE CITY_ID = '"+cmbCITY.SelectedValue.ToString()+@"'    
-                                    ORDER BY NAME";
-                classHelper.LoadComboData(cmbArea, classHelper.query);
-            }
-            catch (Exception ex) { classHelper.ShowMessageBox(ex.ToString(), "Exception"); }
-        }
+        //private void LoadArea()
+        //{
+        //    try
+        //    {
+        //        classHelper.query = @"SELECT 0 AS [ID],'--SELECT AREA--' AS [NAME] 
+        //                            UNION ALL 
+        //                            SELECT AREA_ID AS [ID],AREA_NAME AS [NAME] FROM AREA 
+        //                            WHERE CITY_ID = '"+cmbCITY.SelectedValue.ToString()+@"'    
+        //                            ORDER BY NAME";
+        //        classHelper.LoadComboData(cmbArea, classHelper.query);
+        //    }
+        //    catch (Exception ex) { classHelper.ShowMessageBox(ex.ToString(), "Exception"); }
+        //}
 
-        private void LoadCity()
-        {
-            try
-            {
-                classHelper.query = "SELECT 0 AS [ID],'--SELECT CITY--' AS [NAME] UNION SELECT CITY_ID AS [ID],CITY_NAME AS [NAME] FROM CITY ORDER BY NAME";
-                classHelper.LoadComboData(cmbCITY, classHelper.query);
-            }
+        //private void LoadCity()
+        //{
+        //    try
+        //    {
+        //        classHelper.query = "SELECT 0 AS [ID],'--SELECT CITY--' AS [NAME] UNION SELECT CITY_ID AS [ID],CITY_NAME AS [NAME] FROM CITY ORDER BY NAME";
+        //        classHelper.LoadComboData(cmbCITY, classHelper.query);
+        //    }
 
-            catch (Exception ex) { classHelper.ShowMessageBox(ex.ToString(), "Exception"); }
-        }
+        //    catch (Exception ex) { classHelper.ShowMessageBox(ex.ToString(), "Exception"); }
+        //}
 
         private void loadDataFromGrid(DataGridViewCellEventArgs e)
         {
@@ -134,12 +135,12 @@ namespace ERP_Maaz_Oil.Forms
                     {
                         chkDeActive.Checked = true;
                     }
-                    txtMOBILE.Text = row.Cells["MOBILE"].Value.ToString();
-                    txtEMAIL.Text = row.Cells["EMAIL"].Value.ToString();
-                    txtADDRESS.Text = row.Cells["ADDRESS"].Value.ToString();
-                    cmbCITY.SelectedValue = row.Cells["CITY_ID"].Value.ToString();
-                    cmbArea.SelectedValue = row.Cells["AREA_ID"].Value.ToString();
-                    txtCreditDays.Text = row.Cells["CREDIT_DAYS"].Value.ToString();
+                    //txtMOBILE.Text = row.Cells["MOBILE"].Value.ToString();
+                    //txtEMAIL.Text = row.Cells["EMAIL"].Value.ToString();
+                    //txtADDRESS.Text = row.Cells["ADDRESS"].Value.ToString();
+                    //cmbCITY.SelectedValue = row.Cells["CITY_ID"].Value.ToString();
+                    //cmbArea.SelectedValue = row.Cells["AREA_ID"].Value.ToString();
+                    //txtCreditDays.Text = row.Cells["CREDIT_DAYS"].Value.ToString();
                     txtAccountName.Text = row.Cells["ACCOUNT NAME"].Value.ToString();
                 }
 
@@ -150,33 +151,31 @@ namespace ERP_Maaz_Oil.Forms
 
         private void LoadGrid()
         {
-            classHelper.query = @"SELECT A.COA_ID AS [ID],C.CA_ID,C.CA_NAME AS [CONTROL ACCOUNT],
-                A.AG_ID AS [GP_ID],B.AG_NAME AS [GROUP NAME],
-                A.COA_NAME AS [ACCOUNT NAME],
-                A.OPEN_BAL AS [OPENING BALANCE],
-                CASE WHEN A.DR_CR = 'D' THEN 'DEBIT' ELSE 'CREDIT' END AS [DEBIT CREDIT],
-                CASE WHEN A.STAT = 0 THEN 'ACTIVE' ELSE 'DE-ACTIVE' END AS [STATUS],
-                A.MOBILE,A.EMAIL, A.[ADDRESS],A.CREDIT_DAYS,
-                D.CITY_NAME,E.AREA_NAME,A.CITY_ID,A.AREA_ID
-                FROM COA A
-                INNER JOIN ACCOUNT_GROUP B ON A.AG_ID = B.AG_ID
-                INNER JOIN CONTROL_ACCOUNT C ON A.CA_ID = C.CA_ID
-                INNER JOIN CITY D ON A.CITY_ID = D.CITY_ID
-                INNER JOIN AREA E ON A.AREA_ID = E.AREA_ID
-                ORDER BY [ACCOUNT NAME]";
+            classHelper.query = @" 	SELECT A.COA_ID AS [ID],C.CA_ID,C.CA_NAME AS [CONTROL ACCOUNT],
+            A.AG_ID AS [GP_ID],B.AG_NAME AS [GROUP NAME],
+            A.COA_NAME AS [ACCOUNT NAME],
+            A.OPEN_BAL AS [OPENING BALANCE],
+            CASE WHEN A.DR_CR = 'D' THEN 'DEBIT' ELSE 'CREDIT' END AS [DEBIT CREDIT],
+            CASE WHEN A.STAT = 0 THEN 'ACTIVE' ELSE 'DE-ACTIVE' END AS [STATUS]
+            FROM COA A
+            INNER JOIN ACCOUNT_GROUP B ON A.AG_ID = B.AG_ID
+            INNER JOIN CONTROL_ACCOUNT C ON A.CA_ID = C.CA_ID
+            ORDER BY [ACCOUNT NAME]";
             classHelper.LoadGrid(grdSEARCH, classHelper.query);
         }
 
         private void frm_ChartOfAccounts_Load(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 //classHelper.LoadCoaGrid(grdSEARCH);
                 LoadGrid();
                 classHelper.LoadControlAccount(cmbControlAccount);
-                LoadCity();
-                LoadArea();
+                //LoadCity();
+                //LoadArea();
                 cmbDebitCredit.SelectedIndex = 0;
-                if (isParameter) {
+                if (isParameter)
+                {
                     LoadParameterForm();
                 }
             }
@@ -185,13 +184,10 @@ namespace ERP_Maaz_Oil.Forms
 
         private void txtSEARCH_TextChanged(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 (grdSEARCH.DataSource as DataTable).DefaultView.RowFilter = string.Format(@"
-                [" + grdSEARCH.Columns["ACCOUNT NAME"].Name.ToString() + "] LIKE '%" + classHelper.AvoidInjection(txtSearch.Text) + "%' OR ["
-                + grdSEARCH.Columns["CITY_NAME"].Name.ToString() + "] LIKE '%" + classHelper.AvoidInjection(txtSearch.Text) + "%' OR["
-                + grdSEARCH.Columns["AREA_NAME"].Name.ToString() + "] LIKE '%" + classHelper.AvoidInjection(txtSearch.Text) + "%' OR["
-                + grdSEARCH.Columns["MOBILE"].Name.ToString() + "] LIKE '%" + classHelper.AvoidInjection(txtSearch.Text) + "%' OR["
-                + grdSEARCH.Columns["EMAIL"].Name.ToString() + "] LIKE '%" + classHelper.AvoidInjection(txtSearch.Text) + "%' OR["
+                [" + grdSEARCH.Columns["ACCOUNT NAME"].Name.ToString() + "] LIKE '%" + classHelper.AvoidInjection(txtSearch.Text) + "%' OR["
                 + grdSEARCH.Columns["CONTROL ACCOUNT"].Name.ToString() + "] LIKE '%" + classHelper.AvoidInjection(txtSearch.Text) + "%'");
                 grdSEARCH.ClearSelection();
             }
@@ -203,8 +199,8 @@ namespace ERP_Maaz_Oil.Forms
             grdSEARCH.Columns["ID"].Visible = false;
             grdSEARCH.Columns["CA_ID"].Visible = false;
             grdSEARCH.Columns["GP_ID"].Visible = false;
-            grdSEARCH.Columns["CITY_ID"].Visible = false;
-            grdSEARCH.Columns["AREA_ID"].Visible = false;
+            //grdSEARCH.Columns["CITY_ID"].Visible = false;
+            //grdSEARCH.Columns["AREA_ID"].Visible = false;
 
             //foreach (DataGridViewColumn col in grdSEARCH.Columns)
             //{
@@ -219,7 +215,8 @@ namespace ERP_Maaz_Oil.Forms
 
         private void btnSAVE_Click(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 if (accountId == 0)
                 {
                     if (classHelper.CheckNameExists(grdSEARCH, txtAccountName.Text, 5) == 1)
@@ -243,16 +240,16 @@ namespace ERP_Maaz_Oil.Forms
                     classHelper.ShowMessageBox("Account name field is blank.", "Warning");
                     txtAccountName.Focus();
                 }
-                else if (cmbCITY.SelectedIndex == 0)
-                {
-                    classHelper.ShowMessageBox("City is not selected, please select city.", "Warning");
-                    cmbCITY.Focus();
-                }
-                else if (cmbArea.SelectedIndex == 0)
-                {
-                    classHelper.ShowMessageBox("Area is not selected, please select Area.", "Warning");
-                    cmbArea.Focus();
-                }
+                //else if (cmbCITY.SelectedIndex == 0)
+                //{
+                //    classHelper.ShowMessageBox("City is not selected, please select city.", "Warning");
+                //    cmbCITY.Focus();
+                //}
+                //else if (cmbArea.SelectedIndex == 0)
+                //{
+                //    classHelper.ShowMessageBox("Area is not selected, please select Area.", "Warning");
+                //    cmbArea.Focus();
+                //}
                 else
                 {
                     int status = 0;
@@ -268,7 +265,7 @@ namespace ERP_Maaz_Oil.Forms
                     }
 
                     classHelper.query = @"IF EXISTS (select COA_ID from COA WHERE COA_ID = '" + accountId + @"') 
-                UPDATE COA SET 
+                     UPDATE COA SET 
                      COA_NAME = '" + classHelper.AvoidInjection(txtAccountName.Text) + @"',
                      CA_ID = '" + cmbControlAccount.SelectedValue.ToString() + @"',
                      OPEN_BAL = '" + classHelper.AvoidInjection(txtOpeningBalance.Text) + @"',
@@ -276,17 +273,11 @@ namespace ERP_Maaz_Oil.Forms
                      DR_CR = '" + drCr + @"',
                      MODIFICATION_DATE = GETDATE(),
                      MODIFIED_BY = '" + Classes.Helper.userId + @"',
-                     AG_ID = '" + cmbGroupAccount.SelectedValue.ToString() + @"',
-                     MOBILE = '" + classHelper.AvoidInjection(txtMOBILE.Text) + @"',
-                     EMAIL = '" + classHelper.AvoidInjection(txtEMAIL.Text) + @"',
-                     CITY_ID = '" + cmbCITY.SelectedValue.ToString() + @"',
-                     AREA_ID = '" + cmbArea.SelectedValue.ToString() + @"',
-                     CREDIT_DAYS = '" + classHelper.AvoidInjection(txtCreditDays.Text) + @"',
-                     ADDRESS = '" + classHelper.AvoidInjection(txtADDRESS.Text) + @"'
+                     AG_ID = '" + cmbGroupAccount.SelectedValue.ToString() + @"'
                  WHERE COA_ID = '" + accountId + @"' 
                  ELSE 
                  INSERT INTO COA 
-                 (AG_ID, CA_ID, COA_NAME, OPEN_BAL, DR_CR, STAT, CREATION_DATE, CREATED_BY, MOBILE, EMAIL, CITY_ID, AREA_ID, CREDIT_DAYS, ADDRESS) 
+                 (AG_ID, CA_ID, COA_NAME, OPEN_BAL, DR_CR, STAT, CREATION_DATE, CREATED_BY) 
                  VALUES(
                      '" + cmbGroupAccount.SelectedValue.ToString() + @"',
                      '" + cmbControlAccount.SelectedValue.ToString() + @"',
@@ -295,16 +286,10 @@ namespace ERP_Maaz_Oil.Forms
                      '" + drCr + @"',
                      '" + status + @"',
                      GETDATE(),
-                     '" + Classes.Helper.userId + @"',
-                     '" + classHelper.AvoidInjection(txtMOBILE.Text) + @"',
-                     '" + classHelper.AvoidInjection(txtEMAIL.Text) + @"',
-                     '" + cmbCITY.SelectedValue.ToString() + @"',
-                     '" + cmbArea.SelectedValue.ToString() + @"',
-                     '" + classHelper.AvoidInjection(txtCreditDays.Text) + @"',
-                     '" + classHelper.AvoidInjection(txtADDRESS.Text) + @"'
-                 )";
+                     '" + Classes.Helper.userId + @"')";
 
-                    if (classHelper.SaveCoa(classHelper.query) >= 1) {
+                    if (classHelper.SaveCoa(classHelper.query) >= 1)
+                    {
                         classHelper.ShowMessageBox("Record Saved Sucessfully.", "Information");
                         Clear();
                     }
@@ -315,7 +300,8 @@ namespace ERP_Maaz_Oil.Forms
 
         private void txtOPEN_BAL_KeyPress(object sender, KeyPressEventArgs e)
         {
-            try {
+            try
+            {
                 classHelper.AllowNumbers(e);
             }
             catch (Exception ex) { classHelper.ShowMessageBox(ex.ToString(), "Exception"); }
@@ -323,8 +309,10 @@ namespace ERP_Maaz_Oil.Forms
 
         private void txtOPEN_BAL_Leave(object sender, EventArgs e)
         {
-            try {
-                if (txtOpeningBalance.Text.Trim().Equals("")) {
+            try
+            {
+                if (txtOpeningBalance.Text.Trim().Equals(""))
+                {
                     txtOpeningBalance.Text = "0";
                 }
             }
@@ -338,13 +326,14 @@ namespace ERP_Maaz_Oil.Forms
             SELECT AG_CODE AS [id],AG_NAME AS [name] FROM ACCOUNT_GROUP 
             WHERE AN_ID = (SELECT AN_ID FROM CONTROL_ACCOUNT WHERE CA_ID = '" + cmbControlAccount.SelectedValue.ToString() + @"')
             ORDER BY [name]";
-            classHelper.OpenGroupForm(classHelper.query,cmbGroupAccount);
+            classHelper.OpenGroupForm(classHelper.query, cmbGroupAccount);
         }
 
         private void grdSEARCH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try {
-                
+            try
+            {
+
                 loadDataFromGrid(e);
             }
             catch (Exception ex) { classHelper.ShowMessageBox(ex.ToString(), "Exception"); }
@@ -371,7 +360,8 @@ namespace ERP_Maaz_Oil.Forms
 
         private void cmbCONTROL_AC_DropDown(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 ComboBox cbo = (ComboBox)sender;
                 cbo.PreviewKeyDown += new PreviewKeyDownEventHandler(cmbCONTROL_AC_PreviewKeyDown);
             }
@@ -380,7 +370,8 @@ namespace ERP_Maaz_Oil.Forms
 
         private void cmbCONTROL_AC_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            try {
+            try
+            {
                 ComboBox cbo = (ComboBox)sender;
                 cbo.PreviewKeyDown -= cmbCONTROL_AC_PreviewKeyDown;
                 if (cbo.DroppedDown) cbo.Focus();
@@ -390,7 +381,8 @@ namespace ERP_Maaz_Oil.Forms
 
         private void cmbGROUP_AC_DropDown(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 ComboBox cbo = (ComboBox)sender;
                 cbo.PreviewKeyDown += new PreviewKeyDownEventHandler(cmbGROUP_AC_PreviewKeyDown);
             }
@@ -399,7 +391,8 @@ namespace ERP_Maaz_Oil.Forms
 
         private void cmbGROUP_AC_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            try {
+            try
+            {
                 ComboBox cbo = (ComboBox)sender;
                 cbo.PreviewKeyDown -= cmbGROUP_AC_PreviewKeyDown;
                 if (cbo.DroppedDown) cbo.Focus();
@@ -411,7 +404,10 @@ namespace ERP_Maaz_Oil.Forms
         {
             try
             {
-                classHelper.CoaGridSearch(txtSearching, grdSEARCH);
+                (grdSEARCH.DataSource as DataTable).DefaultView.RowFilter = string.Format(@"
+                [" + grdSEARCH.Columns["ACCOUNT NAME"].Name.ToString() + "] LIKE '%" + classHelper.AvoidInjection(txtSearch.Text) + "%' OR["
+                + grdSEARCH.Columns["CONTROL ACCOUNT"].Name.ToString() + "] LIKE '%" + classHelper.AvoidInjection(txtSearch.Text) + "%'");
+                grdSEARCH.ClearSelection();
             }
             catch (Exception ex) { classHelper.ShowMessageBox(ex.ToString(), "Exception"); }
         }
@@ -420,11 +416,13 @@ namespace ERP_Maaz_Oil.Forms
         {
             if (cmbControlAccount.SelectedIndex > 0)
             {
-                classHelper.LoadGroupAccount(cmbGroupAccount,Convert.ToInt16(cmbControlAccount.SelectedValue.ToString()));
+                classHelper.LoadGroupAccount(cmbGroupAccount, Convert.ToInt16(cmbControlAccount.SelectedValue.ToString()));
                 cmbGroupAccount.Enabled = true;
             }
-            else {
-                if (cmbGroupAccount.Items.Count > 0) {
+            else
+            {
+                if (cmbGroupAccount.Items.Count > 0)
+                {
                     cmbGroupAccount.SelectedIndex = 0;
                 }
                 cmbGroupAccount.Enabled = false;
@@ -457,39 +455,37 @@ namespace ERP_Maaz_Oil.Forms
 
         private void cmbCITY_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
-
-              if (cmbCITY.SelectedIndex > 0)
-              {
-                classHelper.load_area(cmbArea, cmbCITY.SelectedValue.ToString());
-                 cmbArea.Enabled = true;
-            }
-            else
-            {
-                cmbArea.Enabled = false;
-            }
+            //if (cmbCITY.SelectedIndex > 0)
+            //{
+            //    classHelper.load_area(cmbArea, cmbCITY.SelectedValue.ToString());
+            //    cmbArea.Enabled = true;
+            //}
+            //else
+            //{
+            //    cmbArea.Enabled = false;
+            //}
         }
 
         private void btnAddArea_Click(object sender, EventArgs e)
         {
-            using (classHelper.frmAddArea = new frmAddArea())
-            {
-                if (classHelper.frmAddArea.ShowDialog() == System.Windows.Forms.DialogResult.Cancel || classHelper.frmAddArea.ShowDialog() == System.Windows.Forms.DialogResult.Abort)
-                {
-                    classHelper.load_area(cmbArea, cmbCITY.SelectedValue.ToString());
-                }
-            }
+            //using (classHelper.frmAddArea = new frmAddArea())
+            //{
+            //    if (classHelper.frmAddArea.ShowDialog() == System.Windows.Forms.DialogResult.Cancel || classHelper.frmAddArea.ShowDialog() == System.Windows.Forms.DialogResult.Abort)
+            //    {
+            //        classHelper.load_area(cmbArea, cmbCITY.SelectedValue.ToString());
+            //    }
+            //}
         }
 
         private void btnADD_CITY_Click(object sender, EventArgs e)
         {
-            using (classHelper.frmAddCity = new frmAddCity())
-            {
-                if (classHelper.frmAddCity.ShowDialog() == System.Windows.Forms.DialogResult.Cancel || classHelper.frmAddCity.ShowDialog() == System.Windows.Forms.DialogResult.Abort)
-                {
-                    classHelper.load_city(cmbCITY);
-                }
-            }
+            //using (classHelper.frmAddCity = new frmAddCity())
+            //{
+            //    if (classHelper.frmAddCity.ShowDialog() == System.Windows.Forms.DialogResult.Cancel || classHelper.frmAddCity.ShowDialog() == System.Windows.Forms.DialogResult.Abort)
+            //    {
+            //        classHelper.load_city(cmbCITY);
+            //    }
+            //}
         }
 
         private void cmbCITY_DropDown(object sender, EventArgs e)
@@ -518,7 +514,7 @@ namespace ERP_Maaz_Oil.Forms
 
         private void gridSearch_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void txtCreditDays_KeyPress(object sender, KeyPressEventArgs e)

@@ -31,10 +31,10 @@ namespace ERP_Maaz_Oil
             //Classes.Helper hlp = new Classes.Helper();
             //MessageBox.Show(hlp.GetClosingStockValue(Convert.ToDateTime("2020-07-31 23:59:59")).ToString());
 
-            Application.Run(new Forms.LogIn());
+            //Application.Run(new Forms.LogIn());
 
-            //Classes.Helper.userId = 1;
-            //Application.Run(new Forms.frmDashboard());
+            Classes.Helper.userId = 1;
+            Application.Run(new Forms.frmDashboard());
             //Application.Run(new Forms.frmAddServiceTypes());
             //Application.Run(new Forms.frmGatePass_New());
 

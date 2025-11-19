@@ -29,7 +29,7 @@ namespace ERP_Maaz_Oil.Forms
         {
             classHelper.query = @" SELECT A.PURCHASE_MASTER_ID AS [ID],A.INVOICE_NO AS [INVOICE #],
             A.[DATE],B.COA_NAME AS [SUPPLIER],A.[DESCRIPTION],
-            A.CREDIT_DAYS,A.SUPPLIER_ID,TERM
+            A.SUPPLIER_ID
             FROM PURCHASE_MASTER A
             INNER JOIN COA B ON A.SUPPLIER_ID = B.COA_ID
             ORDER BY PURCHASE_MASTER_ID DESC";
@@ -50,7 +50,7 @@ namespace ERP_Maaz_Oil.Forms
             GeneratePINumber();
             dtpDate.Value = DateTime.Now;
             cmbSupplier.SelectedIndex = 0;
-            txtCreditDays.Text = "0";
+            //txtCreditDays.Text = "0";
             txtDescription.Clear();
             cmbProducts.SelectedIndex = 0;
             txtQty.Text = "0";
@@ -61,7 +61,7 @@ namespace ERP_Maaz_Oil.Forms
             isEdit = false;
             gridProducts.Rows.Clear();
 
-            rdbCredit.Checked = true;
+            //rdbCredit.Checked = true;
             LoadGrid();
         }
 
@@ -72,11 +72,11 @@ namespace ERP_Maaz_Oil.Forms
                 classHelper.ShowMessageBox("Supplier is not selected, please select Supplier.", "Warning");
                 cmbSupplier.Focus();
             }
-            else if (txtCreditDays.Text.Trim().Equals(""))
-            {
-                classHelper.ShowMessageBox("Enter Credit Days.", "Warning");
-                txtCreditDays.Focus();
-            }
+            //else if (txtCreditDays.Text.Trim().Equals(""))
+            //{
+            //    classHelper.ShowMessageBox("Enter Credit Days.", "Warning");
+            //    txtCreditDays.Focus();
+            //}
             else if (gridProducts.Rows.Count <= 0)
             {
                 classHelper.ShowMessageBox("Add Products.", "Warning");
@@ -92,9 +92,9 @@ namespace ERP_Maaz_Oil.Forms
 
                     // Determinetype based on selected radio button
                     char term = '0';
-                    if (rdbCredit.Checked == true) {
-                        term = '1';
-                    }
+                    //if (rdbCredit.Checked == true) {
+                    //    term = '1';
+                    //}
                 
                 classHelper.query = @"BEGIN TRY 
                     BEGIN TRANSACTION ";
@@ -104,17 +104,15 @@ namespace ERP_Maaz_Oil.Forms
                      UPDATE PURCHASE_MASTER SET DATE = '" + dtpDate.Value.ToString() + @"',  
                      SUPPLIER_ID = '" + cmbSupplier.SelectedValue.ToString() + @"',
                      DESCRIPTION = '" + classHelper.AvoidInjection(txtDescription.Text) + @"',
-                     CREDIT_DAYS = '" + classHelper.AvoidInjection(txtCreditDays.Text) + @"',
                      TERM = '" + term+ @"',
                      MODIFICATION_DATE = GETDATE(),MODIFIED_BY = '" + Classes.Helper.userId + @"'
                      WHERE PURCHASE_MASTER_ID = '" + id + @"';
                  END
                  ELSE
                  BEGIN
-                     INSERT INTO PURCHASE_MASTER (DATE,SUPPLIER_ID,DESCRIPTION,CREDIT_DAYS,TERM,CREATION_DATE,CREATED_BY,INVOICE_NO) 
+                     INSERT INTO PURCHASE_MASTER (DATE,SUPPLIER_ID,DESCRIPTION,TERM,CREATION_DATE,CREATED_BY,INVOICE_NO) 
                      VALUES ('" + dtpDate.Value.ToString() + "','" + cmbSupplier.SelectedValue.ToString() + @"',
-                     '" + classHelper.AvoidInjection(txtDescription.Text) + @"',
-                     '" + classHelper.AvoidInjection(txtCreditDays.Text) + "', '" + term + @"', GETDATE(),'" + Classes.Helper.userId + @"',
+                     '" + classHelper.AvoidInjection(txtDescription.Text) + @"', '" + term + @"', GETDATE(),'" + Classes.Helper.userId + @"',
                      '" + lblInvoice.Text + @"');
                  END
 
@@ -122,21 +120,21 @@ namespace ERP_Maaz_Oil.Forms
 
                 INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                 VALUES('" + dtpDate.Value.ToString() + "','"+ cmbSupplier.SelectedValue.ToString() +
-                        "'," + masterId +",'PURCHASES','" + lblInvoice.Text + @"', 0,'" + txtTotal.Text + "','P.I # " + lblInvoice.Text + " /" + txtCreditDays.Text + " DAYS PAYMENT)','" + Classes.Helper.userId + @"',GETDATE(),1);
+                        "'," + masterId +",'PURCHASES','" + lblInvoice.Text + @"', 0,'" + txtTotal.Text + "','P.I # " + lblInvoice.Text + ")','" + Classes.Helper.userId + @"',GETDATE(),1);
 
                 INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                 VALUES('" + dtpDate.Value.ToString() + "','" + Classes.Helper.purchasesId + "'," + masterId + ",'PURCHASES','" + lblInvoice.Text + @"',
-                '" + txtTotal.Text + "',0,'P.I # " + lblInvoice.Text + " /" + txtCreditDays.Text + " DAYS PAYMENT)','" + Classes.Helper.userId + @"',GETDATE(),1);";
+                '" + txtTotal.Text + "',0,'P.I # " + lblInvoice.Text + ")','" + Classes.Helper.userId + @"',GETDATE(),1);";
 
-                    if (rdbCash.Checked == true) {
-                        classHelper.query += @" INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
-                        VALUES('" + dtpDate.Value.ToString() + "','" + Classes.Helper.cashId +
-                        "'," + masterId + ",'PURCHASES','" + lblInvoice.Text + @"', 0,'" + txtTotal.Text + "','P.I # " + lblInvoice.Text + " /" + txtCreditDays.Text + " DAYS PAYMENT)','" + Classes.Helper.userId + @"',GETDATE(),1);
+                    //if (rdbCash.Checked == true) {
+                    //    classHelper.query += @" INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
+                    //    VALUES('" + dtpDate.Value.ToString() + "','" + Classes.Helper.cashId +
+                    //    "'," + masterId + ",'PURCHASES','" + lblInvoice.Text + @"', 0,'" + txtTotal.Text + "','P.I # " + lblInvoice.Text + ")','" + Classes.Helper.userId + @"',GETDATE(),1);
 
-                        INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
-                        VALUES('" + dtpDate.Value.ToString() + "','" + cmbSupplier.SelectedValue.ToString() + "'," + masterId + ",'PURCHASES','" + lblInvoice.Text + @"',
-                        '" + txtTotal.Text + "',0,'P.I # " + lblInvoice.Text + " /" + txtCreditDays.Text + " DAYS PAYMENT)','" + Classes.Helper.userId + @"',GETDATE(),1);";
-                    }
+                    //    INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
+                    //    VALUES('" + dtpDate.Value.ToString() + "','" + cmbSupplier.SelectedValue.ToString() + "'," + masterId + ",'PURCHASES','" + lblInvoice.Text + @"',
+                    //    '" + txtTotal.Text + "',0,'P.I # " + lblInvoice.Text + ")','" + Classes.Helper.userId + @"',GETDATE(),1);";
+                    //}
 
                 classHelper.query += @"DELETE FROM PURCHASE_DETAIL WHERE PURCHASE_MASTER_ID = '" + id + @"'";
 
@@ -181,8 +179,8 @@ namespace ERP_Maaz_Oil.Forms
                 classHelper.dataR["qty"] = Convert.ToDouble(rows.Cells["qty"].Value.ToString());
                 classHelper.dataR["rate"] = Convert.ToDouble(rows.Cells["rate"].Value.ToString());
                 classHelper.dataR["total"] = Convert.ToDouble(rows.Cells["total"].Value.ToString());
-                classHelper.dataR["creditDays"] = txtCreditDays.Text;
-                classHelper.dataR["dueDate"] = DateTime.Now.AddDays(Convert.ToInt32(txtCreditDays.Text));
+                classHelper.dataR["creditDays"] = "0";
+                classHelper.dataR["dueDate"] = dtpDate.Value.ToShortDateString();
                 classHelper.mds.Tables["PI"].Rows.Add(classHelper.dataR);
             }
             classHelper.rpt = new ERP_Maaz_Oil.Forms.Reporting.frmReports();
@@ -206,16 +204,16 @@ namespace ERP_Maaz_Oil.Forms
                 dtpDate.Text = row.Cells["DATE"].Value.ToString();
                 cmbSupplier.SelectedValue = row.Cells["SUPPLIER_ID"].Value.ToString();
                 txtDescription.Text = row.Cells["DESCRIPTION"].Value.ToString();
-                txtCreditDays.Text = row.Cells["CREDIT_DAYS"].Value.ToString();
+                //txtCreditDays.Text = row.Cells["CREDIT_DAYS"].Value.ToString();
 
-                if (row.Cells["TERM"].Value.ToString().Equals("0"))
-                {
-                    rdbCash.Checked = true;
-                }
-                else
-                {
-                    rdbCredit.Checked = true;
-                }
+                //if (row.Cells["TERM"].Value.ToString().Equals("0"))
+                //{
+                //    rdbCash.Checked = true;
+                //}
+                //else
+                //{
+                //    rdbCredit.Checked = true;
+                //}
 
                 LoadPurchaseDetails(id);
                 TotalSum();
@@ -243,7 +241,6 @@ namespace ERP_Maaz_Oil.Forms
         private void grdSEARCH_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             grdSearch.Columns["SUPPLIER_ID"].Visible = false;
-            grdSearch.Columns["TERM"].Visible = false;
         }
 
         private void btnCLEAR_Click(object sender, EventArgs e)
@@ -423,13 +420,13 @@ namespace ERP_Maaz_Oil.Forms
 
         private void rdbCredit_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdbCash.Checked == true)
-            {
-                txtCreditDays.Enabled = false;
-            }
-            else {
-                txtCreditDays.Enabled = true;
-            }
+            //if (rdbCash.Checked == true)
+            //{
+            //    txtCreditDays.Enabled = false;
+            //}
+            //else {
+            //    txtCreditDays.Enabled = true;
+            //}
         }
 
         private void LoadPODetails(int poId)
