@@ -1112,7 +1112,7 @@ namespace ERP_Maaz_Oil.Classes
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    dg.Rows.Add(dr["MATERIAL_ID"].ToString(), dr["MATERIAL_NAME"].ToString(), dr["QTY"].ToString());
+                    dg.Rows.Add(dr["MATERIAL_ID"].ToString(), dr["MATERIAL_NAME"].ToString(), dr["QTY"].ToString(), dr["WASTAGE"].ToString());
                 }
 
                 dg.ClearSelection();
@@ -2271,6 +2271,7 @@ namespace ERP_Maaz_Oil.Classes
             (grdSEARCH.DataSource as DataTable).DefaultView.RowFilter = string.Format(@"
             [" + grdSEARCH.Columns["BRAND"].Name.ToString() + "] LIKE '%" + AvoidInjection(txtSEARCH.Text) + "%' OR ["
                + grdSEARCH.Columns["PRODUCT CODE"].Name.ToString() + "] LIKE '%" + AvoidInjection(txtSEARCH.Text) + "%' OR ["
+               + grdSEARCH.Columns["BINDING_TYPE"].Name.ToString() + "] LIKE '%" + AvoidInjection(txtSEARCH.Text) + "%' OR ["
                + grdSEARCH.Columns["PRODUCT NAME"].Name.ToString() + "] LIKE '%" + AvoidInjection(txtSEARCH.Text) + "%'");
             grdSEARCH.ClearSelection();
         }

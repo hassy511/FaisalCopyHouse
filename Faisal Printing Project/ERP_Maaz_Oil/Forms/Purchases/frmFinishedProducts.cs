@@ -45,6 +45,20 @@ namespace ERP_Maaz_Oil.Forms
             catch (Exception ex) { classHelper.ShowMessageBox(ex.ToString(), "Exception"); }
         }
 
+        private void LoadBindingType()
+        {
+            try
+            {
+                classHelper.query = @" SELECT '0' AS [id], '--SELECT BINDING TYPE--' AS [name] 
+                UNION
+                SELECT ID AS [id],BINDING_TYPE AS[name] 
+                FROM BINDING_TYPES
+                ORDER BY [ID]";
+                classHelper.LoadComboData(cmbBindingType, classHelper.query);
+            }
+            catch (Exception ex) { classHelper.ShowMessageBox(ex.ToString(), "Exception"); }
+        }
+
         private void LoadBrand()
         {
             try
@@ -60,19 +74,21 @@ namespace ERP_Maaz_Oil.Forms
 
         private void LoadGrid()
         {
-            classHelper.query = @"select A.PM_ID,B.P_CATEGORY_ID,B.P_CATEEGORY_NAME AS [BRAND],A.PRODUCT_CODE AS [PRODUCT CODE],A.PRODUCT_NAME AS [PRODUCT NAME],
-            A.OPENING_QTY AS [QTY],A.OPENING_RATE AS [OPENING RATE],A.MIN_QTY AS [MINIMUM QTY],A.MAX_QTY AS [MAXIMUM QTY],a.LIST_RATE,a.NET_RATE
+            classHelper.query = @" 	select A.PM_ID,B.P_CATEGORY_ID,B.P_CATEEGORY_NAME AS [BRAND],A.PRODUCT_CODE AS [PRODUCT CODE],A.PRODUCT_NAME AS [PRODUCT NAME],
+            A.OPENING_QTY AS [QTY],A.OPENING_RATE AS [OPENING RATE],A.NUMBER_PAGES,A.BUNDLE_PIECES,
+            A.BINDING_TYPE_ID,C.BINDING_TYPE
             from PRODUCT_MASTER A
             INNER JOIN PRODUCT_CATEGORY B ON A.BRAND_ID = B.P_CATEGORY_ID
+            INNER JOIN BINDING_TYPES C ON A.BINDING_TYPE_ID = C.ID
             ORDER BY A.PM_ID DESC";
             classHelper.LoadGrid(grdSearch, classHelper.query);
         }
 
         private void LoadMaterialDetails(int productMasterId) {
-            classHelper.query = @"SELECT A.MATERIAL_ID,B.MATERIAL_NAME AS [MATERIAL_NAME],A.WEIGHT AS [QTY] 
+            classHelper.query = @"SELECT A.MATERIAL_ID,B.MATERIAL_NAME AS [MATERIAL_NAME],A.WEIGHT AS [QTY],A.WASTAGE
             FROM PRODUCT_DETAILS A
             INNER JOIN MATERIALS B ON A.MATERIAL_ID = B.MATERIAL_ID
-            WHERE A.PM_ID = '"+ productMasterId + @"'
+            WHERE A.PM_ID = '" + productMasterId + @"'
             ORDER BY A.PD_ID ";
             classHelper.LoadMaterialDetailGrid(gridMaterial, classHelper.query);
         }
@@ -86,14 +102,13 @@ namespace ERP_Maaz_Oil.Forms
                 id = row.Cells["PM_ID"].Value.ToString();
                 is_edit = 1;
                 cmbBrand.SelectedValue = row.Cells["P_CATEGORY_ID"].Value.ToString();
+                cmbBindingType.SelectedValue = row.Cells["BINDING_TYPE_ID"].Value.ToString();
                 txtProductCode.Text = row.Cells["PRODUCT CODE"].Value.ToString();
                 txtProductName.Text = row.Cells["PRODUCT NAME"].Value.ToString();
                 txtOpeningQty.Text = row.Cells["QTY"].Value.ToString();
                 txtOpeningRate.Text = row.Cells["OPENING RATE"].Value.ToString();
-                txtRetailRate.Text = row.Cells["LIST_RATE"].Value.ToString();
-                txtNetRate.Text = row.Cells["NET_RATE"].Value.ToString();
-                txtMinQty.Text = row.Cells["MINIMUM QTY"].Value.ToString();
-                txtMaxQty.Text = row.Cells["MAXIMUM QTY"].Value.ToString();
+                txtNumberOfPackages.Text = row.Cells["NUMBER_PAGES"].Value.ToString();
+                txtPcsInBundle.Text = row.Cells["BUNDLE_PIECES"].Value.ToString();
                 LoadMaterialDetails(Convert.ToInt32(id));
             }
         }
@@ -104,19 +119,19 @@ namespace ERP_Maaz_Oil.Forms
             id = "";
             is_edit = 0;
             cmbBrand.SelectedIndex = 0;
+            cmbBindingType.SelectedIndex = 0;
             txtProductCode.Clear();
             txtProductName.Clear();
             txtOpeningQty.Text = "0";
             txtOpeningRate.Text = "0";
-            txtMinQty.Text = "0";
-            txtMaxQty.Text = "0";
             cmbMatrial.SelectedIndex = 0;
             txtMaterialQty.Text = "0";
             gridMaterial.Rows.Clear();
             LoadGrid();
             txtSearch.Clear();
-            txtRetailRate.Text = "0";
-            txtNetRate.Text = "0";
+            txtNumberOfPackages.Text = "0";
+            txtPcsInBundle.Text = "0";
+            txtWastage.Text = "0";
         }
 
         //private void WeightCalculation() {
@@ -161,7 +176,13 @@ namespace ERP_Maaz_Oil.Forms
                 cmbBrand.Focus();
                 return;
             }
-            if (txtProductCode.Text.Trim().Equals(""))
+            else if (cmbBindingType.SelectedIndex == 0)
+            {
+                classHelper.ShowMessageBox("Binding Type is not selected, please select Binding Type.", "Warning");
+                cmbBindingType.Focus();
+                return;
+            }
+            else if (txtProductCode.Text.Trim().Equals(""))
             {
                 classHelper.ShowMessageBox("Product Code  field is blank.", "Warning");
                 txtProductCode.Focus();
@@ -185,28 +206,16 @@ namespace ERP_Maaz_Oil.Forms
                 txtOpeningRate.Focus();
                 return;
             }
-            else if (txtRetailRate.Text.Equals(""))
+            else if (txtNumberOfPackages.Text.Equals(""))
             {
-                classHelper.ShowMessageBox("Retail Rate is Blank, please add value.", "Warning");
-                txtRetailRate.Focus();
+                classHelper.ShowMessageBox("Number of Packages is Blank, please add value.", "Warning");
+                txtNumberOfPackages.Focus();
                 return;
             }
-            else if (txtNetRate.Text.Equals(""))
+            else if (txtPcsInBundle.Text.Equals(""))
             {
-                classHelper.ShowMessageBox("Net Rate is Blank, please add value.", "Warning");
-                txtNetRate.Focus();
-                return;
-            }
-            else if (txtMinQty.Text.Equals(""))
-            {
-                classHelper.ShowMessageBox("Minimum Qty is Blank, please add value.", "Warning");
-                txtMinQty.Focus();
-                return;
-            }
-            else if (txtMaxQty.Text.Equals(""))
-            {
-                classHelper.ShowMessageBox("Maximum Qty is Blank, please add value.", "Warning");
-                txtMaxQty.Focus();
+                classHelper.ShowMessageBox("Pcs In Bundle is Blank, please add value.", "Warning");
+                txtPcsInBundle.Focus();
                 return;
             }
             else if (gridMaterial.Rows.Count <= 0)
@@ -231,30 +240,29 @@ namespace ERP_Maaz_Oil.Forms
                     UPDATE PRODUCT_MASTER SET PRODUCT_CODE = '" + classHelper.AvoidInjection(txtProductCode.Text) + @"',
                     PRODUCT_NAME = '" + classHelper.AvoidInjection(txtProductName.Text) + @"',
                     BRAND_ID = '" + cmbBrand.SelectedValue.ToString() + @"',
+                    BINDING_TYPE_ID = '" + cmbBindingType.SelectedValue.ToString() + @"',
                     MODIFIED_BY = '" + Classes.Helper.userId + @"',MODIFICATION_DATE = GETDATE(),
                     OPENING_QTY = '" + classHelper.AvoidInjection(txtOpeningQty.Text) + @"',
                     OPENING_RATE = '" + classHelper.AvoidInjection(txtOpeningRate.Text) + @"',
-                    LIST_RATE = '" + classHelper.AvoidInjection(txtRetailRate.Text) + @"',
-                    NET_RATE = '" + classHelper.AvoidInjection(txtNetRate.Text) + @"',
-                    MIN_QTY = '" + classHelper.AvoidInjection(txtMinQty.Text) + @"',
-                    MAX_QTY = '" + classHelper.AvoidInjection(txtMaxQty.Text) + @"'
+                    NUMBER_PAGES = '" + classHelper.AvoidInjection(txtNumberOfPackages.Text) + @"',
+                    BUNDLE_PIECES = '" + classHelper.AvoidInjection(txtPcsInBundle.Text) + @"'
                     WHERE PM_ID = '" + id + @"';                 
                 END
                 ELSE
                 BEGIN
-                    INSERT INTO PRODUCT_MASTER(PRODUCT_CODE,PRODUCT_NAME,CREATED_BY,CREATION_DATE,BRAND_ID,OPENING_QTY,OPENING_RATE,MIN_QTY,MAX_QTY,LIST_RATE,NET_RATE)
+                    INSERT INTO PRODUCT_MASTER(PRODUCT_CODE,PRODUCT_NAME,CREATED_BY,CREATION_DATE,BRAND_ID,OPENING_QTY,OPENING_RATE,NUMBER_PAGES,BUNDLE_PIECES,BINDING_TYPE_ID)
                     VALUES('" + classHelper.AvoidInjection(txtProductCode.Text) + "','" + classHelper.AvoidInjection(txtProductName.Text) + @"',
                     '" + Classes.Helper.userId + "',GETDATE(),'" + cmbBrand.SelectedValue.ToString() + @"','" + classHelper.AvoidInjection(txtOpeningQty.Text) + @"',
-                    '" + classHelper.AvoidInjection(txtOpeningRate.Text) + @"','" + classHelper.AvoidInjection(txtMinQty.Text) + @"',
-                    '" + classHelper.AvoidInjection(txtMaxQty.Text) + @"','" + classHelper.AvoidInjection(txtRetailRate.Text) + @"','" + classHelper.AvoidInjection(txtNetRate.Text) + @"'); 
+                    '" + classHelper.AvoidInjection(txtOpeningRate.Text) + @"',
+                    '" + classHelper.AvoidInjection(txtNumberOfPackages.Text) + @"','" + classHelper.AvoidInjection(txtPcsInBundle.Text) + @"','" + cmbBindingType.SelectedValue.ToString() + @"'); 
                 END 
 
                 DELETE FROM PRODUCT_DETAILS WHERE PM_ID = '" + id + @"'";
 
                 foreach (DataGridViewRow rows in gridMaterial.Rows)
                 {
-                    classHelper.query += @"INSERT INTO PRODUCT_DETAILS (PM_ID,MATERIAL_ID,WEIGHT) VALUES 
-                    (" + masterId + ",'" + rows.Cells["materialId"].Value.ToString() + "','" + rows.Cells["qty"].Value.ToString() + @"');";
+                    classHelper.query += @"INSERT INTO PRODUCT_DETAILS (PM_ID,MATERIAL_ID,WEIGHT,WASTAGE) VALUES 
+                    (" + masterId + ",'" + rows.Cells["materialId"].Value.ToString() + "','" + rows.Cells["qty"].Value.ToString() + @"','" + rows.Cells["wastage"].Value.ToString() + @"');";
                 }
 
                 classHelper.query += @" DELETE FROM PRODUCT_ITEM_LEDGER WHERE REF_NO = '00' AND PRODUCT_ID = " + masterId + @" AND ENTRY_FROM = 'ADD PRODUCT OPENING';
@@ -284,8 +292,7 @@ namespace ERP_Maaz_Oil.Forms
             grdSearch.Columns["PM_ID"].Visible = false;
             grdSearch.Columns["P_CATEGORY_ID"].Visible = false;
             grdSearch.Columns["OPENING RATE"].Visible = false;
-            grdSearch.Columns["MINIMUM QTY"].Visible = false;
-            grdSearch.Columns["MAXIMUM QTY"].Visible = false;
+            grdSearch.Columns["BINDING_TYPE_ID"].Visible = false;
         }
 
         private void btnCLEAR_Click(object sender, EventArgs e)
@@ -391,11 +398,17 @@ namespace ERP_Maaz_Oil.Forms
                 MessageBox.Show("Please add Material Qty");
                 txtMaterialQty.Focus();
             }
+            else if (txtWastage.Text.Equals("0") || txtWastage.Text.Equals(""))
+            {
+                MessageBox.Show("Please add Material Wastage");
+                txtWastage.Focus();
+            }
             else
             {
-                gridMaterial.Rows.Add(cmbMatrial.SelectedValue.ToString(), cmbMatrial.Text, txtMaterialQty.Text);
+                gridMaterial.Rows.Add(cmbMatrial.SelectedValue.ToString(), cmbMatrial.Text, txtMaterialQty.Text, txtWastage.Text);
                 cmbMatrial.SelectedIndex = 0;
                 txtMaterialQty.Text = "0";
+                txtWastage.Text = "0";
             }
         }
 
@@ -406,6 +419,7 @@ namespace ERP_Maaz_Oil.Forms
                 DataGridViewRow row = this.gridMaterial.Rows[e.RowIndex];
                 cmbMatrial.SelectedValue = row.Cells["materialId"].Value.ToString();
                 txtMaterialQty.Text = row.Cells["qty"].Value.ToString();
+                txtWastage.Text = row.Cells["wastage"].Value.ToString();
                 gridMaterial.Rows.RemoveAt(e.RowIndex);
             }
         }
@@ -414,6 +428,7 @@ namespace ERP_Maaz_Oil.Forms
         {
             LoadBrand();
             LoadMaterial();
+            LoadBindingType();
             LoadGrid();
         }
 
