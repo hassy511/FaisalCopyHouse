@@ -21,10 +21,9 @@ namespace ERP_Maaz_Oil.Forms
             InitializeComponent();
         }
         //============loading grid query--------------------->
-        string query = @"SELECT A.MATERIAL_ID,A.M_TYPE_ID,C.M_TYPE_NAME AS [MATERIAL TYPE],A.UNIT_ID,D.UNIT_NAME AS [UNIT],
+        string query = @"	SELECT A.MATERIAL_ID,A.M_TYPE_ID,C.M_TYPE_NAME AS [MATERIAL TYPE],A.UNIT_ID,D.UNIT_NAME AS [UNIT],
         A.MATERIAL_CODE AS [CODE],A.MATERIAL_NAME AS [NAME],A.OPENING_QTY AS [QTY],
-        A.OPENING_RATE AS [RATE],A.MIN_QTY AS [MIN QTY],A.MAX_QTY AS [MAX QTY],A.STAT,A.QUALITY,
-        A.RETAIL_RATE,A.NET_RATE
+        A.OPENING_RATE AS [RATE],A.HEIGHT,A.WIDTH,A.STAT,A.GRAMMAGE
         FROM MATERIALS A,MATERIAL_TYPES C,UNITS D
         WHERE A.UNIT_ID = D.UNIT_ID AND A.M_TYPE_ID=C.M_TYPE_ID";
         //load COMBO BOXES
@@ -72,12 +71,10 @@ namespace ERP_Maaz_Oil.Forms
             txtMaterialName.Clear();
             txtOpeningQty.Text = "0";
             txtOpeningRate.Text = "0";
-            txtRetailRate.Text = "0";
-            txtNetRate.Text = "0";
-            txtMinQty.Clear();
-            txtMaxQty.Clear();
+            txtHeight.Text = "0";
+            txtWidth.Text = "0";
+            txtGrammage.Clear();
             is_edit = 0;
-            txtQuality.Clear();
             chkDeActive.Checked = false;
             classHelper.LoadGrid(grdSearch, query);
         }
@@ -104,10 +101,10 @@ namespace ERP_Maaz_Oil.Forms
                 classHelper.ShowMessageBox("Material Name  field is blank.", "Warning");
                 txtMaterialName.Focus();
             }
-            else if (txtQuality.Text.Trim().Equals(""))
+            else if (txtHeight.Text.Trim().Equals(""))
             {
-                classHelper.ShowMessageBox("Quality  field is blank.", "Warning");
-                txtQuality.Focus();
+                classHelper.ShowMessageBox("Height field is blank.", "Warning");
+                txtHeight.Focus();
             }
             else if (txtOpeningQty.Text.Trim().Equals(""))
             {
@@ -119,15 +116,15 @@ namespace ERP_Maaz_Oil.Forms
                 classHelper.ShowMessageBox("Material RATE field is blank.", "Warning");
                 txtOpeningRate.Focus();
             }
-            else if (txtMinQty.Text.Trim().Equals(""))
+            else if (txtGrammage.Text.Trim().Equals(""))
             {
                 classHelper.ShowMessageBox("Minimum Qty field is blank.", "Warning");
-                txtMinQty.Focus();
+                txtGrammage.Focus();
             }
-            else if (txtMaxQty.Text.Trim().Equals(""))
+            else if (txtWidth.Text.Trim().Equals(""))
             {
-                classHelper.ShowMessageBox("Maximum Qty field is blank.", "Warning");
-                txtMaxQty.Focus();
+                classHelper.ShowMessageBox("Width field is blank.", "Warning");
+                txtWidth.Focus();
             }
             else
             {
@@ -145,23 +142,19 @@ namespace ERP_Maaz_Oil.Forms
                 classHelper.query = @"BEGIN TRY 
                              BEGIN TRANSACTION ";
 
-                classHelper.query += @"IF EXISTS (select MATERIAL_ID from MATERIALS WHERE MATERIAL_ID ='" + id +
-                    "') UPDATE MATERIALS SET M_TYPE_ID = '" + cmbMaterialType.SelectedValue.ToString() +
-                    "',LOCATION_ID = '1',UNIT_ID = '" + cmbUnit.SelectedValue.ToString() +
-                    "',MATERIAL_CODE = '" + txtMaterialCode.Text + "',MATERIAL_NAME = '" + txtMaterialName.Text +
-                    "',OPENING_QTY = '" + txtOpeningQty.Text + "',OPENING_RATE = '" + txtOpeningRate.Text +
-                    "',RETAIL_RATE = '" + txtRetailRate.Text + "',NET_RATE = '" + txtNetRate.Text + "',STAT = '" + status + "',MIN_QTY = '" + txtMinQty.Text + "',MAX_QTY = '" + txtMaxQty.Text +
-                    "',MODIFICATION_DATE ='" + DateTime.Now +
-                    "', MODIFIED_BY = '" + Classes.Helper.userId +
-                    "', QUALITY = '" + classHelper.AvoidInjection(txtQuality.Text)
-                    + "' WHERE MATERIAL_ID = '" + id +
-                    "' ELSE INSERT INTO MATERIALS VALUES('" + cmbMaterialType.SelectedValue.ToString() +
-                    "','','" + txtMaterialCode.Text + "','"
-                    + txtMaterialName.Text + "','"
-                    + cmbUnit.SelectedValue.ToString() + "','"
-                    + txtOpeningQty.Text + "','" + txtOpeningRate.Text
-                    + "','" + status + "','" + Classes.Helper.userId + "',GETDATE(),NULL,NULL,1,'" + txtMinQty.Text + "','" + txtMaxQty.Text + @"',
-                    NULL,'" + classHelper.AvoidInjection(txtQuality.Text) + "','" + txtRetailRate.Text + "','" + txtNetRate.Text + "'); ";
+                classHelper.query += @"IF EXISTS (select MATERIAL_ID from MATERIALS WHERE MATERIAL_ID ='" + id +@"') 
+                UPDATE MATERIALS SET M_TYPE_ID = '" + cmbMaterialType.SelectedValue.ToString() +@"',LOCATION_ID = '1',
+                UNIT_ID = '" + cmbUnit.SelectedValue.ToString() +"',MATERIAL_CODE = '" + txtMaterialCode.Text + @"',
+                MATERIAL_NAME = '" + txtMaterialName.Text +@"',OPENING_QTY = '" + txtOpeningQty.Text + "',OPENING_RATE = '" + txtOpeningRate.Text +@"',
+                HEIGHT = '" + txtHeight.Text + "',WIDTH = '" + txtWidth.Text + "',STAT = '" + status + @"',
+                GRAMMAGE = '" + txtGrammage.Text + "',MODIFICATION_DATE = '" + DateTime.Now +@"', 
+                MODIFIED_BY = '" + Classes.Helper.userId + "' WHERE MATERIAL_ID = '" + id + @"' ELSE 
+                INSERT INTO MATERIALS (M_TYPE_ID,MATERIAL_CODE,MATERIAL_NAME,UNIT_ID,OPENING_QTY,OPENING_RATE,STAT,
+                CREATED_BY,CREATION_DATE,COMPANY_ID,HEIGHT,WIDTH,GRAMMAGE) 
+                VALUES('" + cmbMaterialType.SelectedValue.ToString() +"', '" + txtMaterialCode.Text + @"',
+                '"+ txtMaterialName.Text + "', '"+ cmbUnit.SelectedValue.ToString() + "', '"+ txtOpeningQty.Text + @"',
+                '" + txtOpeningRate.Text+ "', '" + status + "', '" + Classes.Helper.userId + @"', GETDATE(), 1,
+                '" + txtHeight.Text + "', '" + txtWidth.Text + @"', '" + txtGrammage.Text + @"'); ";
 
                 classHelper.query += @" DELETE FROM MATERIAL_ITEM_LEDGER WHERE REF_NO = '00' AND MATERIAL_ID = " + masterId + @" AND ENTRY_FROM = 'ADD MATERIAL OPENING';
                     INSERT INTO MATERIAL_ITEM_LEDGER 
@@ -205,19 +198,16 @@ namespace ERP_Maaz_Oil.Forms
                 DataGridViewRow row = this.grdSearch.Rows[e.RowIndex];
                 id = row.Cells[0].Value.ToString();
                 is_edit = 1;
-                cmbMaterialType.SelectedValue = row.Cells[1].Value.ToString();
-                cmbUnit.SelectedValue = row.Cells[3].Value.ToString();
-                txtMaterialCode.Text = row.Cells[5].Value.ToString();
-                txtMaterialName.Text = row.Cells[6].Value.ToString();
-                txtOpeningQty.Text = row.Cells[7].Value.ToString();
-                txtOpeningRate.Text = row.Cells[8].Value.ToString();
-                txtRetailRate.Text = row.Cells["RETAIL_RATE"].Value.ToString();
-                txtNetRate.Text = row.Cells["NET_RATE"].Value.ToString();
-                txtMinQty.Text = row.Cells[9].Value.ToString();
-                txtMaxQty.Text = row.Cells[10].Value.ToString();
-                txtQuality.Text = row.Cells["QUALITY"].Value.ToString();
-                //cmbLocation.Text = row.Cells[9].Value.ToString();
-                if (row.Cells[11].Value.ToString().Equals("0"))
+                cmbMaterialType.SelectedValue = row.Cells["M_TYPE_ID"].Value.ToString();
+                cmbUnit.SelectedValue = row.Cells["UNIT_ID"].Value.ToString();
+                txtMaterialCode.Text = row.Cells["CODE"].Value.ToString();
+                txtMaterialName.Text = row.Cells["NAME"].Value.ToString();
+                txtOpeningQty.Text = row.Cells["QTY"].Value.ToString();
+                txtOpeningRate.Text = row.Cells["RATE"].Value.ToString();
+                txtHeight.Text = row.Cells["HEIGHT"].Value.ToString();
+                txtWidth.Text = row.Cells["WIDTH"].Value.ToString();
+                txtGrammage.Text = row.Cells["GRAMMAGE"].Value.ToString();
+                if (row.Cells["STAT"].Value.ToString().Equals("0"))
                 {
                     chkDeActive.Checked = false;
                 }
@@ -255,10 +245,10 @@ namespace ERP_Maaz_Oil.Forms
 
         private void grdSEARCH_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            grdSearch.Columns[0].Visible = false;
-            grdSearch.Columns[1].Visible = false;
-            grdSearch.Columns[3].Visible = false;
-            grdSearch.Columns[11].Visible = false;
+            grdSearch.Columns["MATERIAL_ID"].Visible = false;
+            grdSearch.Columns["M_TYPE_ID"].Visible = false;
+            grdSearch.Columns["UNIT_ID"].Visible = false;
+            grdSearch.Columns["STAT"].Visible = false;
 
         }
 

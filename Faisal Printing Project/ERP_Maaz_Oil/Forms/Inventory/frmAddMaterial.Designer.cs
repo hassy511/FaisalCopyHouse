@@ -54,13 +54,13 @@
             this.txtOpeningRate = new System.Windows.Forms.TextBox();
             this.cmbUnit = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtMinQty = new System.Windows.Forms.TextBox();
+            this.txtGrammage = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbMaterialType = new SergeUtils.EasyCompletionComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtRetailRate = new System.Windows.Forms.TextBox();
-            this.txtNetRate = new System.Windows.Forms.TextBox();
+            this.txtHeight = new System.Windows.Forms.TextBox();
+            this.txtWidth = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pnlHEADER.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -348,17 +348,17 @@
             this.label7.TabIndex = 212;
             this.label7.Text = "UNIT ";
             // 
-            // txtMinQty
+            // txtGrammage
             // 
-            this.txtMinQty.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMinQty.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtMinQty.Location = new System.Drawing.Point(689, 536);
-            this.txtMinQty.MaxLength = 11;
-            this.txtMinQty.Name = "txtMinQty";
-            this.txtMinQty.Size = new System.Drawing.Size(280, 25);
-            this.txtMinQty.TabIndex = 222;
-            this.txtMinQty.Text = "0";
-            this.txtMinQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQTY_KeyPress);
+            this.txtGrammage.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtGrammage.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtGrammage.Location = new System.Drawing.Point(689, 536);
+            this.txtGrammage.MaxLength = 11;
+            this.txtGrammage.Name = "txtGrammage";
+            this.txtGrammage.Size = new System.Drawing.Size(280, 25);
+            this.txtGrammage.TabIndex = 222;
+            this.txtGrammage.Text = "0";
+            this.txtGrammage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQTY_KeyPress);
             // 
             // label8
             // 
@@ -367,9 +367,9 @@
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label8.Location = new System.Drawing.Point(594, 541);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 15);
+            this.label8.Size = new System.Drawing.Size(74, 15);
             this.label8.TabIndex = 225;
-            this.label8.Text = "MIN QTY";
+            this.label8.Text = "GRAMMAGE";
             // 
             // cmbMaterialType
             // 
@@ -404,35 +404,35 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label10.Location = new System.Drawing.Point(594, 480);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 15);
+            this.label10.Size = new System.Drawing.Size(50, 15);
             this.label10.TabIndex = 356;
-            this.label10.Text = "RETAIL RATE";
+            this.label10.Text = "HEIGHT";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // txtRetailRate
+            // txtHeight
             // 
-            this.txtRetailRate.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtRetailRate.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtRetailRate.Location = new System.Drawing.Point(689, 475);
-            this.txtRetailRate.MaxLength = 11;
-            this.txtRetailRate.Name = "txtRetailRate";
-            this.txtRetailRate.Size = new System.Drawing.Size(280, 25);
-            this.txtRetailRate.TabIndex = 357;
-            this.txtRetailRate.Text = "0";
-            this.txtRetailRate.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.txtRetailRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQTY_KeyPress);
+            this.txtHeight.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtHeight.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtHeight.Location = new System.Drawing.Point(689, 475);
+            this.txtHeight.MaxLength = 11;
+            this.txtHeight.Name = "txtHeight";
+            this.txtHeight.Size = new System.Drawing.Size(280, 25);
+            this.txtHeight.TabIndex = 357;
+            this.txtHeight.Text = "0";
+            this.txtHeight.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQTY_KeyPress);
             // 
-            // txtNetRate
+            // txtWidth
             // 
-            this.txtNetRate.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNetRate.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtNetRate.Location = new System.Drawing.Point(689, 505);
-            this.txtNetRate.MaxLength = 11;
-            this.txtNetRate.Name = "txtNetRate";
-            this.txtNetRate.Size = new System.Drawing.Size(280, 25);
-            this.txtNetRate.TabIndex = 358;
-            this.txtNetRate.Text = "0";
-            this.txtNetRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQTY_KeyPress);
+            this.txtWidth.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtWidth.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtWidth.Location = new System.Drawing.Point(689, 505);
+            this.txtWidth.MaxLength = 11;
+            this.txtWidth.Name = "txtWidth";
+            this.txtWidth.Size = new System.Drawing.Size(280, 25);
+            this.txtWidth.TabIndex = 358;
+            this.txtWidth.Text = "0";
+            this.txtWidth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQTY_KeyPress);
             // 
             // label11
             // 
@@ -441,9 +441,9 @@
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label11.Location = new System.Drawing.Point(594, 510);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 15);
+            this.label11.Size = new System.Drawing.Size(48, 15);
             this.label11.TabIndex = 359;
-            this.label11.Text = "NET RATE";
+            this.label11.Text = "WIDTH";
             // 
             // frmAddMaterial
             // 
@@ -452,12 +452,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1028, 631);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtNetRate);
-            this.Controls.Add(this.txtRetailRate);
+            this.Controls.Add(this.txtWidth);
+            this.Controls.Add(this.txtHeight);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.cmbMaterialType);
-            this.Controls.Add(this.txtMinQty);
+            this.Controls.Add(this.txtGrammage);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtOpeningRate);
             this.Controls.Add(this.txtOpeningQty);
@@ -516,13 +516,13 @@
         private System.Windows.Forms.TextBox txtOpeningRate;
         private System.Windows.Forms.ComboBox cmbUnit;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtMinQty;
+        private System.Windows.Forms.TextBox txtGrammage;
         private System.Windows.Forms.Label label8;
         private SergeUtils.EasyCompletionComboBox cmbMaterialType;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtRetailRate;
-        private System.Windows.Forms.TextBox txtNetRate;
+        private System.Windows.Forms.TextBox txtHeight;
+        private System.Windows.Forms.TextBox txtWidth;
         private System.Windows.Forms.Label label11;
     }
 }
