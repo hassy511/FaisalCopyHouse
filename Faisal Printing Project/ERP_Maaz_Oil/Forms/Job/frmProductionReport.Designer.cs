@@ -59,9 +59,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(270, 58);
+            this.label4.Location = new System.Drawing.Point(360, 71);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 15);
+            this.label4.Size = new System.Drawing.Size(77, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "PRODUCT";
             // 
@@ -69,18 +70,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(639, 58);
+            this.label5.Location = new System.Drawing.Point(852, 71);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 15);
+            this.label5.Size = new System.Drawing.Size(36, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "QTY";
             // 
             // txtProductQty
             // 
             this.txtProductQty.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtProductQty.Location = new System.Drawing.Point(674, 53);
+            this.txtProductQty.Location = new System.Drawing.Point(899, 65);
+            this.txtProductQty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtProductQty.Name = "txtProductQty";
-            this.txtProductQty.Size = new System.Drawing.Size(122, 25);
+            this.txtProductQty.Size = new System.Drawing.Size(161, 29);
             this.txtProductQty.TabIndex = 3;
             this.txtProductQty.Text = "0";
             this.txtProductQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProductQty_KeyPress);
@@ -95,8 +98,9 @@
             this.pnlHEADER.Controls.Add(this.pictureBox15);
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
+            this.pnlHEADER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(1007, 47);
+            this.pnlHEADER.Size = new System.Drawing.Size(1326, 57);
             this.pnlHEADER.TabIndex = 37;
             // 
             // lblHEADING
@@ -105,18 +109,20 @@
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
             this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(11, 8);
+            this.lblHEADING.Location = new System.Drawing.Point(15, 10);
+            this.lblHEADING.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(282, 29);
+            this.lblHEADING.Size = new System.Drawing.Size(326, 32);
             this.lblHEADING.TabIndex = 26;
             this.lblHEADING.Text = "PRODUCTION REPORT";
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1787, 4);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(65, 25);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -137,9 +143,10 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.ImageIndex = 0;
-            this.btnAdd.Location = new System.Drawing.Point(802, 53);
+            this.btnAdd.Location = new System.Drawing.Point(1069, 65);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(91, 25);
+            this.btnAdd.Size = new System.Drawing.Size(121, 31);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -177,11 +184,12 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdItems.DefaultCellStyle = dataGridViewCellStyle6;
-            this.grdItems.Location = new System.Drawing.Point(15, 84);
+            this.grdItems.Location = new System.Drawing.Point(20, 103);
+            this.grdItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdItems.Name = "grdItems";
             this.grdItems.ReadOnly = true;
             this.grdItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdItems.Size = new System.Drawing.Size(979, 349);
+            this.grdItems.Size = new System.Drawing.Size(1305, 430);
             this.grdItems.TabIndex = 325;
             this.grdItems.TabStop = false;
             // 
@@ -198,14 +206,14 @@
             this.productName.HeaderText = "PRODUCT NAME";
             this.productName.Name = "productName";
             this.productName.ReadOnly = true;
-            this.productName.Width = 143;
+            this.productName.Width = 181;
             // 
             // qty
             // 
             this.qty.HeaderText = "QUANTITY";
             this.qty.Name = "qty";
             this.qty.ReadOnly = true;
-            this.qty.Width = 103;
+            this.qty.Width = 129;
             // 
             // cmbProduct
             // 
@@ -213,9 +221,10 @@
             this.cmbProduct.Items.AddRange(new object[] {
             "--SELECT SUPPLIER--",
             "AUTOMART"});
-            this.cmbProduct.Location = new System.Drawing.Point(337, 53);
+            this.cmbProduct.Location = new System.Drawing.Point(449, 65);
+            this.cmbProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbProduct.Name = "cmbProduct";
-            this.cmbProduct.Size = new System.Drawing.Size(296, 25);
+            this.cmbProduct.Size = new System.Drawing.Size(393, 29);
             this.cmbProduct.TabIndex = 330;
             // 
             // btnViewReport
@@ -226,9 +235,10 @@
             this.btnViewReport.ForeColor = System.Drawing.Color.White;
             this.btnViewReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnViewReport.ImageIndex = 0;
-            this.btnViewReport.Location = new System.Drawing.Point(836, 445);
+            this.btnViewReport.Location = new System.Drawing.Point(1115, 548);
+            this.btnViewReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnViewReport.Name = "btnViewReport";
-            this.btnViewReport.Size = new System.Drawing.Size(158, 25);
+            this.btnViewReport.Size = new System.Drawing.Size(211, 31);
             this.btnViewReport.TabIndex = 359;
             this.btnViewReport.Text = "View Report";
             this.btnViewReport.UseVisualStyleBackColor = false;
@@ -240,9 +250,10 @@
             this.cmbBrand.Items.AddRange(new object[] {
             "--SELECT SUPPLIER--",
             "AUTOMART"});
-            this.cmbBrand.Location = new System.Drawing.Point(65, 53);
+            this.cmbBrand.Location = new System.Drawing.Point(87, 65);
+            this.cmbBrand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbBrand.Name = "cmbBrand";
-            this.cmbBrand.Size = new System.Drawing.Size(200, 25);
+            this.cmbBrand.Size = new System.Drawing.Size(265, 29);
             this.cmbBrand.TabIndex = 361;
             this.cmbBrand.SelectedIndexChanged += new System.EventHandler(this.cmbBrand_SelectedIndexChanged);
             // 
@@ -250,9 +261,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(12, 58);
+            this.label1.Location = new System.Drawing.Point(16, 71);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 15);
+            this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 360;
             this.label1.Text = "BRAND";
             // 
@@ -264,9 +276,10 @@
             this.btnCLEAR.ForeColor = System.Drawing.Color.White;
             this.btnCLEAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCLEAR.ImageIndex = 1;
-            this.btnCLEAR.Location = new System.Drawing.Point(902, 53);
+            this.btnCLEAR.Location = new System.Drawing.Point(1203, 65);
+            this.btnCLEAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCLEAR.Name = "btnCLEAR";
-            this.btnCLEAR.Size = new System.Drawing.Size(91, 25);
+            this.btnCLEAR.Size = new System.Drawing.Size(121, 31);
             this.btnCLEAR.TabIndex = 362;
             this.btnCLEAR.Text = "CLEAR";
             this.btnCLEAR.UseVisualStyleBackColor = false;
@@ -274,11 +287,11 @@
             // 
             // frmProductionReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1007, 476);
+            this.ClientSize = new System.Drawing.Size(1340, 576);
             this.Controls.Add(this.btnCLEAR);
             this.Controls.Add(this.cmbBrand);
             this.Controls.Add(this.label1);
@@ -290,12 +303,12 @@
             this.Controls.Add(this.pnlHEADER);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1023, 515);
+            this.MaximumSize = new System.Drawing.Size(1358, 623);
             this.MinimizeBox = false;
             this.Name = "frmProductionReport";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PRODUCTION";
             this.Load += new System.EventHandler(this.frmJobOrder_Load);

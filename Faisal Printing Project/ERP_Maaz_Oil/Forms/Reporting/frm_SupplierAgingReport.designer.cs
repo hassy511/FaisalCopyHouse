@@ -60,15 +60,15 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(340, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(394, 107);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -76,9 +76,9 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Location = new System.Drawing.Point(1499, 3);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(57, 24);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
@@ -87,11 +87,11 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 14.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(2, 18);
+            this.lblHEADING.Location = new System.Drawing.Point(2, 22);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(146, 46);
+            this.lblHEADING.Size = new System.Drawing.Size(203, 58);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "SUPPLIER \r\nAGING REPORT";
             // 
@@ -104,9 +104,9 @@
             this.grpCASHBOOK.Controls.Add(this.cmbSupplier);
             this.grpCASHBOOK.Controls.Add(this.btnSHOW);
             this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpCASHBOOK.Location = new System.Drawing.Point(0, 90);
+            this.grpCASHBOOK.Location = new System.Drawing.Point(0, 110);
             this.grpCASHBOOK.Name = "grpCASHBOOK";
-            this.grpCASHBOOK.Size = new System.Drawing.Size(340, 115);
+            this.grpCASHBOOK.Size = new System.Drawing.Size(396, 141);
             this.grpCASHBOOK.TabIndex = 1;
             this.grpCASHBOOK.TabStop = false;
             this.grpCASHBOOK.Text = "AGING REPORT";
@@ -117,17 +117,17 @@
             this.dtpDueDate.CustomFormat = "dd/MM/yyyy";
             this.dtpDueDate.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtpDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDueDate.Location = new System.Drawing.Point(137, 55);
+            this.dtpDueDate.Location = new System.Drawing.Point(159, 67);
             this.dtpDueDate.Name = "dtpDueDate";
-            this.dtpDueDate.Size = new System.Drawing.Size(197, 23);
+            this.dtpDueDate.Size = new System.Drawing.Size(229, 27);
             this.dtpDueDate.TabIndex = 2;
             // 
             // rdbSupplier
             // 
             this.rdbSupplier.AutoSize = true;
-            this.rdbSupplier.Location = new System.Drawing.Point(7, 26);
+            this.rdbSupplier.Location = new System.Drawing.Point(8, 31);
             this.rdbSupplier.Name = "rdbSupplier";
-            this.rdbSupplier.Size = new System.Drawing.Size(86, 21);
+            this.rdbSupplier.Size = new System.Drawing.Size(109, 27);
             this.rdbSupplier.TabIndex = 129;
             this.rdbSupplier.Text = "SUPPLIER:";
             this.rdbSupplier.UseVisualStyleBackColor = true;
@@ -136,9 +136,9 @@
             // rdbDueDate
             // 
             this.rdbDueDate.AutoSize = true;
-            this.rdbDueDate.Location = new System.Drawing.Point(7, 55);
+            this.rdbDueDate.Location = new System.Drawing.Point(8, 67);
             this.rdbDueDate.Name = "rdbDueDate";
-            this.rdbDueDate.Size = new System.Drawing.Size(126, 21);
+            this.rdbDueDate.Size = new System.Drawing.Size(161, 27);
             this.rdbDueDate.TabIndex = 1;
             this.rdbDueDate.Text = "DUE DATE UPTO:";
             this.rdbDueDate.UseVisualStyleBackColor = true;
@@ -148,9 +148,9 @@
             // 
             this.rdbOverAll.AutoSize = true;
             this.rdbOverAll.Checked = true;
-            this.rdbOverAll.Location = new System.Drawing.Point(7, 86);
+            this.rdbOverAll.Location = new System.Drawing.Point(8, 105);
             this.rdbOverAll.Name = "rdbOverAll";
-            this.rdbOverAll.Size = new System.Drawing.Size(80, 21);
+            this.rdbOverAll.Size = new System.Drawing.Size(102, 27);
             this.rdbOverAll.TabIndex = 3;
             this.rdbOverAll.TabStop = true;
             this.rdbOverAll.Text = "OVERALL";
@@ -162,9 +162,9 @@
             this.cmbSupplier.Enabled = false;
             this.cmbSupplier.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbSupplier.FormattingEnabled = true;
-            this.cmbSupplier.Location = new System.Drawing.Point(137, 24);
+            this.cmbSupplier.Location = new System.Drawing.Point(159, 29);
             this.cmbSupplier.Name = "cmbSupplier";
-            this.cmbSupplier.Size = new System.Drawing.Size(197, 25);
+            this.cmbSupplier.Size = new System.Drawing.Size(229, 29);
             this.cmbSupplier.TabIndex = 0;
             this.cmbSupplier.DropDown += new System.EventHandler(this.cmbCustomer_DropDown);
             this.cmbSupplier.TextUpdate += new System.EventHandler(this.cmbSalePerson_TextUpdate);
@@ -179,9 +179,9 @@
             this.btnSHOW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSHOW.ImageIndex = 5;
             this.btnSHOW.ImageList = this.imageList1;
-            this.btnSHOW.Location = new System.Drawing.Point(137, 84);
+            this.btnSHOW.Location = new System.Drawing.Point(159, 103);
             this.btnSHOW.Name = "btnSHOW";
-            this.btnSHOW.Size = new System.Drawing.Size(197, 25);
+            this.btnSHOW.Size = new System.Drawing.Size(229, 30);
             this.btnSHOW.TabIndex = 4;
             this.btnSHOW.Text = "SHOW";
             this.btnSHOW.UseVisualStyleBackColor = false;
@@ -200,15 +200,15 @@
             // 
             // frm_SupplierAgingReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(340, 207);
+            this.ClientSize = new System.Drawing.Size(394, 244);
             this.Controls.Add(this.grpCASHBOOK);
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(356, 246);
+            this.MaximumSize = new System.Drawing.Size(412, 291);
             this.Name = "frm_SupplierAgingReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SUPPLIER AGING REPORT";

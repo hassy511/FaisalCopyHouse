@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_JournalVoucherReport));
             this.pnlHEADER = new System.Windows.Forms.Panel();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
@@ -66,15 +66,15 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(336, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(391, 107);
             this.pnlHEADER.TabIndex = 38;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -82,9 +82,9 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Location = new System.Drawing.Point(1499, 3);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(57, 24);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
@@ -93,11 +93,11 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 11.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(4, 32);
+            this.lblHEADING.Location = new System.Drawing.Point(4, 39);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(151, 18);
+            this.lblHEADING.Size = new System.Drawing.Size(209, 25);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "JOURNAL VOUCHER";
             // 
@@ -112,9 +112,9 @@
             this.grpCASHBOOK.Controls.Add(this.btnSHOW);
             this.grpCASHBOOK.Controls.Add(this.lblITO);
             this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpCASHBOOK.Location = new System.Drawing.Point(8, 104);
+            this.grpCASHBOOK.Location = new System.Drawing.Point(9, 127);
             this.grpCASHBOOK.Name = "grpCASHBOOK";
-            this.grpCASHBOOK.Size = new System.Drawing.Size(317, 163);
+            this.grpCASHBOOK.Size = new System.Drawing.Size(369, 200);
             this.grpCASHBOOK.TabIndex = 39;
             this.grpCASHBOOK.TabStop = false;
             this.grpCASHBOOK.Text = "JOURNAL VOUCHER REPORT";
@@ -125,45 +125,45 @@
             this.cmbACCOUNT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbACCOUNT.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbACCOUNT.FormattingEnabled = true;
-            this.cmbACCOUNT.Location = new System.Drawing.Point(64, 33);
+            this.cmbACCOUNT.Location = new System.Drawing.Point(74, 40);
             this.cmbACCOUNT.Name = "cmbACCOUNT";
-            this.cmbACCOUNT.Size = new System.Drawing.Size(231, 25);
+            this.cmbACCOUNT.Size = new System.Drawing.Size(268, 29);
             this.cmbACCOUNT.TabIndex = 0;
             // 
             // grdSEARCH
             // 
             this.grdSEARCH.AllowUserToAddRows = false;
             this.grdSEARCH.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue;
-            this.grdSEARCH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightBlue;
+            this.grdSEARCH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.grdSEARCH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grdSEARCH.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grdSEARCH.BackgroundColor = System.Drawing.Color.White;
             this.grdSEARCH.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdSEARCH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdSEARCH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.grdSEARCH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdSEARCH.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdSEARCH.Location = new System.Drawing.Point(18, 122);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle6;
+            this.grdSEARCH.Location = new System.Drawing.Point(20, 150);
             this.grdSEARCH.Name = "grdSEARCH";
             this.grdSEARCH.ReadOnly = true;
             this.grdSEARCH.RowHeadersVisible = false;
             this.grdSEARCH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdSEARCH.Size = new System.Drawing.Size(20, 14);
+            this.grdSEARCH.Size = new System.Drawing.Size(23, 17);
             this.grdSEARCH.TabIndex = 338;
             this.grdSEARCH.TabStop = false;
             this.grdSEARCH.Visible = false;
@@ -173,9 +173,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(26, 38);
+            this.label1.Location = new System.Drawing.Point(30, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 15);
+            this.label1.Size = new System.Drawing.Size(41, 20);
             this.label1.TabIndex = 339;
             this.label1.Text = "ACC:";
             // 
@@ -184,9 +184,9 @@
             this.dtp_TO.CustomFormat = "dd/MM/yyyy";
             this.dtp_TO.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_TO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_TO.Location = new System.Drawing.Point(64, 93);
+            this.dtp_TO.Location = new System.Drawing.Point(74, 114);
             this.dtp_TO.Name = "dtp_TO";
-            this.dtp_TO.Size = new System.Drawing.Size(231, 23);
+            this.dtp_TO.Size = new System.Drawing.Size(268, 27);
             this.dtp_TO.TabIndex = 2;
             // 
             // dtp_FROM
@@ -194,9 +194,9 @@
             this.dtp_FROM.CustomFormat = "dd/MM/yyyy";
             this.dtp_FROM.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_FROM.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_FROM.Location = new System.Drawing.Point(64, 64);
+            this.dtp_FROM.Location = new System.Drawing.Point(74, 78);
             this.dtp_FROM.Name = "dtp_FROM";
-            this.dtp_FROM.Size = new System.Drawing.Size(231, 23);
+            this.dtp_FROM.Size = new System.Drawing.Size(268, 27);
             this.dtp_FROM.TabIndex = 1;
             // 
             // lblFROM
@@ -204,9 +204,9 @@
             this.lblFROM.AutoSize = true;
             this.lblFROM.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblFROM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFROM.Location = new System.Drawing.Point(15, 68);
+            this.lblFROM.Location = new System.Drawing.Point(17, 83);
             this.lblFROM.Name = "lblFROM";
-            this.lblFROM.Size = new System.Drawing.Size(43, 15);
+            this.lblFROM.Size = new System.Drawing.Size(55, 20);
             this.lblFROM.TabIndex = 118;
             this.lblFROM.Text = "FROM:";
             // 
@@ -219,9 +219,9 @@
             this.btnSHOW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSHOW.ImageIndex = 5;
             this.btnSHOW.ImageList = this.imageList1;
-            this.btnSHOW.Location = new System.Drawing.Point(64, 122);
+            this.btnSHOW.Location = new System.Drawing.Point(74, 150);
             this.btnSHOW.Name = "btnSHOW";
-            this.btnSHOW.Size = new System.Drawing.Size(231, 25);
+            this.btnSHOW.Size = new System.Drawing.Size(269, 30);
             this.btnSHOW.TabIndex = 3;
             this.btnSHOW.Text = "SHOW";
             this.btnSHOW.UseVisualStyleBackColor = false;
@@ -243,22 +243,22 @@
             this.lblITO.AutoSize = true;
             this.lblITO.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblITO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblITO.Location = new System.Drawing.Point(32, 97);
+            this.lblITO.Location = new System.Drawing.Point(37, 119);
             this.lblITO.Name = "lblITO";
-            this.lblITO.Size = new System.Drawing.Size(26, 15);
+            this.lblITO.Size = new System.Drawing.Size(31, 20);
             this.lblITO.TabIndex = 46;
             this.lblITO.Text = "TO:";
             // 
             // frm_JournalVoucherReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(336, 278);
+            this.ClientSize = new System.Drawing.Size(391, 342);
             this.Controls.Add(this.pnlHEADER);
             this.Controls.Add(this.grpCASHBOOK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_JournalVoucherReport";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JOURNAL VOUCHER REPORT";
             this.Load += new System.EventHandler(this.frm_JournalVoucherReport_Load);

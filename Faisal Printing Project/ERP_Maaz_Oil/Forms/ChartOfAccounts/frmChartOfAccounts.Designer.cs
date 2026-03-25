@@ -71,9 +71,10 @@
             // treeCOA
             // 
             this.treeCOA.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeCOA.Location = new System.Drawing.Point(0, 95);
+            this.treeCOA.Location = new System.Drawing.Point(0, 117);
+            this.treeCOA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.treeCOA.Name = "treeCOA";
-            this.treeCOA.Size = new System.Drawing.Size(353, 548);
+            this.treeCOA.Size = new System.Drawing.Size(469, 674);
             this.treeCOA.TabIndex = 37;
             // 
             // cmbControlAccount
@@ -82,9 +83,10 @@
             this.cmbControlAccount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbControlAccount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbControlAccount.FormattingEnabled = true;
-            this.cmbControlAccount.Location = new System.Drawing.Point(487, 531);
+            this.cmbControlAccount.Location = new System.Drawing.Point(649, 654);
+            this.cmbControlAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbControlAccount.Name = "cmbControlAccount";
-            this.cmbControlAccount.Size = new System.Drawing.Size(231, 25);
+            this.cmbControlAccount.Size = new System.Drawing.Size(307, 29);
             this.cmbControlAccount.TabIndex = 0;
             this.cmbControlAccount.DropDown += new System.EventHandler(this.cmbCONTROL_AC_DropDown);
             this.cmbControlAccount.SelectedIndexChanged += new System.EventHandler(this.cmbControlAccount_SelectedIndexChanged);
@@ -96,9 +98,10 @@
             this.lblControlAccount.AutoSize = true;
             this.lblControlAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblControlAccount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblControlAccount.Location = new System.Drawing.Point(359, 536);
+            this.lblControlAccount.Location = new System.Drawing.Point(479, 660);
+            this.lblControlAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblControlAccount.Name = "lblControlAccount";
-            this.lblControlAccount.Size = new System.Drawing.Size(112, 15);
+            this.lblControlAccount.Size = new System.Drawing.Size(144, 20);
             this.lblControlAccount.TabIndex = 209;
             this.lblControlAccount.Text = "ACCOUNT NATURE:";
             // 
@@ -109,9 +112,10 @@
             this.cmbGroupAccount.Enabled = false;
             this.cmbGroupAccount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbGroupAccount.FormattingEnabled = true;
-            this.cmbGroupAccount.Location = new System.Drawing.Point(846, 531);
+            this.cmbGroupAccount.Location = new System.Drawing.Point(1128, 654);
+            this.cmbGroupAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbGroupAccount.Name = "cmbGroupAccount";
-            this.cmbGroupAccount.Size = new System.Drawing.Size(213, 25);
+            this.cmbGroupAccount.Size = new System.Drawing.Size(283, 29);
             this.cmbGroupAccount.TabIndex = 1;
             this.cmbGroupAccount.DropDown += new System.EventHandler(this.cmbGROUP_AC_DropDown);
             this.cmbGroupAccount.TextUpdate += new System.EventHandler(this.cmbCONTROL_AC_TextUpdate);
@@ -122,9 +126,10 @@
             this.lblGroupAccount.AutoSize = true;
             this.lblGroupAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblGroupAccount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblGroupAccount.Location = new System.Drawing.Point(724, 536);
+            this.lblGroupAccount.Location = new System.Drawing.Point(965, 660);
+            this.lblGroupAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGroupAccount.Name = "lblGroupAccount";
-            this.lblGroupAccount.Size = new System.Drawing.Size(86, 15);
+            this.lblGroupAccount.Size = new System.Drawing.Size(110, 20);
             this.lblGroupAccount.TabIndex = 212;
             this.lblGroupAccount.Text = "TREE BRANCH:";
             // 
@@ -133,9 +138,10 @@
             this.lblAccountName.AutoSize = true;
             this.lblAccountName.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblAccountName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAccountName.Location = new System.Drawing.Point(359, 567);
+            this.lblAccountName.Location = new System.Drawing.Point(479, 698);
+            this.lblAccountName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAccountName.Name = "lblAccountName";
-            this.lblAccountName.Size = new System.Drawing.Size(102, 15);
+            this.lblAccountName.Size = new System.Drawing.Size(131, 20);
             this.lblAccountName.TabIndex = 213;
             this.lblAccountName.Text = "ACCOUNT NAME:";
             // 
@@ -143,10 +149,11 @@
             // 
             this.txtAccountName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAccountName.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtAccountName.Location = new System.Drawing.Point(487, 562);
+            this.txtAccountName.Location = new System.Drawing.Point(649, 692);
+            this.txtAccountName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccountName.MaxLength = 32000;
             this.txtAccountName.Name = "txtAccountName";
-            this.txtAccountName.Size = new System.Drawing.Size(231, 25);
+            this.txtAccountName.Size = new System.Drawing.Size(307, 29);
             this.txtAccountName.TabIndex = 2;
             this.txtAccountName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtACCOUNT_NAME_MouseClick);
             this.txtAccountName.TextChanged += new System.EventHandler(this.txtAccountName_TextChanged);
@@ -156,9 +163,10 @@
             // 
             this.chkDeActive.AutoSize = true;
             this.chkDeActive.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.chkDeActive.Location = new System.Drawing.Point(990, 593);
+            this.chkDeActive.Location = new System.Drawing.Point(1320, 730);
+            this.chkDeActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkDeActive.Name = "chkDeActive";
-            this.chkDeActive.Size = new System.Drawing.Size(86, 19);
+            this.chkDeActive.Size = new System.Drawing.Size(105, 24);
             this.chkDeActive.TabIndex = 5;
             this.chkDeActive.Text = "DE-ACTIVE";
             this.chkDeActive.UseVisualStyleBackColor = true;
@@ -167,10 +175,11 @@
             // 
             this.txtOpeningBalance.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOpeningBalance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtOpeningBalance.Location = new System.Drawing.Point(846, 562);
+            this.txtOpeningBalance.Location = new System.Drawing.Point(1128, 692);
+            this.txtOpeningBalance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtOpeningBalance.MaxLength = 15;
             this.txtOpeningBalance.Name = "txtOpeningBalance";
-            this.txtOpeningBalance.Size = new System.Drawing.Size(122, 25);
+            this.txtOpeningBalance.Size = new System.Drawing.Size(161, 29);
             this.txtOpeningBalance.TabIndex = 3;
             this.txtOpeningBalance.Text = "0";
             this.txtOpeningBalance.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtACCOUNT_NAME_MouseClick);
@@ -183,9 +192,10 @@
             this.lblOpeningBalance.AutoSize = true;
             this.lblOpeningBalance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblOpeningBalance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblOpeningBalance.Location = new System.Drawing.Point(724, 567);
+            this.lblOpeningBalance.Location = new System.Drawing.Point(965, 698);
+            this.lblOpeningBalance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOpeningBalance.Name = "lblOpeningBalance";
-            this.lblOpeningBalance.Size = new System.Drawing.Size(116, 15);
+            this.lblOpeningBalance.Size = new System.Drawing.Size(148, 20);
             this.lblOpeningBalance.TabIndex = 216;
             this.lblOpeningBalance.Text = "OPENING BALANCE:";
             // 
@@ -198,9 +208,10 @@
             this.cmbDebitCredit.Items.AddRange(new object[] {
             "DEBIT",
             "CREDIT"});
-            this.cmbDebitCredit.Location = new System.Drawing.Point(968, 562);
+            this.cmbDebitCredit.Location = new System.Drawing.Point(1291, 692);
+            this.cmbDebitCredit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbDebitCredit.Name = "cmbDebitCredit";
-            this.cmbDebitCredit.Size = new System.Drawing.Size(116, 25);
+            this.cmbDebitCredit.Size = new System.Drawing.Size(153, 29);
             this.cmbDebitCredit.TabIndex = 4;
             this.cmbDebitCredit.TextUpdate += new System.EventHandler(this.cmbCONTROL_AC_TextUpdate);
             // 
@@ -232,11 +243,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdSEARCH.Location = new System.Drawing.Point(359, 126);
+            this.grdSEARCH.Location = new System.Drawing.Point(479, 155);
+            this.grdSEARCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdSEARCH.Name = "grdSEARCH";
             this.grdSEARCH.ReadOnly = true;
             this.grdSEARCH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdSEARCH.Size = new System.Drawing.Size(725, 399);
+            this.grdSEARCH.Size = new System.Drawing.Size(967, 491);
             this.grdSEARCH.TabIndex = 221;
             this.grdSEARCH.TabStop = false;
             this.grdSEARCH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdSEARCH_CellClick);
@@ -250,7 +262,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtSearch.Location = new System.Drawing.Point(422, 95);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(662, 25);
+            this.txtSearch.Size = new System.Drawing.Size(662, 29);
             this.txtSearch.TabIndex = 220;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSEARCH_TextChanged);
             // 
@@ -259,9 +271,10 @@
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSearch.Location = new System.Drawing.Point(359, 99);
+            this.lblSearch.Location = new System.Drawing.Point(479, 122);
+            this.lblSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(57, 17);
+            this.lblSearch.Size = new System.Drawing.Size(74, 23);
             this.lblSearch.TabIndex = 219;
             this.lblSearch.Text = "SEARCH";
             // 
@@ -281,9 +294,10 @@
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClear.ImageIndex = 1;
             this.btnClear.ImageList = this.imageList1;
-            this.btnClear.Location = new System.Drawing.Point(960, 618);
+            this.btnClear.Location = new System.Drawing.Point(1280, 761);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(116, 25);
+            this.btnClear.Size = new System.Drawing.Size(155, 31);
             this.btnClear.TabIndex = 7;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -298,9 +312,10 @@
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.ImageIndex = 0;
             this.btnSave.ImageList = this.imageList1;
-            this.btnSave.Location = new System.Drawing.Point(844, 618);
+            this.btnSave.Location = new System.Drawing.Point(1125, 761);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(116, 25);
+            this.btnSave.Size = new System.Drawing.Size(155, 31);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -312,9 +327,10 @@
             this.btnAddGroupAccount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnAddGroupAccount.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddGroupAccount.Image = global::ERP_Maaz_Oil.Properties.Resources.plus;
-            this.btnAddGroupAccount.Location = new System.Drawing.Point(1059, 531);
+            this.btnAddGroupAccount.Location = new System.Drawing.Point(1412, 654);
+            this.btnAddGroupAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddGroupAccount.Name = "btnAddGroupAccount";
-            this.btnAddGroupAccount.Size = new System.Drawing.Size(25, 25);
+            this.btnAddGroupAccount.Size = new System.Drawing.Size(33, 30);
             this.btnAddGroupAccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnAddGroupAccount.TabIndex = 210;
             this.btnAddGroupAccount.TabStop = false;
@@ -326,9 +342,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearching.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSearching.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtSearching.Location = new System.Drawing.Point(422, 95);
+            this.txtSearching.Location = new System.Drawing.Point(563, 117);
+            this.txtSearching.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearching.Name = "txtSearching";
-            this.txtSearching.Size = new System.Drawing.Size(656, 25);
+            this.txtSearching.Size = new System.Drawing.Size(873, 29);
             this.txtSearching.TabIndex = 284;
             this.txtSearching.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -337,9 +354,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(359, 595);
+            this.label8.Location = new System.Drawing.Point(479, 732);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 15);
+            this.label8.Size = new System.Drawing.Size(85, 20);
             this.label8.TabIndex = 358;
             this.label8.Text = "RATE TYPE:";
             // 
@@ -347,18 +365,20 @@
             // 
             this.panel1.Controls.Add(this.rdbNet);
             this.panel1.Controls.Add(this.rdbRetail);
-            this.panel1.Location = new System.Drawing.Point(487, 593);
+            this.panel1.Location = new System.Drawing.Point(649, 730);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(231, 26);
+            this.panel1.Size = new System.Drawing.Size(308, 32);
             this.panel1.TabIndex = 359;
             // 
             // rdbNet
             // 
             this.rdbNet.AutoSize = true;
             this.rdbNet.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.rdbNet.Location = new System.Drawing.Point(71, 3);
+            this.rdbNet.Location = new System.Drawing.Point(95, 4);
+            this.rdbNet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbNet.Name = "rdbNet";
-            this.rdbNet.Size = new System.Drawing.Size(47, 19);
+            this.rdbNet.Size = new System.Drawing.Size(58, 24);
             this.rdbNet.TabIndex = 1;
             this.rdbNet.Text = "NET";
             this.rdbNet.UseVisualStyleBackColor = true;
@@ -367,9 +387,10 @@
             // 
             this.rdbRetail.AutoSize = true;
             this.rdbRetail.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.rdbRetail.Location = new System.Drawing.Point(6, 3);
+            this.rdbRetail.Location = new System.Drawing.Point(8, 4);
+            this.rdbRetail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbRetail.Name = "rdbRetail";
-            this.rdbRetail.Size = new System.Drawing.Size(62, 19);
+            this.rdbRetail.Size = new System.Drawing.Size(75, 24);
             this.rdbRetail.TabIndex = 0;
             this.rdbRetail.Text = "RETAIL";
             this.rdbRetail.UseVisualStyleBackColor = true;
@@ -377,9 +398,10 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Location = new System.Drawing.Point(1713, 4);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(65, 25);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
@@ -390,18 +412,20 @@
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
             this.lblHEADING.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(12, 36);
+            this.lblHEADING.Location = new System.Drawing.Point(16, 44);
+            this.lblHEADING.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(224, 23);
+            this.lblHEADING.Size = new System.Drawing.Size(281, 29);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "CHART OF ACCOUNTS";
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1787, 4);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(65, 25);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -416,16 +440,17 @@
             this.pnlHEADER.Controls.Add(this.pictureBox14);
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
+            this.pnlHEADER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(1090, 85);
+            this.pnlHEADER.Size = new System.Drawing.Size(1453, 105);
             this.pnlHEADER.TabIndex = 222;
             // 
             // frmChartOfAccounts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1090, 647);
+            this.ClientSize = new System.Drawing.Size(1453, 796);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtSearching);
@@ -448,7 +473,8 @@
             this.Controls.Add(this.treeCOA);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1284, 703);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1706, 854);
             this.Name = "frmChartOfAccounts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CHART OF ACCOUNTS";

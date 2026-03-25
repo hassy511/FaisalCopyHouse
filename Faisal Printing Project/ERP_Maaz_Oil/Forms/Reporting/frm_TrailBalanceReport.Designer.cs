@@ -35,6 +35,7 @@
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.lblHEADING = new System.Windows.Forms.Label();
             this.grpCASHBOOK = new System.Windows.Forms.GroupBox();
+            this.chkZeroBalance = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rdbConsolidated = new System.Windows.Forms.RadioButton();
             this.rdbDetailed = new System.Windows.Forms.RadioButton();
@@ -46,7 +47,6 @@
             this.btnSHOW = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.lblITO = new System.Windows.Forms.Label();
-            this.chkZeroBalance = new System.Windows.Forms.CheckBox();
             this.pnlHEADER.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -66,15 +66,15 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(302, 60);
+            this.pnlHEADER.Size = new System.Drawing.Size(349, 73);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -82,9 +82,9 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Location = new System.Drawing.Point(1499, 3);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(57, 24);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
@@ -93,11 +93,11 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 10.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(2, 12);
+            this.lblHEADING.Location = new System.Drawing.Point(2, 14);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(119, 34);
+            this.lblHEADING.Size = new System.Drawing.Size(155, 44);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "TRIAL BALANCE \r\nREPORT";
             // 
@@ -113,29 +113,39 @@
             this.grpCASHBOOK.Controls.Add(this.btnSHOW);
             this.grpCASHBOOK.Controls.Add(this.lblITO);
             this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpCASHBOOK.Location = new System.Drawing.Point(2, 66);
+            this.grpCASHBOOK.Location = new System.Drawing.Point(2, 81);
             this.grpCASHBOOK.Name = "grpCASHBOOK";
-            this.grpCASHBOOK.Size = new System.Drawing.Size(297, 171);
+            this.grpCASHBOOK.Size = new System.Drawing.Size(346, 210);
             this.grpCASHBOOK.TabIndex = 37;
             this.grpCASHBOOK.TabStop = false;
             this.grpCASHBOOK.Text = "TRIAL BALANCE REPORT";
             this.grpCASHBOOK.Enter += new System.EventHandler(this.grpSALES_Enter);
             // 
+            // chkZeroBalance
+            // 
+            this.chkZeroBalance.AutoSize = true;
+            this.chkZeroBalance.Location = new System.Drawing.Point(93, 134);
+            this.chkZeroBalance.Name = "chkZeroBalance";
+            this.chkZeroBalance.Size = new System.Drawing.Size(179, 27);
+            this.chkZeroBalance.TabIndex = 129;
+            this.chkZeroBalance.Text = "Without 0 Balances";
+            this.chkZeroBalance.UseVisualStyleBackColor = true;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.rdbConsolidated);
             this.panel1.Controls.Add(this.rdbDetailed);
-            this.panel1.Location = new System.Drawing.Point(80, 78);
+            this.panel1.Location = new System.Drawing.Point(93, 95);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(211, 25);
+            this.panel1.Size = new System.Drawing.Size(246, 30);
             this.panel1.TabIndex = 128;
             // 
             // rdbConsolidated
             // 
             this.rdbConsolidated.AutoSize = true;
-            this.rdbConsolidated.Location = new System.Drawing.Point(102, 3);
+            this.rdbConsolidated.Location = new System.Drawing.Point(118, 3);
             this.rdbConsolidated.Name = "rdbConsolidated";
-            this.rdbConsolidated.Size = new System.Drawing.Size(105, 21);
+            this.rdbConsolidated.Size = new System.Drawing.Size(131, 27);
             this.rdbConsolidated.TabIndex = 127;
             this.rdbConsolidated.Text = "Consolidated";
             this.rdbConsolidated.UseVisualStyleBackColor = true;
@@ -146,7 +156,7 @@
             this.rdbDetailed.Checked = true;
             this.rdbDetailed.Location = new System.Drawing.Point(3, 1);
             this.rdbDetailed.Name = "rdbDetailed";
-            this.rdbDetailed.Size = new System.Drawing.Size(75, 21);
+            this.rdbDetailed.Size = new System.Drawing.Size(94, 27);
             this.rdbDetailed.TabIndex = 126;
             this.rdbDetailed.TabStop = true;
             this.rdbDetailed.Text = "Detailed";
@@ -157,17 +167,17 @@
             this.dtpUpto.CustomFormat = "dd/MM/yyyy";
             this.dtpUpto.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtpUpto.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpUpto.Location = new System.Drawing.Point(80, 24);
+            this.dtpUpto.Location = new System.Drawing.Point(93, 29);
             this.dtpUpto.Name = "dtpUpto";
-            this.dtpUpto.Size = new System.Drawing.Size(211, 23);
+            this.dtpUpto.Size = new System.Drawing.Size(245, 27);
             this.dtpUpto.TabIndex = 125;
             // 
             // rdbRange
             // 
             this.rdbRange.AutoSize = true;
-            this.rdbRange.Location = new System.Drawing.Point(10, 54);
+            this.rdbRange.Location = new System.Drawing.Point(11, 66);
             this.rdbRange.Name = "rdbRange";
-            this.rdbRange.Size = new System.Drawing.Size(64, 21);
+            this.rdbRange.Size = new System.Drawing.Size(80, 27);
             this.rdbRange.TabIndex = 124;
             this.rdbRange.TabStop = true;
             this.rdbRange.Text = "Range";
@@ -177,9 +187,9 @@
             // 
             this.rdbUpto.AutoSize = true;
             this.rdbUpto.Checked = true;
-            this.rdbUpto.Location = new System.Drawing.Point(10, 25);
+            this.rdbUpto.Location = new System.Drawing.Point(11, 30);
             this.rdbUpto.Name = "rdbUpto";
-            this.rdbUpto.Size = new System.Drawing.Size(56, 21);
+            this.rdbUpto.Size = new System.Drawing.Size(69, 27);
             this.rdbUpto.TabIndex = 123;
             this.rdbUpto.TabStop = true;
             this.rdbUpto.Text = "Upto";
@@ -190,9 +200,9 @@
             this.dtp_TO.CustomFormat = "dd/MM/yyyy";
             this.dtp_TO.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_TO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_TO.Location = new System.Drawing.Point(194, 53);
+            this.dtp_TO.Location = new System.Drawing.Point(226, 65);
             this.dtp_TO.Name = "dtp_TO";
-            this.dtp_TO.Size = new System.Drawing.Size(97, 23);
+            this.dtp_TO.Size = new System.Drawing.Size(112, 27);
             this.dtp_TO.TabIndex = 120;
             // 
             // dtp_FROM
@@ -200,9 +210,9 @@
             this.dtp_FROM.CustomFormat = "dd/MM/yyyy";
             this.dtp_FROM.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_FROM.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_FROM.Location = new System.Drawing.Point(80, 53);
+            this.dtp_FROM.Location = new System.Drawing.Point(93, 65);
             this.dtp_FROM.Name = "dtp_FROM";
-            this.dtp_FROM.Size = new System.Drawing.Size(97, 23);
+            this.dtp_FROM.Size = new System.Drawing.Size(112, 27);
             this.dtp_FROM.TabIndex = 119;
             // 
             // btnSHOW
@@ -214,9 +224,9 @@
             this.btnSHOW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSHOW.ImageIndex = 5;
             this.btnSHOW.ImageList = this.imageList1;
-            this.btnSHOW.Location = new System.Drawing.Point(80, 136);
+            this.btnSHOW.Location = new System.Drawing.Point(93, 167);
             this.btnSHOW.Name = "btnSHOW";
-            this.btnSHOW.Size = new System.Drawing.Size(211, 25);
+            this.btnSHOW.Size = new System.Drawing.Size(246, 30);
             this.btnSHOW.TabIndex = 9;
             this.btnSHOW.Text = "SHOW";
             this.btnSHOW.UseVisualStyleBackColor = false;
@@ -238,33 +248,23 @@
             this.lblITO.AutoSize = true;
             this.lblITO.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblITO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblITO.Location = new System.Drawing.Point(176, 57);
+            this.lblITO.Location = new System.Drawing.Point(205, 70);
             this.lblITO.Name = "lblITO";
-            this.lblITO.Size = new System.Drawing.Size(18, 15);
+            this.lblITO.Size = new System.Drawing.Size(23, 20);
             this.lblITO.TabIndex = 46;
             this.lblITO.Text = " - ";
             // 
-            // chkZeroBalance
-            // 
-            this.chkZeroBalance.AutoSize = true;
-            this.chkZeroBalance.Location = new System.Drawing.Point(80, 109);
-            this.chkZeroBalance.Name = "chkZeroBalance";
-            this.chkZeroBalance.Size = new System.Drawing.Size(144, 21);
-            this.chkZeroBalance.TabIndex = 129;
-            this.chkZeroBalance.Text = "Without 0 Balances";
-            this.chkZeroBalance.UseVisualStyleBackColor = true;
-            // 
             // frm_TrailBalanceReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(302, 234);
+            this.ClientSize = new System.Drawing.Size(349, 278);
             this.Controls.Add(this.grpCASHBOOK);
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(318, 273);
+            this.MaximumSize = new System.Drawing.Size(367, 325);
             this.Name = "frm_TrailBalanceReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TRIAL BALANCE REPORT";

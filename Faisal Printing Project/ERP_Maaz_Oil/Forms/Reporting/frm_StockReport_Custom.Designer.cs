@@ -35,6 +35,8 @@
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.lblHEADING = new System.Windows.Forms.Label();
             this.grpCASHBOOK = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.itemList = new System.Windows.Forms.CheckedListBox();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,8 +46,6 @@
             this.lblFROM = new System.Windows.Forms.Label();
             this.btnSHOW = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.pnlHEADER.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -64,15 +64,15 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(348, 46);
+            this.pnlHEADER.Size = new System.Drawing.Size(405, 56);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -80,9 +80,9 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Location = new System.Drawing.Point(1499, 3);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(57, 24);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
@@ -91,11 +91,11 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 11.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(3, 17);
+            this.lblHEADING.Location = new System.Drawing.Point(3, 20);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(117, 18);
+            this.lblHEADING.Size = new System.Drawing.Size(170, 25);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "STOCK REPORT";
             // 
@@ -112,19 +112,38 @@
             this.grpCASHBOOK.Controls.Add(this.lblFROM);
             this.grpCASHBOOK.Controls.Add(this.btnSHOW);
             this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpCASHBOOK.Location = new System.Drawing.Point(1, 52);
+            this.grpCASHBOOK.Location = new System.Drawing.Point(1, 63);
             this.grpCASHBOOK.Name = "grpCASHBOOK";
-            this.grpCASHBOOK.Size = new System.Drawing.Size(343, 610);
+            this.grpCASHBOOK.Size = new System.Drawing.Size(400, 750);
             this.grpCASHBOOK.TabIndex = 37;
             this.grpCASHBOOK.TabStop = false;
             this.grpCASHBOOK.Text = "STOCK REPORT ITEM / DATE WISE";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(58, 82);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 20);
+            this.label3.TabIndex = 127;
+            this.label3.Text = "SEARCH:";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(128, 76);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(254, 29);
+            this.txtSearch.TabIndex = 126;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged_1);
+            // 
             // itemList
             // 
             this.itemList.FormattingEnabled = true;
-            this.itemList.Location = new System.Drawing.Point(6, 102);
+            this.itemList.Location = new System.Drawing.Point(6, 125);
             this.itemList.Name = "itemList";
-            this.itemList.Size = new System.Drawing.Size(331, 404);
+            this.itemList.Size = new System.Drawing.Size(385, 484);
             this.itemList.TabIndex = 125;
             // 
             // dtpFrom
@@ -132,9 +151,9 @@
             this.dtpFrom.CustomFormat = "dd/MM/yyyy";
             this.dtpFrom.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFrom.Location = new System.Drawing.Point(98, 514);
+            this.dtpFrom.Location = new System.Drawing.Point(114, 632);
             this.dtpFrom.Name = "dtpFrom";
-            this.dtpFrom.Size = new System.Drawing.Size(231, 23);
+            this.dtpFrom.Size = new System.Drawing.Size(268, 27);
             this.dtpFrom.TabIndex = 123;
             // 
             // label2
@@ -142,9 +161,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(49, 547);
+            this.label2.Location = new System.Drawing.Point(57, 673);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 15);
+            this.label2.Size = new System.Drawing.Size(31, 20);
             this.label2.TabIndex = 124;
             this.label2.Text = "TO:";
             // 
@@ -153,9 +172,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(12, 36);
+            this.label1.Location = new System.Drawing.Point(13, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 15);
+            this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 122;
             this.label1.Text = "SELECT BRAND:";
             // 
@@ -165,9 +184,9 @@
             this.cmbBrand.Items.AddRange(new object[] {
             "--SELECT SUPPLIER--",
             "AUTOMART"});
-            this.cmbBrand.Location = new System.Drawing.Point(110, 31);
+            this.cmbBrand.Location = new System.Drawing.Point(128, 38);
             this.cmbBrand.Name = "cmbBrand";
-            this.cmbBrand.Size = new System.Drawing.Size(219, 25);
+            this.cmbBrand.Size = new System.Drawing.Size(254, 29);
             this.cmbBrand.TabIndex = 121;
             this.cmbBrand.SelectedIndexChanged += new System.EventHandler(this.cmbBrand_SelectedIndexChanged);
             // 
@@ -176,9 +195,9 @@
             this.dtpTo.CustomFormat = "dd/MM/yyyy";
             this.dtpTo.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTo.Location = new System.Drawing.Point(98, 543);
+            this.dtpTo.Location = new System.Drawing.Point(114, 668);
             this.dtpTo.Name = "dtpTo";
-            this.dtpTo.Size = new System.Drawing.Size(231, 23);
+            this.dtpTo.Size = new System.Drawing.Size(268, 27);
             this.dtpTo.TabIndex = 1;
             // 
             // lblFROM
@@ -186,9 +205,9 @@
             this.lblFROM.AutoSize = true;
             this.lblFROM.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblFROM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFROM.Location = new System.Drawing.Point(49, 518);
+            this.lblFROM.Location = new System.Drawing.Point(57, 637);
             this.lblFROM.Name = "lblFROM";
-            this.lblFROM.Size = new System.Drawing.Size(43, 15);
+            this.lblFROM.Size = new System.Drawing.Size(55, 20);
             this.lblFROM.TabIndex = 118;
             this.lblFROM.Text = "FROM:";
             // 
@@ -201,9 +220,9 @@
             this.btnSHOW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSHOW.ImageIndex = 5;
             this.btnSHOW.ImageList = this.imageList1;
-            this.btnSHOW.Location = new System.Drawing.Point(98, 572);
+            this.btnSHOW.Location = new System.Drawing.Point(114, 703);
             this.btnSHOW.Name = "btnSHOW";
-            this.btnSHOW.Size = new System.Drawing.Size(231, 25);
+            this.btnSHOW.Size = new System.Drawing.Size(269, 30);
             this.btnSHOW.TabIndex = 3;
             this.btnSHOW.Text = "SHOW";
             this.btnSHOW.UseVisualStyleBackColor = false;
@@ -220,31 +239,12 @@
             this.imageList1.Images.SetKeyName(4, "icons8-Traffic Jam Filled-100.png");
             this.imageList1.Images.SetKeyName(5, "icons8-show-property-filled-50.png");
             // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(110, 62);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(219, 25);
-            this.txtSearch.TabIndex = 126;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged_1);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(50, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 15);
-            this.label3.TabIndex = 127;
-            this.label3.Text = "SEARCH:";
-            // 
             // frm_StockReport_Custom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(348, 664);
+            this.ClientSize = new System.Drawing.Size(405, 817);
             this.Controls.Add(this.grpCASHBOOK);
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

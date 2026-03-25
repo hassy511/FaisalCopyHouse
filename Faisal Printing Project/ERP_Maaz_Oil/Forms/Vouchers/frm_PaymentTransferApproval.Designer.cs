@@ -40,6 +40,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbRefAc = new System.Windows.Forms.ComboBox();
             this.lblRefAc = new System.Windows.Forms.Label();
+            this.cmbRecAccount = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.cmbPayAccount = new System.Windows.Forms.ComboBox();
             this.lblPayAccount = new System.Windows.Forms.Label();
             this.cmbSalesPerson = new System.Windows.Forms.ComboBox();
@@ -89,8 +91,6 @@
             this.rdbConformation = new System.Windows.Forms.RadioButton();
             this.cmbPerson = new System.Windows.Forms.ComboBox();
             this.lblSSalePerson = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbRecAccount = new System.Windows.Forms.ComboBox();
             this.grpCASHBOOK.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEntries)).BeginInit();
             this.pnlHEADER.SuspendLayout();
@@ -121,9 +121,9 @@
             this.grpCASHBOOK.Controls.Add(this.btnSHOW);
             this.grpCASHBOOK.Controls.Add(this.lblITO);
             this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpCASHBOOK.Location = new System.Drawing.Point(0, 70);
+            this.grpCASHBOOK.Location = new System.Drawing.Point(0, 86);
             this.grpCASHBOOK.Name = "grpCASHBOOK";
-            this.grpCASHBOOK.Size = new System.Drawing.Size(994, 115);
+            this.grpCASHBOOK.Size = new System.Drawing.Size(1159, 141);
             this.grpCASHBOOK.TabIndex = 37;
             this.grpCASHBOOK.TabStop = false;
             this.grpCASHBOOK.Text = "PAYMENT TRANSFER REPORT";
@@ -137,9 +137,9 @@
             this.cmbBank.FormattingEnabled = true;
             this.cmbBank.Items.AddRange(new object[] {
             "--SELECT INVOICE--"});
-            this.cmbBank.Location = new System.Drawing.Point(255, 84);
+            this.cmbBank.Location = new System.Drawing.Point(297, 103);
             this.cmbBank.Name = "cmbBank";
-            this.cmbBank.Size = new System.Drawing.Size(136, 25);
+            this.cmbBank.Size = new System.Drawing.Size(157, 29);
             this.cmbBank.TabIndex = 353;
             // 
             // label3
@@ -147,9 +147,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(203, 87);
+            this.label3.Location = new System.Drawing.Point(236, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.Size = new System.Drawing.Size(58, 23);
             this.label3.TabIndex = 352;
             this.label3.Text = "BANK:";
             // 
@@ -161,9 +161,9 @@
             this.cmbSubAccount.FormattingEnabled = true;
             this.cmbSubAccount.Items.AddRange(new object[] {
             "--SELECT INVOICE--"});
-            this.cmbSubAccount.Location = new System.Drawing.Point(495, 83);
+            this.cmbSubAccount.Location = new System.Drawing.Point(577, 102);
             this.cmbSubAccount.Name = "cmbSubAccount";
-            this.cmbSubAccount.Size = new System.Drawing.Size(188, 25);
+            this.cmbSubAccount.Size = new System.Drawing.Size(218, 29);
             this.cmbSubAccount.TabIndex = 353;
             // 
             // label2
@@ -171,9 +171,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(397, 85);
+            this.label2.Location = new System.Drawing.Point(463, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 17);
+            this.label2.Size = new System.Drawing.Size(83, 23);
             this.label2.TabIndex = 352;
             this.label2.Text = "SUB ACC:";
             // 
@@ -183,9 +183,9 @@
             this.cmbRefAc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbRefAc.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbRefAc.FormattingEnabled = true;
-            this.cmbRefAc.Location = new System.Drawing.Point(785, 48);
+            this.cmbRefAc.Location = new System.Drawing.Point(915, 59);
             this.cmbRefAc.Name = "cmbRefAc";
-            this.cmbRefAc.Size = new System.Drawing.Size(203, 25);
+            this.cmbRefAc.Size = new System.Drawing.Size(236, 29);
             this.cmbRefAc.TabIndex = 129;
             // 
             // lblRefAc
@@ -193,11 +193,33 @@
             this.lblRefAc.AutoSize = true;
             this.lblRefAc.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblRefAc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRefAc.Location = new System.Drawing.Point(717, 53);
+            this.lblRefAc.Location = new System.Drawing.Point(836, 65);
             this.lblRefAc.Name = "lblRefAc";
-            this.lblRefAc.Size = new System.Drawing.Size(47, 15);
+            this.lblRefAc.Size = new System.Drawing.Size(61, 20);
             this.lblRefAc.TabIndex = 128;
             this.lblRefAc.Text = "REF AC:";
+            // 
+            // cmbRecAccount
+            // 
+            this.cmbRecAccount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbRecAccount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbRecAccount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cmbRecAccount.FormattingEnabled = true;
+            this.cmbRecAccount.Location = new System.Drawing.Point(577, 65);
+            this.cmbRecAccount.Name = "cmbRecAccount";
+            this.cmbRecAccount.Size = new System.Drawing.Size(218, 29);
+            this.cmbRecAccount.TabIndex = 127;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(465, 71);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 20);
+            this.label4.TabIndex = 126;
+            this.label4.Text = "REC ACCOUNT:";
             // 
             // cmbPayAccount
             // 
@@ -205,9 +227,9 @@
             this.cmbPayAccount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbPayAccount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbPayAccount.FormattingEnabled = true;
-            this.cmbPayAccount.Location = new System.Drawing.Point(785, 17);
+            this.cmbPayAccount.Location = new System.Drawing.Point(915, 20);
             this.cmbPayAccount.Name = "cmbPayAccount";
-            this.cmbPayAccount.Size = new System.Drawing.Size(203, 25);
+            this.cmbPayAccount.Size = new System.Drawing.Size(236, 29);
             this.cmbPayAccount.TabIndex = 127;
             // 
             // lblPayAccount
@@ -215,9 +237,9 @@
             this.lblPayAccount.AutoSize = true;
             this.lblPayAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblPayAccount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPayAccount.Location = new System.Drawing.Point(689, 22);
+            this.lblPayAccount.Location = new System.Drawing.Point(803, 27);
             this.lblPayAccount.Name = "lblPayAccount";
-            this.lblPayAccount.Size = new System.Drawing.Size(90, 15);
+            this.lblPayAccount.Size = new System.Drawing.Size(113, 20);
             this.lblPayAccount.TabIndex = 126;
             this.lblPayAccount.Text = "PAY ACCOUNT:";
             // 
@@ -227,9 +249,9 @@
             this.cmbSalesPerson.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbSalesPerson.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbSalesPerson.FormattingEnabled = true;
-            this.cmbSalesPerson.Location = new System.Drawing.Point(495, 22);
+            this.cmbSalesPerson.Location = new System.Drawing.Point(577, 27);
             this.cmbSalesPerson.Name = "cmbSalesPerson";
-            this.cmbSalesPerson.Size = new System.Drawing.Size(188, 25);
+            this.cmbSalesPerson.Size = new System.Drawing.Size(218, 29);
             this.cmbSalesPerson.TabIndex = 125;
             // 
             // lblSalesPerson
@@ -237,9 +259,9 @@
             this.lblSalesPerson.AutoSize = true;
             this.lblSalesPerson.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblSalesPerson.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSalesPerson.Location = new System.Drawing.Point(397, 27);
+            this.lblSalesPerson.Location = new System.Drawing.Point(463, 33);
             this.lblSalesPerson.Name = "lblSalesPerson";
-            this.lblSalesPerson.Size = new System.Drawing.Size(92, 15);
+            this.lblSalesPerson.Size = new System.Drawing.Size(115, 20);
             this.lblSalesPerson.TabIndex = 124;
             this.lblSalesPerson.Text = "SALES PERSON:";
             // 
@@ -252,9 +274,9 @@
             this.btnShowReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnShowReport.ImageIndex = 5;
             this.btnShowReport.ImageList = this.imageList1;
-            this.btnShowReport.Location = new System.Drawing.Point(864, 82);
+            this.btnShowReport.Location = new System.Drawing.Point(1007, 100);
             this.btnShowReport.Name = "btnShowReport";
-            this.btnShowReport.Size = new System.Drawing.Size(130, 25);
+            this.btnShowReport.Size = new System.Drawing.Size(151, 30);
             this.btnShowReport.TabIndex = 123;
             this.btnShowReport.Text = "SHOW REPORT";
             this.btnShowReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -275,9 +297,9 @@
             // rdbPending
             // 
             this.rdbPending.AutoSize = true;
-            this.rdbPending.Location = new System.Drawing.Point(12, 55);
+            this.rdbPending.Location = new System.Drawing.Point(13, 67);
             this.rdbPending.Name = "rdbPending";
-            this.rdbPending.Size = new System.Drawing.Size(181, 21);
+            this.rdbPending.Size = new System.Drawing.Size(231, 27);
             this.rdbPending.TabIndex = 122;
             this.rdbPending.Text = "SHOW PENDING ENTRIES";
             this.rdbPending.UseVisualStyleBackColor = true;
@@ -286,9 +308,9 @@
             // 
             this.rdbAll.AutoSize = true;
             this.rdbAll.Checked = true;
-            this.rdbAll.Location = new System.Drawing.Point(12, 24);
+            this.rdbAll.Location = new System.Drawing.Point(13, 29);
             this.rdbAll.Name = "rdbAll";
-            this.rdbAll.Size = new System.Drawing.Size(145, 21);
+            this.rdbAll.Size = new System.Drawing.Size(184, 27);
             this.rdbAll.TabIndex = 121;
             this.rdbAll.TabStop = true;
             this.rdbAll.Text = "SHOW ALL ENTRIES";
@@ -299,9 +321,9 @@
             this.dtp_TO.CustomFormat = "dd/MM/yyyy";
             this.dtp_TO.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_TO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_TO.Location = new System.Drawing.Point(255, 54);
+            this.dtp_TO.Location = new System.Drawing.Point(297, 66);
             this.dtp_TO.Name = "dtp_TO";
-            this.dtp_TO.Size = new System.Drawing.Size(136, 23);
+            this.dtp_TO.Size = new System.Drawing.Size(157, 27);
             this.dtp_TO.TabIndex = 120;
             // 
             // dtp_FROM
@@ -309,9 +331,9 @@
             this.dtp_FROM.CustomFormat = "dd/MM/yyyy";
             this.dtp_FROM.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_FROM.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_FROM.Location = new System.Drawing.Point(255, 23);
+            this.dtp_FROM.Location = new System.Drawing.Point(297, 28);
             this.dtp_FROM.Name = "dtp_FROM";
-            this.dtp_FROM.Size = new System.Drawing.Size(136, 23);
+            this.dtp_FROM.Size = new System.Drawing.Size(157, 27);
             this.dtp_FROM.TabIndex = 119;
             // 
             // lblFROM
@@ -319,9 +341,9 @@
             this.lblFROM.AutoSize = true;
             this.lblFROM.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblFROM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFROM.Location = new System.Drawing.Point(206, 27);
+            this.lblFROM.Location = new System.Drawing.Point(240, 33);
             this.lblFROM.Name = "lblFROM";
-            this.lblFROM.Size = new System.Drawing.Size(43, 15);
+            this.lblFROM.Size = new System.Drawing.Size(55, 20);
             this.lblFROM.TabIndex = 118;
             this.lblFROM.Text = "FROM:";
             // 
@@ -334,9 +356,9 @@
             this.btnSHOW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSHOW.ImageIndex = 5;
             this.btnSHOW.ImageList = this.imageList1;
-            this.btnSHOW.Location = new System.Drawing.Point(738, 82);
+            this.btnSHOW.Location = new System.Drawing.Point(860, 100);
             this.btnSHOW.Name = "btnSHOW";
-            this.btnSHOW.Size = new System.Drawing.Size(120, 25);
+            this.btnSHOW.Size = new System.Drawing.Size(139, 30);
             this.btnSHOW.TabIndex = 9;
             this.btnSHOW.Text = "SHOW";
             this.btnSHOW.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -348,9 +370,9 @@
             this.lblITO.AutoSize = true;
             this.lblITO.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblITO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblITO.Location = new System.Drawing.Point(206, 58);
+            this.lblITO.Location = new System.Drawing.Point(240, 71);
             this.lblITO.Name = "lblITO";
-            this.lblITO.Size = new System.Drawing.Size(26, 15);
+            this.lblITO.Size = new System.Drawing.Size(31, 20);
             this.lblITO.TabIndex = 46;
             this.lblITO.Text = "TO:";
             // 
@@ -402,11 +424,11 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdEntries.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdEntries.Location = new System.Drawing.Point(0, 233);
+            this.grdEntries.Location = new System.Drawing.Point(0, 286);
             this.grdEntries.Name = "grdEntries";
             this.grdEntries.RowHeadersVisible = false;
             this.grdEntries.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grdEntries.Size = new System.Drawing.Size(996, 227);
+            this.grdEntries.Size = new System.Drawing.Size(1161, 279);
             this.grdEntries.TabIndex = 222;
             this.grdEntries.TabStop = false;
             this.grdEntries.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdPOList_CellClick);
@@ -533,9 +555,9 @@
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdate.ImageIndex = 5;
             this.btnUpdate.ImageList = this.imageList1;
-            this.btnUpdate.Location = new System.Drawing.Point(6, 466);
+            this.btnUpdate.Location = new System.Drawing.Point(6, 573);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(129, 25);
+            this.btnUpdate.Size = new System.Drawing.Size(150, 30);
             this.btnUpdate.TabIndex = 124;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -554,15 +576,15 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(995, 66);
+            this.pnlHEADER.Size = new System.Drawing.Size(1160, 80);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -570,9 +592,9 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Location = new System.Drawing.Point(1499, 3);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(57, 24);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
@@ -581,11 +603,11 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 10.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(2, 12);
+            this.lblHEADING.Location = new System.Drawing.Point(2, 14);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(153, 34);
+            this.lblHEADING.Size = new System.Drawing.Size(205, 44);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "PAYMENT TRANSFER \r\nREPORT";
             // 
@@ -594,11 +616,11 @@
             this.txtTotalPending.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalPending.Enabled = false;
             this.txtTotalPending.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtTotalPending.Location = new System.Drawing.Point(580, 466);
+            this.txtTotalPending.Location = new System.Drawing.Point(676, 573);
             this.txtTotalPending.MaxLength = 11;
             this.txtTotalPending.Name = "txtTotalPending";
             this.txtTotalPending.ReadOnly = true;
-            this.txtTotalPending.Size = new System.Drawing.Size(144, 25);
+            this.txtTotalPending.Size = new System.Drawing.Size(167, 29);
             this.txtTotalPending.TabIndex = 332;
             this.txtTotalPending.Text = "0";
             // 
@@ -607,9 +629,9 @@
             this.lblTotalPending.AutoSize = true;
             this.lblTotalPending.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblTotalPending.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTotalPending.Location = new System.Drawing.Point(477, 471);
+            this.lblTotalPending.Location = new System.Drawing.Point(556, 579);
             this.lblTotalPending.Name = "lblTotalPending";
-            this.lblTotalPending.Size = new System.Drawing.Size(98, 15);
+            this.lblTotalPending.Size = new System.Drawing.Size(120, 20);
             this.lblTotalPending.TabIndex = 333;
             this.lblTotalPending.Text = "TOTAL PENDING";
             // 
@@ -618,11 +640,11 @@
             this.txtTotalApproved.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalApproved.Enabled = false;
             this.txtTotalApproved.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtTotalApproved.Location = new System.Drawing.Point(844, 466);
+            this.txtTotalApproved.Location = new System.Drawing.Point(984, 573);
             this.txtTotalApproved.MaxLength = 11;
             this.txtTotalApproved.Name = "txtTotalApproved";
             this.txtTotalApproved.ReadOnly = true;
-            this.txtTotalApproved.Size = new System.Drawing.Size(144, 25);
+            this.txtTotalApproved.Size = new System.Drawing.Size(167, 29);
             this.txtTotalApproved.TabIndex = 334;
             this.txtTotalApproved.Text = "0";
             // 
@@ -631,9 +653,9 @@
             this.lblTotalApproved.AutoSize = true;
             this.lblTotalApproved.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblTotalApproved.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTotalApproved.Location = new System.Drawing.Point(732, 471);
+            this.lblTotalApproved.Location = new System.Drawing.Point(853, 579);
             this.lblTotalApproved.Name = "lblTotalApproved";
-            this.lblTotalApproved.Size = new System.Drawing.Size(108, 15);
+            this.lblTotalApproved.Size = new System.Drawing.Size(131, 20);
             this.lblTotalApproved.TabIndex = 335;
             this.lblTotalApproved.Text = "TOTAL APPROVED";
             // 
@@ -642,9 +664,9 @@
             this.dtpConformationDate.CustomFormat = "dd/MM/yyyy";
             this.dtpConformationDate.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtpConformationDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpConformationDate.Location = new System.Drawing.Point(154, 204);
+            this.dtpConformationDate.Location = new System.Drawing.Point(179, 251);
             this.dtpConformationDate.Name = "dtpConformationDate";
-            this.dtpConformationDate.Size = new System.Drawing.Size(183, 23);
+            this.dtpConformationDate.Size = new System.Drawing.Size(212, 27);
             this.dtpConformationDate.TabIndex = 131;
             // 
             // label1
@@ -652,9 +674,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(12, 208);
+            this.label1.Location = new System.Drawing.Point(13, 255);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 15);
+            this.label1.Size = new System.Drawing.Size(171, 20);
             this.label1.TabIndex = 130;
             this.label1.Text = "CONFORMATION DATE:";
             // 
@@ -667,9 +689,9 @@
             this.btnApply.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnApply.ImageIndex = 5;
             this.btnApply.ImageList = this.imageList1;
-            this.btnApply.Location = new System.Drawing.Point(622, 203);
+            this.btnApply.Location = new System.Drawing.Point(725, 249);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(92, 25);
+            this.btnApply.Size = new System.Drawing.Size(107, 30);
             this.btnApply.TabIndex = 130;
             this.btnApply.Text = "APPLY";
             this.btnApply.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -681,9 +703,9 @@
             this.rdbEntryDate.AutoSize = true;
             this.rdbEntryDate.Checked = true;
             this.rdbEntryDate.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rdbEntryDate.Location = new System.Drawing.Point(720, 205);
+            this.rdbEntryDate.Location = new System.Drawing.Point(839, 252);
             this.rdbEntryDate.Name = "rdbEntryDate";
-            this.rdbEntryDate.Size = new System.Drawing.Size(102, 21);
+            this.rdbEntryDate.Size = new System.Drawing.Size(128, 27);
             this.rdbEntryDate.TabIndex = 130;
             this.rdbEntryDate.TabStop = true;
             this.rdbEntryDate.Text = "ENTRY DATE";
@@ -693,9 +715,9 @@
             // 
             this.rdbConformation.AutoSize = true;
             this.rdbConformation.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rdbConformation.Location = new System.Drawing.Point(826, 205);
+            this.rdbConformation.Location = new System.Drawing.Point(963, 252);
             this.rdbConformation.Name = "rdbConformation";
-            this.rdbConformation.Size = new System.Drawing.Size(167, 21);
+            this.rdbConformation.Size = new System.Drawing.Size(212, 27);
             this.rdbConformation.TabIndex = 336;
             this.rdbConformation.Text = "CONFORMATION DATE";
             this.rdbConformation.UseVisualStyleBackColor = true;
@@ -706,9 +728,9 @@
             this.cmbPerson.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbPerson.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbPerson.FormattingEnabled = true;
-            this.cmbPerson.Location = new System.Drawing.Point(440, 203);
+            this.cmbPerson.Location = new System.Drawing.Point(513, 249);
             this.cmbPerson.Name = "cmbPerson";
-            this.cmbPerson.Size = new System.Drawing.Size(176, 25);
+            this.cmbPerson.Size = new System.Drawing.Size(204, 29);
             this.cmbPerson.TabIndex = 131;
             // 
             // lblSSalePerson
@@ -716,40 +738,18 @@
             this.lblSSalePerson.AutoSize = true;
             this.lblSSalePerson.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblSSalePerson.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSSalePerson.Location = new System.Drawing.Point(379, 208);
+            this.lblSSalePerson.Location = new System.Drawing.Point(442, 255);
             this.lblSSalePerson.Name = "lblSSalePerson";
-            this.lblSSalePerson.Size = new System.Drawing.Size(55, 15);
+            this.lblSSalePerson.Size = new System.Drawing.Size(70, 20);
             this.lblSSalePerson.TabIndex = 130;
             this.lblSSalePerson.Text = "PERSON:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(399, 58);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 15);
-            this.label4.TabIndex = 126;
-            this.label4.Text = "REC ACCOUNT:";
-            // 
-            // cmbRecAccount
-            // 
-            this.cmbRecAccount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbRecAccount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbRecAccount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.cmbRecAccount.FormattingEnabled = true;
-            this.cmbRecAccount.Location = new System.Drawing.Point(495, 53);
-            this.cmbRecAccount.Name = "cmbRecAccount";
-            this.cmbRecAccount.Size = new System.Drawing.Size(188, 25);
-            this.cmbRecAccount.TabIndex = 127;
-            // 
             // frm_PaymentTransferApproval
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(995, 509);
+            this.ClientSize = new System.Drawing.Size(1160, 626);
             this.Controls.Add(this.cmbPerson);
             this.Controls.Add(this.lblSSalePerson);
             this.Controls.Add(this.rdbConformation);

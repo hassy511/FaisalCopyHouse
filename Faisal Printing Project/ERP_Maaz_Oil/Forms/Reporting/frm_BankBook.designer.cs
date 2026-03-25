@@ -65,7 +65,7 @@
             this.pnlHEADER.Controls.Add(this.lblHEADING);
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
-            this.pnlHEADER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlHEADER.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHEADER.Name = "pnlHEADER";
             this.pnlHEADER.Size = new System.Drawing.Size(423, 108);
             this.pnlHEADER.TabIndex = 36;
@@ -74,7 +74,7 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Location = new System.Drawing.Point(1787, 4);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(65, 25);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -85,7 +85,7 @@
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.Location = new System.Drawing.Point(1713, 4);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(65, 25);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -96,12 +96,12 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 11.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
             this.lblHEADING.Location = new System.Drawing.Point(5, 39);
             this.lblHEADING.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(120, 23);
+            this.lblHEADING.Size = new System.Drawing.Size(131, 25);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "BANK BOOK";
             // 
@@ -117,9 +117,9 @@
             this.grpCASHBOOK.Controls.Add(this.lblITO);
             this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.grpCASHBOOK.Location = new System.Drawing.Point(0, 111);
-            this.grpCASHBOOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpCASHBOOK.Margin = new System.Windows.Forms.Padding(4);
             this.grpCASHBOOK.Name = "grpCASHBOOK";
-            this.grpCASHBOOK.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpCASHBOOK.Padding = new System.Windows.Forms.Padding(4);
             this.grpCASHBOOK.Size = new System.Drawing.Size(423, 177);
             this.grpCASHBOOK.TabIndex = 37;
             this.grpCASHBOOK.TabStop = false;
@@ -132,7 +132,7 @@
             this.cmbACCOUNT.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbACCOUNT.FormattingEnabled = true;
             this.cmbACCOUNT.Location = new System.Drawing.Point(103, 26);
-            this.cmbACCOUNT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbACCOUNT.Margin = new System.Windows.Forms.Padding(4);
             this.cmbACCOUNT.Name = "cmbACCOUNT";
             this.cmbACCOUNT.Size = new System.Drawing.Size(307, 29);
             this.cmbACCOUNT.TabIndex = 340;
@@ -178,7 +178,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle3;
             this.grdSEARCH.Location = new System.Drawing.Point(41, 135);
-            this.grdSEARCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdSEARCH.Margin = new System.Windows.Forms.Padding(4);
             this.grdSEARCH.Name = "grdSEARCH";
             this.grdSEARCH.ReadOnly = true;
             this.grdSEARCH.RowHeadersVisible = false;
@@ -194,7 +194,7 @@
             this.dtp_TO.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_TO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_TO.Location = new System.Drawing.Point(103, 100);
-            this.dtp_TO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_TO.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_TO.Name = "dtp_TO";
             this.dtp_TO.Size = new System.Drawing.Size(307, 27);
             this.dtp_TO.TabIndex = 120;
@@ -205,7 +205,7 @@
             this.dtp_FROM.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_FROM.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_FROM.Location = new System.Drawing.Point(103, 64);
-            this.dtp_FROM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_FROM.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_FROM.Name = "dtp_FROM";
             this.dtp_FROM.Size = new System.Drawing.Size(307, 27);
             this.dtp_FROM.TabIndex = 119;
@@ -232,7 +232,7 @@
             this.btnSHOW.ImageIndex = 5;
             this.btnSHOW.ImageList = this.imageList1;
             this.btnSHOW.Location = new System.Drawing.Point(103, 135);
-            this.btnSHOW.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSHOW.Margin = new System.Windows.Forms.Padding(4);
             this.btnSHOW.Name = "btnSHOW";
             this.btnSHOW.Size = new System.Drawing.Size(308, 31);
             this.btnSHOW.TabIndex = 9;
@@ -273,7 +273,7 @@
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(441, 328);
             this.Name = "frm_BankBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

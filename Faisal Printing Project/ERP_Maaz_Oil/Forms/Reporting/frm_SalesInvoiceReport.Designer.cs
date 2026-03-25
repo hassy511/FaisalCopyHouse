@@ -35,16 +35,16 @@
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.lblHEADING = new System.Windows.Forms.Label();
             this.grpSalesReport = new System.Windows.Forms.GroupBox();
+            this.chkRaw = new System.Windows.Forms.CheckBox();
+            this.chkProduct = new System.Windows.Forms.CheckBox();
+            this.cmbRawMaterial = new SergeUtils.EasyCompletionComboBox();
+            this.cmbProduct = new SergeUtils.EasyCompletionComboBox();
             this.dtp_TO = new System.Windows.Forms.DateTimePicker();
             this.dtp_FROM = new System.Windows.Forms.DateTimePicker();
             this.lblFROM = new System.Windows.Forms.Label();
             this.btnSHOW = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.lblITO = new System.Windows.Forms.Label();
-            this.cmbProduct = new SergeUtils.EasyCompletionComboBox();
-            this.cmbRawMaterial = new SergeUtils.EasyCompletionComboBox();
-            this.chkProduct = new System.Windows.Forms.CheckBox();
-            this.chkRaw = new System.Windows.Forms.CheckBox();
             this.pnlHEADER.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -63,15 +63,15 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(441, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(512, 107);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -79,9 +79,9 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Location = new System.Drawing.Point(1499, 3);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(57, 24);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
@@ -90,11 +90,11 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 10.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(2, 26);
+            this.lblHEADING.Location = new System.Drawing.Point(2, 31);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(110, 34);
+            this.lblHEADING.Size = new System.Drawing.Size(150, 44);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "SALES INVOICE \r\nREPORT";
             // 
@@ -110,22 +110,64 @@
             this.grpSalesReport.Controls.Add(this.btnSHOW);
             this.grpSalesReport.Controls.Add(this.lblITO);
             this.grpSalesReport.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpSalesReport.Location = new System.Drawing.Point(0, 90);
+            this.grpSalesReport.Location = new System.Drawing.Point(0, 110);
             this.grpSalesReport.Name = "grpSalesReport";
-            this.grpSalesReport.Size = new System.Drawing.Size(439, 175);
+            this.grpSalesReport.Size = new System.Drawing.Size(512, 215);
             this.grpSalesReport.TabIndex = 37;
             this.grpSalesReport.TabStop = false;
             this.grpSalesReport.Text = "SALES INVOICE REPORT";
             this.grpSalesReport.Enter += new System.EventHandler(this.grpSALES_Enter);
+            // 
+            // chkRaw
+            // 
+            this.chkRaw.AutoSize = true;
+            this.chkRaw.Location = new System.Drawing.Point(8, 66);
+            this.chkRaw.Name = "chkRaw";
+            this.chkRaw.Size = new System.Drawing.Size(69, 27);
+            this.chkRaw.TabIndex = 124;
+            this.chkRaw.Text = "RAW";
+            this.chkRaw.UseVisualStyleBackColor = true;
+            // 
+            // chkProduct
+            // 
+            this.chkProduct.AutoSize = true;
+            this.chkProduct.Location = new System.Drawing.Point(8, 28);
+            this.chkProduct.Name = "chkProduct";
+            this.chkProduct.Size = new System.Drawing.Size(110, 27);
+            this.chkProduct.TabIndex = 123;
+            this.chkProduct.Text = "PRODUCT";
+            this.chkProduct.UseVisualStyleBackColor = true;
+            // 
+            // cmbRawMaterial
+            // 
+            this.cmbRawMaterial.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cmbRawMaterial.Items.AddRange(new object[] {
+            "--SELECT SUPPLIER--",
+            "AUTOMART"});
+            this.cmbRawMaterial.Location = new System.Drawing.Point(109, 63);
+            this.cmbRawMaterial.Name = "cmbRawMaterial";
+            this.cmbRawMaterial.Size = new System.Drawing.Size(394, 29);
+            this.cmbRawMaterial.TabIndex = 122;
+            // 
+            // cmbProduct
+            // 
+            this.cmbProduct.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cmbProduct.Items.AddRange(new object[] {
+            "--SELECT SUPPLIER--",
+            "AUTOMART"});
+            this.cmbProduct.Location = new System.Drawing.Point(109, 25);
+            this.cmbProduct.Name = "cmbProduct";
+            this.cmbProduct.Size = new System.Drawing.Size(394, 29);
+            this.cmbProduct.TabIndex = 121;
             // 
             // dtp_TO
             // 
             this.dtp_TO.CustomFormat = "dd/MM/yyyy";
             this.dtp_TO.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_TO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_TO.Location = new System.Drawing.Point(94, 112);
+            this.dtp_TO.Location = new System.Drawing.Point(109, 137);
             this.dtp_TO.Name = "dtp_TO";
-            this.dtp_TO.Size = new System.Drawing.Size(339, 23);
+            this.dtp_TO.Size = new System.Drawing.Size(394, 27);
             this.dtp_TO.TabIndex = 1;
             // 
             // dtp_FROM
@@ -133,9 +175,9 @@
             this.dtp_FROM.CustomFormat = "dd/MM/yyyy";
             this.dtp_FROM.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_FROM.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_FROM.Location = new System.Drawing.Point(94, 83);
+            this.dtp_FROM.Location = new System.Drawing.Point(109, 102);
             this.dtp_FROM.Name = "dtp_FROM";
-            this.dtp_FROM.Size = new System.Drawing.Size(339, 23);
+            this.dtp_FROM.Size = new System.Drawing.Size(394, 27);
             this.dtp_FROM.TabIndex = 0;
             // 
             // lblFROM
@@ -143,9 +185,9 @@
             this.lblFROM.AutoSize = true;
             this.lblFROM.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblFROM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFROM.Location = new System.Drawing.Point(7, 87);
+            this.lblFROM.Location = new System.Drawing.Point(8, 107);
             this.lblFROM.Name = "lblFROM";
-            this.lblFROM.Size = new System.Drawing.Size(43, 15);
+            this.lblFROM.Size = new System.Drawing.Size(55, 20);
             this.lblFROM.TabIndex = 118;
             this.lblFROM.Text = "FROM:";
             // 
@@ -158,9 +200,9 @@
             this.btnSHOW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSHOW.ImageIndex = 5;
             this.btnSHOW.ImageList = this.imageList1;
-            this.btnSHOW.Location = new System.Drawing.Point(94, 141);
+            this.btnSHOW.Location = new System.Drawing.Point(109, 173);
             this.btnSHOW.Name = "btnSHOW";
-            this.btnSHOW.Size = new System.Drawing.Size(339, 25);
+            this.btnSHOW.Size = new System.Drawing.Size(395, 30);
             this.btnSHOW.TabIndex = 2;
             this.btnSHOW.Text = "SHOW";
             this.btnSHOW.UseVisualStyleBackColor = false;
@@ -182,65 +224,23 @@
             this.lblITO.AutoSize = true;
             this.lblITO.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblITO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblITO.Location = new System.Drawing.Point(7, 116);
+            this.lblITO.Location = new System.Drawing.Point(8, 142);
             this.lblITO.Name = "lblITO";
-            this.lblITO.Size = new System.Drawing.Size(26, 15);
+            this.lblITO.Size = new System.Drawing.Size(31, 20);
             this.lblITO.TabIndex = 46;
             this.lblITO.Text = "TO:";
             // 
-            // cmbProduct
-            // 
-            this.cmbProduct.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.cmbProduct.Items.AddRange(new object[] {
-            "--SELECT SUPPLIER--",
-            "AUTOMART"});
-            this.cmbProduct.Location = new System.Drawing.Point(94, 21);
-            this.cmbProduct.Name = "cmbProduct";
-            this.cmbProduct.Size = new System.Drawing.Size(339, 25);
-            this.cmbProduct.TabIndex = 121;
-            // 
-            // cmbRawMaterial
-            // 
-            this.cmbRawMaterial.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.cmbRawMaterial.Items.AddRange(new object[] {
-            "--SELECT SUPPLIER--",
-            "AUTOMART"});
-            this.cmbRawMaterial.Location = new System.Drawing.Point(94, 52);
-            this.cmbRawMaterial.Name = "cmbRawMaterial";
-            this.cmbRawMaterial.Size = new System.Drawing.Size(339, 25);
-            this.cmbRawMaterial.TabIndex = 122;
-            // 
-            // chkProduct
-            // 
-            this.chkProduct.AutoSize = true;
-            this.chkProduct.Location = new System.Drawing.Point(7, 23);
-            this.chkProduct.Name = "chkProduct";
-            this.chkProduct.Size = new System.Drawing.Size(86, 21);
-            this.chkProduct.TabIndex = 123;
-            this.chkProduct.Text = "PRODUCT";
-            this.chkProduct.UseVisualStyleBackColor = true;
-            // 
-            // chkRaw
-            // 
-            this.chkRaw.AutoSize = true;
-            this.chkRaw.Location = new System.Drawing.Point(7, 54);
-            this.chkRaw.Name = "chkRaw";
-            this.chkRaw.Size = new System.Drawing.Size(57, 21);
-            this.chkRaw.TabIndex = 124;
-            this.chkRaw.Text = "RAW";
-            this.chkRaw.UseVisualStyleBackColor = true;
-            // 
             // frm_SalesInvoiceReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(441, 265);
+            this.ClientSize = new System.Drawing.Size(512, 316);
             this.Controls.Add(this.grpSalesReport);
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(457, 304);
+            this.MaximumSize = new System.Drawing.Size(530, 363);
             this.Name = "frm_SalesInvoiceReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SALES INVOICE REPORT";

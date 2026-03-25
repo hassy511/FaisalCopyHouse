@@ -43,8 +43,6 @@
             this.grpCASHBOOK = new System.Windows.Forms.GroupBox();
             this.lblTotalHard = new System.Windows.Forms.Label();
             this.lblTotalSoya = new System.Windows.Forms.Label();
-            this.lblOpenHard = new System.Windows.Forms.Label();
-            this.lblOpenSoya = new System.Windows.Forms.Label();
             this.grdOpening = new System.Windows.Forms.DataGridView();
             this.openPurchasesDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.openInvoice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +60,8 @@
             this.openHardKg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.openHardRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.openHardAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblOpenHard = new System.Windows.Forms.Label();
+            this.lblOpenSoya = new System.Windows.Forms.Label();
             this.grdData = new System.Windows.Forms.DataGridView();
             this.purchasesDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.invoice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,15 +111,15 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(299, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(346, 107);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -127,9 +127,9 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Location = new System.Drawing.Point(1499, 3);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(57, 24);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
@@ -138,11 +138,11 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 10.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(2, 26);
+            this.lblHEADING.Location = new System.Drawing.Point(2, 31);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(150, 34);
+            this.lblHEADING.Size = new System.Drawing.Size(201, 44);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "INCOME STATEMENT \r\nREPORT";
             // 
@@ -166,9 +166,9 @@
             this.grpCASHBOOK.Controls.Add(this.btnSHOW);
             this.grpCASHBOOK.Controls.Add(this.lblITO);
             this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpCASHBOOK.Location = new System.Drawing.Point(2, 90);
+            this.grpCASHBOOK.Location = new System.Drawing.Point(2, 110);
             this.grpCASHBOOK.Name = "grpCASHBOOK";
-            this.grpCASHBOOK.Size = new System.Drawing.Size(294, 111);
+            this.grpCASHBOOK.Size = new System.Drawing.Size(342, 136);
             this.grpCASHBOOK.TabIndex = 37;
             this.grpCASHBOOK.TabStop = false;
             this.grpCASHBOOK.Text = "INCOME STATEMENT REPORT";
@@ -177,9 +177,9 @@
             // lblTotalHard
             // 
             this.lblTotalHard.AutoSize = true;
-            this.lblTotalHard.Location = new System.Drawing.Point(389, 56);
+            this.lblTotalHard.Location = new System.Drawing.Point(453, 68);
             this.lblTotalHard.Name = "lblTotalHard";
-            this.lblTotalHard.Size = new System.Drawing.Size(15, 17);
+            this.lblTotalHard.Size = new System.Drawing.Size(19, 23);
             this.lblTotalHard.TabIndex = 352;
             this.lblTotalHard.Text = "0";
             this.lblTotalHard.Visible = false;
@@ -187,32 +187,12 @@
             // lblTotalSoya
             // 
             this.lblTotalSoya.AutoSize = true;
-            this.lblTotalSoya.Location = new System.Drawing.Point(387, 30);
+            this.lblTotalSoya.Location = new System.Drawing.Point(451, 36);
             this.lblTotalSoya.Name = "lblTotalSoya";
-            this.lblTotalSoya.Size = new System.Drawing.Size(15, 17);
+            this.lblTotalSoya.Size = new System.Drawing.Size(19, 23);
             this.lblTotalSoya.TabIndex = 351;
             this.lblTotalSoya.Text = "0";
             this.lblTotalSoya.Visible = false;
-            // 
-            // lblOpenHard
-            // 
-            this.lblOpenHard.AutoSize = true;
-            this.lblOpenHard.Location = new System.Drawing.Point(368, 52);
-            this.lblOpenHard.Name = "lblOpenHard";
-            this.lblOpenHard.Size = new System.Drawing.Size(15, 17);
-            this.lblOpenHard.TabIndex = 350;
-            this.lblOpenHard.Text = "0";
-            this.lblOpenHard.Visible = false;
-            // 
-            // lblOpenSoya
-            // 
-            this.lblOpenSoya.AutoSize = true;
-            this.lblOpenSoya.Location = new System.Drawing.Point(366, 26);
-            this.lblOpenSoya.Name = "lblOpenSoya";
-            this.lblOpenSoya.Size = new System.Drawing.Size(15, 17);
-            this.lblOpenSoya.TabIndex = 349;
-            this.lblOpenSoya.Text = "0";
-            this.lblOpenSoya.Visible = false;
             // 
             // grdOpening
             // 
@@ -259,11 +239,11 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdOpening.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdOpening.Location = new System.Drawing.Point(47, 80);
+            this.grdOpening.Location = new System.Drawing.Point(54, 98);
             this.grdOpening.Name = "grdOpening";
             this.grdOpening.ReadOnly = true;
             this.grdOpening.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdOpening.Size = new System.Drawing.Size(23, 15);
+            this.grdOpening.Size = new System.Drawing.Size(26, 18);
             this.grdOpening.TabIndex = 348;
             this.grdOpening.TabStop = false;
             this.grdOpening.Visible = false;
@@ -273,111 +253,132 @@
             this.openPurchasesDate.HeaderText = "PURCHASED DATE";
             this.openPurchasesDate.Name = "openPurchasesDate";
             this.openPurchasesDate.ReadOnly = true;
-            this.openPurchasesDate.Width = 143;
+            this.openPurchasesDate.Width = 182;
             // 
             // openInvoice
             // 
             this.openInvoice.HeaderText = "INVOICE";
             this.openInvoice.Name = "openInvoice";
             this.openInvoice.ReadOnly = true;
-            this.openInvoice.Width = 84;
+            this.openInvoice.Width = 106;
             // 
             // openCanolaKg
             // 
             this.openCanolaKg.HeaderText = "CANOLA KG";
             this.openCanolaKg.Name = "openCanolaKg";
             this.openCanolaKg.ReadOnly = true;
-            this.openCanolaKg.Width = 106;
+            this.openCanolaKg.Width = 132;
             // 
             // openCanolaRate
             // 
             this.openCanolaRate.HeaderText = "CANOLA RATE";
             this.openCanolaRate.Name = "openCanolaRate";
             this.openCanolaRate.ReadOnly = true;
-            this.openCanolaRate.Width = 119;
+            this.openCanolaRate.Width = 150;
             // 
             // openCanolaAmount
             // 
             this.openCanolaAmount.HeaderText = "CANOLA AMOUNT";
             this.openCanolaAmount.Name = "openCanolaAmount";
             this.openCanolaAmount.ReadOnly = true;
-            this.openCanolaAmount.Width = 146;
+            this.openCanolaAmount.Width = 185;
             // 
             // openOlienKg
             // 
             this.openOlienKg.HeaderText = "OLIEN KG";
             this.openOlienKg.Name = "openOlienKg";
             this.openOlienKg.ReadOnly = true;
-            this.openOlienKg.Width = 91;
+            this.openOlienKg.Width = 113;
             // 
             // openOlienRate
             // 
             this.openOlienRate.HeaderText = "OLIEN RATE";
             this.openOlienRate.Name = "openOlienRate";
             this.openOlienRate.ReadOnly = true;
-            this.openOlienRate.Width = 104;
+            this.openOlienRate.Width = 131;
             // 
             // openOlienAmount
             // 
             this.openOlienAmount.HeaderText = "OLIEN AMOUNT";
             this.openOlienAmount.Name = "openOlienAmount";
             this.openOlienAmount.ReadOnly = true;
-            this.openOlienAmount.Width = 131;
+            this.openOlienAmount.Width = 166;
             // 
             // openMuandRate
             // 
             this.openMuandRate.HeaderText = "MUAND RATE";
             this.openMuandRate.Name = "openMuandRate";
             this.openMuandRate.ReadOnly = true;
-            this.openMuandRate.Width = 116;
+            this.openMuandRate.Width = 147;
             // 
             // openMaterialId
             // 
             this.openMaterialId.HeaderText = "MATERIAL ID";
             this.openMaterialId.Name = "openMaterialId";
             this.openMaterialId.ReadOnly = true;
-            this.openMaterialId.Width = 111;
+            this.openMaterialId.Width = 140;
             // 
             // openSoyaKg
             // 
             this.openSoyaKg.HeaderText = "SOYA KG";
             this.openSoyaKg.Name = "openSoyaKg";
             this.openSoyaKg.ReadOnly = true;
-            this.openSoyaKg.Width = 87;
+            this.openSoyaKg.Width = 107;
             // 
             // openSoyaRate
             // 
             this.openSoyaRate.HeaderText = "SOYA RATE";
             this.openSoyaRate.Name = "openSoyaRate";
             this.openSoyaRate.ReadOnly = true;
+            this.openSoyaRate.Width = 125;
             // 
             // openSoyaAmount
             // 
             this.openSoyaAmount.HeaderText = "SOYA AMOUNT";
             this.openSoyaAmount.Name = "openSoyaAmount";
             this.openSoyaAmount.ReadOnly = true;
-            this.openSoyaAmount.Width = 127;
+            this.openSoyaAmount.Width = 160;
             // 
             // openHardKg
             // 
             this.openHardKg.HeaderText = "HARD KG";
             this.openHardKg.Name = "openHardKg";
             this.openHardKg.ReadOnly = true;
-            this.openHardKg.Width = 90;
+            this.openHardKg.Width = 112;
             // 
             // openHardRate
             // 
             this.openHardRate.HeaderText = "HARD RATE";
             this.openHardRate.Name = "openHardRate";
             this.openHardRate.ReadOnly = true;
-            this.openHardRate.Width = 103;
+            this.openHardRate.Width = 130;
             // 
             // openHardAmount
             // 
             this.openHardAmount.HeaderText = "HARD AMOUNT";
             this.openHardAmount.Name = "openHardAmount";
             this.openHardAmount.ReadOnly = true;
-            this.openHardAmount.Width = 130;
+            this.openHardAmount.Width = 165;
+            // 
+            // lblOpenHard
+            // 
+            this.lblOpenHard.AutoSize = true;
+            this.lblOpenHard.Location = new System.Drawing.Point(429, 63);
+            this.lblOpenHard.Name = "lblOpenHard";
+            this.lblOpenHard.Size = new System.Drawing.Size(19, 23);
+            this.lblOpenHard.TabIndex = 350;
+            this.lblOpenHard.Text = "0";
+            this.lblOpenHard.Visible = false;
+            // 
+            // lblOpenSoya
+            // 
+            this.lblOpenSoya.AutoSize = true;
+            this.lblOpenSoya.Location = new System.Drawing.Point(426, 31);
+            this.lblOpenSoya.Name = "lblOpenSoya";
+            this.lblOpenSoya.Size = new System.Drawing.Size(19, 23);
+            this.lblOpenSoya.TabIndex = 349;
+            this.lblOpenSoya.Text = "0";
+            this.lblOpenSoya.Visible = false;
             // 
             // grdData
             // 
@@ -424,11 +425,11 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdData.DefaultCellStyle = dataGridViewCellStyle6;
-            this.grdData.Location = new System.Drawing.Point(4, 77);
+            this.grdData.Location = new System.Drawing.Point(4, 94);
             this.grdData.Name = "grdData";
             this.grdData.ReadOnly = true;
             this.grdData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdData.Size = new System.Drawing.Size(41, 18);
+            this.grdData.Size = new System.Drawing.Size(47, 22);
             this.grdData.TabIndex = 347;
             this.grdData.TabStop = false;
             this.grdData.Visible = false;
@@ -438,118 +439,119 @@
             this.purchasesDate.HeaderText = "PURCHASED DATE";
             this.purchasesDate.Name = "purchasesDate";
             this.purchasesDate.ReadOnly = true;
-            this.purchasesDate.Width = 143;
+            this.purchasesDate.Width = 182;
             // 
             // invoice
             // 
             this.invoice.HeaderText = "INVOICE";
             this.invoice.Name = "invoice";
             this.invoice.ReadOnly = true;
-            this.invoice.Width = 84;
+            this.invoice.Width = 106;
             // 
             // canolaKg
             // 
             this.canolaKg.HeaderText = "CANOLA KG";
             this.canolaKg.Name = "canolaKg";
             this.canolaKg.ReadOnly = true;
-            this.canolaKg.Width = 106;
+            this.canolaKg.Width = 132;
             // 
             // canolaRate
             // 
             this.canolaRate.HeaderText = "CANOLA RATE";
             this.canolaRate.Name = "canolaRate";
             this.canolaRate.ReadOnly = true;
-            this.canolaRate.Width = 119;
+            this.canolaRate.Width = 150;
             // 
             // canolaAmount
             // 
             this.canolaAmount.HeaderText = "CANOLA AMOUNT";
             this.canolaAmount.Name = "canolaAmount";
             this.canolaAmount.ReadOnly = true;
-            this.canolaAmount.Width = 146;
+            this.canolaAmount.Width = 185;
             // 
             // olienKg
             // 
             this.olienKg.HeaderText = "OLIEN KG";
             this.olienKg.Name = "olienKg";
             this.olienKg.ReadOnly = true;
-            this.olienKg.Width = 91;
+            this.olienKg.Width = 113;
             // 
             // olienRate
             // 
             this.olienRate.HeaderText = "OLIEN RATE";
             this.olienRate.Name = "olienRate";
             this.olienRate.ReadOnly = true;
-            this.olienRate.Width = 104;
+            this.olienRate.Width = 131;
             // 
             // olienAmount
             // 
             this.olienAmount.HeaderText = "OLIEN AMOUNT";
             this.olienAmount.Name = "olienAmount";
             this.olienAmount.ReadOnly = true;
-            this.olienAmount.Width = 131;
+            this.olienAmount.Width = 166;
             // 
             // muandRate
             // 
             this.muandRate.HeaderText = "MUAND RATE";
             this.muandRate.Name = "muandRate";
             this.muandRate.ReadOnly = true;
-            this.muandRate.Width = 116;
+            this.muandRate.Width = 147;
             // 
             // materialId
             // 
             this.materialId.HeaderText = "MATERIAL ID";
             this.materialId.Name = "materialId";
             this.materialId.ReadOnly = true;
-            this.materialId.Width = 111;
+            this.materialId.Width = 140;
             // 
             // soyaKg
             // 
             this.soyaKg.HeaderText = "SOYA KG";
             this.soyaKg.Name = "soyaKg";
             this.soyaKg.ReadOnly = true;
-            this.soyaKg.Width = 87;
+            this.soyaKg.Width = 107;
             // 
             // soyaRate
             // 
             this.soyaRate.HeaderText = "SOYA RATE";
             this.soyaRate.Name = "soyaRate";
             this.soyaRate.ReadOnly = true;
+            this.soyaRate.Width = 125;
             // 
             // soyaAmount
             // 
             this.soyaAmount.HeaderText = "SOYA AMOUNT";
             this.soyaAmount.Name = "soyaAmount";
             this.soyaAmount.ReadOnly = true;
-            this.soyaAmount.Width = 127;
+            this.soyaAmount.Width = 160;
             // 
             // hardKg
             // 
             this.hardKg.HeaderText = "HARD KG";
             this.hardKg.Name = "hardKg";
             this.hardKg.ReadOnly = true;
-            this.hardKg.Width = 90;
+            this.hardKg.Width = 112;
             // 
             // hardRate
             // 
             this.hardRate.HeaderText = "HARD RATE";
             this.hardRate.Name = "hardRate";
             this.hardRate.ReadOnly = true;
-            this.hardRate.Width = 103;
+            this.hardRate.Width = 130;
             // 
             // hardAmount
             // 
             this.hardAmount.HeaderText = "HARD AMOUNT";
             this.hardAmount.Name = "hardAmount";
             this.hardAmount.ReadOnly = true;
-            this.hardAmount.Width = 130;
+            this.hardAmount.Width = 165;
             // 
             // rdbConsolidated
             // 
             this.rdbConsolidated.AutoSize = true;
-            this.rdbConsolidated.Location = new System.Drawing.Point(166, 21);
+            this.rdbConsolidated.Location = new System.Drawing.Point(193, 25);
             this.rdbConsolidated.Name = "rdbConsolidated";
-            this.rdbConsolidated.Size = new System.Drawing.Size(121, 21);
+            this.rdbConsolidated.Size = new System.Drawing.Size(155, 27);
             this.rdbConsolidated.TabIndex = 346;
             this.rdbConsolidated.Text = "CONSOLIDATED";
             this.rdbConsolidated.UseVisualStyleBackColor = true;
@@ -558,9 +560,9 @@
             // 
             this.rdbDetailed.AutoSize = true;
             this.rdbDetailed.Checked = true;
-            this.rdbDetailed.Location = new System.Drawing.Point(76, 21);
+            this.rdbDetailed.Location = new System.Drawing.Point(88, 25);
             this.rdbDetailed.Name = "rdbDetailed";
-            this.rdbDetailed.Size = new System.Drawing.Size(83, 21);
+            this.rdbDetailed.Size = new System.Drawing.Size(105, 27);
             this.rdbDetailed.TabIndex = 345;
             this.rdbDetailed.TabStop = true;
             this.rdbDetailed.Text = "DETAILED";
@@ -569,9 +571,9 @@
             // lblOpenOlien
             // 
             this.lblOpenOlien.AutoSize = true;
-            this.lblOpenOlien.Location = new System.Drawing.Point(329, 56);
+            this.lblOpenOlien.Location = new System.Drawing.Point(383, 68);
             this.lblOpenOlien.Name = "lblOpenOlien";
-            this.lblOpenOlien.Size = new System.Drawing.Size(15, 17);
+            this.lblOpenOlien.Size = new System.Drawing.Size(19, 23);
             this.lblOpenOlien.TabIndex = 343;
             this.lblOpenOlien.Text = "0";
             this.lblOpenOlien.Visible = false;
@@ -579,9 +581,9 @@
             // lblOpenCanola
             // 
             this.lblOpenCanola.AutoSize = true;
-            this.lblOpenCanola.Location = new System.Drawing.Point(327, 30);
+            this.lblOpenCanola.Location = new System.Drawing.Point(381, 36);
             this.lblOpenCanola.Name = "lblOpenCanola";
-            this.lblOpenCanola.Size = new System.Drawing.Size(15, 17);
+            this.lblOpenCanola.Size = new System.Drawing.Size(19, 23);
             this.lblOpenCanola.TabIndex = 342;
             this.lblOpenCanola.Text = "0";
             this.lblOpenCanola.Visible = false;
@@ -589,9 +591,9 @@
             // lblTotalOlien
             // 
             this.lblTotalOlien.AutoSize = true;
-            this.lblTotalOlien.Location = new System.Drawing.Point(308, 52);
+            this.lblTotalOlien.Location = new System.Drawing.Point(359, 63);
             this.lblTotalOlien.Name = "lblTotalOlien";
-            this.lblTotalOlien.Size = new System.Drawing.Size(15, 17);
+            this.lblTotalOlien.Size = new System.Drawing.Size(19, 23);
             this.lblTotalOlien.TabIndex = 341;
             this.lblTotalOlien.Text = "0";
             this.lblTotalOlien.Visible = false;
@@ -599,9 +601,9 @@
             // lblTotalCanola
             // 
             this.lblTotalCanola.AutoSize = true;
-            this.lblTotalCanola.Location = new System.Drawing.Point(306, 26);
+            this.lblTotalCanola.Location = new System.Drawing.Point(356, 31);
             this.lblTotalCanola.Name = "lblTotalCanola";
-            this.lblTotalCanola.Size = new System.Drawing.Size(15, 17);
+            this.lblTotalCanola.Size = new System.Drawing.Size(19, 23);
             this.lblTotalCanola.TabIndex = 340;
             this.lblTotalCanola.Text = "0";
             this.lblTotalCanola.Visible = false;
@@ -609,9 +611,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 51);
+            this.label1.Location = new System.Drawing.Point(10, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 17);
+            this.label1.Size = new System.Drawing.Size(79, 23);
             this.label1.TabIndex = 121;
             this.label1.Text = "PERIOD: ";
             // 
@@ -620,9 +622,9 @@
             this.dtp_TO.CustomFormat = "dd/MM/yyyy";
             this.dtp_TO.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_TO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_TO.Location = new System.Drawing.Point(190, 48);
+            this.dtp_TO.Location = new System.Drawing.Point(221, 59);
             this.dtp_TO.Name = "dtp_TO";
-            this.dtp_TO.Size = new System.Drawing.Size(97, 23);
+            this.dtp_TO.Size = new System.Drawing.Size(112, 27);
             this.dtp_TO.TabIndex = 120;
             // 
             // dtp_FROM
@@ -630,9 +632,9 @@
             this.dtp_FROM.CustomFormat = "dd/MM/yyyy";
             this.dtp_FROM.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_FROM.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_FROM.Location = new System.Drawing.Point(76, 48);
+            this.dtp_FROM.Location = new System.Drawing.Point(88, 59);
             this.dtp_FROM.Name = "dtp_FROM";
-            this.dtp_FROM.Size = new System.Drawing.Size(97, 23);
+            this.dtp_FROM.Size = new System.Drawing.Size(112, 27);
             this.dtp_FROM.TabIndex = 119;
             // 
             // btnSHOW
@@ -644,9 +646,9 @@
             this.btnSHOW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSHOW.ImageIndex = 5;
             this.btnSHOW.ImageList = this.imageList1;
-            this.btnSHOW.Location = new System.Drawing.Point(76, 77);
+            this.btnSHOW.Location = new System.Drawing.Point(88, 94);
             this.btnSHOW.Name = "btnSHOW";
-            this.btnSHOW.Size = new System.Drawing.Size(211, 25);
+            this.btnSHOW.Size = new System.Drawing.Size(246, 30);
             this.btnSHOW.TabIndex = 9;
             this.btnSHOW.Text = "SHOW";
             this.btnSHOW.UseVisualStyleBackColor = false;
@@ -668,23 +670,23 @@
             this.lblITO.AutoSize = true;
             this.lblITO.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblITO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblITO.Location = new System.Drawing.Point(172, 52);
+            this.lblITO.Location = new System.Drawing.Point(200, 63);
             this.lblITO.Name = "lblITO";
-            this.lblITO.Size = new System.Drawing.Size(18, 15);
+            this.lblITO.Size = new System.Drawing.Size(23, 20);
             this.lblITO.TabIndex = 46;
             this.lblITO.Text = " - ";
             // 
             // frm_IncomeStatementReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(299, 204);
+            this.ClientSize = new System.Drawing.Size(346, 241);
             this.Controls.Add(this.grpCASHBOOK);
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(315, 243);
+            this.MaximumSize = new System.Drawing.Size(364, 288);
             this.Name = "frm_IncomeStatementReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "INCOME STATEMENT REPORT";

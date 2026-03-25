@@ -466,12 +466,12 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
             this.lblHEADING.Location = new System.Drawing.Point(8, 39);
             this.lblHEADING.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(318, 30);
+            this.lblHEADING.Size = new System.Drawing.Size(358, 31);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "BANK RECEIPT VOUCHER";
             // 

@@ -100,16 +100,18 @@
             this.pnlHEADER.Controls.Add(this.lblHEADING);
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
+            this.pnlHEADER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(298, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(395, 108);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1787, 4);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(65, 25);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -117,9 +119,10 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Location = new System.Drawing.Point(1713, 4);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(65, 25);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
@@ -128,11 +131,12 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 10.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(2, 26);
+            this.lblHEADING.Location = new System.Drawing.Point(3, 32);
+            this.lblHEADING.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(123, 34);
+            this.lblHEADING.Size = new System.Drawing.Size(165, 44);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "BALANCE SHEET \r\nREPORT";
             // 
@@ -152,9 +156,11 @@
             this.grpCASHBOOK.Controls.Add(this.dtp_TO);
             this.grpCASHBOOK.Controls.Add(this.btnSHOW);
             this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpCASHBOOK.Location = new System.Drawing.Point(2, 90);
+            this.grpCASHBOOK.Location = new System.Drawing.Point(3, 111);
+            this.grpCASHBOOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpCASHBOOK.Name = "grpCASHBOOK";
-            this.grpCASHBOOK.Size = new System.Drawing.Size(294, 87);
+            this.grpCASHBOOK.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpCASHBOOK.Size = new System.Drawing.Size(392, 107);
             this.grpCASHBOOK.TabIndex = 37;
             this.grpCASHBOOK.TabStop = false;
             this.grpCASHBOOK.Text = "BALANCE SHEET REPORT";
@@ -163,9 +169,10 @@
             // lblTotalHard
             // 
             this.lblTotalHard.AutoSize = true;
-            this.lblTotalHard.Location = new System.Drawing.Point(371, 55);
+            this.lblTotalHard.Location = new System.Drawing.Point(495, 68);
+            this.lblTotalHard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalHard.Name = "lblTotalHard";
-            this.lblTotalHard.Size = new System.Drawing.Size(15, 17);
+            this.lblTotalHard.Size = new System.Drawing.Size(19, 23);
             this.lblTotalHard.TabIndex = 356;
             this.lblTotalHard.Text = "0";
             this.lblTotalHard.Visible = false;
@@ -173,9 +180,10 @@
             // lblTotalSoya
             // 
             this.lblTotalSoya.AutoSize = true;
-            this.lblTotalSoya.Location = new System.Drawing.Point(369, 29);
+            this.lblTotalSoya.Location = new System.Drawing.Point(492, 36);
+            this.lblTotalSoya.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalSoya.Name = "lblTotalSoya";
-            this.lblTotalSoya.Size = new System.Drawing.Size(15, 17);
+            this.lblTotalSoya.Size = new System.Drawing.Size(19, 23);
             this.lblTotalSoya.TabIndex = 355;
             this.lblTotalSoya.Text = "0";
             this.lblTotalSoya.Visible = false;
@@ -183,9 +191,10 @@
             // lblOpenHard
             // 
             this.lblOpenHard.AutoSize = true;
-            this.lblOpenHard.Location = new System.Drawing.Point(350, 51);
+            this.lblOpenHard.Location = new System.Drawing.Point(467, 63);
+            this.lblOpenHard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOpenHard.Name = "lblOpenHard";
-            this.lblOpenHard.Size = new System.Drawing.Size(15, 17);
+            this.lblOpenHard.Size = new System.Drawing.Size(19, 23);
             this.lblOpenHard.TabIndex = 354;
             this.lblOpenHard.Text = "0";
             this.lblOpenHard.Visible = false;
@@ -193,9 +202,10 @@
             // lblOpenSoya
             // 
             this.lblOpenSoya.AutoSize = true;
-            this.lblOpenSoya.Location = new System.Drawing.Point(348, 25);
+            this.lblOpenSoya.Location = new System.Drawing.Point(464, 31);
+            this.lblOpenSoya.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOpenSoya.Name = "lblOpenSoya";
-            this.lblOpenSoya.Size = new System.Drawing.Size(15, 17);
+            this.lblOpenSoya.Size = new System.Drawing.Size(19, 23);
             this.lblOpenSoya.TabIndex = 353;
             this.lblOpenSoya.Text = "0";
             this.lblOpenSoya.Visible = false;
@@ -245,11 +255,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdData.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdData.Location = new System.Drawing.Point(29, 52);
+            this.grdData.Location = new System.Drawing.Point(39, 64);
+            this.grdData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdData.Name = "grdData";
             this.grdData.ReadOnly = true;
             this.grdData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdData.Size = new System.Drawing.Size(41, 18);
+            this.grdData.Size = new System.Drawing.Size(55, 22);
             this.grdData.TabIndex = 348;
             this.grdData.TabStop = false;
             this.grdData.Visible = false;
@@ -259,111 +270,112 @@
             this.purchasesDate.HeaderText = "PURCHASED DATE";
             this.purchasesDate.Name = "purchasesDate";
             this.purchasesDate.ReadOnly = true;
-            this.purchasesDate.Width = 143;
+            this.purchasesDate.Width = 182;
             // 
             // invoice
             // 
             this.invoice.HeaderText = "INVOICE";
             this.invoice.Name = "invoice";
             this.invoice.ReadOnly = true;
-            this.invoice.Width = 84;
+            this.invoice.Width = 106;
             // 
             // canolaKg
             // 
             this.canolaKg.HeaderText = "CANOLA KG";
             this.canolaKg.Name = "canolaKg";
             this.canolaKg.ReadOnly = true;
-            this.canolaKg.Width = 106;
+            this.canolaKg.Width = 132;
             // 
             // canolaRate
             // 
             this.canolaRate.HeaderText = "CANOLA RATE";
             this.canolaRate.Name = "canolaRate";
             this.canolaRate.ReadOnly = true;
-            this.canolaRate.Width = 119;
+            this.canolaRate.Width = 150;
             // 
             // canolaAmount
             // 
             this.canolaAmount.HeaderText = "CANOLA AMOUNT";
             this.canolaAmount.Name = "canolaAmount";
             this.canolaAmount.ReadOnly = true;
-            this.canolaAmount.Width = 146;
+            this.canolaAmount.Width = 185;
             // 
             // olienKg
             // 
             this.olienKg.HeaderText = "OLIEN KG";
             this.olienKg.Name = "olienKg";
             this.olienKg.ReadOnly = true;
-            this.olienKg.Width = 91;
+            this.olienKg.Width = 113;
             // 
             // olienRate
             // 
             this.olienRate.HeaderText = "OLIEN RATE";
             this.olienRate.Name = "olienRate";
             this.olienRate.ReadOnly = true;
-            this.olienRate.Width = 104;
+            this.olienRate.Width = 131;
             // 
             // olienAmount
             // 
             this.olienAmount.HeaderText = "OLIEN AMOUNT";
             this.olienAmount.Name = "olienAmount";
             this.olienAmount.ReadOnly = true;
-            this.olienAmount.Width = 131;
+            this.olienAmount.Width = 166;
             // 
             // muandRate
             // 
             this.muandRate.HeaderText = "MUAND RATE";
             this.muandRate.Name = "muandRate";
             this.muandRate.ReadOnly = true;
-            this.muandRate.Width = 116;
+            this.muandRate.Width = 147;
             // 
             // materialId
             // 
             this.materialId.HeaderText = "MATERIAL ID";
             this.materialId.Name = "materialId";
             this.materialId.ReadOnly = true;
-            this.materialId.Width = 111;
+            this.materialId.Width = 140;
             // 
             // soyaKg
             // 
             this.soyaKg.HeaderText = "SOYA KG";
             this.soyaKg.Name = "soyaKg";
             this.soyaKg.ReadOnly = true;
-            this.soyaKg.Width = 87;
+            this.soyaKg.Width = 107;
             // 
             // soyaRate
             // 
             this.soyaRate.HeaderText = "SOYA RATE";
             this.soyaRate.Name = "soyaRate";
             this.soyaRate.ReadOnly = true;
+            this.soyaRate.Width = 125;
             // 
             // soyaAmount
             // 
             this.soyaAmount.HeaderText = "SOYA AMOUNT";
             this.soyaAmount.Name = "soyaAmount";
             this.soyaAmount.ReadOnly = true;
-            this.soyaAmount.Width = 127;
+            this.soyaAmount.Width = 160;
             // 
             // hardKg
             // 
             this.hardKg.HeaderText = "HARD KG";
             this.hardKg.Name = "hardKg";
             this.hardKg.ReadOnly = true;
-            this.hardKg.Width = 90;
+            this.hardKg.Width = 112;
             // 
             // hardRate
             // 
             this.hardRate.HeaderText = "HARD RATE";
             this.hardRate.Name = "hardRate";
             this.hardRate.ReadOnly = true;
-            this.hardRate.Width = 103;
+            this.hardRate.Width = 130;
             // 
             // hardAmount
             // 
             this.hardAmount.HeaderText = "HARD AMOUNT";
             this.hardAmount.Name = "hardAmount";
             this.hardAmount.ReadOnly = true;
-            this.hardAmount.Width = 130;
+            this.hardAmount.Width = 165;
             // 
             // grdOpening
             // 
@@ -404,11 +416,12 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdOpening.DefaultCellStyle = dataGridViewCellStyle6;
-            this.grdOpening.Location = new System.Drawing.Point(6, 55);
+            this.grdOpening.Location = new System.Drawing.Point(8, 68);
+            this.grdOpening.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdOpening.Name = "grdOpening";
             this.grdOpening.ReadOnly = true;
             this.grdOpening.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdOpening.Size = new System.Drawing.Size(23, 18);
+            this.grdOpening.Size = new System.Drawing.Size(31, 22);
             this.grdOpening.TabIndex = 344;
             this.grdOpening.TabStop = false;
             this.grdOpening.Visible = false;
@@ -418,77 +431,78 @@
             this.openPurchasesDate.HeaderText = "PURCHASED DATE";
             this.openPurchasesDate.Name = "openPurchasesDate";
             this.openPurchasesDate.ReadOnly = true;
-            this.openPurchasesDate.Width = 143;
+            this.openPurchasesDate.Width = 182;
             // 
             // openInvoice
             // 
             this.openInvoice.HeaderText = "INVOICE";
             this.openInvoice.Name = "openInvoice";
             this.openInvoice.ReadOnly = true;
-            this.openInvoice.Width = 84;
+            this.openInvoice.Width = 106;
             // 
             // openCanolaKg
             // 
             this.openCanolaKg.HeaderText = "CANOLA KG";
             this.openCanolaKg.Name = "openCanolaKg";
             this.openCanolaKg.ReadOnly = true;
-            this.openCanolaKg.Width = 106;
+            this.openCanolaKg.Width = 132;
             // 
             // openCanolaRate
             // 
             this.openCanolaRate.HeaderText = "CANOLA RATE";
             this.openCanolaRate.Name = "openCanolaRate";
             this.openCanolaRate.ReadOnly = true;
-            this.openCanolaRate.Width = 119;
+            this.openCanolaRate.Width = 150;
             // 
             // openCanolaAmount
             // 
             this.openCanolaAmount.HeaderText = "CANOLA AMOUNT";
             this.openCanolaAmount.Name = "openCanolaAmount";
             this.openCanolaAmount.ReadOnly = true;
-            this.openCanolaAmount.Width = 146;
+            this.openCanolaAmount.Width = 185;
             // 
             // openOlienKg
             // 
             this.openOlienKg.HeaderText = "OLIEN KG";
             this.openOlienKg.Name = "openOlienKg";
             this.openOlienKg.ReadOnly = true;
-            this.openOlienKg.Width = 91;
+            this.openOlienKg.Width = 113;
             // 
             // openOlienRate
             // 
             this.openOlienRate.HeaderText = "OLIEN RATE";
             this.openOlienRate.Name = "openOlienRate";
             this.openOlienRate.ReadOnly = true;
-            this.openOlienRate.Width = 104;
+            this.openOlienRate.Width = 131;
             // 
             // openOlienAmount
             // 
             this.openOlienAmount.HeaderText = "OLIEN AMOUNT";
             this.openOlienAmount.Name = "openOlienAmount";
             this.openOlienAmount.ReadOnly = true;
-            this.openOlienAmount.Width = 131;
+            this.openOlienAmount.Width = 166;
             // 
             // openMuandRate
             // 
             this.openMuandRate.HeaderText = "MUAND RATE";
             this.openMuandRate.Name = "openMuandRate";
             this.openMuandRate.ReadOnly = true;
-            this.openMuandRate.Width = 116;
+            this.openMuandRate.Width = 147;
             // 
             // openMaterialId
             // 
             this.openMaterialId.HeaderText = "MATERIAL ID";
             this.openMaterialId.Name = "openMaterialId";
             this.openMaterialId.ReadOnly = true;
-            this.openMaterialId.Width = 111;
+            this.openMaterialId.Width = 140;
             // 
             // lblOpenOlien
             // 
             this.lblOpenOlien.AutoSize = true;
-            this.lblOpenOlien.Location = new System.Drawing.Point(329, 56);
+            this.lblOpenOlien.Location = new System.Drawing.Point(439, 69);
+            this.lblOpenOlien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOpenOlien.Name = "lblOpenOlien";
-            this.lblOpenOlien.Size = new System.Drawing.Size(15, 17);
+            this.lblOpenOlien.Size = new System.Drawing.Size(19, 23);
             this.lblOpenOlien.TabIndex = 343;
             this.lblOpenOlien.Text = "0";
             this.lblOpenOlien.Visible = false;
@@ -496,9 +510,10 @@
             // lblOpenCanola
             // 
             this.lblOpenCanola.AutoSize = true;
-            this.lblOpenCanola.Location = new System.Drawing.Point(327, 30);
+            this.lblOpenCanola.Location = new System.Drawing.Point(436, 37);
+            this.lblOpenCanola.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOpenCanola.Name = "lblOpenCanola";
-            this.lblOpenCanola.Size = new System.Drawing.Size(15, 17);
+            this.lblOpenCanola.Size = new System.Drawing.Size(19, 23);
             this.lblOpenCanola.TabIndex = 342;
             this.lblOpenCanola.Text = "0";
             this.lblOpenCanola.Visible = false;
@@ -506,9 +521,10 @@
             // lblTotalOlien
             // 
             this.lblTotalOlien.AutoSize = true;
-            this.lblTotalOlien.Location = new System.Drawing.Point(308, 52);
+            this.lblTotalOlien.Location = new System.Drawing.Point(411, 64);
+            this.lblTotalOlien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalOlien.Name = "lblTotalOlien";
-            this.lblTotalOlien.Size = new System.Drawing.Size(15, 17);
+            this.lblTotalOlien.Size = new System.Drawing.Size(19, 23);
             this.lblTotalOlien.TabIndex = 341;
             this.lblTotalOlien.Text = "0";
             this.lblTotalOlien.Visible = false;
@@ -516,9 +532,10 @@
             // lblTotalCanola
             // 
             this.lblTotalCanola.AutoSize = true;
-            this.lblTotalCanola.Location = new System.Drawing.Point(306, 26);
+            this.lblTotalCanola.Location = new System.Drawing.Point(408, 32);
+            this.lblTotalCanola.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalCanola.Name = "lblTotalCanola";
-            this.lblTotalCanola.Size = new System.Drawing.Size(15, 17);
+            this.lblTotalCanola.Size = new System.Drawing.Size(19, 23);
             this.lblTotalCanola.TabIndex = 340;
             this.lblTotalCanola.Text = "0";
             this.lblTotalCanola.Visible = false;
@@ -526,9 +543,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 26);
+            this.label1.Location = new System.Drawing.Point(12, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 17);
+            this.label1.Size = new System.Drawing.Size(62, 23);
             this.label1.TabIndex = 121;
             this.label1.Text = "UPTO: ";
             // 
@@ -537,9 +555,10 @@
             this.dtp_TO.CustomFormat = "dd/MM/yyyy";
             this.dtp_TO.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_TO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_TO.Location = new System.Drawing.Point(76, 23);
+            this.dtp_TO.Location = new System.Drawing.Point(101, 28);
+            this.dtp_TO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtp_TO.Name = "dtp_TO";
-            this.dtp_TO.Size = new System.Drawing.Size(211, 23);
+            this.dtp_TO.Size = new System.Drawing.Size(280, 27);
             this.dtp_TO.TabIndex = 120;
             // 
             // btnSHOW
@@ -551,9 +570,10 @@
             this.btnSHOW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSHOW.ImageIndex = 5;
             this.btnSHOW.ImageList = this.imageList1;
-            this.btnSHOW.Location = new System.Drawing.Point(76, 52);
+            this.btnSHOW.Location = new System.Drawing.Point(101, 64);
+            this.btnSHOW.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSHOW.Name = "btnSHOW";
-            this.btnSHOW.Size = new System.Drawing.Size(211, 25);
+            this.btnSHOW.Size = new System.Drawing.Size(281, 31);
             this.btnSHOW.TabIndex = 9;
             this.btnSHOW.Text = "SHOW";
             this.btnSHOW.UseVisualStyleBackColor = false;
@@ -572,15 +592,16 @@
             // 
             // frm_BalanceSheetReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(298, 180);
+            this.ClientSize = new System.Drawing.Size(395, 212);
             this.Controls.Add(this.grpCASHBOOK);
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(314, 219);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(413, 259);
             this.Name = "frm_BalanceSheetReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BALANCE SHEET REPORT";

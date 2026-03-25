@@ -107,10 +107,10 @@
             // 
             this.txtRefAccPay.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRefAccPay.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtRefAccPay.Location = new System.Drawing.Point(507, 190);
+            this.txtRefAccPay.Location = new System.Drawing.Point(633, 237);
             this.txtRefAccPay.MaxLength = 50;
             this.txtRefAccPay.Name = "txtRefAccPay";
-            this.txtRefAccPay.Size = new System.Drawing.Size(246, 25);
+            this.txtRefAccPay.Size = new System.Drawing.Size(306, 29);
             this.txtRefAccPay.TabIndex = 1;
             this.txtRefAccPay.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAmount_MouseClick);
             this.txtRefAccPay.Enter += new System.EventHandler(this.txtAmount_Enter);
@@ -121,9 +121,9 @@
             this.lblRefAccPay.AutoSize = true;
             this.lblRefAccPay.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblRefAccPay.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRefAccPay.Location = new System.Drawing.Point(381, 194);
+            this.lblRefAccPay.Location = new System.Drawing.Point(476, 242);
             this.lblRefAccPay.Name = "lblRefAccPay";
-            this.lblRefAccPay.Size = new System.Drawing.Size(87, 15);
+            this.lblRefAccPay.Size = new System.Drawing.Size(112, 20);
             this.lblRefAccPay.TabIndex = 273;
             this.lblRefAccPay.Text = "REF ACCOUNT:";
             // 
@@ -131,9 +131,9 @@
             // 
             this.cmbAccounts.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbAccounts.FormattingEnabled = true;
-            this.cmbAccounts.Location = new System.Drawing.Point(124, 127);
+            this.cmbAccounts.Location = new System.Drawing.Point(155, 158);
             this.cmbAccounts.Name = "cmbAccounts";
-            this.cmbAccounts.Size = new System.Drawing.Size(246, 25);
+            this.cmbAccounts.Size = new System.Drawing.Size(306, 29);
             this.cmbAccounts.TabIndex = 3;
             this.cmbAccounts.DropDown += new System.EventHandler(this.cmbPay_DropDown);
             this.cmbAccounts.SelectedIndexChanged += new System.EventHandler(this.cmbAccounts_SelectedIndexChanged);
@@ -151,9 +151,9 @@
             // dtp_DATE
             // 
             this.dtp_DATE.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-            this.dtp_DATE.Location = new System.Drawing.Point(507, 128);
+            this.dtp_DATE.Location = new System.Drawing.Point(633, 160);
             this.dtp_DATE.Name = "dtp_DATE";
-            this.dtp_DATE.Size = new System.Drawing.Size(246, 23);
+            this.dtp_DATE.Size = new System.Drawing.Size(306, 27);
             this.dtp_DATE.TabIndex = 0;
             this.dtp_DATE.ValueChanged += new System.EventHandler(this.dtp_DATE_ValueChanged);
             // 
@@ -162,9 +162,9 @@
             this.lblCode.AutoSize = true;
             this.lblCode.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(215)))));
-            this.lblCode.Location = new System.Drawing.Point(123, 105);
+            this.lblCode.Location = new System.Drawing.Point(153, 131);
             this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(69, 15);
+            this.lblCode.Size = new System.Drawing.Size(85, 20);
             this.lblCode.TabIndex = 268;
             this.lblCode.Text = "CPV-1-2017";
             // 
@@ -172,11 +172,11 @@
             // 
             this.txtNar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNar.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtNar.Location = new System.Drawing.Point(122, 286);
+            this.txtNar.Location = new System.Drawing.Point(152, 357);
             this.txtNar.MaxLength = 100;
             this.txtNar.Multiline = true;
             this.txtNar.Name = "txtNar";
-            this.txtNar.Size = new System.Drawing.Size(372, 57);
+            this.txtNar.Size = new System.Drawing.Size(464, 70);
             this.txtNar.TabIndex = 2;
             this.txtNar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAmount_MouseClick);
             this.txtNar.Enter += new System.EventHandler(this.txtAmount_Enter);
@@ -187,9 +187,9 @@
             this.lblAcc.AutoSize = true;
             this.lblAcc.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblAcc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAcc.Location = new System.Drawing.Point(1, 294);
+            this.lblAcc.Location = new System.Drawing.Point(1, 367);
             this.lblAcc.Name = "lblAcc";
-            this.lblAcc.Size = new System.Drawing.Size(77, 15);
+            this.lblAcc.Size = new System.Drawing.Size(97, 20);
             this.lblAcc.TabIndex = 266;
             this.lblAcc.Text = "NARRATION:";
             // 
@@ -197,10 +197,10 @@
             // 
             this.txtAmountRcv.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAmountRcv.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtAmountRcv.Location = new System.Drawing.Point(124, 156);
+            this.txtAmountRcv.Location = new System.Drawing.Point(155, 195);
             this.txtAmountRcv.MaxLength = 10;
             this.txtAmountRcv.Name = "txtAmountRcv";
-            this.txtAmountRcv.Size = new System.Drawing.Size(246, 25);
+            this.txtAmountRcv.Size = new System.Drawing.Size(306, 29);
             this.txtAmountRcv.TabIndex = 4;
             this.txtAmountRcv.Text = "0.0";
             this.txtAmountRcv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAmount_MouseClick);
@@ -214,9 +214,9 @@
             this.lblAmt.AutoSize = true;
             this.lblAmt.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblAmt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAmt.Location = new System.Drawing.Point(2, 162);
+            this.lblAmt.Location = new System.Drawing.Point(2, 202);
             this.lblAmt.Name = "lblAmt";
-            this.lblAmt.Size = new System.Drawing.Size(118, 15);
+            this.lblAmt.Size = new System.Drawing.Size(150, 20);
             this.lblAmt.TabIndex = 264;
             this.lblAmt.Text = "RECEIVED AMOUNT:";
             // 
@@ -225,9 +225,9 @@
             this.lblPaid.AutoSize = true;
             this.lblPaid.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblPaid.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPaid.Location = new System.Drawing.Point(2, 132);
+            this.lblPaid.Location = new System.Drawing.Point(2, 165);
             this.lblPaid.Name = "lblPaid";
-            this.lblPaid.Size = new System.Drawing.Size(102, 15);
+            this.lblPaid.Size = new System.Drawing.Size(131, 20);
             this.lblPaid.TabIndex = 261;
             this.lblPaid.Text = "ACCOUNT NAME:";
             // 
@@ -236,9 +236,9 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDate.Location = new System.Drawing.Point(381, 130);
+            this.lblDate.Location = new System.Drawing.Point(476, 162);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(39, 15);
+            this.lblDate.Size = new System.Drawing.Size(49, 20);
             this.lblDate.TabIndex = 260;
             this.lblDate.Text = "DATE:";
             // 
@@ -247,9 +247,9 @@
             this.lblV.AutoSize = true;
             this.lblV.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblV.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblV.Location = new System.Drawing.Point(2, 105);
+            this.lblV.Location = new System.Drawing.Point(2, 131);
             this.lblV.Name = "lblV";
-            this.lblV.Size = new System.Drawing.Size(74, 15);
+            this.lblV.Size = new System.Drawing.Size(95, 20);
             this.lblV.TabIndex = 259;
             this.lblV.Text = "VOUCHER #:";
             // 
@@ -281,12 +281,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdSEARCH.Location = new System.Drawing.Point(0, 380);
+            this.grdSEARCH.Location = new System.Drawing.Point(0, 475);
             this.grdSEARCH.Name = "grdSEARCH";
             this.grdSEARCH.ReadOnly = true;
             this.grdSEARCH.RowHeadersVisible = false;
             this.grdSEARCH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdSEARCH.Size = new System.Drawing.Size(754, 151);
+            this.grdSEARCH.Size = new System.Drawing.Size(942, 188);
             this.grdSEARCH.TabIndex = 258;
             this.grdSEARCH.TabStop = false;
             this.grdSEARCH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdSEARCH_CellClick);
@@ -296,9 +296,9 @@
             // 
             this.txtSEARCH.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSEARCH.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtSEARCH.Location = new System.Drawing.Point(123, 351);
+            this.txtSEARCH.Location = new System.Drawing.Point(153, 438);
             this.txtSEARCH.Name = "txtSEARCH";
-            this.txtSEARCH.Size = new System.Drawing.Size(632, 25);
+            this.txtSEARCH.Size = new System.Drawing.Size(789, 29);
             this.txtSEARCH.TabIndex = 257;
             this.txtSEARCH.TextChanged += new System.EventHandler(this.txtSEARCH_TextChanged);
             // 
@@ -307,9 +307,9 @@
             this.lblSEARCH.AutoSize = true;
             this.lblSEARCH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSEARCH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSEARCH.Location = new System.Drawing.Point(2, 354);
+            this.lblSEARCH.Location = new System.Drawing.Point(2, 442);
             this.lblSEARCH.Name = "lblSEARCH";
-            this.lblSEARCH.Size = new System.Drawing.Size(57, 17);
+            this.lblSEARCH.Size = new System.Drawing.Size(74, 23);
             this.lblSEARCH.TabIndex = 256;
             this.lblSEARCH.Text = "SEARCH";
             // 
@@ -322,9 +322,9 @@
             this.btnSAVE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSAVE.ImageIndex = 0;
             this.btnSAVE.ImageList = this.imageList1;
-            this.btnSAVE.Location = new System.Drawing.Point(508, 286);
+            this.btnSAVE.Location = new System.Drawing.Point(635, 357);
             this.btnSAVE.Name = "btnSAVE";
-            this.btnSAVE.Size = new System.Drawing.Size(122, 25);
+            this.btnSAVE.Size = new System.Drawing.Size(152, 31);
             this.btnSAVE.TabIndex = 6;
             this.btnSAVE.Text = "SAVE";
             this.btnSAVE.UseVisualStyleBackColor = false;
@@ -334,9 +334,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::ERP_Maaz_Oil.Properties.Resources.plus;
-            this.pictureBox1.Location = new System.Drawing.Point(1431, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(1788, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(52, 20);
+            this.pictureBox1.Size = new System.Drawing.Size(65, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 255;
             this.pictureBox1.TabStop = false;
@@ -352,16 +352,16 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(1080, 56);
+            this.pnlHEADER.Size = new System.Drawing.Size(1347, 69);
             this.pnlHEADER.TabIndex = 38;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Image = global::ERP_Maaz_Oil.Properties.Resources.plus;
-            this.pictureBox15.Location = new System.Drawing.Point(1430, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1787, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(52, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(65, 25);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -370,11 +370,11 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(6, 18);
+            this.lblHEADING.Location = new System.Drawing.Point(7, 22);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(122, 23);
+            this.lblHEADING.Size = new System.Drawing.Size(175, 31);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "CASH BOOK";
             // 
@@ -383,9 +383,9 @@
             this.lblCASH_AC.AutoSize = true;
             this.lblCASH_AC.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblCASH_AC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCASH_AC.Location = new System.Drawing.Point(381, 226);
+            this.lblCASH_AC.Location = new System.Drawing.Point(476, 282);
             this.lblCASH_AC.Name = "lblCASH_AC";
-            this.lblCASH_AC.Size = new System.Drawing.Size(56, 15);
+            this.lblCASH_AC.Size = new System.Drawing.Size(68, 20);
             this.lblCASH_AC.TabIndex = 279;
             this.lblCASH_AC.Text = "PAID TO:";
             // 
@@ -394,10 +394,10 @@
             this.rdbCashPayment.AutoSize = true;
             this.rdbCashPayment.Checked = true;
             this.rdbCashPayment.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbCashPayment.Location = new System.Drawing.Point(384, 65);
+            this.rdbCashPayment.Location = new System.Drawing.Point(480, 81);
             this.rdbCashPayment.Margin = new System.Windows.Forms.Padding(2);
             this.rdbCashPayment.Name = "rdbCashPayment";
-            this.rdbCashPayment.Size = new System.Drawing.Size(140, 24);
+            this.rdbCashPayment.Size = new System.Drawing.Size(178, 29);
             this.rdbCashPayment.TabIndex = 280;
             this.rdbCashPayment.TabStop = true;
             this.rdbCashPayment.Text = "CASH PAYMENT";
@@ -408,10 +408,10 @@
             // 
             this.rdbCashReceipt.AutoSize = true;
             this.rdbCashReceipt.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbCashReceipt.Location = new System.Drawing.Point(5, 65);
+            this.rdbCashReceipt.Location = new System.Drawing.Point(6, 81);
             this.rdbCashReceipt.Margin = new System.Windows.Forms.Padding(2);
             this.rdbCashReceipt.Name = "rdbCashReceipt";
-            this.rdbCashReceipt.Size = new System.Drawing.Size(128, 24);
+            this.rdbCashReceipt.Size = new System.Drawing.Size(162, 29);
             this.rdbCashReceipt.TabIndex = 280;
             this.rdbCashReceipt.Text = "CASH RECEIPT";
             this.rdbCashReceipt.UseVisualStyleBackColor = true;
@@ -421,9 +421,9 @@
             // 
             this.cmbRecAcc.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbRecAcc.FormattingEnabled = true;
-            this.cmbRecAcc.Location = new System.Drawing.Point(124, 219);
+            this.cmbRecAcc.Location = new System.Drawing.Point(155, 273);
             this.cmbRecAcc.Name = "cmbRecAcc";
-            this.cmbRecAcc.Size = new System.Drawing.Size(246, 25);
+            this.cmbRecAcc.Size = new System.Drawing.Size(306, 29);
             this.cmbRecAcc.TabIndex = 281;
             // 
             // lblRc
@@ -431,9 +431,9 @@
             this.lblRc.AutoSize = true;
             this.lblRc.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblRc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRc.Location = new System.Drawing.Point(2, 226);
+            this.lblRc.Location = new System.Drawing.Point(2, 282);
             this.lblRc.Name = "lblRc";
-            this.lblRc.Size = new System.Drawing.Size(93, 15);
+            this.lblRc.Size = new System.Drawing.Size(119, 20);
             this.lblRc.TabIndex = 282;
             this.lblRc.Text = "RECVR PERSON:";
             // 
@@ -442,9 +442,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(381, 161);
+            this.label1.Location = new System.Drawing.Point(476, 201);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 15);
+            this.label1.Size = new System.Drawing.Size(151, 20);
             this.label1.TabIndex = 264;
             this.label1.Text = "PAYMENT AMOUNT:";
             // 
@@ -452,10 +452,10 @@
             // 
             this.txtAmountPay.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAmountPay.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtAmountPay.Location = new System.Drawing.Point(507, 156);
+            this.txtAmountPay.Location = new System.Drawing.Point(633, 195);
             this.txtAmountPay.MaxLength = 10;
             this.txtAmountPay.Name = "txtAmountPay";
-            this.txtAmountPay.Size = new System.Drawing.Size(246, 25);
+            this.txtAmountPay.Size = new System.Drawing.Size(306, 29);
             this.txtAmountPay.TabIndex = 4;
             this.txtAmountPay.Text = "0.0";
             this.txtAmountPay.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAmount_MouseClick);
@@ -469,9 +469,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(2, 194);
+            this.label2.Location = new System.Drawing.Point(2, 242);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 15);
+            this.label2.Size = new System.Drawing.Size(112, 20);
             this.label2.TabIndex = 273;
             this.label2.Text = "REF ACCOUNT:";
             // 
@@ -479,10 +479,10 @@
             // 
             this.txtRefAccRec.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRefAccRec.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtRefAccRec.Location = new System.Drawing.Point(124, 190);
+            this.txtRefAccRec.Location = new System.Drawing.Point(155, 237);
             this.txtRefAccRec.MaxLength = 50;
             this.txtRefAccRec.Name = "txtRefAccRec";
-            this.txtRefAccRec.Size = new System.Drawing.Size(246, 25);
+            this.txtRefAccRec.Size = new System.Drawing.Size(306, 29);
             this.txtRefAccRec.TabIndex = 1;
             this.txtRefAccRec.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAmount_MouseClick);
             this.txtRefAccRec.Enter += new System.EventHandler(this.txtAmount_Enter);
@@ -493,9 +493,9 @@
             this.lblTrNo.AutoSize = true;
             this.lblTrNo.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblTrNo.ForeColor = System.Drawing.Color.Red;
-            this.lblTrNo.Location = new System.Drawing.Point(666, 70);
+            this.lblTrNo.Location = new System.Drawing.Point(832, 87);
             this.lblTrNo.Name = "lblTrNo";
-            this.lblTrNo.Size = new System.Drawing.Size(69, 15);
+            this.lblTrNo.Size = new System.Drawing.Size(85, 20);
             this.lblTrNo.TabIndex = 268;
             this.lblTrNo.Text = "CPV-1-2017";
             this.lblTrNo.Visible = false;
@@ -505,9 +505,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(643, 70);
+            this.label4.Location = new System.Drawing.Point(803, 87);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 15);
+            this.label4.Size = new System.Drawing.Size(114, 20);
             this.label4.TabIndex = 259;
             this.label4.Text = "TRANSACTION:";
             this.label4.Visible = false;
@@ -517,9 +517,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(2, 258);
+            this.label3.Location = new System.Drawing.Point(2, 322);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 15);
+            this.label3.Size = new System.Drawing.Size(142, 20);
             this.label3.TabIndex = 273;
             this.label3.Text = "AMOUNT(WORDS):";
             // 
@@ -527,11 +527,11 @@
             // 
             this.txtAmountWords.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAmountWords.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtAmountWords.Location = new System.Drawing.Point(123, 254);
+            this.txtAmountWords.Location = new System.Drawing.Point(153, 317);
             this.txtAmountWords.MaxLength = 50;
             this.txtAmountWords.Name = "txtAmountWords";
             this.txtAmountWords.ReadOnly = true;
-            this.txtAmountWords.Size = new System.Drawing.Size(246, 25);
+            this.txtAmountWords.Size = new System.Drawing.Size(306, 29);
             this.txtAmountWords.TabIndex = 1;
             this.txtAmountWords.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAmount_MouseClick);
             this.txtAmountWords.Enter += new System.EventHandler(this.txtAmount_Enter);
@@ -566,14 +566,14 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdPaySummary.DefaultCellStyle = dataGridViewCellStyle6;
-            this.grdPaySummary.Location = new System.Drawing.Point(761, 340);
+            this.grdPaySummary.Location = new System.Drawing.Point(951, 425);
             this.grdPaySummary.Name = "grdPaySummary";
             this.grdPaySummary.ReadOnly = true;
             this.grdPaySummary.RowHeadersVisible = false;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdPaySummary.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.grdPaySummary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdPaySummary.Size = new System.Drawing.Size(314, 191);
+            this.grdPaySummary.Size = new System.Drawing.Size(392, 238);
             this.grdPaySummary.TabIndex = 357;
             this.grdPaySummary.TabStop = false;
             this.grdPaySummary.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.grdPaySummary_DataBindingComplete);
@@ -607,14 +607,14 @@
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdRecSummary.DefaultCellStyle = dataGridViewCellStyle10;
-            this.grdRecSummary.Location = new System.Drawing.Point(761, 90);
+            this.grdRecSummary.Location = new System.Drawing.Point(951, 112);
             this.grdRecSummary.Name = "grdRecSummary";
             this.grdRecSummary.ReadOnly = true;
             this.grdRecSummary.RowHeadersVisible = false;
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdRecSummary.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.grdRecSummary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdRecSummary.Size = new System.Drawing.Size(314, 186);
+            this.grdRecSummary.Size = new System.Drawing.Size(392, 232);
             this.grdRecSummary.TabIndex = 358;
             this.grdRecSummary.TabStop = false;
             this.grdRecSummary.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.grdRecSummary_DataBindingComplete);
@@ -623,10 +623,10 @@
             // 
             this.txtTotalPayGrid.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalPayGrid.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtTotalPayGrid.Location = new System.Drawing.Point(959, 538);
+            this.txtTotalPayGrid.Location = new System.Drawing.Point(1198, 672);
             this.txtTotalPayGrid.Name = "txtTotalPayGrid";
             this.txtTotalPayGrid.ReadOnly = true;
-            this.txtTotalPayGrid.Size = new System.Drawing.Size(117, 25);
+            this.txtTotalPayGrid.Size = new System.Drawing.Size(145, 29);
             this.txtTotalPayGrid.TabIndex = 355;
             this.txtTotalPayGrid.Text = "0";
             this.txtTotalPayGrid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -636,9 +636,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(894, 540);
+            this.label6.Location = new System.Drawing.Point(1117, 675);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 17);
+            this.label6.Size = new System.Drawing.Size(57, 23);
             this.label6.TabIndex = 353;
             this.label6.Text = "TOTAL";
             // 
@@ -646,10 +646,10 @@
             // 
             this.txtTotalRecGrid.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalRecGrid.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtTotalRecGrid.Location = new System.Drawing.Point(959, 282);
+            this.txtTotalRecGrid.Location = new System.Drawing.Point(1198, 352);
             this.txtTotalRecGrid.Name = "txtTotalRecGrid";
             this.txtTotalRecGrid.ReadOnly = true;
-            this.txtTotalRecGrid.Size = new System.Drawing.Size(117, 25);
+            this.txtTotalRecGrid.Size = new System.Drawing.Size(145, 29);
             this.txtTotalRecGrid.TabIndex = 356;
             this.txtTotalRecGrid.Text = "0";
             this.txtTotalRecGrid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -659,9 +659,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(894, 282);
+            this.label5.Location = new System.Drawing.Point(1117, 352);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 17);
+            this.label5.Size = new System.Drawing.Size(57, 23);
             this.label5.TabIndex = 354;
             this.label5.Text = "TOTAL";
             // 
@@ -670,9 +670,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(798, 316);
+            this.label7.Location = new System.Drawing.Point(997, 395);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(252, 21);
+            this.label7.Size = new System.Drawing.Size(313, 28);
             this.label7.TabIndex = 351;
             this.label7.Text = "SUMMARY PAYMENT ACCOUNT";
             // 
@@ -681,9 +681,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(798, 65);
+            this.label8.Location = new System.Drawing.Point(997, 81);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(239, 21);
+            this.label8.Size = new System.Drawing.Size(297, 28);
             this.label8.TabIndex = 352;
             this.label8.Text = "SUMMARY RECEIPT ACCOUNT";
             // 
@@ -692,9 +692,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(381, 254);
+            this.label9.Location = new System.Drawing.Point(476, 317);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 15);
+            this.label9.Size = new System.Drawing.Size(120, 20);
             this.label9.TabIndex = 273;
             this.label9.Text = "CASH BALANCE:";
             // 
@@ -702,11 +702,11 @@
             // 
             this.txtBalance.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBalance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtBalance.Location = new System.Drawing.Point(507, 249);
+            this.txtBalance.Location = new System.Drawing.Point(633, 311);
             this.txtBalance.MaxLength = 50;
             this.txtBalance.Name = "txtBalance";
             this.txtBalance.ReadOnly = true;
-            this.txtBalance.Size = new System.Drawing.Size(246, 25);
+            this.txtBalance.Size = new System.Drawing.Size(306, 29);
             this.txtBalance.TabIndex = 1;
             this.txtBalance.Text = "0";
             this.txtBalance.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAmount_MouseClick);
@@ -722,9 +722,9 @@
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.ImageIndex = 1;
             this.btnDelete.ImageList = this.imageList1;
-            this.btnDelete.Location = new System.Drawing.Point(507, 316);
+            this.btnDelete.Location = new System.Drawing.Point(633, 395);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(123, 25);
+            this.btnDelete.Size = new System.Drawing.Size(153, 31);
             this.btnDelete.TabIndex = 359;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -734,10 +734,10 @@
             // 
             this.txtPaidTo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPaidTo.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtPaidTo.Location = new System.Drawing.Point(507, 219);
+            this.txtPaidTo.Location = new System.Drawing.Point(633, 273);
             this.txtPaidTo.MaxLength = 50;
             this.txtPaidTo.Name = "txtPaidTo";
-            this.txtPaidTo.Size = new System.Drawing.Size(246, 25);
+            this.txtPaidTo.Size = new System.Drawing.Size(306, 29);
             this.txtPaidTo.TabIndex = 1;
             this.txtPaidTo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAmount_MouseClick);
             this.txtPaidTo.Enter += new System.EventHandler(this.txtAmount_Enter);
@@ -748,9 +748,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(209, 538);
+            this.label10.Location = new System.Drawing.Point(261, 672);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 17);
+            this.label10.Size = new System.Drawing.Size(61, 23);
             this.label10.TabIndex = 353;
             this.label10.Text = "TOTAL:";
             // 
@@ -758,10 +758,10 @@
             // 
             this.txtTotalPaid.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalPaid.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtTotalPaid.Location = new System.Drawing.Point(465, 537);
+            this.txtTotalPaid.Location = new System.Drawing.Point(581, 671);
             this.txtTotalPaid.Name = "txtTotalPaid";
             this.txtTotalPaid.ReadOnly = true;
-            this.txtTotalPaid.Size = new System.Drawing.Size(117, 25);
+            this.txtTotalPaid.Size = new System.Drawing.Size(145, 29);
             this.txtTotalPaid.TabIndex = 355;
             this.txtTotalPaid.Text = "0";
             this.txtTotalPaid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -770,10 +770,10 @@
             // 
             this.txtTotalRcvd.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalRcvd.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtTotalRcvd.Location = new System.Drawing.Point(310, 537);
+            this.txtTotalRcvd.Location = new System.Drawing.Point(387, 671);
             this.txtTotalRcvd.Name = "txtTotalRcvd";
             this.txtTotalRcvd.ReadOnly = true;
-            this.txtTotalRcvd.Size = new System.Drawing.Size(117, 25);
+            this.txtTotalRcvd.Size = new System.Drawing.Size(145, 29);
             this.txtTotalRcvd.TabIndex = 355;
             this.txtTotalRcvd.Text = "0";
             this.txtTotalRcvd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -782,10 +782,10 @@
             // 
             this.txtTotalBalanceAmount.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalBalanceAmount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtTotalBalanceAmount.Location = new System.Drawing.Point(637, 537);
+            this.txtTotalBalanceAmount.Location = new System.Drawing.Point(796, 671);
             this.txtTotalBalanceAmount.Name = "txtTotalBalanceAmount";
             this.txtTotalBalanceAmount.ReadOnly = true;
-            this.txtTotalBalanceAmount.Size = new System.Drawing.Size(117, 25);
+            this.txtTotalBalanceAmount.Size = new System.Drawing.Size(145, 29);
             this.txtTotalBalanceAmount.TabIndex = 355;
             this.txtTotalBalanceAmount.Text = "0";
             this.txtTotalBalanceAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -800,9 +800,9 @@
             this.btnCLEAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCLEAR.ImageIndex = 1;
             this.btnCLEAR.ImageList = this.imageList1;
-            this.btnCLEAR.Location = new System.Drawing.Point(629, 286);
+            this.btnCLEAR.Location = new System.Drawing.Point(786, 357);
             this.btnCLEAR.Name = "btnCLEAR";
-            this.btnCLEAR.Size = new System.Drawing.Size(125, 25);
+            this.btnCLEAR.Size = new System.Drawing.Size(156, 31);
             this.btnCLEAR.TabIndex = 7;
             this.btnCLEAR.Text = "CLEAR";
             this.btnCLEAR.UseVisualStyleBackColor = false;
@@ -817,9 +817,9 @@
             this.btnReceiptVoucher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReceiptVoucher.ImageIndex = 2;
             this.btnReceiptVoucher.ImageList = this.imageList1;
-            this.btnReceiptVoucher.Location = new System.Drawing.Point(629, 316);
+            this.btnReceiptVoucher.Location = new System.Drawing.Point(786, 395);
             this.btnReceiptVoucher.Name = "btnReceiptVoucher";
-            this.btnReceiptVoucher.Size = new System.Drawing.Size(125, 25);
+            this.btnReceiptVoucher.Size = new System.Drawing.Size(156, 31);
             this.btnReceiptVoucher.TabIndex = 360;
             this.btnReceiptVoucher.Text = "VOUCHER";
             this.btnReceiptVoucher.UseVisualStyleBackColor = false;
@@ -830,9 +830,9 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(381, 102);
+            this.label11.Location = new System.Drawing.Point(476, 127);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(116, 15);
+            this.label11.Size = new System.Drawing.Size(148, 20);
             this.label11.TabIndex = 273;
             this.label11.Text = "OPENING BALANCE:";
             // 
@@ -840,11 +840,11 @@
             // 
             this.txtOpenBalance.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOpenBalance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtOpenBalance.Location = new System.Drawing.Point(507, 98);
+            this.txtOpenBalance.Location = new System.Drawing.Point(633, 122);
             this.txtOpenBalance.MaxLength = 50;
             this.txtOpenBalance.Name = "txtOpenBalance";
             this.txtOpenBalance.ReadOnly = true;
-            this.txtOpenBalance.Size = new System.Drawing.Size(246, 25);
+            this.txtOpenBalance.Size = new System.Drawing.Size(306, 29);
             this.txtOpenBalance.TabIndex = 1;
             this.txtOpenBalance.Text = "0";
             this.txtOpenBalance.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAmount_MouseClick);
@@ -853,10 +853,10 @@
             // 
             // frm_CashPmt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1080, 572);
+            this.ClientSize = new System.Drawing.Size(1347, 705);
             this.Controls.Add(this.btnReceiptVoucher);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.grdPaySummary);
@@ -910,7 +910,7 @@
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1096, 611);
+            this.MaximumSize = new System.Drawing.Size(1365, 752);
             this.Name = "frm_CashPmt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CASH PAYMENT VOUCHER";

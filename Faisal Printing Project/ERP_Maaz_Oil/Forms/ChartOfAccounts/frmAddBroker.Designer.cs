@@ -71,16 +71,18 @@
             this.pnlHEADER.Controls.Add(this.lblHEADING);
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
+            this.pnlHEADER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(745, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(993, 108);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1787, 4);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(65, 25);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -89,11 +91,12 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 16.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(6, 25);
+            this.lblHEADING.Location = new System.Drawing.Point(8, 31);
+            this.lblHEADING.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(150, 26);
+            this.lblHEADING.Size = new System.Drawing.Size(200, 32);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "ADD BROKER";
             // 
@@ -125,11 +128,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdSEARCH.Location = new System.Drawing.Point(2, 126);
+            this.grdSEARCH.Location = new System.Drawing.Point(3, 155);
+            this.grdSEARCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdSEARCH.Name = "grdSEARCH";
             this.grdSEARCH.ReadOnly = true;
             this.grdSEARCH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdSEARCH.Size = new System.Drawing.Size(736, 212);
+            this.grdSEARCH.Size = new System.Drawing.Size(981, 261);
             this.grdSEARCH.TabIndex = 221;
             this.grdSEARCH.TabStop = false;
             this.grdSEARCH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdSEARCH_CellClick);
@@ -141,9 +145,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSEARCH.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSEARCH.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtSEARCH.Location = new System.Drawing.Point(72, 95);
+            this.txtSEARCH.Location = new System.Drawing.Point(96, 117);
+            this.txtSEARCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSEARCH.Name = "txtSEARCH";
-            this.txtSEARCH.Size = new System.Drawing.Size(666, 25);
+            this.txtSEARCH.Size = new System.Drawing.Size(887, 29);
             this.txtSEARCH.TabIndex = 0;
             this.txtSEARCH.TextChanged += new System.EventHandler(this.txtSEARCH_TextChanged);
             // 
@@ -152,9 +157,10 @@
             this.lblSEARCH.AutoSize = true;
             this.lblSEARCH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSEARCH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSEARCH.Location = new System.Drawing.Point(9, 99);
+            this.lblSEARCH.Location = new System.Drawing.Point(12, 122);
+            this.lblSEARCH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSEARCH.Name = "lblSEARCH";
-            this.lblSEARCH.Size = new System.Drawing.Size(57, 17);
+            this.lblSEARCH.Size = new System.Drawing.Size(74, 23);
             this.lblSEARCH.TabIndex = 219;
             this.lblSEARCH.Text = "SEARCH";
             // 
@@ -167,9 +173,10 @@
             this.btnCLEAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCLEAR.ImageIndex = 1;
             this.btnCLEAR.ImageList = this.imageList1;
-            this.btnCLEAR.Location = new System.Drawing.Point(599, 437);
+            this.btnCLEAR.Location = new System.Drawing.Point(799, 538);
+            this.btnCLEAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCLEAR.Name = "btnCLEAR";
-            this.btnCLEAR.Size = new System.Drawing.Size(139, 25);
+            this.btnCLEAR.Size = new System.Drawing.Size(185, 31);
             this.btnCLEAR.TabIndex = 9;
             this.btnCLEAR.Text = "CLEAR";
             this.btnCLEAR.UseVisualStyleBackColor = false;
@@ -191,9 +198,10 @@
             this.btnSAVE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSAVE.ImageIndex = 0;
             this.btnSAVE.ImageList = this.imageList1;
-            this.btnSAVE.Location = new System.Drawing.Point(461, 437);
+            this.btnSAVE.Location = new System.Drawing.Point(615, 538);
+            this.btnSAVE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSAVE.Name = "btnSAVE";
-            this.btnSAVE.Size = new System.Drawing.Size(139, 25);
+            this.btnSAVE.Size = new System.Drawing.Size(185, 31);
             this.btnSAVE.TabIndex = 8;
             this.btnSAVE.Text = "SAVE";
             this.btnSAVE.UseVisualStyleBackColor = false;
@@ -204,9 +212,10 @@
             this.lblCITY.AutoSize = true;
             this.lblCITY.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblCITY.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCITY.Location = new System.Drawing.Point(351, 349);
+            this.lblCITY.Location = new System.Drawing.Point(468, 430);
+            this.lblCITY.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCITY.Name = "lblCITY";
-            this.lblCITY.Size = new System.Drawing.Size(77, 15);
+            this.lblCITY.Size = new System.Drawing.Size(95, 20);
             this.lblCITY.TabIndex = 212;
             this.lblCITY.Text = "SELECT CITY:";
             // 
@@ -216,9 +225,10 @@
             this.cmbCITY.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCITY.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbCITY.FormattingEnabled = true;
-            this.cmbCITY.Location = new System.Drawing.Point(461, 344);
+            this.cmbCITY.Location = new System.Drawing.Point(615, 423);
+            this.cmbCITY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCITY.Name = "cmbCITY";
-            this.cmbCITY.Size = new System.Drawing.Size(277, 25);
+            this.cmbCITY.Size = new System.Drawing.Size(368, 29);
             this.cmbCITY.TabIndex = 4;
             this.cmbCITY.DropDown += new System.EventHandler(this.cmbCITY_DropDown);
             this.cmbCITY.TextUpdate += new System.EventHandler(this.cmbVENDOR_TextUpdate);
@@ -228,10 +238,11 @@
             // 
             this.txtMOBILE.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMOBILE.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtMOBILE.Location = new System.Drawing.Point(68, 406);
+            this.txtMOBILE.Location = new System.Drawing.Point(91, 500);
+            this.txtMOBILE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMOBILE.MaxLength = 11;
             this.txtMOBILE.Name = "txtMOBILE";
-            this.txtMOBILE.Size = new System.Drawing.Size(277, 25);
+            this.txtMOBILE.Size = new System.Drawing.Size(368, 29);
             this.txtMOBILE.TabIndex = 3;
             this.txtMOBILE.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPHONE_MouseClick);
             this.txtMOBILE.Enter += new System.EventHandler(this.txtPHONE_Enter);
@@ -243,9 +254,10 @@
             this.lblMOBILE.AutoSize = true;
             this.lblMOBILE.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblMOBILE.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblMOBILE.Location = new System.Drawing.Point(9, 411);
+            this.lblMOBILE.Location = new System.Drawing.Point(12, 506);
+            this.lblMOBILE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMOBILE.Name = "lblMOBILE";
-            this.lblMOBILE.Size = new System.Drawing.Size(53, 15);
+            this.lblMOBILE.Size = new System.Drawing.Size(66, 20);
             this.lblMOBILE.TabIndex = 224;
             this.lblMOBILE.Text = "MOBILE:";
             // 
@@ -253,10 +265,11 @@
             // 
             this.txtEMAIL.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEMAIL.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtEMAIL.Location = new System.Drawing.Point(68, 375);
+            this.txtEMAIL.Location = new System.Drawing.Point(91, 462);
+            this.txtEMAIL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEMAIL.MaxLength = 100;
             this.txtEMAIL.Name = "txtEMAIL";
-            this.txtEMAIL.Size = new System.Drawing.Size(277, 25);
+            this.txtEMAIL.Size = new System.Drawing.Size(368, 29);
             this.txtEMAIL.TabIndex = 2;
             this.txtEMAIL.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPHONE_MouseClick);
             this.txtEMAIL.Enter += new System.EventHandler(this.txtPHONE_Enter);
@@ -267,9 +280,10 @@
             this.lblEMAIL.AutoSize = true;
             this.lblEMAIL.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblEMAIL.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEMAIL.Location = new System.Drawing.Point(9, 380);
+            this.lblEMAIL.Location = new System.Drawing.Point(12, 468);
+            this.lblEMAIL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEMAIL.Name = "lblEMAIL";
-            this.lblEMAIL.Size = new System.Drawing.Size(45, 15);
+            this.lblEMAIL.Size = new System.Drawing.Size(56, 20);
             this.lblEMAIL.TabIndex = 226;
             this.lblEMAIL.Text = "EMAIL:";
             // 
@@ -277,9 +291,10 @@
             // 
             this.chkDeActive.AutoSize = true;
             this.chkDeActive.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.chkDeActive.Location = new System.Drawing.Point(68, 442);
+            this.chkDeActive.Location = new System.Drawing.Point(91, 544);
+            this.chkDeActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkDeActive.Name = "chkDeActive";
-            this.chkDeActive.Size = new System.Drawing.Size(86, 19);
+            this.chkDeActive.Size = new System.Drawing.Size(105, 24);
             this.chkDeActive.TabIndex = 7;
             this.chkDeActive.Text = "DE-ACTIVE";
             this.chkDeActive.UseVisualStyleBackColor = true;
@@ -289,9 +304,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(9, 349);
+            this.label1.Location = new System.Drawing.Point(12, 430);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 15);
+            this.label1.Size = new System.Drawing.Size(68, 20);
             this.label1.TabIndex = 212;
             this.label1.Text = "BROKER:";
             // 
@@ -301,9 +317,10 @@
             this.cmbBROKER.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbBROKER.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbBROKER.FormattingEnabled = true;
-            this.cmbBROKER.Location = new System.Drawing.Point(68, 344);
+            this.cmbBROKER.Location = new System.Drawing.Point(91, 423);
+            this.cmbBROKER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbBROKER.Name = "cmbBROKER";
-            this.cmbBROKER.Size = new System.Drawing.Size(277, 25);
+            this.cmbBROKER.Size = new System.Drawing.Size(368, 29);
             this.cmbBROKER.TabIndex = 1;
             this.cmbBROKER.DropDown += new System.EventHandler(this.cmbCITY_DropDown);
             this.cmbBROKER.SelectedIndexChanged += new System.EventHandler(this.cmbPACCOUNT_SelectedIndexChanged);
@@ -315,9 +332,10 @@
             this.COMISSION_TYPE.AutoSize = true;
             this.COMISSION_TYPE.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.COMISSION_TYPE.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.COMISSION_TYPE.Location = new System.Drawing.Point(351, 411);
+            this.COMISSION_TYPE.Location = new System.Drawing.Point(468, 506);
+            this.COMISSION_TYPE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.COMISSION_TYPE.Name = "COMISSION_TYPE";
-            this.COMISSION_TYPE.Size = new System.Drawing.Size(104, 15);
+            this.COMISSION_TYPE.Size = new System.Drawing.Size(128, 20);
             this.COMISSION_TYPE.TabIndex = 212;
             this.COMISSION_TYPE.Text = "COMISSION TYPE";
             // 
@@ -330,9 +348,10 @@
             this.cmbCOMISSION.Items.AddRange(new object[] {
             "Rupess",
             "%"});
-            this.cmbCOMISSION.Location = new System.Drawing.Point(461, 406);
+            this.cmbCOMISSION.Location = new System.Drawing.Point(615, 500);
+            this.cmbCOMISSION.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCOMISSION.Name = "cmbCOMISSION";
-            this.cmbCOMISSION.Size = new System.Drawing.Size(277, 25);
+            this.cmbCOMISSION.Size = new System.Drawing.Size(368, 29);
             this.cmbCOMISSION.TabIndex = 6;
             this.cmbCOMISSION.Text = "--------SELECT TYPE---------";
             this.cmbCOMISSION.DropDown += new System.EventHandler(this.cmbCITY_DropDown);
@@ -343,9 +362,10 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.Location = new System.Drawing.Point(33, 520);
+            this.checkBox1.Location = new System.Drawing.Point(44, 640);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(86, 19);
+            this.checkBox1.Size = new System.Drawing.Size(105, 24);
             this.checkBox1.TabIndex = 235;
             this.checkBox1.Text = "DE-ACTIVE";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -355,9 +375,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(351, 380);
+            this.label2.Location = new System.Drawing.Point(468, 468);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 15);
+            this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 226;
             this.label2.Text = "COMISSION:";
             // 
@@ -365,10 +386,11 @@
             // 
             this.txtCOMISSION.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCOMISSION.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtCOMISSION.Location = new System.Drawing.Point(461, 375);
+            this.txtCOMISSION.Location = new System.Drawing.Point(615, 462);
+            this.txtCOMISSION.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCOMISSION.MaxLength = 100;
             this.txtCOMISSION.Name = "txtCOMISSION";
-            this.txtCOMISSION.Size = new System.Drawing.Size(277, 25);
+            this.txtCOMISSION.Size = new System.Drawing.Size(368, 29);
             this.txtCOMISSION.TabIndex = 5;
             this.txtCOMISSION.Text = "0";
             this.txtCOMISSION.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPHONE_MouseClick);
@@ -378,10 +400,10 @@
             // 
             // frmAddBroker
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(745, 471);
+            this.ClientSize = new System.Drawing.Size(993, 580);
             this.Controls.Add(this.grdSEARCH);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.chkDeActive);
@@ -404,7 +426,8 @@
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1314, 703);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1746, 854);
             this.Name = "frmAddBroker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADD BROKER";

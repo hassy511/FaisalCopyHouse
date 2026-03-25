@@ -80,15 +80,15 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(994, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(1159, 107);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -96,9 +96,9 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Location = new System.Drawing.Point(1499, 3);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(57, 24);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
@@ -107,11 +107,11 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 10.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(2, 26);
+            this.lblHEADING.Location = new System.Drawing.Point(2, 31);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(143, 34);
+            this.lblHEADING.Size = new System.Drawing.Size(197, 44);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "PURCHASES ORDER \r\nREPORT";
             // 
@@ -128,9 +128,9 @@
             this.grpCASHBOOK.Controls.Add(this.btnSHOW);
             this.grpCASHBOOK.Controls.Add(this.lblITO);
             this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpCASHBOOK.Location = new System.Drawing.Point(0, 90);
+            this.grpCASHBOOK.Location = new System.Drawing.Point(0, 110);
             this.grpCASHBOOK.Name = "grpCASHBOOK";
-            this.grpCASHBOOK.Size = new System.Drawing.Size(994, 90);
+            this.grpCASHBOOK.Size = new System.Drawing.Size(1159, 110);
             this.grpCASHBOOK.TabIndex = 37;
             this.grpCASHBOOK.TabStop = false;
             this.grpCASHBOOK.Text = "PURCHASES ORDER REPORT";
@@ -141,9 +141,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(21, 64);
+            this.label1.Location = new System.Drawing.Point(24, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 15);
+            this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 124;
             this.label1.Text = "SUPPLIER:";
             // 
@@ -153,9 +153,9 @@
             this.cmbSupplier.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbSupplier.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbSupplier.FormattingEnabled = true;
-            this.cmbSupplier.Location = new System.Drawing.Point(88, 59);
+            this.cmbSupplier.Location = new System.Drawing.Point(102, 72);
             this.cmbSupplier.Name = "cmbSupplier";
-            this.cmbSupplier.Size = new System.Drawing.Size(231, 25);
+            this.cmbSupplier.Size = new System.Drawing.Size(268, 29);
             this.cmbSupplier.TabIndex = 26;
             // 
             // btnShowReport
@@ -167,9 +167,9 @@
             this.btnShowReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnShowReport.ImageIndex = 5;
             this.btnShowReport.ImageList = this.imageList1;
-            this.btnShowReport.Location = new System.Drawing.Point(853, 22);
+            this.btnShowReport.Location = new System.Drawing.Point(995, 27);
             this.btnShowReport.Name = "btnShowReport";
-            this.btnShowReport.Size = new System.Drawing.Size(129, 25);
+            this.btnShowReport.Size = new System.Drawing.Size(150, 30);
             this.btnShowReport.TabIndex = 123;
             this.btnShowReport.Text = "SHOW REPORT";
             this.btnShowReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -190,9 +190,9 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(162, 24);
+            this.radioButton1.Location = new System.Drawing.Point(188, 29);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(166, 21);
+            this.radioButton1.Size = new System.Drawing.Size(213, 27);
             this.radioButton1.TabIndex = 122;
             this.radioButton1.Text = "SHOW ACTIVE ORDERS";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -201,9 +201,9 @@
             // 
             this.rdbAll.AutoSize = true;
             this.rdbAll.Checked = true;
-            this.rdbAll.Location = new System.Drawing.Point(12, 24);
+            this.rdbAll.Location = new System.Drawing.Point(13, 29);
             this.rdbAll.Name = "rdbAll";
-            this.rdbAll.Size = new System.Drawing.Size(144, 21);
+            this.rdbAll.Size = new System.Drawing.Size(184, 27);
             this.rdbAll.TabIndex = 121;
             this.rdbAll.TabStop = true;
             this.rdbAll.Text = "SHOW ALL ORDERS";
@@ -214,9 +214,9 @@
             this.dtp_TO.CustomFormat = "dd/MM/yyyy";
             this.dtp_TO.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_TO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_TO.Location = new System.Drawing.Point(576, 23);
+            this.dtp_TO.Location = new System.Drawing.Point(671, 28);
             this.dtp_TO.Name = "dtp_TO";
-            this.dtp_TO.Size = new System.Drawing.Size(136, 23);
+            this.dtp_TO.Size = new System.Drawing.Size(157, 27);
             this.dtp_TO.TabIndex = 120;
             // 
             // dtp_FROM
@@ -224,9 +224,9 @@
             this.dtp_FROM.CustomFormat = "dd/MM/yyyy";
             this.dtp_FROM.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_FROM.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_FROM.Location = new System.Drawing.Point(402, 23);
+            this.dtp_FROM.Location = new System.Drawing.Point(468, 28);
             this.dtp_FROM.Name = "dtp_FROM";
-            this.dtp_FROM.Size = new System.Drawing.Size(136, 23);
+            this.dtp_FROM.Size = new System.Drawing.Size(157, 27);
             this.dtp_FROM.TabIndex = 119;
             // 
             // lblFROM
@@ -234,9 +234,9 @@
             this.lblFROM.AutoSize = true;
             this.lblFROM.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblFROM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFROM.Location = new System.Drawing.Point(353, 27);
+            this.lblFROM.Location = new System.Drawing.Point(411, 33);
             this.lblFROM.Name = "lblFROM";
-            this.lblFROM.Size = new System.Drawing.Size(43, 15);
+            this.lblFROM.Size = new System.Drawing.Size(55, 20);
             this.lblFROM.TabIndex = 118;
             this.lblFROM.Text = "FROM:";
             // 
@@ -249,9 +249,9 @@
             this.btnSHOW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSHOW.ImageIndex = 5;
             this.btnSHOW.ImageList = this.imageList1;
-            this.btnSHOW.Location = new System.Drawing.Point(718, 22);
+            this.btnSHOW.Location = new System.Drawing.Point(837, 27);
             this.btnSHOW.Name = "btnSHOW";
-            this.btnSHOW.Size = new System.Drawing.Size(129, 25);
+            this.btnSHOW.Size = new System.Drawing.Size(150, 30);
             this.btnSHOW.TabIndex = 9;
             this.btnSHOW.Text = "SHOW";
             this.btnSHOW.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -263,9 +263,9 @@
             this.lblITO.AutoSize = true;
             this.lblITO.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblITO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblITO.Location = new System.Drawing.Point(544, 27);
+            this.lblITO.Location = new System.Drawing.Point(634, 33);
             this.lblITO.Name = "lblITO";
-            this.lblITO.Size = new System.Drawing.Size(26, 15);
+            this.lblITO.Size = new System.Drawing.Size(31, 20);
             this.lblITO.TabIndex = 46;
             this.lblITO.Text = "TO:";
             // 
@@ -308,11 +308,11 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdPOList.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdPOList.Location = new System.Drawing.Point(0, 186);
+            this.grdPOList.Location = new System.Drawing.Point(0, 228);
             this.grdPOList.Name = "grdPOList";
             this.grdPOList.ReadOnly = true;
             this.grdPOList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdPOList.Size = new System.Drawing.Size(994, 229);
+            this.grdPOList.Size = new System.Drawing.Size(1159, 281);
             this.grdPOList.TabIndex = 222;
             this.grdPOList.TabStop = false;
             this.grdPOList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdPOList_CellClick);
@@ -322,7 +322,7 @@
             this.discard.HeaderText = "DISCARD";
             this.discard.Name = "discard";
             this.discard.ReadOnly = true;
-            this.discard.Width = 59;
+            this.discard.Width = 74;
             // 
             // poID
             // 
@@ -337,56 +337,56 @@
             this.DATE.HeaderText = "DATE";
             this.DATE.Name = "DATE";
             this.DATE.ReadOnly = true;
-            this.DATE.Width = 59;
+            this.DATE.Width = 71;
             // 
             // PO_NO
             // 
             this.PO_NO.HeaderText = "INVOICE #";
             this.PO_NO.Name = "PO_NO";
             this.PO_NO.ReadOnly = true;
-            this.PO_NO.Width = 84;
+            this.PO_NO.Width = 105;
             // 
             // SUPPLIER
             // 
             this.SUPPLIER.HeaderText = "SUPPLIER";
             this.SUPPLIER.Name = "SUPPLIER";
             this.SUPPLIER.ReadOnly = true;
-            this.SUPPLIER.Width = 79;
+            this.SUPPLIER.Width = 99;
             // 
             // MATERIAL
             // 
             this.MATERIAL.HeaderText = "RAW MATERIAL";
             this.MATERIAL.Name = "MATERIAL";
             this.MATERIAL.ReadOnly = true;
-            this.MATERIAL.Width = 111;
+            this.MATERIAL.Width = 139;
             // 
             // PO_WEIGHT
             // 
             this.PO_WEIGHT.HeaderText = "PO WEIGHT";
             this.PO_WEIGHT.Name = "PO_WEIGHT";
             this.PO_WEIGHT.ReadOnly = true;
-            this.PO_WEIGHT.Width = 91;
+            this.PO_WEIGHT.Width = 114;
             // 
             // PI_WEIGHT
             // 
             this.PI_WEIGHT.HeaderText = "PI WEIGHT";
             this.PI_WEIGHT.Name = "PI_WEIGHT";
             this.PI_WEIGHT.ReadOnly = true;
-            this.PI_WEIGHT.Width = 86;
+            this.PI_WEIGHT.Width = 107;
             // 
             // BALANCE
             // 
             this.BALANCE.HeaderText = "BALANCE";
             this.BALANCE.Name = "BALANCE";
             this.BALANCE.ReadOnly = true;
-            this.BALANCE.Width = 79;
+            this.BALANCE.Width = 98;
             // 
             // RATE_KG
             // 
             this.RATE_KG.HeaderText = "RATE (KG)";
             this.RATE_KG.Name = "RATE_KG";
             this.RATE_KG.ReadOnly = true;
-            this.RATE_KG.Width = 84;
+            this.RATE_KG.Width = 102;
             // 
             // btnDiscard
             // 
@@ -397,9 +397,9 @@
             this.btnDiscard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDiscard.ImageIndex = 5;
             this.btnDiscard.ImageList = this.imageList1;
-            this.btnDiscard.Location = new System.Drawing.Point(6, 421);
+            this.btnDiscard.Location = new System.Drawing.Point(6, 518);
             this.btnDiscard.Name = "btnDiscard";
-            this.btnDiscard.Size = new System.Drawing.Size(129, 25);
+            this.btnDiscard.Size = new System.Drawing.Size(150, 30);
             this.btnDiscard.TabIndex = 124;
             this.btnDiscard.Text = "DISCARD P.O";
             this.btnDiscard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -408,10 +408,10 @@
             // 
             // frm_PurchasesOrderReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(994, 449);
+            this.ClientSize = new System.Drawing.Size(1159, 552);
             this.Controls.Add(this.btnDiscard);
             this.Controls.Add(this.grdPOList);
             this.Controls.Add(this.grpCASHBOOK);

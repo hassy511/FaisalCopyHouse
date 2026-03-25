@@ -41,6 +41,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DayBookForm));
             this.pnlHEADER = new System.Windows.Forms.Panel();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -256,7 +257,7 @@
             this.pnlHEADER.Controls.Add(this.lblCredit);
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
-            this.pnlHEADER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlHEADER.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHEADER.Name = "pnlHEADER";
             this.pnlHEADER.Size = new System.Drawing.Size(1296, 84);
             this.pnlHEADER.TabIndex = 96;
@@ -265,7 +266,7 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Location = new System.Drawing.Point(1788, 4);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(65, 25);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -276,7 +277,7 @@
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.Location = new System.Drawing.Point(1712, 4);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(65, 25);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -292,7 +293,7 @@
             this.lblHEADING.Location = new System.Drawing.Point(12, 26);
             this.lblHEADING.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(174, 32);
+            this.lblHEADING.Size = new System.Drawing.Size(173, 32);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "VOUCHERS";
             // 
@@ -316,7 +317,7 @@
             this.txtBankAmount.Enabled = false;
             this.txtBankAmount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtBankAmount.Location = new System.Drawing.Point(820, 49);
-            this.txtBankAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBankAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtBankAmount.MaxLength = 50;
             this.txtBankAmount.Name = "txtBankAmount";
             this.txtBankAmount.Size = new System.Drawing.Size(265, 29);
@@ -425,7 +426,7 @@
             this.btnReceiptVoucher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReceiptVoucher.ImageIndex = 2;
             this.btnReceiptVoucher.Location = new System.Drawing.Point(711, 741);
-            this.btnReceiptVoucher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReceiptVoucher.Margin = new System.Windows.Forms.Padding(4);
             this.btnReceiptVoucher.Name = "btnReceiptVoucher";
             this.btnReceiptVoucher.Size = new System.Drawing.Size(239, 31);
             this.btnReceiptVoucher.TabIndex = 348;
@@ -438,7 +439,7 @@
             // 
             this.txtAmountWordsRec.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtAmountWordsRec.Location = new System.Drawing.Point(142, 628);
-            this.txtAmountWordsRec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAmountWordsRec.Margin = new System.Windows.Forms.Padding(4);
             this.txtAmountWordsRec.MaxLength = 50;
             this.txtAmountWordsRec.Name = "txtAmountWordsRec";
             this.txtAmountWordsRec.ReadOnly = true;
@@ -463,7 +464,7 @@
             // 
             this.txtSearchReceipt.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtSearchReceipt.Location = new System.Drawing.Point(91, 6);
-            this.txtSearchReceipt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchReceipt.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchReceipt.MaxLength = 50;
             this.txtSearchReceipt.Name = "txtSearchReceipt";
             this.txtSearchReceipt.Size = new System.Drawing.Size(1184, 29);
@@ -516,7 +517,7 @@
             this.btAddReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btAddReceipt.ImageIndex = 0;
             this.btAddReceipt.Location = new System.Drawing.Point(1010, 481);
-            this.btAddReceipt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btAddReceipt.Margin = new System.Windows.Forms.Padding(4);
             this.btAddReceipt.Name = "btAddReceipt";
             this.btAddReceipt.Size = new System.Drawing.Size(268, 31);
             this.btAddReceipt.TabIndex = 160;
@@ -551,7 +552,7 @@
             // 
             this.txtChqNo.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtChqNo.Location = new System.Drawing.Point(1010, 444);
-            this.txtChqNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtChqNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtChqNo.MaxLength = 50;
             this.txtChqNo.Name = "txtChqNo";
             this.txtChqNo.Size = new System.Drawing.Size(265, 29);
@@ -598,7 +599,7 @@
             // 
             this.subAccTxt.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.subAccTxt.Location = new System.Drawing.Point(142, 516);
-            this.subAccTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subAccTxt.Margin = new System.Windows.Forms.Padding(4);
             this.subAccTxt.MaxLength = 50;
             this.subAccTxt.Name = "subAccTxt";
             this.subAccTxt.Size = new System.Drawing.Size(265, 29);
@@ -608,7 +609,7 @@
             // 
             this.txtAmnt.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtAmnt.Location = new System.Drawing.Point(625, 444);
-            this.txtAmnt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAmnt.Margin = new System.Windows.Forms.Padding(4);
             this.txtAmnt.MaxLength = 50;
             this.txtAmnt.Name = "txtAmnt";
             this.txtAmnt.Size = new System.Drawing.Size(265, 29);
@@ -631,7 +632,7 @@
             // 
             this.txtChqTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtChqTotal.Location = new System.Drawing.Point(775, 704);
-            this.txtChqTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtChqTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtChqTotal.MaxLength = 50;
             this.txtChqTotal.Name = "txtChqTotal";
             this.txtChqTotal.ReadOnly = true;
@@ -646,7 +647,7 @@
             // 
             this.txtCashAmount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtCashAmount.Location = new System.Drawing.Point(142, 554);
-            this.txtCashAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCashAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtCashAmount.MaxLength = 50;
             this.txtCashAmount.Name = "txtCashAmount";
             this.txtCashAmount.Size = new System.Drawing.Size(265, 29);
@@ -689,7 +690,7 @@
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.ImageIndex = 1;
             this.btnDelete.Location = new System.Drawing.Point(960, 742);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(318, 31);
             this.btnDelete.TabIndex = 8;
@@ -707,7 +708,7 @@
             this.btnReceiptCLEAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReceiptCLEAR.ImageIndex = 1;
             this.btnReceiptCLEAR.Location = new System.Drawing.Point(1121, 704);
-            this.btnReceiptCLEAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReceiptCLEAR.Margin = new System.Windows.Forms.Padding(4);
             this.btnReceiptCLEAR.Name = "btnReceiptCLEAR";
             this.btnReceiptCLEAR.Size = new System.Drawing.Size(155, 31);
             this.btnReceiptCLEAR.TabIndex = 7;
@@ -724,7 +725,7 @@
             this.btnSAVEReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSAVEReceipt.ImageIndex = 0;
             this.btnSAVEReceipt.Location = new System.Drawing.Point(960, 704);
-            this.btnSAVEReceipt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSAVEReceipt.Margin = new System.Windows.Forms.Padding(4);
             this.btnSAVEReceipt.Name = "btnSAVEReceipt";
             this.btnSAVEReceipt.Size = new System.Drawing.Size(155, 31);
             this.btnSAVEReceipt.TabIndex = 6;
@@ -803,7 +804,7 @@
             // 
             this.txtDescriptRece.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtDescriptRece.Location = new System.Drawing.Point(142, 665);
-            this.txtDescriptRece.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescriptRece.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescriptRece.MaxLength = 50;
             this.txtDescriptRece.Multiline = true;
             this.txtDescriptRece.Name = "txtDescriptRece";
@@ -827,7 +828,7 @@
             this.txtAmountReceipt.Enabled = false;
             this.txtAmountReceipt.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtAmountReceipt.Location = new System.Drawing.Point(142, 591);
-            this.txtAmountReceipt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAmountReceipt.Margin = new System.Windows.Forms.Padding(4);
             this.txtAmountReceipt.MaxLength = 50;
             this.txtAmountReceipt.Name = "txtAmountReceipt";
             this.txtAmountReceipt.ReadOnly = true;
@@ -1007,7 +1008,7 @@
             // 
             this.txtPayChqNo.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtPayChqNo.Location = new System.Drawing.Point(156, 461);
-            this.txtPayChqNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPayChqNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtPayChqNo.MaxLength = 50;
             this.txtPayChqNo.Name = "txtPayChqNo";
             this.txtPayChqNo.Size = new System.Drawing.Size(406, 29);
@@ -1046,7 +1047,7 @@
             this.btnVoucherWithCust.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVoucherWithCust.ImageIndex = 2;
             this.btnVoucherWithCust.Location = new System.Drawing.Point(930, 686);
-            this.btnVoucherWithCust.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVoucherWithCust.Margin = new System.Windows.Forms.Padding(4);
             this.btnVoucherWithCust.Name = "btnVoucherWithCust";
             this.btnVoucherWithCust.Size = new System.Drawing.Size(348, 31);
             this.btnVoucherWithCust.TabIndex = 12;
@@ -1065,7 +1066,7 @@
             this.btnPaymentVoucher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPaymentVoucher.ImageIndex = 2;
             this.btnPaymentVoucher.Location = new System.Drawing.Point(930, 652);
-            this.btnPaymentVoucher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPaymentVoucher.Margin = new System.Windows.Forms.Padding(4);
             this.btnPaymentVoucher.Name = "btnPaymentVoucher";
             this.btnPaymentVoucher.Size = new System.Drawing.Size(184, 31);
             this.btnPaymentVoucher.TabIndex = 349;
@@ -1118,7 +1119,7 @@
             this.txtPayBankAmount.Enabled = false;
             this.txtPayBankAmount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtPayBankAmount.Location = new System.Drawing.Point(195, 176);
-            this.txtPayBankAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPayBankAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtPayBankAmount.MaxLength = 50;
             this.txtPayBankAmount.Name = "txtPayBankAmount";
             this.txtPayBankAmount.ReadOnly = true;
@@ -1132,7 +1133,7 @@
             // 
             this.txtChqAmountPay.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtChqAmountPay.Location = new System.Drawing.Point(211, 44);
-            this.txtChqAmountPay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtChqAmountPay.Margin = new System.Windows.Forms.Padding(4);
             this.txtChqAmountPay.MaxLength = 50;
             this.txtChqAmountPay.Name = "txtChqAmountPay";
             this.txtChqAmountPay.Size = new System.Drawing.Size(265, 29);
@@ -1247,7 +1248,7 @@
             this.btnDeletePayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletePayment.ImageIndex = 1;
             this.btnDeletePayment.Location = new System.Drawing.Point(1115, 652);
-            this.btnDeletePayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeletePayment.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeletePayment.Name = "btnDeletePayment";
             this.btnDeletePayment.Size = new System.Drawing.Size(162, 31);
             this.btnDeletePayment.TabIndex = 11;
@@ -1260,7 +1261,7 @@
             // 
             this.txtAmountWordsPay.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtAmountWordsPay.Location = new System.Drawing.Point(156, 691);
-            this.txtAmountWordsPay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAmountWordsPay.Margin = new System.Windows.Forms.Padding(4);
             this.txtAmountWordsPay.MaxLength = 50;
             this.txtAmountWordsPay.Name = "txtAmountWordsPay";
             this.txtAmountWordsPay.ReadOnly = true;
@@ -1285,7 +1286,7 @@
             // 
             this.txtTotalGrdPayment.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtTotalGrdPayment.Location = new System.Drawing.Point(632, 622);
-            this.txtTotalGrdPayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotalGrdPayment.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalGrdPayment.MaxLength = 50;
             this.txtTotalGrdPayment.Name = "txtTotalGrdPayment";
             this.txtTotalGrdPayment.ReadOnly = true;
@@ -1312,7 +1313,7 @@
             // 
             this.txtPayCashAmount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtPayCashAmount.Location = new System.Drawing.Point(156, 614);
-            this.txtPayCashAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPayCashAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtPayCashAmount.MaxLength = 50;
             this.txtPayCashAmount.Name = "txtPayCashAmount";
             this.txtPayCashAmount.Size = new System.Drawing.Size(406, 29);
@@ -1349,7 +1350,7 @@
             // 
             this.txtSEARCHPayments.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtSEARCHPayments.Location = new System.Drawing.Point(88, 8);
-            this.txtSEARCHPayments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSEARCHPayments.Margin = new System.Windows.Forms.Padding(4);
             this.txtSEARCHPayments.MaxLength = 50;
             this.txtSEARCHPayments.Name = "txtSEARCHPayments";
             this.txtSEARCHPayments.Size = new System.Drawing.Size(1192, 29);
@@ -1403,7 +1404,7 @@
             this.btnAddChqPay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddChqPay.ImageIndex = 0;
             this.btnAddChqPay.Location = new System.Drawing.Point(574, 661);
-            this.btnAddChqPay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddChqPay.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddChqPay.Name = "btnAddChqPay";
             this.btnAddChqPay.Size = new System.Drawing.Size(268, 31);
             this.btnAddChqPay.TabIndex = 167;
@@ -1416,7 +1417,7 @@
             // 
             this.txtPayChqAmount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtPayChqAmount.Location = new System.Drawing.Point(156, 575);
-            this.txtPayChqAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPayChqAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtPayChqAmount.MaxLength = 50;
             this.txtPayChqAmount.Name = "txtPayChqAmount";
             this.txtPayChqAmount.Size = new System.Drawing.Size(406, 29);
@@ -1446,7 +1447,7 @@
             this.btnClearPay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClearPay.ImageIndex = 1;
             this.btnClearPay.Location = new System.Drawing.Point(1115, 621);
-            this.btnClearPay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClearPay.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearPay.Name = "btnClearPay";
             this.btnClearPay.Size = new System.Drawing.Size(162, 31);
             this.btnClearPay.TabIndex = 11;
@@ -1463,7 +1464,7 @@
             this.btnSavePay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSavePay.ImageIndex = 0;
             this.btnSavePay.Location = new System.Drawing.Point(930, 621);
-            this.btnSavePay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSavePay.Margin = new System.Windows.Forms.Padding(4);
             this.btnSavePay.Name = "btnSavePay";
             this.btnSavePay.Size = new System.Drawing.Size(184, 31);
             this.btnSavePay.TabIndex = 10;
@@ -1475,7 +1476,7 @@
             // 
             this.txtDescriptPay.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtDescriptPay.Location = new System.Drawing.Point(156, 730);
-            this.txtDescriptPay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescriptPay.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescriptPay.MaxLength = 50;
             this.txtDescriptPay.Multiline = true;
             this.txtDescriptPay.Name = "txtDescriptPay";
@@ -1498,7 +1499,7 @@
             // 
             this.txtBankPayment.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtBankPayment.Location = new System.Drawing.Point(156, 536);
-            this.txtBankPayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBankPayment.Margin = new System.Windows.Forms.Padding(4);
             this.txtBankPayment.MaxLength = 50;
             this.txtBankPayment.Name = "txtBankPayment";
             this.txtBankPayment.Size = new System.Drawing.Size(406, 29);
@@ -1510,7 +1511,7 @@
             // 
             this.txtPaidToPayments.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtPaidToPayments.Location = new System.Drawing.Point(156, 386);
-            this.txtPaidToPayments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPaidToPayments.Margin = new System.Windows.Forms.Padding(4);
             this.txtPaidToPayments.MaxLength = 50;
             this.txtPaidToPayments.Name = "txtPaidToPayments";
             this.txtPaidToPayments.Size = new System.Drawing.Size(406, 29);
@@ -1535,7 +1536,7 @@
             this.txtAmountPay.Enabled = false;
             this.txtAmountPay.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtAmountPay.Location = new System.Drawing.Point(156, 652);
-            this.txtAmountPay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAmountPay.Margin = new System.Windows.Forms.Padding(4);
             this.txtAmountPay.MaxLength = 50;
             this.txtAmountPay.Name = "txtAmountPay";
             this.txtAmountPay.ReadOnly = true;
@@ -1730,7 +1731,7 @@
             this.btn_VIEW_VOUCHER.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_VIEW_VOUCHER.ImageIndex = 2;
             this.btn_VIEW_VOUCHER.Location = new System.Drawing.Point(1094, 718);
-            this.btn_VIEW_VOUCHER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_VIEW_VOUCHER.Margin = new System.Windows.Forms.Padding(4);
             this.btn_VIEW_VOUCHER.Name = "btn_VIEW_VOUCHER";
             this.btn_VIEW_VOUCHER.Size = new System.Drawing.Size(182, 31);
             this.btn_VIEW_VOUCHER.TabIndex = 363;
@@ -1771,7 +1772,7 @@
             this.btnDeleteGeneral.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeleteGeneral.ImageIndex = 1;
             this.btnDeleteGeneral.Location = new System.Drawing.Point(899, 718);
-            this.btnDeleteGeneral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteGeneral.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteGeneral.Name = "btnDeleteGeneral";
             this.btnDeleteGeneral.Size = new System.Drawing.Size(188, 31);
             this.btnDeleteGeneral.TabIndex = 360;
@@ -1783,7 +1784,7 @@
             // 
             this.txtAmountWordsGen.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtAmountWordsGen.Location = new System.Drawing.Point(154, 628);
-            this.txtAmountWordsGen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAmountWordsGen.Margin = new System.Windows.Forms.Padding(4);
             this.txtAmountWordsGen.MaxLength = 50;
             this.txtAmountWordsGen.Name = "txtAmountWordsGen";
             this.txtAmountWordsGen.ReadOnly = true;
@@ -1839,7 +1840,7 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdENTRY.DefaultCellStyle = dataGridViewCellStyle8;
             this.grdENTRY.Location = new System.Drawing.Point(448, 436);
-            this.grdENTRY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdENTRY.Margin = new System.Windows.Forms.Padding(4);
             this.grdENTRY.Name = "grdENTRY";
             this.grdENTRY.ReadOnly = true;
             this.grdENTRY.RowHeadersVisible = false;
@@ -1898,7 +1899,7 @@
             this.btnADD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnADD.ImageIndex = 0;
             this.btnADD.Location = new System.Drawing.Point(154, 742);
-            this.btnADD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnADD.Margin = new System.Windows.Forms.Padding(4);
             this.btnADD.Name = "btnADD";
             this.btnADD.Size = new System.Drawing.Size(265, 31);
             this.btnADD.TabIndex = 334;
@@ -1913,7 +1914,7 @@
             this.txtSEARCH.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSEARCH.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtSEARCH.Location = new System.Drawing.Point(95, 6);
-            this.txtSEARCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSEARCH.Margin = new System.Windows.Forms.Padding(4);
             this.txtSEARCH.Name = "txtSEARCH";
             this.txtSEARCH.Size = new System.Drawing.Size(1180, 29);
             this.txtSEARCH.TabIndex = 287;
@@ -1963,7 +1964,7 @@
             this.btnGeneralClr.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGeneralClr.ImageIndex = 1;
             this.btnGeneralClr.Location = new System.Drawing.Point(1094, 682);
-            this.btnGeneralClr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGeneralClr.Margin = new System.Windows.Forms.Padding(4);
             this.btnGeneralClr.Name = "btnGeneralClr";
             this.btnGeneralClr.Size = new System.Drawing.Size(182, 31);
             this.btnGeneralClr.TabIndex = 6;
@@ -1980,7 +1981,7 @@
             this.btnGeneralSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGeneralSave.ImageIndex = 0;
             this.btnGeneralSave.Location = new System.Drawing.Point(899, 682);
-            this.btnGeneralSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGeneralSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnGeneralSave.Name = "btnGeneralSave";
             this.btnGeneralSave.Size = new System.Drawing.Size(188, 31);
             this.btnGeneralSave.TabIndex = 5;
@@ -1992,7 +1993,7 @@
             // 
             this.txtNarration.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtNarration.Location = new System.Drawing.Point(154, 664);
-            this.txtNarration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNarration.Margin = new System.Windows.Forms.Padding(4);
             this.txtNarration.MaxLength = 32000;
             this.txtNarration.Multiline = true;
             this.txtNarration.Name = "txtNarration";
@@ -2062,7 +2063,7 @@
             // 
             this.txtCreditTotalGV.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtCreditTotalGV.Location = new System.Drawing.Point(555, 719);
-            this.txtCreditTotalGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCreditTotalGV.Margin = new System.Windows.Forms.Padding(4);
             this.txtCreditTotalGV.MaxLength = 50;
             this.txtCreditTotalGV.Name = "txtCreditTotalGV";
             this.txtCreditTotalGV.ReadOnly = true;
@@ -2089,7 +2090,7 @@
             // 
             this.txtDebitTotalGV.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtDebitTotalGV.Location = new System.Drawing.Point(555, 682);
-            this.txtDebitTotalGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDebitTotalGV.Margin = new System.Windows.Forms.Padding(4);
             this.txtDebitTotalGV.MaxLength = 50;
             this.txtDebitTotalGV.Name = "txtDebitTotalGV";
             this.txtDebitTotalGV.ReadOnly = true;
@@ -2116,7 +2117,7 @@
             // 
             this.txtCreditGV.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtCreditGV.Location = new System.Drawing.Point(154, 581);
-            this.txtCreditGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCreditGV.Margin = new System.Windows.Forms.Padding(4);
             this.txtCreditGV.MaxLength = 50;
             this.txtCreditGV.Name = "txtCreditGV";
             this.txtCreditGV.Size = new System.Drawing.Size(265, 29);
@@ -2143,7 +2144,7 @@
             // 
             this.txtDebitGV.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtDebitGV.Location = new System.Drawing.Point(154, 542);
-            this.txtDebitGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDebitGV.Margin = new System.Windows.Forms.Padding(4);
             this.txtDebitGV.MaxLength = 50;
             this.txtDebitGV.Name = "txtDebitGV";
             this.txtDebitGV.Size = new System.Drawing.Size(265, 29);
@@ -2197,7 +2198,7 @@
             this.deleteBtnCD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.deleteBtnCD.ImageIndex = 1;
             this.deleteBtnCD.Location = new System.Drawing.Point(789, 610);
-            this.deleteBtnCD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deleteBtnCD.Margin = new System.Windows.Forms.Padding(4);
             this.deleteBtnCD.Name = "deleteBtnCD";
             this.deleteBtnCD.Size = new System.Drawing.Size(271, 31);
             this.deleteBtnCD.TabIndex = 361;
@@ -2215,7 +2216,7 @@
             this.btnClearCD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClearCD.ImageIndex = 1;
             this.btnClearCD.Location = new System.Drawing.Point(908, 18);
-            this.btnClearCD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClearCD.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearCD.Name = "btnClearCD";
             this.btnClearCD.Size = new System.Drawing.Size(132, 31);
             this.btnClearCD.TabIndex = 3;
@@ -2233,7 +2234,7 @@
             this.btnSaveCD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSaveCD.ImageIndex = 0;
             this.btnSaveCD.Location = new System.Drawing.Point(772, 18);
-            this.btnSaveCD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveCD.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveCD.Name = "btnSaveCD";
             this.btnSaveCD.Size = new System.Drawing.Size(131, 31);
             this.btnSaveCD.TabIndex = 2;
@@ -2397,7 +2398,7 @@
             // 
             this.txtChqReturnReason.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtChqReturnReason.Location = new System.Drawing.Point(149, 121);
-            this.txtChqReturnReason.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtChqReturnReason.Margin = new System.Windows.Forms.Padding(4);
             this.txtChqReturnReason.MaxLength = 50;
             this.txtChqReturnReason.Multiline = true;
             this.txtChqReturnReason.Name = "txtChqReturnReason";
@@ -2408,7 +2409,7 @@
             // 
             this.rdbPending.AutoSize = true;
             this.rdbPending.Location = new System.Drawing.Point(305, 49);
-            this.rdbPending.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbPending.Margin = new System.Windows.Forms.Padding(4);
             this.rdbPending.Name = "rdbPending";
             this.rdbPending.Size = new System.Drawing.Size(112, 29);
             this.rdbPending.TabIndex = 146;
@@ -2420,7 +2421,7 @@
             this.rdbPaid.AutoSize = true;
             this.rdbPaid.Checked = true;
             this.rdbPaid.Location = new System.Drawing.Point(149, 49);
-            this.rdbPaid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbPaid.Margin = new System.Windows.Forms.Padding(4);
             this.rdbPaid.Name = "rdbPaid";
             this.rdbPaid.Size = new System.Drawing.Size(73, 29);
             this.rdbPaid.TabIndex = 145;
@@ -2438,7 +2439,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.ImageIndex = 1;
             this.button1.Location = new System.Drawing.Point(282, 196);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 31);
             this.button1.TabIndex = 3;
@@ -2455,7 +2456,7 @@
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.ImageIndex = 0;
             this.button2.Location = new System.Drawing.Point(149, 196);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 31);
             this.button2.TabIndex = 2;
@@ -2610,7 +2611,7 @@
             this.txtChqTotalRec.Enabled = false;
             this.txtChqTotalRec.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChqTotalRec.Location = new System.Drawing.Point(579, 471);
-            this.txtChqTotalRec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtChqTotalRec.Margin = new System.Windows.Forms.Padding(4);
             this.txtChqTotalRec.MaxLength = 50;
             this.txtChqTotalRec.Name = "txtChqTotalRec";
             this.txtChqTotalRec.Size = new System.Drawing.Size(152, 23);
@@ -2623,7 +2624,7 @@
             this.txtCashTotalRec.Enabled = false;
             this.txtCashTotalRec.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashTotalRec.Location = new System.Drawing.Point(419, 471);
-            this.txtCashTotalRec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCashTotalRec.Margin = new System.Windows.Forms.Padding(4);
             this.txtCashTotalRec.MaxLength = 50;
             this.txtCashTotalRec.Name = "txtCashTotalRec";
             this.txtCashTotalRec.Size = new System.Drawing.Size(152, 23);
@@ -2699,10 +2700,9 @@
             this.Controls.Add(this.dayControl);
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DayBookForm";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VOUCHERS";
             this.Load += new System.EventHandler(this.DayBookForm_Load);

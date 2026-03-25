@@ -70,9 +70,9 @@
             this.cmbSalesPerson.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbSalesPerson.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbSalesPerson.FormattingEnabled = true;
-            this.cmbSalesPerson.Location = new System.Drawing.Point(114, 94);
+            this.cmbSalesPerson.Location = new System.Drawing.Point(132, 115);
             this.cmbSalesPerson.Name = "cmbSalesPerson";
-            this.cmbSalesPerson.Size = new System.Drawing.Size(231, 25);
+            this.cmbSalesPerson.Size = new System.Drawing.Size(268, 29);
             this.cmbSalesPerson.TabIndex = 2;
             // 
             // lblAC_NAME
@@ -80,9 +80,9 @@
             this.lblAC_NAME.AutoSize = true;
             this.lblAC_NAME.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblAC_NAME.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAC_NAME.Location = new System.Drawing.Point(14, 98);
+            this.lblAC_NAME.Location = new System.Drawing.Point(16, 120);
             this.lblAC_NAME.Name = "lblAC_NAME";
-            this.lblAC_NAME.Size = new System.Drawing.Size(89, 15);
+            this.lblAC_NAME.Size = new System.Drawing.Size(111, 20);
             this.lblAC_NAME.TabIndex = 121;
             this.lblAC_NAME.Text = "SALES PERSON";
             // 
@@ -91,9 +91,9 @@
             this.dtp_TO.CustomFormat = "dd/MM/yyyy";
             this.dtp_TO.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_TO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_TO.Location = new System.Drawing.Point(114, 65);
+            this.dtp_TO.Location = new System.Drawing.Point(132, 79);
             this.dtp_TO.Name = "dtp_TO";
-            this.dtp_TO.Size = new System.Drawing.Size(231, 23);
+            this.dtp_TO.Size = new System.Drawing.Size(268, 27);
             this.dtp_TO.TabIndex = 1;
             // 
             // dtp_FROM
@@ -101,9 +101,9 @@
             this.dtp_FROM.CustomFormat = "dd/MM/yyyy";
             this.dtp_FROM.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_FROM.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_FROM.Location = new System.Drawing.Point(114, 36);
+            this.dtp_FROM.Location = new System.Drawing.Point(132, 44);
             this.dtp_FROM.Name = "dtp_FROM";
-            this.dtp_FROM.Size = new System.Drawing.Size(231, 23);
+            this.dtp_FROM.Size = new System.Drawing.Size(268, 27);
             this.dtp_FROM.TabIndex = 0;
             // 
             // lblFROM
@@ -111,9 +111,9 @@
             this.lblFROM.AutoSize = true;
             this.lblFROM.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblFROM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFROM.Location = new System.Drawing.Point(60, 42);
+            this.lblFROM.Location = new System.Drawing.Point(69, 51);
             this.lblFROM.Name = "lblFROM";
-            this.lblFROM.Size = new System.Drawing.Size(43, 15);
+            this.lblFROM.Size = new System.Drawing.Size(55, 20);
             this.lblFROM.TabIndex = 118;
             this.lblFROM.Text = "FROM:";
             // 
@@ -126,9 +126,9 @@
             this.btnSHOW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSHOW.ImageIndex = 5;
             this.btnSHOW.ImageList = this.imageList1;
-            this.btnSHOW.Location = new System.Drawing.Point(114, 187);
+            this.btnSHOW.Location = new System.Drawing.Point(132, 230);
             this.btnSHOW.Name = "btnSHOW";
-            this.btnSHOW.Size = new System.Drawing.Size(231, 25);
+            this.btnSHOW.Size = new System.Drawing.Size(269, 30);
             this.btnSHOW.TabIndex = 5;
             this.btnSHOW.Text = "SHOW";
             this.btnSHOW.UseVisualStyleBackColor = false;
@@ -150,9 +150,9 @@
             this.lblITO.AutoSize = true;
             this.lblITO.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblITO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblITO.Location = new System.Drawing.Point(77, 71);
+            this.lblITO.Location = new System.Drawing.Point(89, 87);
             this.lblITO.Name = "lblITO";
-            this.lblITO.Size = new System.Drawing.Size(26, 15);
+            this.lblITO.Size = new System.Drawing.Size(31, 20);
             this.lblITO.TabIndex = 46;
             this.lblITO.Text = "TO:";
             // 
@@ -161,42 +161,42 @@
             this.dc.HeaderText = "Dr / Cr";
             this.dc.Name = "dc";
             this.dc.ReadOnly = true;
-            this.dc.Width = 73;
+            this.dc.Width = 91;
             // 
             // bal
             // 
             this.bal.HeaderText = "BALANCE";
             this.bal.Name = "bal";
             this.bal.ReadOnly = true;
-            this.bal.Width = 90;
+            this.bal.Width = 112;
             // 
             // credit
             // 
             this.credit.HeaderText = "CREDIT";
             this.credit.Name = "credit";
             this.credit.ReadOnly = true;
-            this.credit.Width = 76;
+            this.credit.Width = 96;
             // 
             // debit
             // 
             this.debit.HeaderText = "DEBIT";
             this.debit.Name = "debit";
             this.debit.ReadOnly = true;
-            this.debit.Width = 68;
+            this.debit.Width = 84;
             // 
             // a_name
             // 
             this.a_name.HeaderText = "DESCRIPTION";
             this.a_name.Name = "a_name";
             this.a_name.ReadOnly = true;
-            this.a_name.Width = 115;
+            this.a_name.Width = 146;
             // 
             // s_nature
             // 
             this.s_nature.HeaderText = "DATE";
             this.s_nature.Name = "s_nature";
             this.s_nature.ReadOnly = true;
-            this.s_nature.Width = 64;
+            this.s_nature.Width = 79;
             // 
             // grdSEARCH
             // 
@@ -233,12 +233,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdSEARCH.Location = new System.Drawing.Point(12, 184);
+            this.grdSEARCH.Location = new System.Drawing.Point(13, 226);
             this.grdSEARCH.Name = "grdSEARCH";
             this.grdSEARCH.ReadOnly = true;
             this.grdSEARCH.RowHeadersVisible = false;
             this.grdSEARCH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdSEARCH.Size = new System.Drawing.Size(10, 10);
+            this.grdSEARCH.Size = new System.Drawing.Size(11, 12);
             this.grdSEARCH.TabIndex = 338;
             this.grdSEARCH.TabStop = false;
             this.grdSEARCH.Visible = false;
@@ -258,9 +258,9 @@
             this.grpCASHBOOK.Controls.Add(this.btnSHOW);
             this.grpCASHBOOK.Controls.Add(this.lblITO);
             this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpCASHBOOK.Location = new System.Drawing.Point(0, 112);
+            this.grpCASHBOOK.Location = new System.Drawing.Point(0, 137);
             this.grpCASHBOOK.Name = "grpCASHBOOK";
-            this.grpCASHBOOK.Size = new System.Drawing.Size(388, 229);
+            this.grpCASHBOOK.Size = new System.Drawing.Size(452, 281);
             this.grpCASHBOOK.TabIndex = 0;
             this.grpCASHBOOK.TabStop = false;
             this.grpCASHBOOK.Text = "CHQ IN HAND REPORT";
@@ -269,10 +269,10 @@
             // 
             this.chckChqDate.AutoSize = true;
             this.chckChqDate.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.chckChqDate.Location = new System.Drawing.Point(25, 160);
-            this.chckChqDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chckChqDate.Location = new System.Drawing.Point(29, 196);
+            this.chckChqDate.Margin = new System.Windows.Forms.Padding(2);
             this.chckChqDate.Name = "chckChqDate";
-            this.chckChqDate.Size = new System.Drawing.Size(83, 19);
+            this.chckChqDate.Size = new System.Drawing.Size(102, 24);
             this.chckChqDate.TabIndex = 339;
             this.chckChqDate.Text = "CHQ DATE";
             this.chckChqDate.UseVisualStyleBackColor = true;
@@ -284,9 +284,9 @@
             this.cmbCustomer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCustomer.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbCustomer.FormattingEnabled = true;
-            this.cmbCustomer.Location = new System.Drawing.Point(114, 127);
+            this.cmbCustomer.Location = new System.Drawing.Point(132, 156);
             this.cmbCustomer.Name = "cmbCustomer";
-            this.cmbCustomer.Size = new System.Drawing.Size(231, 25);
+            this.cmbCustomer.Size = new System.Drawing.Size(268, 29);
             this.cmbCustomer.TabIndex = 3;
             // 
             // label1
@@ -294,9 +294,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(34, 131);
+            this.label1.Location = new System.Drawing.Point(39, 161);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 15);
+            this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 121;
             this.label1.Text = "CUSTOMER";
             // 
@@ -306,17 +306,17 @@
             this.dtp_ChqDate.Enabled = false;
             this.dtp_ChqDate.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_ChqDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_ChqDate.Location = new System.Drawing.Point(114, 158);
+            this.dtp_ChqDate.Location = new System.Drawing.Point(132, 194);
             this.dtp_ChqDate.Name = "dtp_ChqDate";
-            this.dtp_ChqDate.Size = new System.Drawing.Size(231, 23);
+            this.dtp_ChqDate.Size = new System.Drawing.Size(268, 27);
             this.dtp_ChqDate.TabIndex = 4;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -324,9 +324,9 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Location = new System.Drawing.Point(1499, 3);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(57, 24);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
@@ -335,11 +335,11 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 11.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(4, 32);
+            this.lblHEADING.Location = new System.Drawing.Point(4, 39);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(169, 18);
+            this.lblHEADING.Size = new System.Drawing.Size(228, 25);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "CHQ IN HAND REPORT";
             // 
@@ -355,17 +355,18 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(400, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(466, 107);
             this.pnlHEADER.TabIndex = 38;
             // 
             // frmChqInHandReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 351);
+            this.ClientSize = new System.Drawing.Size(466, 431);
             this.Controls.Add(this.grpCASHBOOK);
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmChqInHandReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CHQ IN HAND REPORT";

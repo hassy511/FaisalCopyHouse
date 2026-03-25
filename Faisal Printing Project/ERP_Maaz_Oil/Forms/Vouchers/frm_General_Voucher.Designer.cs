@@ -83,9 +83,9 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Image = global::ERP_Maaz_Oil.Properties.Resources.plus;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -96,9 +96,9 @@
             this.cmbACCOUNT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbACCOUNT.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbACCOUNT.FormattingEnabled = true;
-            this.cmbACCOUNT.Location = new System.Drawing.Point(528, 241);
+            this.cmbACCOUNT.Location = new System.Drawing.Point(615, 296);
             this.cmbACCOUNT.Name = "cmbACCOUNT";
-            this.cmbACCOUNT.Size = new System.Drawing.Size(231, 25);
+            this.cmbACCOUNT.Size = new System.Drawing.Size(268, 29);
             this.cmbACCOUNT.TabIndex = 2;
             this.cmbACCOUNT.DropDown += new System.EventHandler(this.cmbACCOUNT_DropDown);
             this.cmbACCOUNT.SelectedIndexChanged += new System.EventHandler(this.cmbACCOUNT_SelectedIndexChanged);
@@ -110,9 +110,9 @@
             this.lblTrNo.AutoSize = true;
             this.lblTrNo.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblTrNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(24)))), ((int)(((byte)(38)))));
-            this.lblTrNo.Location = new System.Drawing.Point(528, 122);
+            this.lblTrNo.Location = new System.Drawing.Point(615, 150);
             this.lblTrNo.Name = "lblTrNo";
-            this.lblTrNo.Size = new System.Drawing.Size(73, 15);
+            this.lblTrNo.Size = new System.Drawing.Size(85, 20);
             this.lblTrNo.TabIndex = 323;
             this.lblTrNo.Text = "1221023332";
             // 
@@ -121,18 +121,18 @@
             this.lblTr.AutoSize = true;
             this.lblTr.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblTr.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTr.Location = new System.Drawing.Point(420, 122);
+            this.lblTr.Location = new System.Drawing.Point(489, 150);
             this.lblTr.Name = "lblTr";
-            this.lblTr.Size = new System.Drawing.Size(102, 15);
+            this.lblTr.Size = new System.Drawing.Size(127, 20);
             this.lblTr.TabIndex = 322;
             this.lblTr.Text = "TRANSACTION #:";
             // 
             // dtp_DATE
             // 
             this.dtp_DATE.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-            this.dtp_DATE.Location = new System.Drawing.Point(528, 150);
+            this.dtp_DATE.Location = new System.Drawing.Point(615, 184);
             this.dtp_DATE.Name = "dtp_DATE";
-            this.dtp_DATE.Size = new System.Drawing.Size(231, 23);
+            this.dtp_DATE.Size = new System.Drawing.Size(268, 27);
             this.dtp_DATE.TabIndex = 0;
             // 
             // lblTV
@@ -140,9 +140,9 @@
             this.lblTV.AutoSize = true;
             this.lblTV.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblTV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(215)))));
-            this.lblTV.Location = new System.Drawing.Point(528, 96);
+            this.lblTV.Location = new System.Drawing.Point(615, 118);
             this.lblTV.Name = "lblTV";
-            this.lblTV.Size = new System.Drawing.Size(63, 15);
+            this.lblTV.Size = new System.Drawing.Size(77, 20);
             this.lblTV.TabIndex = 320;
             this.lblTV.Text = "GV-1-2017";
             // 
@@ -150,11 +150,11 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblHEADING.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblHEADING.Location = new System.Drawing.Point(6, 32);
+            this.lblHEADING.Location = new System.Drawing.Point(6, 39);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(193, 23);
+            this.lblHEADING.Size = new System.Drawing.Size(286, 31);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "JOURNAL VOUCHER";
             // 
@@ -162,11 +162,11 @@
             // 
             this.txtNar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNar.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtNar.Location = new System.Drawing.Point(528, 179);
+            this.txtNar.Location = new System.Drawing.Point(615, 220);
             this.txtNar.MaxLength = 100;
             this.txtNar.Multiline = true;
             this.txtNar.Name = "txtNar";
-            this.txtNar.Size = new System.Drawing.Size(561, 56);
+            this.txtNar.Size = new System.Drawing.Size(653, 67);
             this.txtNar.TabIndex = 1;
             this.txtNar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtDEBIT_MouseClick);
             this.txtNar.Enter += new System.EventHandler(this.txtDEBIT_Enter);
@@ -177,9 +177,9 @@
             this.lblNar.AutoSize = true;
             this.lblNar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblNar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblNar.Location = new System.Drawing.Point(420, 200);
+            this.lblNar.Location = new System.Drawing.Point(489, 246);
             this.lblNar.Name = "lblNar";
-            this.lblNar.Size = new System.Drawing.Size(77, 15);
+            this.lblNar.Size = new System.Drawing.Size(97, 20);
             this.lblNar.TabIndex = 318;
             this.lblNar.Text = "NARRATION:";
             // 
@@ -187,10 +187,10 @@
             // 
             this.txtDEBIT.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDEBIT.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtDEBIT.Location = new System.Drawing.Point(849, 272);
+            this.txtDEBIT.Location = new System.Drawing.Point(990, 334);
             this.txtDEBIT.MaxLength = 10;
             this.txtDEBIT.Name = "txtDEBIT";
-            this.txtDEBIT.Size = new System.Drawing.Size(240, 25);
+            this.txtDEBIT.Size = new System.Drawing.Size(279, 29);
             this.txtDEBIT.TabIndex = 3;
             this.txtDEBIT.Text = "0.0";
             this.txtDEBIT.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtDEBIT_MouseClick);
@@ -204,9 +204,9 @@
             this.lblACCOUNT.AutoSize = true;
             this.lblACCOUNT.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblACCOUNT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblACCOUNT.Location = new System.Drawing.Point(420, 246);
+            this.lblACCOUNT.Location = new System.Drawing.Point(489, 302);
             this.lblACCOUNT.Name = "lblACCOUNT";
-            this.lblACCOUNT.Size = new System.Drawing.Size(65, 15);
+            this.lblACCOUNT.Size = new System.Drawing.Size(83, 20);
             this.lblACCOUNT.TabIndex = 313;
             this.lblACCOUNT.Text = "ACCOUNT:";
             // 
@@ -227,9 +227,9 @@
             this.btnCLEAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCLEAR.ImageIndex = 1;
             this.btnCLEAR.ImageList = this.imageList1;
-            this.btnCLEAR.Location = new System.Drawing.Point(973, 515);
+            this.btnCLEAR.Location = new System.Drawing.Point(1135, 633);
             this.btnCLEAR.Name = "btnCLEAR";
-            this.btnCLEAR.Size = new System.Drawing.Size(116, 25);
+            this.btnCLEAR.Size = new System.Drawing.Size(135, 30);
             this.btnCLEAR.TabIndex = 7;
             this.btnCLEAR.Text = "CLEAR";
             this.btnCLEAR.UseVisualStyleBackColor = false;
@@ -240,9 +240,9 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDate.Location = new System.Drawing.Point(420, 154);
+            this.lblDate.Location = new System.Drawing.Point(489, 189);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(39, 15);
+            this.lblDate.Size = new System.Drawing.Size(49, 20);
             this.lblDate.TabIndex = 312;
             this.lblDate.Text = "DATE:";
             // 
@@ -251,9 +251,9 @@
             this.lblDEBIT.AutoSize = true;
             this.lblDEBIT.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblDEBIT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDEBIT.Location = new System.Drawing.Point(768, 277);
+            this.lblDEBIT.Location = new System.Drawing.Point(895, 340);
             this.lblDEBIT.Name = "lblDEBIT";
-            this.lblDEBIT.Size = new System.Drawing.Size(43, 15);
+            this.lblDEBIT.Size = new System.Drawing.Size(53, 20);
             this.lblDEBIT.TabIndex = 316;
             this.lblDEBIT.Text = "DEBIT:";
             this.lblDEBIT.Click += new System.EventHandler(this.lblAmt_Click);
@@ -267,9 +267,9 @@
             this.btnSAVE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSAVE.ImageIndex = 0;
             this.btnSAVE.ImageList = this.imageList1;
-            this.btnSAVE.Location = new System.Drawing.Point(859, 515);
+            this.btnSAVE.Location = new System.Drawing.Point(1002, 633);
             this.btnSAVE.Name = "btnSAVE";
-            this.btnSAVE.Size = new System.Drawing.Size(114, 25);
+            this.btnSAVE.Size = new System.Drawing.Size(132, 30);
             this.btnSAVE.TabIndex = 6;
             this.btnSAVE.Text = "SAVE";
             this.btnSAVE.UseVisualStyleBackColor = false;
@@ -280,9 +280,9 @@
             this.lblV.AutoSize = true;
             this.lblV.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblV.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblV.Location = new System.Drawing.Point(420, 96);
+            this.lblV.Location = new System.Drawing.Point(489, 118);
             this.lblV.Name = "lblV";
-            this.lblV.Size = new System.Drawing.Size(74, 15);
+            this.lblV.Size = new System.Drawing.Size(95, 20);
             this.lblV.TabIndex = 311;
             this.lblV.Text = "VOUCHER #:";
             // 
@@ -314,12 +314,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdSEARCH.Location = new System.Drawing.Point(11, 122);
+            this.grdSEARCH.Location = new System.Drawing.Point(12, 150);
             this.grdSEARCH.Name = "grdSEARCH";
             this.grdSEARCH.ReadOnly = true;
             this.grdSEARCH.RowHeadersVisible = false;
             this.grdSEARCH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdSEARCH.Size = new System.Drawing.Size(403, 418);
+            this.grdSEARCH.Size = new System.Drawing.Size(470, 514);
             this.grdSEARCH.TabIndex = 310;
             this.grdSEARCH.TabStop = false;
             this.grdSEARCH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdSEARCH_CellClick);
@@ -332,9 +332,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSEARCH.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSEARCH.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtSEARCH.Location = new System.Drawing.Point(71, 91);
+            this.txtSEARCH.Location = new System.Drawing.Point(82, 111);
             this.txtSEARCH.Name = "txtSEARCH";
-            this.txtSEARCH.Size = new System.Drawing.Size(343, 25);
+            this.txtSEARCH.Size = new System.Drawing.Size(399, 29);
             this.txtSEARCH.TabIndex = 309;
             this.txtSEARCH.TextChanged += new System.EventHandler(this.txtSEARCH_TextChanged);
             // 
@@ -343,9 +343,9 @@
             this.lblSEARCH.AutoSize = true;
             this.lblSEARCH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSEARCH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSEARCH.Location = new System.Drawing.Point(8, 95);
+            this.lblSEARCH.Location = new System.Drawing.Point(9, 116);
             this.lblSEARCH.Name = "lblSEARCH";
-            this.lblSEARCH.Size = new System.Drawing.Size(57, 17);
+            this.lblSEARCH.Size = new System.Drawing.Size(74, 23);
             this.lblSEARCH.TabIndex = 308;
             this.lblSEARCH.Text = "SEARCH";
             // 
@@ -360,17 +360,17 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(1101, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(1284, 107);
             this.pnlHEADER.TabIndex = 307;
             // 
             // txtCREDIT
             // 
             this.txtCREDIT.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCREDIT.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtCREDIT.Location = new System.Drawing.Point(849, 303);
+            this.txtCREDIT.Location = new System.Drawing.Point(990, 372);
             this.txtCREDIT.MaxLength = 10;
             this.txtCREDIT.Name = "txtCREDIT";
-            this.txtCREDIT.Size = new System.Drawing.Size(240, 25);
+            this.txtCREDIT.Size = new System.Drawing.Size(279, 29);
             this.txtCREDIT.TabIndex = 4;
             this.txtCREDIT.Text = "0.0";
             this.txtCREDIT.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtDEBIT_MouseClick);
@@ -384,9 +384,9 @@
             this.lblCREDIT.AutoSize = true;
             this.lblCREDIT.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblCREDIT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCREDIT.Location = new System.Drawing.Point(768, 308);
+            this.lblCREDIT.Location = new System.Drawing.Point(895, 379);
             this.lblCREDIT.Name = "lblCREDIT";
-            this.lblCREDIT.Size = new System.Drawing.Size(50, 15);
+            this.lblCREDIT.Size = new System.Drawing.Size(62, 20);
             this.lblCREDIT.TabIndex = 325;
             this.lblCREDIT.Text = "CREDIT:";
             this.lblCREDIT.Click += new System.EventHandler(this.label1_Click);
@@ -400,9 +400,9 @@
             this.btnADD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnADD.ImageIndex = 0;
             this.btnADD.ImageList = this.imageList1;
-            this.btnADD.Location = new System.Drawing.Point(528, 303);
+            this.btnADD.Location = new System.Drawing.Point(615, 372);
             this.btnADD.Name = "btnADD";
-            this.btnADD.Size = new System.Drawing.Size(231, 25);
+            this.btnADD.Size = new System.Drawing.Size(269, 30);
             this.btnADD.TabIndex = 5;
             this.btnADD.Text = "ADD";
             this.btnADD.UseVisualStyleBackColor = false;
@@ -443,12 +443,12 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdENTRY.DefaultCellStyle = dataGridViewCellStyle6;
-            this.grdENTRY.Location = new System.Drawing.Point(528, 334);
+            this.grdENTRY.Location = new System.Drawing.Point(615, 411);
             this.grdENTRY.Name = "grdENTRY";
             this.grdENTRY.ReadOnly = true;
             this.grdENTRY.RowHeadersVisible = false;
             this.grdENTRY.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdENTRY.Size = new System.Drawing.Size(561, 175);
+            this.grdENTRY.Size = new System.Drawing.Size(654, 215);
             this.grdENTRY.TabIndex = 327;
             this.grdENTRY.TabStop = false;
             this.grdENTRY.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdENTRY_CellClick);
@@ -467,21 +467,20 @@
             this.acc_name.HeaderText = "ACCOUNT";
             this.acc_name.Name = "acc_name";
             this.acc_name.ReadOnly = true;
-            this.acc_name.Width = 101;
+            this.acc_name.Width = 125;
             // 
             // debit
             // 
             this.debit.HeaderText = "DEBIT";
             this.debit.Name = "debit";
             this.debit.ReadOnly = true;
-            this.debit.Width = 71;
+            this.debit.Width = 89;
             // 
             // credit
             // 
             this.credit.HeaderText = "CREDIT";
             this.credit.Name = "credit";
             this.credit.ReadOnly = true;
-            this.credit.Width = 81;
             // 
             // inv_no
             // 
@@ -508,9 +507,9 @@
             this.cmbSELECT_INV.FormattingEnabled = true;
             this.cmbSELECT_INV.Items.AddRange(new object[] {
             "--SELECT INVOICE--"});
-            this.cmbSELECT_INV.Location = new System.Drawing.Point(528, 272);
+            this.cmbSELECT_INV.Location = new System.Drawing.Point(615, 334);
             this.cmbSELECT_INV.Name = "cmbSELECT_INV";
-            this.cmbSELECT_INV.Size = new System.Drawing.Size(231, 25);
+            this.cmbSELECT_INV.Size = new System.Drawing.Size(268, 29);
             this.cmbSELECT_INV.TabIndex = 330;
             this.cmbSELECT_INV.DropDown += new System.EventHandler(this.cmbSELECT_INV_DropDown);
             this.cmbSELECT_INV.TextUpdate += new System.EventHandler(this.cmbSELECT_INV_TextUpdate);
@@ -520,9 +519,9 @@
             // 
             this.rdbOTHERS.AutoSize = true;
             this.rdbOTHERS.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rdbOTHERS.Location = new System.Drawing.Point(1022, 243);
+            this.rdbOTHERS.Location = new System.Drawing.Point(1192, 299);
             this.rdbOTHERS.Name = "rdbOTHERS";
-            this.rdbOTHERS.Size = new System.Drawing.Size(67, 21);
+            this.rdbOTHERS.Size = new System.Drawing.Size(85, 27);
             this.rdbOTHERS.TabIndex = 329;
             this.rdbOTHERS.Text = "OTHER";
             this.rdbOTHERS.UseVisualStyleBackColor = true;
@@ -532,9 +531,9 @@
             // 
             this.rdbINV_REC.AutoSize = true;
             this.rdbINV_REC.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rdbINV_REC.Location = new System.Drawing.Point(768, 243);
+            this.rdbINV_REC.Location = new System.Drawing.Point(895, 299);
             this.rdbINV_REC.Name = "rdbINV_REC";
-            this.rdbINV_REC.Size = new System.Drawing.Size(113, 21);
+            this.rdbINV_REC.Size = new System.Drawing.Size(146, 27);
             this.rdbINV_REC.TabIndex = 328;
             this.rdbINV_REC.TabStop = true;
             this.rdbINV_REC.Text = "INVOICE / REC";
@@ -545,9 +544,9 @@
             // 
             this.rdbPAY.AutoSize = true;
             this.rdbPAY.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rdbPAY.Location = new System.Drawing.Point(895, 243);
+            this.rdbPAY.Location = new System.Drawing.Point(1044, 299);
             this.rdbPAY.Name = "rdbPAY";
-            this.rdbPAY.Size = new System.Drawing.Size(113, 21);
+            this.rdbPAY.Size = new System.Drawing.Size(144, 27);
             this.rdbPAY.TabIndex = 331;
             this.rdbPAY.TabStop = true;
             this.rdbPAY.Text = "INVOICE / PAY";
@@ -559,9 +558,9 @@
             this.lbl_SELECT_INV.AutoSize = true;
             this.lbl_SELECT_INV.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lbl_SELECT_INV.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_SELECT_INV.Location = new System.Drawing.Point(420, 277);
+            this.lbl_SELECT_INV.Location = new System.Drawing.Point(489, 340);
             this.lbl_SELECT_INV.Name = "lbl_SELECT_INV";
-            this.lbl_SELECT_INV.Size = new System.Drawing.Size(99, 15);
+            this.lbl_SELECT_INV.Size = new System.Drawing.Size(123, 20);
             this.lbl_SELECT_INV.TabIndex = 332;
             this.lbl_SELECT_INV.Text = "SELECT INVOICE:";
             // 
@@ -574,9 +573,9 @@
             this.btn_VIEW_VOUCHER.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_VIEW_VOUCHER.ImageIndex = 2;
             this.btn_VIEW_VOUCHER.ImageList = this.imageList1;
-            this.btn_VIEW_VOUCHER.Location = new System.Drawing.Point(528, 515);
+            this.btn_VIEW_VOUCHER.Location = new System.Drawing.Point(615, 633);
             this.btn_VIEW_VOUCHER.Name = "btn_VIEW_VOUCHER";
-            this.btn_VIEW_VOUCHER.Size = new System.Drawing.Size(231, 25);
+            this.btn_VIEW_VOUCHER.Size = new System.Drawing.Size(269, 30);
             this.btn_VIEW_VOUCHER.TabIndex = 333;
             this.btn_VIEW_VOUCHER.Text = "VIEW VOUCHER";
             this.btn_VIEW_VOUCHER.UseVisualStyleBackColor = false;
@@ -584,10 +583,10 @@
             // 
             // frm_General_Voucher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1101, 546);
+            this.ClientSize = new System.Drawing.Size(1284, 671);
             this.Controls.Add(this.btn_VIEW_VOUCHER);
             this.Controls.Add(this.lbl_SELECT_INV);
             this.Controls.Add(this.rdbPAY);

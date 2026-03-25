@@ -69,9 +69,9 @@
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -80,11 +80,11 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 11.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(3, 55);
+            this.lblHEADING.Location = new System.Drawing.Point(3, 67);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(175, 18);
+            this.lblHEADING.Size = new System.Drawing.Size(258, 25);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "SALES INVOICE HISTORY";
             // 
@@ -100,41 +100,37 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(468, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(545, 107);
             this.pnlHEADER.TabIndex = 40;
             // 
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Location = new System.Drawing.Point(1499, 3);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(57, 24);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
             // 
             // cmbArea
             // 
-            this.cmbArea.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbArea.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbArea.Enabled = false;
             this.cmbArea.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbArea.FormattingEnabled = true;
-            this.cmbArea.Location = new System.Drawing.Point(161, 156);
+            this.cmbArea.Location = new System.Drawing.Point(187, 191);
             this.cmbArea.Name = "cmbArea";
-            this.cmbArea.Size = new System.Drawing.Size(231, 25);
+            this.cmbArea.Size = new System.Drawing.Size(268, 29);
             this.cmbArea.TabIndex = 0;
             // 
             // cmbSalesPerson
             // 
-            this.cmbSalesPerson.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbSalesPerson.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbSalesPerson.Enabled = false;
             this.cmbSalesPerson.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbSalesPerson.FormattingEnabled = true;
-            this.cmbSalesPerson.Location = new System.Drawing.Point(161, 63);
+            this.cmbSalesPerson.Location = new System.Drawing.Point(187, 77);
             this.cmbSalesPerson.Name = "cmbSalesPerson";
-            this.cmbSalesPerson.Size = new System.Drawing.Size(231, 25);
+            this.cmbSalesPerson.Size = new System.Drawing.Size(268, 29);
             this.cmbSalesPerson.TabIndex = 0;
             // 
             // btnSHOW
@@ -146,9 +142,9 @@
             this.btnSHOW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSHOW.ImageIndex = 5;
             this.btnSHOW.ImageList = this.imageList1;
-            this.btnSHOW.Location = new System.Drawing.Point(161, 228);
+            this.btnSHOW.Location = new System.Drawing.Point(187, 280);
             this.btnSHOW.Name = "btnSHOW";
-            this.btnSHOW.Size = new System.Drawing.Size(231, 25);
+            this.btnSHOW.Size = new System.Drawing.Size(269, 30);
             this.btnSHOW.TabIndex = 3;
             this.btnSHOW.Text = "SHOW";
             this.btnSHOW.UseVisualStyleBackColor = false;
@@ -181,9 +177,9 @@
             this.grpCASHBOOK.Controls.Add(this.cmbCustName);
             this.grpCASHBOOK.Controls.Add(this.btnSHOW);
             this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpCASHBOOK.Location = new System.Drawing.Point(12, 117);
+            this.grpCASHBOOK.Location = new System.Drawing.Point(13, 143);
             this.grpCASHBOOK.Name = "grpCASHBOOK";
-            this.grpCASHBOOK.Size = new System.Drawing.Size(429, 268);
+            this.grpCASHBOOK.Size = new System.Drawing.Size(500, 329);
             this.grpCASHBOOK.TabIndex = 41;
             this.grpCASHBOOK.TabStop = false;
             this.grpCASHBOOK.Text = "SALES INVOICE HISTORY";
@@ -191,9 +187,9 @@
             // chkDays
             // 
             this.chkDays.AutoSize = true;
-            this.chkDays.Location = new System.Drawing.Point(41, 191);
+            this.chkDays.Location = new System.Drawing.Point(47, 235);
             this.chkDays.Name = "chkDays";
-            this.chkDays.Size = new System.Drawing.Size(59, 21);
+            this.chkDays.Size = new System.Drawing.Size(73, 27);
             this.chkDays.TabIndex = 340;
             this.chkDays.Text = "DAYS";
             this.chkDays.UseVisualStyleBackColor = true;
@@ -202,9 +198,9 @@
             // chkArea
             // 
             this.chkArea.AutoSize = true;
-            this.chkArea.Location = new System.Drawing.Point(41, 157);
+            this.chkArea.Location = new System.Drawing.Point(47, 193);
             this.chkArea.Name = "chkArea";
-            this.chkArea.Size = new System.Drawing.Size(60, 21);
+            this.chkArea.Size = new System.Drawing.Size(74, 27);
             this.chkArea.TabIndex = 340;
             this.chkArea.Text = "AREA";
             this.chkArea.UseVisualStyleBackColor = true;
@@ -213,9 +209,9 @@
             // rdbCustomer
             // 
             this.rdbCustomer.AutoSize = true;
-            this.rdbCustomer.Location = new System.Drawing.Point(41, 127);
+            this.rdbCustomer.Location = new System.Drawing.Point(47, 156);
             this.rdbCustomer.Name = "rdbCustomer";
-            this.rdbCustomer.Size = new System.Drawing.Size(96, 21);
+            this.rdbCustomer.Size = new System.Drawing.Size(124, 27);
             this.rdbCustomer.TabIndex = 339;
             this.rdbCustomer.TabStop = true;
             this.rdbCustomer.Text = "CUSTOMER:";
@@ -225,9 +221,9 @@
             // rdbProvince
             // 
             this.rdbProvince.AutoSize = true;
-            this.rdbProvince.Location = new System.Drawing.Point(41, 96);
+            this.rdbProvince.Location = new System.Drawing.Point(47, 118);
             this.rdbProvince.Name = "rdbProvince";
-            this.rdbProvince.Size = new System.Drawing.Size(92, 21);
+            this.rdbProvince.Size = new System.Drawing.Size(118, 27);
             this.rdbProvince.TabIndex = 339;
             this.rdbProvince.TabStop = true;
             this.rdbProvince.Text = "PROVINCE:";
@@ -238,9 +234,9 @@
             // 
             this.rdbAll.AutoSize = true;
             this.rdbAll.Checked = true;
-            this.rdbAll.Location = new System.Drawing.Point(41, 38);
+            this.rdbAll.Location = new System.Drawing.Point(47, 46);
             this.rdbAll.Name = "rdbAll";
-            this.rdbAll.Size = new System.Drawing.Size(47, 21);
+            this.rdbAll.Size = new System.Drawing.Size(58, 27);
             this.rdbAll.TabIndex = 339;
             this.rdbAll.TabStop = true;
             this.rdbAll.Text = "ALL";
@@ -250,9 +246,9 @@
             // rdbSales
             // 
             this.rdbSales.AutoSize = true;
-            this.rdbSales.Location = new System.Drawing.Point(41, 65);
+            this.rdbSales.Location = new System.Drawing.Point(47, 79);
             this.rdbSales.Name = "rdbSales";
-            this.rdbSales.Size = new System.Drawing.Size(116, 21);
+            this.rdbSales.Size = new System.Drawing.Size(147, 27);
             this.rdbSales.TabIndex = 339;
             this.rdbSales.Text = "SALES PERSON";
             this.rdbSales.UseVisualStyleBackColor = true;
@@ -294,12 +290,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdSEARCH.Location = new System.Drawing.Point(9, 171);
+            this.grdSEARCH.Location = new System.Drawing.Point(10, 210);
             this.grdSEARCH.Name = "grdSEARCH";
             this.grdSEARCH.ReadOnly = true;
             this.grdSEARCH.RowHeadersVisible = false;
             this.grdSEARCH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdSEARCH.Size = new System.Drawing.Size(10, 10);
+            this.grdSEARCH.Size = new System.Drawing.Size(11, 12);
             this.grdSEARCH.TabIndex = 338;
             this.grdSEARCH.TabStop = false;
             this.grdSEARCH.Visible = false;
@@ -309,54 +305,52 @@
             this.s_nature.HeaderText = "DATE";
             this.s_nature.Name = "s_nature";
             this.s_nature.ReadOnly = true;
-            this.s_nature.Width = 64;
+            this.s_nature.Width = 79;
             // 
             // a_name
             // 
             this.a_name.HeaderText = "DESCRIPTION";
             this.a_name.Name = "a_name";
             this.a_name.ReadOnly = true;
-            this.a_name.Width = 115;
+            this.a_name.Width = 146;
             // 
             // debit
             // 
             this.debit.HeaderText = "DEBIT";
             this.debit.Name = "debit";
             this.debit.ReadOnly = true;
-            this.debit.Width = 68;
+            this.debit.Width = 84;
             // 
             // credit
             // 
             this.credit.HeaderText = "CREDIT";
             this.credit.Name = "credit";
             this.credit.ReadOnly = true;
-            this.credit.Width = 76;
+            this.credit.Width = 96;
             // 
             // bal
             // 
             this.bal.HeaderText = "BALANCE";
             this.bal.Name = "bal";
             this.bal.ReadOnly = true;
-            this.bal.Width = 90;
+            this.bal.Width = 112;
             // 
             // dc
             // 
             this.dc.HeaderText = "Dr / Cr";
             this.dc.Name = "dc";
             this.dc.ReadOnly = true;
-            this.dc.Width = 73;
+            this.dc.Width = 91;
             // 
             // FOLIO
             // 
             this.FOLIO.HeaderText = "FOLIO";
             this.FOLIO.Name = "FOLIO";
             this.FOLIO.ReadOnly = true;
-            this.FOLIO.Width = 70;
+            this.FOLIO.Width = 87;
             // 
             // cmbDays
             // 
-            this.cmbDays.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbDays.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbDays.Enabled = false;
             this.cmbDays.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbDays.FormattingEnabled = true;
@@ -366,46 +360,42 @@
             "50",
             "60",
             "90"});
-            this.cmbDays.Location = new System.Drawing.Point(161, 187);
+            this.cmbDays.Location = new System.Drawing.Point(187, 230);
             this.cmbDays.Name = "cmbDays";
-            this.cmbDays.Size = new System.Drawing.Size(231, 25);
+            this.cmbDays.Size = new System.Drawing.Size(268, 29);
             this.cmbDays.TabIndex = 0;
             this.cmbDays.Text = "-- SELECT DAYS --";
             // 
             // cmbProvince
             // 
-            this.cmbProvince.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbProvince.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbProvince.Enabled = false;
             this.cmbProvince.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbProvince.FormattingEnabled = true;
-            this.cmbProvince.Location = new System.Drawing.Point(161, 94);
+            this.cmbProvince.Location = new System.Drawing.Point(187, 115);
             this.cmbProvince.Name = "cmbProvince";
-            this.cmbProvince.Size = new System.Drawing.Size(231, 25);
+            this.cmbProvince.Size = new System.Drawing.Size(268, 29);
             this.cmbProvince.TabIndex = 0;
             // 
             // cmbCustName
             // 
-            this.cmbCustName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbCustName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCustName.Enabled = false;
             this.cmbCustName.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbCustName.FormattingEnabled = true;
-            this.cmbCustName.Location = new System.Drawing.Point(161, 125);
+            this.cmbCustName.Location = new System.Drawing.Point(187, 153);
             this.cmbCustName.Name = "cmbCustName";
-            this.cmbCustName.Size = new System.Drawing.Size(231, 25);
+            this.cmbCustName.Size = new System.Drawing.Size(268, 29);
             this.cmbCustName.TabIndex = 0;
             // 
             // frm_SalesInvoiceHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(468, 412);
+            this.ClientSize = new System.Drawing.Size(545, 507);
             this.Controls.Add(this.pnlHEADER);
             this.Controls.Add(this.grpCASHBOOK);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_SalesInvoiceHistory";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SALES INVOICE HISTORY";
             this.Load += new System.EventHandler(this.frm_SalesInvoiceHistory_Load);
