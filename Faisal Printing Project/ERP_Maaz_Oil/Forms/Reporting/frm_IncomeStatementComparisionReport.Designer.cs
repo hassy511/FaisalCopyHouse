@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_IncomeStatementComparisionReport));
             this.pnlHEADER = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblHEADING = new System.Windows.Forms.Label();
             this.grpCASHBOOK = new System.Windows.Forms.GroupBox();
             this.lblTotalCanola = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.btnSHOW = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.lblITO = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnlHEADER.SuspendLayout();
             this.grpCASHBOOK.SuspendLayout();
             this.SuspendLayout();
@@ -55,18 +55,29 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(299, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(348, 107);
             this.pnlHEADER.TabIndex = 36;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(3, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(183, 96);
+            this.label2.TabIndex = 341;
+            this.label2.Text = "INCOME\r\nSTATEMENT\r\nCOMPARISION";
             // 
             // lblHEADING
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 10.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(-417, 160);
+            this.lblHEADING.Location = new System.Drawing.Point(-487, 196);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(150, 34);
+            this.lblHEADING.Size = new System.Drawing.Size(201, 44);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "INCOME STATEMENT \r\nREPORT";
             // 
@@ -79,9 +90,9 @@
             this.grpCASHBOOK.Controls.Add(this.btnSHOW);
             this.grpCASHBOOK.Controls.Add(this.lblITO);
             this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpCASHBOOK.Location = new System.Drawing.Point(2, 90);
+            this.grpCASHBOOK.Location = new System.Drawing.Point(2, 110);
             this.grpCASHBOOK.Name = "grpCASHBOOK";
-            this.grpCASHBOOK.Size = new System.Drawing.Size(294, 93);
+            this.grpCASHBOOK.Size = new System.Drawing.Size(342, 114);
             this.grpCASHBOOK.TabIndex = 37;
             this.grpCASHBOOK.TabStop = false;
             this.grpCASHBOOK.Text = "INCOME STATEMENT REPORT";
@@ -90,9 +101,9 @@
             // lblTotalCanola
             // 
             this.lblTotalCanola.AutoSize = true;
-            this.lblTotalCanola.Location = new System.Drawing.Point(306, 26);
+            this.lblTotalCanola.Location = new System.Drawing.Point(356, 31);
             this.lblTotalCanola.Name = "lblTotalCanola";
-            this.lblTotalCanola.Size = new System.Drawing.Size(15, 17);
+            this.lblTotalCanola.Size = new System.Drawing.Size(19, 23);
             this.lblTotalCanola.TabIndex = 340;
             this.lblTotalCanola.Text = "0";
             this.lblTotalCanola.Visible = false;
@@ -100,9 +111,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 33);
+            this.label1.Location = new System.Drawing.Point(10, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 17);
+            this.label1.Size = new System.Drawing.Size(79, 23);
             this.label1.TabIndex = 121;
             this.label1.Text = "PERIOD: ";
             // 
@@ -111,9 +122,9 @@
             this.dtp_TO.CustomFormat = "dd/MM/yyyy";
             this.dtp_TO.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_TO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_TO.Location = new System.Drawing.Point(190, 30);
+            this.dtp_TO.Location = new System.Drawing.Point(221, 36);
             this.dtp_TO.Name = "dtp_TO";
-            this.dtp_TO.Size = new System.Drawing.Size(97, 23);
+            this.dtp_TO.Size = new System.Drawing.Size(112, 27);
             this.dtp_TO.TabIndex = 120;
             // 
             // dtp_FROM
@@ -121,9 +132,9 @@
             this.dtp_FROM.CustomFormat = "dd/MM/yyyy";
             this.dtp_FROM.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_FROM.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_FROM.Location = new System.Drawing.Point(76, 30);
+            this.dtp_FROM.Location = new System.Drawing.Point(88, 36);
             this.dtp_FROM.Name = "dtp_FROM";
-            this.dtp_FROM.Size = new System.Drawing.Size(97, 23);
+            this.dtp_FROM.Size = new System.Drawing.Size(112, 27);
             this.dtp_FROM.TabIndex = 119;
             // 
             // btnSHOW
@@ -135,9 +146,9 @@
             this.btnSHOW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSHOW.ImageIndex = 5;
             this.btnSHOW.ImageList = this.imageList1;
-            this.btnSHOW.Location = new System.Drawing.Point(76, 59);
+            this.btnSHOW.Location = new System.Drawing.Point(88, 72);
             this.btnSHOW.Name = "btnSHOW";
-            this.btnSHOW.Size = new System.Drawing.Size(211, 25);
+            this.btnSHOW.Size = new System.Drawing.Size(246, 30);
             this.btnSHOW.TabIndex = 9;
             this.btnSHOW.Text = "SHOW";
             this.btnSHOW.UseVisualStyleBackColor = false;
@@ -159,29 +170,18 @@
             this.lblITO.AutoSize = true;
             this.lblITO.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblITO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblITO.Location = new System.Drawing.Point(172, 34);
+            this.lblITO.Location = new System.Drawing.Point(200, 41);
             this.lblITO.Name = "lblITO";
-            this.lblITO.Size = new System.Drawing.Size(18, 15);
+            this.lblITO.Size = new System.Drawing.Size(23, 20);
             this.lblITO.TabIndex = 46;
             this.lblITO.Text = " - ";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 75);
-            this.label2.TabIndex = 341;
-            this.label2.Text = "INCOME\r\nSTATEMENT\r\nCOMPARISION";
-            // 
             // frm_IncomeStatementComparisionReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(299, 185);
+            this.ClientSize = new System.Drawing.Size(348, 227);
             this.Controls.Add(this.grpCASHBOOK);
             this.Controls.Add(this.lblHEADING);
             this.Controls.Add(this.pnlHEADER);

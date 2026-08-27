@@ -57,16 +57,18 @@
             this.pnlHEADER.Controls.Add(this.lblHEADING);
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
+            this.pnlHEADER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(428, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(571, 108);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1787, 4);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(65, 25);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -77,9 +79,10 @@
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
             this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(6, 15);
+            this.lblHEADING.Location = new System.Drawing.Point(8, 18);
+            this.lblHEADING.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(181, 58);
+            this.lblHEADING.Size = new System.Drawing.Size(209, 64);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "PRODUCTION \r\nPROCESS";
             // 
@@ -92,9 +95,10 @@
             this.btnCLEAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCLEAR.ImageIndex = 1;
             this.btnCLEAR.ImageList = this.imageList1;
-            this.btnCLEAR.Location = new System.Drawing.Point(272, 187);
+            this.btnCLEAR.Location = new System.Drawing.Point(363, 230);
+            this.btnCLEAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCLEAR.Name = "btnCLEAR";
-            this.btnCLEAR.Size = new System.Drawing.Size(140, 25);
+            this.btnCLEAR.Size = new System.Drawing.Size(187, 31);
             this.btnCLEAR.TabIndex = 4;
             this.btnCLEAR.Text = "CLEAR";
             this.btnCLEAR.UseVisualStyleBackColor = false;
@@ -116,9 +120,10 @@
             this.btnSAVE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSAVE.ImageIndex = 0;
             this.btnSAVE.ImageList = this.imageList1;
-            this.btnSAVE.Location = new System.Drawing.Point(132, 187);
+            this.btnSAVE.Location = new System.Drawing.Point(176, 230);
+            this.btnSAVE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSAVE.Name = "btnSAVE";
-            this.btnSAVE.Size = new System.Drawing.Size(140, 25);
+            this.btnSAVE.Size = new System.Drawing.Size(187, 31);
             this.btnSAVE.TabIndex = 3;
             this.btnSAVE.Text = "PROCESS";
             this.btnSAVE.UseVisualStyleBackColor = false;
@@ -128,9 +133,10 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.Location = new System.Drawing.Point(33, 520);
+            this.checkBox1.Location = new System.Drawing.Point(44, 640);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(86, 19);
+            this.checkBox1.Size = new System.Drawing.Size(105, 24);
             this.checkBox1.TabIndex = 235;
             this.checkBox1.Text = "DE-ACTIVE";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -146,9 +152,10 @@
             "PRODUCTION",
             "RAW",
             "CONSUMABLE"});
-            this.comboBox1.Location = new System.Drawing.Point(132, 94);
+            this.comboBox1.Location = new System.Drawing.Point(176, 116);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(280, 25);
+            this.comboBox1.Size = new System.Drawing.Size(372, 29);
             this.comboBox1.TabIndex = 236;
             // 
             // label9
@@ -156,9 +163,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(4, 99);
+            this.label9.Location = new System.Drawing.Point(5, 122);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 15);
+            this.label9.Size = new System.Drawing.Size(154, 20);
             this.label9.TabIndex = 237;
             this.label9.Text = "PRODUCT CATEGORY";
             // 
@@ -173,9 +181,10 @@
             "PRODUCTION",
             "RAW",
             "CONSUMABLE"});
-            this.comboBox2.Location = new System.Drawing.Point(132, 125);
+            this.comboBox2.Location = new System.Drawing.Point(176, 154);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(280, 25);
+            this.comboBox2.Size = new System.Drawing.Size(372, 29);
             this.comboBox2.TabIndex = 238;
             // 
             // label1
@@ -183,9 +192,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(4, 130);
+            this.label1.Location = new System.Drawing.Point(5, 160);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 15);
+            this.label1.Size = new System.Drawing.Size(77, 20);
             this.label1.TabIndex = 239;
             this.label1.Text = "PRODUCT";
             // 
@@ -193,10 +203,11 @@
             // 
             this.txtQTY.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtQTY.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtQTY.Location = new System.Drawing.Point(132, 156);
+            this.txtQTY.Location = new System.Drawing.Point(176, 192);
+            this.txtQTY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtQTY.MaxLength = 11;
             this.txtQTY.Name = "txtQTY";
-            this.txtQTY.Size = new System.Drawing.Size(280, 25);
+            this.txtQTY.Size = new System.Drawing.Size(372, 29);
             this.txtQTY.TabIndex = 240;
             this.txtQTY.Text = "10";
             // 
@@ -205,18 +216,19 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(8, 161);
+            this.label4.Location = new System.Drawing.Point(11, 198);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 15);
+            this.label4.Size = new System.Drawing.Size(36, 20);
             this.label4.TabIndex = 241;
             this.label4.Text = "QTY";
             // 
             // frmProductionProcess
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(428, 227);
+            this.ClientSize = new System.Drawing.Size(571, 279);
             this.Controls.Add(this.txtQTY);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox2);
@@ -229,7 +241,8 @@
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1314, 703);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1746, 854);
             this.Name = "frmProductionProcess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PRODUCTION PROCESS";

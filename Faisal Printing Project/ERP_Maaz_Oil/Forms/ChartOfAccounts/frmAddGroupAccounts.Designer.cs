@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddGroupAccounts));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblHEADING = new System.Windows.Forms.Label();
             this.pnlHEADER = new System.Windows.Forms.Panel();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
@@ -61,9 +61,10 @@
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
             this.lblHEADING.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(12, 36);
+            this.lblHEADING.Location = new System.Drawing.Point(16, 44);
+            this.lblHEADING.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(255, 23);
+            this.lblHEADING.Size = new System.Drawing.Size(321, 29);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "ADD BRANCH ACCOUNTS";
             // 
@@ -77,16 +78,18 @@
             this.pnlHEADER.Controls.Add(this.pictureBox14);
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
+            this.pnlHEADER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(725, 85);
+            this.pnlHEADER.Size = new System.Drawing.Size(967, 105);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1787, 4);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(65, 25);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -94,9 +97,10 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Location = new System.Drawing.Point(1713, 4);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(65, 25);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
@@ -110,9 +114,10 @@
             this.btnCLEAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCLEAR.ImageIndex = 1;
             this.btnCLEAR.ImageList = this.imageList1;
-            this.btnCLEAR.Location = new System.Drawing.Point(600, 573);
+            this.btnCLEAR.Location = new System.Drawing.Point(800, 705);
+            this.btnCLEAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCLEAR.Name = "btnCLEAR";
-            this.btnCLEAR.Size = new System.Drawing.Size(116, 25);
+            this.btnCLEAR.Size = new System.Drawing.Size(155, 31);
             this.btnCLEAR.TabIndex = 226;
             this.btnCLEAR.Text = "CLEAR";
             this.btnCLEAR.UseVisualStyleBackColor = false;
@@ -134,9 +139,10 @@
             this.btnSAVE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSAVE.ImageIndex = 0;
             this.btnSAVE.ImageList = this.imageList1;
-            this.btnSAVE.Location = new System.Drawing.Point(486, 573);
+            this.btnSAVE.Location = new System.Drawing.Point(648, 705);
+            this.btnSAVE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSAVE.Name = "btnSAVE";
-            this.btnSAVE.Size = new System.Drawing.Size(114, 25);
+            this.btnSAVE.Size = new System.Drawing.Size(152, 31);
             this.btnSAVE.TabIndex = 225;
             this.btnSAVE.Text = "SAVE";
             this.btnSAVE.UseVisualStyleBackColor = false;
@@ -146,35 +152,36 @@
             // 
             this.grdSEARCH.AllowUserToAddRows = false;
             this.grdSEARCH.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.grdSEARCH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.grdSEARCH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grdSEARCH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grdSEARCH.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grdSEARCH.BackgroundColor = System.Drawing.Color.White;
             this.grdSEARCH.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdSEARCH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdSEARCH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grdSEARCH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdSEARCH.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle6;
-            this.grdSEARCH.Location = new System.Drawing.Point(12, 127);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle3;
+            this.grdSEARCH.Location = new System.Drawing.Point(16, 156);
+            this.grdSEARCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdSEARCH.Name = "grdSEARCH";
             this.grdSEARCH.ReadOnly = true;
             this.grdSEARCH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdSEARCH.Size = new System.Drawing.Size(704, 409);
+            this.grdSEARCH.Size = new System.Drawing.Size(939, 503);
             this.grdSEARCH.TabIndex = 232;
             this.grdSEARCH.TabStop = false;
             this.grdSEARCH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdSEARCH_CellClick);
@@ -186,9 +193,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSEARCH.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSEARCH.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtSEARCH.Location = new System.Drawing.Point(72, 96);
+            this.txtSEARCH.Location = new System.Drawing.Point(96, 118);
+            this.txtSEARCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSEARCH.Name = "txtSEARCH";
-            this.txtSEARCH.Size = new System.Drawing.Size(644, 25);
+            this.txtSEARCH.Size = new System.Drawing.Size(857, 29);
             this.txtSEARCH.TabIndex = 231;
             this.txtSEARCH.TextChanged += new System.EventHandler(this.txtSEARCH_TextChanged);
             // 
@@ -197,9 +205,10 @@
             this.lblSEARCH.AutoSize = true;
             this.lblSEARCH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSEARCH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSEARCH.Location = new System.Drawing.Point(9, 100);
+            this.lblSEARCH.Location = new System.Drawing.Point(12, 123);
+            this.lblSEARCH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSEARCH.Name = "lblSEARCH";
-            this.lblSEARCH.Size = new System.Drawing.Size(57, 17);
+            this.lblSEARCH.Size = new System.Drawing.Size(74, 23);
             this.lblSEARCH.TabIndex = 230;
             this.lblSEARCH.Text = "SEARCH";
             // 
@@ -207,10 +216,11 @@
             // 
             this.txtGROUP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGROUP.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtGROUP.Location = new System.Drawing.Point(127, 573);
+            this.txtGROUP.Location = new System.Drawing.Point(169, 705);
+            this.txtGROUP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGROUP.MaxLength = 100;
             this.txtGROUP.Name = "txtGROUP";
-            this.txtGROUP.Size = new System.Drawing.Size(231, 25);
+            this.txtGROUP.Size = new System.Drawing.Size(307, 29);
             this.txtGROUP.TabIndex = 224;
             this.txtGROUP.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtGROUP_MouseClick);
             this.txtGROUP.Enter += new System.EventHandler(this.txtGROUP_Enter);
@@ -220,9 +230,10 @@
             this.lblGROUP.AutoSize = true;
             this.lblGROUP.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblGROUP.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblGROUP.Location = new System.Drawing.Point(9, 578);
+            this.lblGROUP.Location = new System.Drawing.Point(12, 711);
+            this.lblGROUP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGROUP.Name = "lblGROUP";
-            this.lblGROUP.Size = new System.Drawing.Size(94, 15);
+            this.lblGROUP.Size = new System.Drawing.Size(121, 20);
             this.lblGROUP.TabIndex = 229;
             this.lblGROUP.Text = "BRANCH NAME:";
             // 
@@ -232,9 +243,10 @@
             this.cmbPACCOUNT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbPACCOUNT.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbPACCOUNT.FormattingEnabled = true;
-            this.cmbPACCOUNT.Location = new System.Drawing.Point(486, 542);
+            this.cmbPACCOUNT.Location = new System.Drawing.Point(648, 667);
+            this.cmbPACCOUNT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbPACCOUNT.Name = "cmbPACCOUNT";
-            this.cmbPACCOUNT.Size = new System.Drawing.Size(230, 25);
+            this.cmbPACCOUNT.Size = new System.Drawing.Size(305, 29);
             this.cmbPACCOUNT.TabIndex = 223;
             this.cmbPACCOUNT.DropDown += new System.EventHandler(this.cmbPACCOUNT_DropDown);
             this.cmbPACCOUNT.SelectedIndexChanged += new System.EventHandler(this.cmbPACCOUNT_SelectedIndexChanged);
@@ -245,9 +257,10 @@
             this.lblPACCOUNT.AutoSize = true;
             this.lblPACCOUNT.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblPACCOUNT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPACCOUNT.Location = new System.Drawing.Point(364, 547);
+            this.lblPACCOUNT.Location = new System.Drawing.Point(485, 673);
+            this.lblPACCOUNT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPACCOUNT.Name = "lblPACCOUNT";
-            this.lblPACCOUNT.Size = new System.Drawing.Size(111, 15);
+            this.lblPACCOUNT.Size = new System.Drawing.Size(142, 20);
             this.lblPACCOUNT.TabIndex = 228;
             this.lblPACCOUNT.Text = "PARENT ACCOUNT:";
             // 
@@ -257,9 +270,10 @@
             this.cmbACCOUNT_NATURE.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbACCOUNT_NATURE.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbACCOUNT_NATURE.FormattingEnabled = true;
-            this.cmbACCOUNT_NATURE.Location = new System.Drawing.Point(127, 542);
+            this.cmbACCOUNT_NATURE.Location = new System.Drawing.Point(169, 667);
+            this.cmbACCOUNT_NATURE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbACCOUNT_NATURE.Name = "cmbACCOUNT_NATURE";
-            this.cmbACCOUNT_NATURE.Size = new System.Drawing.Size(231, 25);
+            this.cmbACCOUNT_NATURE.Size = new System.Drawing.Size(307, 29);
             this.cmbACCOUNT_NATURE.TabIndex = 222;
             this.cmbACCOUNT_NATURE.DropDown += new System.EventHandler(this.cmbACCOUNT_NATURE_DropDown);
             this.cmbACCOUNT_NATURE.TextUpdate += new System.EventHandler(this.cmbACCOUNT_NATURE_TextUpdate);
@@ -270,18 +284,19 @@
             this.lblACCOUNT_NATURE.AutoSize = true;
             this.lblACCOUNT_NATURE.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblACCOUNT_NATURE.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblACCOUNT_NATURE.Location = new System.Drawing.Point(9, 547);
+            this.lblACCOUNT_NATURE.Location = new System.Drawing.Point(12, 673);
+            this.lblACCOUNT_NATURE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblACCOUNT_NATURE.Name = "lblACCOUNT_NATURE";
-            this.lblACCOUNT_NATURE.Size = new System.Drawing.Size(112, 15);
+            this.lblACCOUNT_NATURE.Size = new System.Drawing.Size(144, 20);
             this.lblACCOUNT_NATURE.TabIndex = 227;
             this.lblACCOUNT_NATURE.Text = "ACCOUNT NATURE:";
             // 
             // frmAddGroupAccounts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(725, 604);
+            this.ClientSize = new System.Drawing.Size(967, 743);
             this.Controls.Add(this.btnCLEAR);
             this.Controls.Add(this.btnSAVE);
             this.Controls.Add(this.grdSEARCH);
@@ -295,11 +310,11 @@
             this.Controls.Add(this.lblACCOUNT_NATURE);
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAddGroupAccounts";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADD BRANCH ACCOUNTS";
             this.Load += new System.EventHandler(this.frmAddGroupAccounts_Load);

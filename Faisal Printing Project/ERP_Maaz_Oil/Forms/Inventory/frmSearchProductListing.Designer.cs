@@ -79,11 +79,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdSEARCH.Location = new System.Drawing.Point(12, 125);
+            this.grdSEARCH.Location = new System.Drawing.Point(16, 154);
+            this.grdSEARCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdSEARCH.Name = "grdSEARCH";
             this.grdSEARCH.ReadOnly = true;
             this.grdSEARCH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdSEARCH.Size = new System.Drawing.Size(879, 389);
+            this.grdSEARCH.Size = new System.Drawing.Size(1172, 479);
             this.grdSEARCH.TabIndex = 221;
             this.grdSEARCH.TabStop = false;
             this.grdSEARCH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdSEARCH_CellClick);
@@ -123,9 +124,10 @@
             this.btnCLEAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCLEAR.ImageIndex = 1;
             this.btnCLEAR.ImageList = this.imageList1;
-            this.btnCLEAR.Location = new System.Drawing.Point(774, 94);
+            this.btnCLEAR.Location = new System.Drawing.Point(1032, 116);
+            this.btnCLEAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCLEAR.Name = "btnCLEAR";
-            this.btnCLEAR.Size = new System.Drawing.Size(116, 25);
+            this.btnCLEAR.Size = new System.Drawing.Size(155, 31);
             this.btnCLEAR.TabIndex = 9;
             this.btnCLEAR.Text = "CLEAR";
             this.btnCLEAR.UseVisualStyleBackColor = false;
@@ -140,9 +142,10 @@
             this.btnSAVE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSAVE.ImageIndex = 0;
             this.btnSAVE.ImageList = this.imageList1;
-            this.btnSAVE.Location = new System.Drawing.Point(659, 94);
+            this.btnSAVE.Location = new System.Drawing.Point(879, 116);
+            this.btnSAVE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSAVE.Name = "btnSAVE";
-            this.btnSAVE.Size = new System.Drawing.Size(114, 25);
+            this.btnSAVE.Size = new System.Drawing.Size(152, 31);
             this.btnSAVE.TabIndex = 8;
             this.btnSAVE.Text = "SHOW";
             this.btnSAVE.UseVisualStyleBackColor = false;
@@ -157,19 +160,21 @@
             this.pnlHEADER.Controls.Add(this.lblHEADING);
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
+            this.pnlHEADER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(903, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(1204, 108);
             this.pnlHEADER.TabIndex = 36;
             // 
             // lblHEADING
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 16.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(6, 25);
+            this.lblHEADING.Location = new System.Drawing.Point(8, 31);
+            this.lblHEADING.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(202, 26);
+            this.lblHEADING.Size = new System.Drawing.Size(277, 32);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "SEARCH PRODUCT";
             // 
@@ -182,9 +187,10 @@
             this.cmbProduct.Items.AddRange(new object[] {
             "--SELECT SUPPLIER--",
             "AUTOMART"});
-            this.cmbProduct.Location = new System.Drawing.Point(86, 94);
+            this.cmbProduct.Location = new System.Drawing.Point(115, 116);
+            this.cmbProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbProduct.Name = "cmbProduct";
-            this.cmbProduct.Size = new System.Drawing.Size(567, 25);
+            this.cmbProduct.Size = new System.Drawing.Size(755, 29);
             this.cmbProduct.TabIndex = 342;
             // 
             // label11
@@ -192,18 +198,19 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(17, 99);
+            this.label11.Location = new System.Drawing.Point(23, 122);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 15);
+            this.label11.Size = new System.Drawing.Size(77, 20);
             this.label11.TabIndex = 343;
             this.label11.Text = "PRODUCT";
             // 
             // frmSearchProductListing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(903, 526);
+            this.ClientSize = new System.Drawing.Size(1204, 647);
             this.Controls.Add(this.cmbProduct);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnCLEAR);
@@ -212,6 +219,7 @@
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmSearchProductListing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SEARCH PRODUCT";

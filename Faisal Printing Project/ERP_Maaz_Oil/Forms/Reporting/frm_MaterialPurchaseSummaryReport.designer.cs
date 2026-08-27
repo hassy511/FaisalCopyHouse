@@ -58,18 +58,18 @@
             this.pnlHEADER.Controls.Add(this.lblHEADING);
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
-            this.pnlHEADER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlHEADER.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(400, 108);
+            this.pnlHEADER.Size = new System.Drawing.Size(350, 108);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1787, 4);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 4);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(65, 25);
+            this.pictureBox15.Size = new System.Drawing.Size(56, 25);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -77,10 +77,10 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1713, 4);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox14.Location = new System.Drawing.Point(1498, 4);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(65, 25);
+            this.pictureBox14.Size = new System.Drawing.Size(56, 25);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
@@ -89,12 +89,11 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 10.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(3, 32);
-            this.lblHEADING.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHEADING.Location = new System.Drawing.Point(2, 32);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(195, 40);
+            this.lblHEADING.Size = new System.Drawing.Size(221, 44);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "MATERIAL PURCHASES \r\nSUMMARY REPORT";
             // 
@@ -106,11 +105,11 @@
             this.grpCASHBOOK.Controls.Add(this.btnSHOW);
             this.grpCASHBOOK.Controls.Add(this.lblITO);
             this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpCASHBOOK.Location = new System.Drawing.Point(3, 111);
-            this.grpCASHBOOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpCASHBOOK.Location = new System.Drawing.Point(2, 111);
+            this.grpCASHBOOK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpCASHBOOK.Name = "grpCASHBOOK";
-            this.grpCASHBOOK.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpCASHBOOK.Size = new System.Drawing.Size(396, 178);
+            this.grpCASHBOOK.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grpCASHBOOK.Size = new System.Drawing.Size(346, 178);
             this.grpCASHBOOK.TabIndex = 37;
             this.grpCASHBOOK.TabStop = false;
             this.grpCASHBOOK.Text = "MATERIAL PURCHASES SUMMARY REPORT";
@@ -121,10 +120,10 @@
             this.dtp_TO.CustomFormat = "dd/MM/yyyy";
             this.dtp_TO.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_TO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_TO.Location = new System.Drawing.Point(76, 74);
-            this.dtp_TO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_TO.Location = new System.Drawing.Point(66, 74);
+            this.dtp_TO.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtp_TO.Name = "dtp_TO";
-            this.dtp_TO.Size = new System.Drawing.Size(307, 27);
+            this.dtp_TO.Size = new System.Drawing.Size(269, 27);
             this.dtp_TO.TabIndex = 120;
             // 
             // dtp_FROM
@@ -132,10 +131,10 @@
             this.dtp_FROM.CustomFormat = "dd/MM/yyyy";
             this.dtp_FROM.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.dtp_FROM.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_FROM.Location = new System.Drawing.Point(76, 38);
-            this.dtp_FROM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_FROM.Location = new System.Drawing.Point(66, 38);
+            this.dtp_FROM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtp_FROM.Name = "dtp_FROM";
-            this.dtp_FROM.Size = new System.Drawing.Size(307, 27);
+            this.dtp_FROM.Size = new System.Drawing.Size(269, 27);
             this.dtp_FROM.TabIndex = 119;
             // 
             // lblFROM
@@ -143,8 +142,7 @@
             this.lblFROM.AutoSize = true;
             this.lblFROM.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblFROM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFROM.Location = new System.Drawing.Point(10, 43);
-            this.lblFROM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFROM.Location = new System.Drawing.Point(8, 43);
             this.lblFROM.Name = "lblFROM";
             this.lblFROM.Size = new System.Drawing.Size(55, 20);
             this.lblFROM.TabIndex = 118;
@@ -159,10 +157,10 @@
             this.btnSHOW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSHOW.ImageIndex = 5;
             this.btnSHOW.ImageList = this.imageList1;
-            this.btnSHOW.Location = new System.Drawing.Point(76, 110);
-            this.btnSHOW.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSHOW.Location = new System.Drawing.Point(66, 110);
+            this.btnSHOW.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSHOW.Name = "btnSHOW";
-            this.btnSHOW.Size = new System.Drawing.Size(308, 31);
+            this.btnSHOW.Size = new System.Drawing.Size(269, 31);
             this.btnSHOW.TabIndex = 9;
             this.btnSHOW.Text = "SHOW";
             this.btnSHOW.UseVisualStyleBackColor = false;
@@ -184,8 +182,7 @@
             this.lblITO.AutoSize = true;
             this.lblITO.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblITO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblITO.Location = new System.Drawing.Point(33, 79);
-            this.lblITO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblITO.Location = new System.Drawing.Point(28, 79);
             this.lblITO.Name = "lblITO";
             this.lblITO.Size = new System.Drawing.Size(31, 20);
             this.lblITO.TabIndex = 46;
@@ -193,16 +190,16 @@
             // 
             // frm_MaterialPurchaseSummaryReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(400, 278);
+            this.ClientSize = new System.Drawing.Size(350, 278);
             this.Controls.Add(this.grpCASHBOOK);
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximumSize = new System.Drawing.Size(418, 325);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximumSize = new System.Drawing.Size(368, 325);
             this.Name = "frm_MaterialPurchaseSummaryReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MATERIAL PURCHASES SUMMARY REPORT";

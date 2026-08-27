@@ -44,12 +44,12 @@
             this.cmbArea = new SergeUtils.EasyCompletionComboBox();
             this.rdbCustomer = new System.Windows.Forms.RadioButton();
             this.rdbProvince = new System.Windows.Forms.RadioButton();
+            this.rdbSalesPerson = new System.Windows.Forms.RadioButton();
             this.cmbCustomer = new SergeUtils.EasyCompletionComboBox();
             this.cmbProvnice = new SergeUtils.EasyCompletionComboBox();
+            this.cmbSalePerson = new SergeUtils.EasyCompletionComboBox();
             this.btnSHOW = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.cmbSalePerson = new SergeUtils.EasyCompletionComboBox();
-            this.rdbSalesPerson = new System.Windows.Forms.RadioButton();
             this.pnlHEADER.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -69,15 +69,15 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(340, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(394, 107);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -85,9 +85,9 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Location = new System.Drawing.Point(1499, 3);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(57, 24);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
@@ -96,11 +96,11 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 14.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(2, 18);
+            this.lblHEADING.Location = new System.Drawing.Point(2, 22);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(146, 46);
+            this.lblHEADING.Size = new System.Drawing.Size(203, 58);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "CUSTOMER \r\nAGING REPORT";
             // 
@@ -119,9 +119,9 @@
             this.grpCASHBOOK.Controls.Add(this.cmbSalePerson);
             this.grpCASHBOOK.Controls.Add(this.btnSHOW);
             this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpCASHBOOK.Location = new System.Drawing.Point(0, 90);
+            this.grpCASHBOOK.Location = new System.Drawing.Point(0, 110);
             this.grpCASHBOOK.Name = "grpCASHBOOK";
-            this.grpCASHBOOK.Size = new System.Drawing.Size(340, 247);
+            this.grpCASHBOOK.Size = new System.Drawing.Size(396, 303);
             this.grpCASHBOOK.TabIndex = 37;
             this.grpCASHBOOK.TabStop = false;
             this.grpCASHBOOK.Text = "AGING REPORT";
@@ -131,17 +131,17 @@
             // 
             this.panel1.Controls.Add(this.rdbConsolidated);
             this.panel1.Controls.Add(this.rdbDetailed);
-            this.panel1.Location = new System.Drawing.Point(125, 179);
+            this.panel1.Location = new System.Drawing.Point(145, 220);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 29);
+            this.panel1.Size = new System.Drawing.Size(236, 35);
             this.panel1.TabIndex = 351;
             // 
             // rdbConsolidated
             // 
             this.rdbConsolidated.AutoSize = true;
-            this.rdbConsolidated.Location = new System.Drawing.Point(82, 3);
+            this.rdbConsolidated.Location = new System.Drawing.Point(95, 3);
             this.rdbConsolidated.Name = "rdbConsolidated";
-            this.rdbConsolidated.Size = new System.Drawing.Size(121, 21);
+            this.rdbConsolidated.Size = new System.Drawing.Size(155, 27);
             this.rdbConsolidated.TabIndex = 1;
             this.rdbConsolidated.Text = "CONSOLIDATED";
             this.rdbConsolidated.UseVisualStyleBackColor = true;
@@ -152,7 +152,7 @@
             this.rdbDetailed.Checked = true;
             this.rdbDetailed.Location = new System.Drawing.Point(0, 3);
             this.rdbDetailed.Name = "rdbDetailed";
-            this.rdbDetailed.Size = new System.Drawing.Size(83, 21);
+            this.rdbDetailed.Size = new System.Drawing.Size(105, 27);
             this.rdbDetailed.TabIndex = 0;
             this.rdbDetailed.TabStop = true;
             this.rdbDetailed.Text = "DETAILED";
@@ -163,17 +163,17 @@
             this.cmbDays.Enabled = false;
             this.cmbDays.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbDays.FormattingEnabled = true;
-            this.cmbDays.Location = new System.Drawing.Point(125, 148);
+            this.cmbDays.Location = new System.Drawing.Point(145, 182);
             this.cmbDays.Name = "cmbDays";
-            this.cmbDays.Size = new System.Drawing.Size(203, 25);
+            this.cmbDays.Size = new System.Drawing.Size(236, 29);
             this.cmbDays.TabIndex = 9;
             // 
             // chkDays
             // 
             this.chkDays.AutoSize = true;
-            this.chkDays.Location = new System.Drawing.Point(7, 152);
+            this.chkDays.Location = new System.Drawing.Point(8, 187);
             this.chkDays.Name = "chkDays";
-            this.chkDays.Size = new System.Drawing.Size(59, 21);
+            this.chkDays.Size = new System.Drawing.Size(73, 27);
             this.chkDays.TabIndex = 8;
             this.chkDays.Text = "DAYS";
             this.chkDays.UseVisualStyleBackColor = true;
@@ -182,9 +182,9 @@
             // chkArea
             // 
             this.chkArea.AutoSize = true;
-            this.chkArea.Location = new System.Drawing.Point(7, 121);
+            this.chkArea.Location = new System.Drawing.Point(8, 148);
             this.chkArea.Name = "chkArea";
-            this.chkArea.Size = new System.Drawing.Size(60, 21);
+            this.chkArea.Size = new System.Drawing.Size(74, 27);
             this.chkArea.TabIndex = 6;
             this.chkArea.Text = "AREA";
             this.chkArea.UseVisualStyleBackColor = true;
@@ -195,17 +195,17 @@
             this.cmbArea.Enabled = false;
             this.cmbArea.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbArea.FormattingEnabled = true;
-            this.cmbArea.Location = new System.Drawing.Point(125, 117);
+            this.cmbArea.Location = new System.Drawing.Point(145, 143);
             this.cmbArea.Name = "cmbArea";
-            this.cmbArea.Size = new System.Drawing.Size(203, 25);
+            this.cmbArea.Size = new System.Drawing.Size(236, 29);
             this.cmbArea.TabIndex = 7;
             // 
             // rdbCustomer
             // 
             this.rdbCustomer.AutoSize = true;
-            this.rdbCustomer.Location = new System.Drawing.Point(7, 88);
+            this.rdbCustomer.Location = new System.Drawing.Point(8, 108);
             this.rdbCustomer.Name = "rdbCustomer";
-            this.rdbCustomer.Size = new System.Drawing.Size(96, 21);
+            this.rdbCustomer.Size = new System.Drawing.Size(124, 27);
             this.rdbCustomer.TabIndex = 4;
             this.rdbCustomer.Text = "CUSTOMER:";
             this.rdbCustomer.UseVisualStyleBackColor = true;
@@ -214,22 +214,35 @@
             // rdbProvince
             // 
             this.rdbProvince.AutoSize = true;
-            this.rdbProvince.Location = new System.Drawing.Point(7, 57);
+            this.rdbProvince.Location = new System.Drawing.Point(8, 70);
             this.rdbProvince.Name = "rdbProvince";
-            this.rdbProvince.Size = new System.Drawing.Size(92, 21);
+            this.rdbProvince.Size = new System.Drawing.Size(118, 27);
             this.rdbProvince.TabIndex = 2;
             this.rdbProvince.Text = "PROVINCE:";
             this.rdbProvince.UseVisualStyleBackColor = true;
             this.rdbProvince.CheckedChanged += new System.EventHandler(this.rdbProvince_CheckedChanged);
+            // 
+            // rdbSalesPerson
+            // 
+            this.rdbSalesPerson.AutoSize = true;
+            this.rdbSalesPerson.Checked = true;
+            this.rdbSalesPerson.Location = new System.Drawing.Point(8, 31);
+            this.rdbSalesPerson.Name = "rdbSalesPerson";
+            this.rdbSalesPerson.Size = new System.Drawing.Size(142, 27);
+            this.rdbSalesPerson.TabIndex = 0;
+            this.rdbSalesPerson.TabStop = true;
+            this.rdbSalesPerson.Text = "SALE PERSON:";
+            this.rdbSalesPerson.UseVisualStyleBackColor = true;
+            this.rdbSalesPerson.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // cmbCustomer
             // 
             this.cmbCustomer.Enabled = false;
             this.cmbCustomer.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbCustomer.FormattingEnabled = true;
-            this.cmbCustomer.Location = new System.Drawing.Point(125, 86);
+            this.cmbCustomer.Location = new System.Drawing.Point(145, 105);
             this.cmbCustomer.Name = "cmbCustomer";
-            this.cmbCustomer.Size = new System.Drawing.Size(203, 25);
+            this.cmbCustomer.Size = new System.Drawing.Size(236, 29);
             this.cmbCustomer.TabIndex = 5;
             this.cmbCustomer.DropDown += new System.EventHandler(this.cmbCustomer_DropDown);
             this.cmbCustomer.TextUpdate += new System.EventHandler(this.cmbSalePerson_TextUpdate);
@@ -240,13 +253,26 @@
             this.cmbProvnice.Enabled = false;
             this.cmbProvnice.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbProvnice.FormattingEnabled = true;
-            this.cmbProvnice.Location = new System.Drawing.Point(125, 55);
+            this.cmbProvnice.Location = new System.Drawing.Point(145, 67);
             this.cmbProvnice.Name = "cmbProvnice";
-            this.cmbProvnice.Size = new System.Drawing.Size(203, 25);
+            this.cmbProvnice.Size = new System.Drawing.Size(236, 29);
             this.cmbProvnice.TabIndex = 3;
             this.cmbProvnice.DropDown += new System.EventHandler(this.cmbProvnice_DropDown);
             this.cmbProvnice.TextUpdate += new System.EventHandler(this.cmbSalePerson_TextUpdate);
             this.cmbProvnice.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.cmbProvnice_PreviewKeyDown);
+            // 
+            // cmbSalePerson
+            // 
+            this.cmbSalePerson.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cmbSalePerson.FormattingEnabled = true;
+            this.cmbSalePerson.Location = new System.Drawing.Point(145, 29);
+            this.cmbSalePerson.Name = "cmbSalePerson";
+            this.cmbSalePerson.Size = new System.Drawing.Size(236, 29);
+            this.cmbSalePerson.TabIndex = 1;
+            this.cmbSalePerson.DropDown += new System.EventHandler(this.cmbSalePerson_DropDown);
+            this.cmbSalePerson.SelectedIndexChanged += new System.EventHandler(this.cmbSalePerson_SelectedIndexChanged);
+            this.cmbSalePerson.TextUpdate += new System.EventHandler(this.cmbSalePerson_TextUpdate);
+            this.cmbSalePerson.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.cmbSalePerson_PreviewKeyDown);
             // 
             // btnSHOW
             // 
@@ -257,9 +283,9 @@
             this.btnSHOW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSHOW.ImageIndex = 5;
             this.btnSHOW.ImageList = this.imageList1;
-            this.btnSHOW.Location = new System.Drawing.Point(125, 214);
+            this.btnSHOW.Location = new System.Drawing.Point(145, 263);
             this.btnSHOW.Name = "btnSHOW";
-            this.btnSHOW.Size = new System.Drawing.Size(203, 25);
+            this.btnSHOW.Size = new System.Drawing.Size(236, 30);
             this.btnSHOW.TabIndex = 10;
             this.btnSHOW.Text = "SHOW";
             this.btnSHOW.UseVisualStyleBackColor = false;
@@ -276,43 +302,17 @@
             this.imageList1.Images.SetKeyName(4, "icons8-Traffic Jam Filled-100.png");
             this.imageList1.Images.SetKeyName(5, "icons8-show-property-filled-50.png");
             // 
-            // cmbSalePerson
-            // 
-            this.cmbSalePerson.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.cmbSalePerson.FormattingEnabled = true;
-            this.cmbSalePerson.Location = new System.Drawing.Point(125, 24);
-            this.cmbSalePerson.Name = "cmbSalePerson";
-            this.cmbSalePerson.Size = new System.Drawing.Size(203, 25);
-            this.cmbSalePerson.TabIndex = 1;
-            this.cmbSalePerson.DropDown += new System.EventHandler(this.cmbSalePerson_DropDown);
-            this.cmbSalePerson.SelectedIndexChanged += new System.EventHandler(this.cmbSalePerson_SelectedIndexChanged);
-            this.cmbSalePerson.TextUpdate += new System.EventHandler(this.cmbSalePerson_TextUpdate);
-            this.cmbSalePerson.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.cmbSalePerson_PreviewKeyDown);
-            // 
-            // rdbSalesPerson
-            // 
-            this.rdbSalesPerson.AutoSize = true;
-            this.rdbSalesPerson.Checked = true;
-            this.rdbSalesPerson.Location = new System.Drawing.Point(7, 26);
-            this.rdbSalesPerson.Name = "rdbSalesPerson";
-            this.rdbSalesPerson.Size = new System.Drawing.Size(112, 21);
-            this.rdbSalesPerson.TabIndex = 0;
-            this.rdbSalesPerson.TabStop = true;
-            this.rdbSalesPerson.Text = "SALE PERSON:";
-            this.rdbSalesPerson.UseVisualStyleBackColor = true;
-            this.rdbSalesPerson.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
             // frm_CustomerAgingReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(340, 338);
+            this.ClientSize = new System.Drawing.Size(394, 406);
             this.Controls.Add(this.grpCASHBOOK);
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(356, 377);
+            this.MaximumSize = new System.Drawing.Size(412, 453);
             this.Name = "frm_CustomerAgingReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CUSTOMER AGING REPORT";

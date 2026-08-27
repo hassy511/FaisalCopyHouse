@@ -64,15 +64,15 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(907, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(1058, 107);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -83,9 +83,9 @@
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
             this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(6, 25);
+            this.lblHEADING.Location = new System.Drawing.Point(6, 30);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(218, 29);
+            this.lblHEADING.Size = new System.Drawing.Size(253, 32);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "PRODUCT RATES";
             // 
@@ -117,10 +117,10 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdItems.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdItems.Location = new System.Drawing.Point(1, 157);
+            this.grdItems.Location = new System.Drawing.Point(1, 193);
             this.grdItems.Name = "grdItems";
             this.grdItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grdItems.Size = new System.Drawing.Size(905, 284);
+            this.grdItems.Size = new System.Drawing.Size(1055, 349);
             this.grdItems.TabIndex = 221;
             this.grdItems.TabStop = false;
             this.grdItems.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdSEARCH_CellValueChanged);
@@ -136,9 +136,9 @@
             this.btnCLEAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCLEAR.ImageIndex = 1;
             this.btnCLEAR.ImageList = this.imageList1;
-            this.btnCLEAR.Location = new System.Drawing.Point(779, 447);
+            this.btnCLEAR.Location = new System.Drawing.Point(908, 550);
             this.btnCLEAR.Name = "btnCLEAR";
-            this.btnCLEAR.Size = new System.Drawing.Size(116, 25);
+            this.btnCLEAR.Size = new System.Drawing.Size(135, 30);
             this.btnCLEAR.TabIndex = 10;
             this.btnCLEAR.Text = "CLEAR";
             this.btnCLEAR.UseVisualStyleBackColor = false;
@@ -160,9 +160,9 @@
             this.btnSAVE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSAVE.ImageIndex = 0;
             this.btnSAVE.ImageList = this.imageList1;
-            this.btnSAVE.Location = new System.Drawing.Point(659, 447);
+            this.btnSAVE.Location = new System.Drawing.Point(768, 550);
             this.btnSAVE.Name = "btnSAVE";
-            this.btnSAVE.Size = new System.Drawing.Size(114, 25);
+            this.btnSAVE.Size = new System.Drawing.Size(132, 30);
             this.btnSAVE.TabIndex = 9;
             this.btnSAVE.Text = "SAVE";
             this.btnSAVE.UseVisualStyleBackColor = false;
@@ -178,9 +178,9 @@
             "--SELECT CUSTOMER--",
             "FAROOQ MOTLANI\t",
             "SHAAM LAL"});
-            this.cmbCustomer.Location = new System.Drawing.Point(119, 95);
+            this.cmbCustomer.Location = new System.Drawing.Point(138, 116);
             this.cmbCustomer.Name = "cmbCustomer";
-            this.cmbCustomer.Size = new System.Drawing.Size(263, 25);
+            this.cmbCustomer.Size = new System.Drawing.Size(306, 29);
             this.cmbCustomer.TabIndex = 228;
             this.cmbCustomer.SelectedIndexChanged += new System.EventHandler(this.cmbCustomer_SelectedIndexChanged);
             // 
@@ -189,9 +189,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(2, 100);
+            this.label10.Location = new System.Drawing.Point(2, 123);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 15);
+            this.label10.Size = new System.Drawing.Size(138, 20);
             this.label10.TabIndex = 229;
             this.label10.Text = "SELECT CUSTOMER";
             // 
@@ -199,9 +199,9 @@
             // 
             this.rdbCredit.AutoSize = true;
             this.rdbCredit.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.rdbCredit.Location = new System.Drawing.Point(450, 98);
+            this.rdbCredit.Location = new System.Drawing.Point(524, 120);
             this.rdbCredit.Name = "rdbCredit";
-            this.rdbCredit.Size = new System.Drawing.Size(65, 19);
+            this.rdbCredit.Size = new System.Drawing.Size(79, 24);
             this.rdbCredit.TabIndex = 337;
             this.rdbCredit.Text = "CREDIT";
             this.rdbCredit.UseVisualStyleBackColor = true;
@@ -212,9 +212,9 @@
             this.rdbCash.AutoSize = true;
             this.rdbCash.Checked = true;
             this.rdbCash.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.rdbCash.Location = new System.Drawing.Point(388, 98);
+            this.rdbCash.Location = new System.Drawing.Point(452, 120);
             this.rdbCash.Name = "rdbCash";
-            this.rdbCash.Size = new System.Drawing.Size(56, 19);
+            this.rdbCash.Size = new System.Drawing.Size(68, 24);
             this.rdbCash.TabIndex = 336;
             this.rdbCash.TabStop = true;
             this.rdbCash.Text = "CASH";
@@ -231,9 +231,9 @@
             "--SELECT CUSTOMER--",
             "FAROOQ MOTLANI\t",
             "SHAAM LAL"});
-            this.cmbFormula.Location = new System.Drawing.Point(632, 95);
+            this.cmbFormula.Location = new System.Drawing.Point(737, 116);
             this.cmbFormula.Name = "cmbFormula";
-            this.cmbFormula.Size = new System.Drawing.Size(263, 25);
+            this.cmbFormula.Size = new System.Drawing.Size(306, 29);
             this.cmbFormula.TabIndex = 338;
             this.cmbFormula.SelectedIndexChanged += new System.EventHandler(this.cmbFormula_SelectedIndexChanged);
             // 
@@ -242,9 +242,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(522, 100);
+            this.label1.Location = new System.Drawing.Point(608, 123);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 15);
+            this.label1.Size = new System.Drawing.Size(131, 20);
             this.label1.TabIndex = 339;
             this.label1.Text = "SELECT FORMULA";
             // 
@@ -254,9 +254,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSEARCH.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSEARCH.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtSEARCH.Location = new System.Drawing.Point(65, 126);
+            this.txtSEARCH.Location = new System.Drawing.Point(75, 155);
             this.txtSEARCH.Name = "txtSEARCH";
-            this.txtSEARCH.Size = new System.Drawing.Size(830, 25);
+            this.txtSEARCH.Size = new System.Drawing.Size(967, 29);
             this.txtSEARCH.TabIndex = 340;
             this.txtSEARCH.TextChanged += new System.EventHandler(this.txtSEARCH_TextChanged);
             // 
@@ -265,18 +265,18 @@
             this.lblSEARCH.AutoSize = true;
             this.lblSEARCH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSEARCH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSEARCH.Location = new System.Drawing.Point(2, 130);
+            this.lblSEARCH.Location = new System.Drawing.Point(2, 159);
             this.lblSEARCH.Name = "lblSEARCH";
-            this.lblSEARCH.Size = new System.Drawing.Size(57, 17);
+            this.lblSEARCH.Size = new System.Drawing.Size(74, 23);
             this.lblSEARCH.TabIndex = 341;
             this.lblSEARCH.Text = "SEARCH";
             // 
             // frmSalesRateFormula
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(907, 479);
+            this.ClientSize = new System.Drawing.Size(1058, 589);
             this.Controls.Add(this.txtSEARCH);
             this.Controls.Add(this.lblSEARCH);
             this.Controls.Add(this.cmbFormula);
@@ -291,7 +291,7 @@
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1314, 703);
+            this.MaximumSize = new System.Drawing.Size(1529, 854);
             this.Name = "frmSalesRateFormula";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PRODUCT RATES";

@@ -64,16 +64,18 @@
             this.pnlHEADER.Controls.Add(this.lblHEADING);
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
+            this.pnlHEADER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(398, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(531, 108);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1787, 4);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(65, 25);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -82,11 +84,12 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 16.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(6, 25);
+            this.lblHEADING.Location = new System.Drawing.Point(8, 31);
+            this.lblHEADING.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(52, 26);
+            this.lblHEADING.Size = new System.Drawing.Size(70, 32);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "TAX";
             // 
@@ -118,11 +121,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdSEARCH.Location = new System.Drawing.Point(16, 126);
+            this.grdSEARCH.Location = new System.Drawing.Point(21, 155);
+            this.grdSEARCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdSEARCH.Name = "grdSEARCH";
             this.grdSEARCH.ReadOnly = true;
             this.grdSEARCH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdSEARCH.Size = new System.Drawing.Size(370, 195);
+            this.grdSEARCH.Size = new System.Drawing.Size(493, 240);
             this.grdSEARCH.TabIndex = 221;
             this.grdSEARCH.TabStop = false;
             this.grdSEARCH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdSEARCH_CellClick);
@@ -134,9 +138,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSEARCH.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSEARCH.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtSEARCH.Location = new System.Drawing.Point(72, 95);
+            this.txtSEARCH.Location = new System.Drawing.Point(96, 117);
+            this.txtSEARCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSEARCH.Name = "txtSEARCH";
-            this.txtSEARCH.Size = new System.Drawing.Size(313, 25);
+            this.txtSEARCH.Size = new System.Drawing.Size(416, 29);
             this.txtSEARCH.TabIndex = 0;
             this.txtSEARCH.TextChanged += new System.EventHandler(this.txtSEARCH_TextChanged);
             // 
@@ -145,9 +150,10 @@
             this.lblSEARCH.AutoSize = true;
             this.lblSEARCH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSEARCH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSEARCH.Location = new System.Drawing.Point(9, 99);
+            this.lblSEARCH.Location = new System.Drawing.Point(12, 122);
+            this.lblSEARCH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSEARCH.Name = "lblSEARCH";
-            this.lblSEARCH.Size = new System.Drawing.Size(57, 17);
+            this.lblSEARCH.Size = new System.Drawing.Size(74, 23);
             this.lblSEARCH.TabIndex = 219;
             this.lblSEARCH.Text = "SEARCH";
             // 
@@ -160,9 +166,10 @@
             this.btnCLEAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCLEAR.ImageIndex = 1;
             this.btnCLEAR.ImageList = this.imageList1;
-            this.btnCLEAR.Location = new System.Drawing.Point(239, 448);
+            this.btnCLEAR.Location = new System.Drawing.Point(319, 551);
+            this.btnCLEAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCLEAR.Name = "btnCLEAR";
-            this.btnCLEAR.Size = new System.Drawing.Size(116, 25);
+            this.btnCLEAR.Size = new System.Drawing.Size(155, 31);
             this.btnCLEAR.TabIndex = 6;
             this.btnCLEAR.Text = "CLEAR";
             this.btnCLEAR.UseVisualStyleBackColor = false;
@@ -184,9 +191,10 @@
             this.btnSAVE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSAVE.ImageIndex = 0;
             this.btnSAVE.ImageList = this.imageList1;
-            this.btnSAVE.Location = new System.Drawing.Point(124, 448);
+            this.btnSAVE.Location = new System.Drawing.Point(165, 551);
+            this.btnSAVE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSAVE.Name = "btnSAVE";
-            this.btnSAVE.Size = new System.Drawing.Size(114, 25);
+            this.btnSAVE.Size = new System.Drawing.Size(152, 31);
             this.btnSAVE.TabIndex = 5;
             this.btnSAVE.Text = "SAVE";
             this.btnSAVE.UseVisualStyleBackColor = false;
@@ -196,9 +204,10 @@
             // 
             this.chkDeActive.AutoSize = true;
             this.chkDeActive.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.chkDeActive.Location = new System.Drawing.Point(16, 454);
+            this.chkDeActive.Location = new System.Drawing.Point(21, 559);
+            this.chkDeActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkDeActive.Name = "chkDeActive";
-            this.chkDeActive.Size = new System.Drawing.Size(86, 19);
+            this.chkDeActive.Size = new System.Drawing.Size(105, 24);
             this.chkDeActive.TabIndex = 4;
             this.chkDeActive.Text = "DE-ACTIVE";
             this.chkDeActive.UseVisualStyleBackColor = true;
@@ -208,9 +217,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(16, 376);
+            this.label1.Location = new System.Drawing.Point(21, 463);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 15);
+            this.label1.Size = new System.Drawing.Size(35, 20);
             this.label1.TabIndex = 212;
             this.label1.Text = "TAX";
             // 
@@ -220,9 +230,10 @@
             this.cmbTAXACC.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbTAXACC.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbTAXACC.FormattingEnabled = true;
-            this.cmbTAXACC.Location = new System.Drawing.Point(125, 372);
+            this.cmbTAXACC.Location = new System.Drawing.Point(167, 458);
+            this.cmbTAXACC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTAXACC.Name = "cmbTAXACC";
-            this.cmbTAXACC.Size = new System.Drawing.Size(264, 25);
+            this.cmbTAXACC.Size = new System.Drawing.Size(351, 29);
             this.cmbTAXACC.TabIndex = 2;
             this.cmbTAXACC.DropDown += new System.EventHandler(this.cmbCITY_DropDown);
             this.cmbTAXACC.SelectedIndexChanged += new System.EventHandler(this.cmbPACCOUNT_SelectedIndexChanged);
@@ -234,9 +245,10 @@
             this.COMISSION_TYPE.AutoSize = true;
             this.COMISSION_TYPE.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.COMISSION_TYPE.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.COMISSION_TYPE.Location = new System.Drawing.Point(13, 411);
+            this.COMISSION_TYPE.Location = new System.Drawing.Point(17, 506);
+            this.COMISSION_TYPE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.COMISSION_TYPE.Name = "COMISSION_TYPE";
-            this.COMISSION_TYPE.Size = new System.Drawing.Size(58, 15);
+            this.COMISSION_TYPE.Size = new System.Drawing.Size(73, 20);
             this.COMISSION_TYPE.TabIndex = 212;
             this.COMISSION_TYPE.Text = "TAX TYPE";
             // 
@@ -249,9 +261,10 @@
             this.cmbTAX.Items.AddRange(new object[] {
             "Rupess",
             "%"});
-            this.cmbTAX.Location = new System.Drawing.Point(124, 406);
+            this.cmbTAX.Location = new System.Drawing.Point(165, 500);
+            this.cmbTAX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTAX.Name = "cmbTAX";
-            this.cmbTAX.Size = new System.Drawing.Size(261, 25);
+            this.cmbTAX.Size = new System.Drawing.Size(347, 29);
             this.cmbTAX.TabIndex = 3;
             this.cmbTAX.Text = "--------SELECT TYPE---------";
             this.cmbTAX.DropDown += new System.EventHandler(this.cmbCITY_DropDown);
@@ -263,10 +276,11 @@
             // 
             this.txtTAX.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTAX.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtTAX.Location = new System.Drawing.Point(122, 341);
+            this.txtTAX.Location = new System.Drawing.Point(163, 420);
+            this.txtTAX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTAX.MaxLength = 11;
             this.txtTAX.Name = "txtTAX";
-            this.txtTAX.Size = new System.Drawing.Size(263, 25);
+            this.txtTAX.Size = new System.Drawing.Size(349, 29);
             this.txtTAX.TabIndex = 1;
             // 
             // label2
@@ -274,18 +288,19 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(16, 346);
+            this.label2.Location = new System.Drawing.Point(21, 426);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 15);
+            this.label2.Size = new System.Drawing.Size(84, 20);
             this.label2.TabIndex = 212;
             this.label2.Text = "TAX VALUE";
             // 
             // frmAddTax
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(398, 510);
+            this.ClientSize = new System.Drawing.Size(531, 628);
             this.Controls.Add(this.txtTAX);
             this.Controls.Add(this.chkDeActive);
             this.Controls.Add(this.btnCLEAR);
@@ -301,7 +316,8 @@
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1314, 703);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1746, 854);
             this.Name = "frmAddTax";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TAX";

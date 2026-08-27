@@ -112,15 +112,15 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(922, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(1075, 107);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -131,9 +131,9 @@
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
             this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(6, 25);
+            this.lblHEADING.Location = new System.Drawing.Point(6, 30);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(184, 29);
+            this.lblHEADING.Size = new System.Drawing.Size(216, 32);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "SALES DIRECT";
             // 
@@ -165,11 +165,11 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdSEARCH.Location = new System.Drawing.Point(5, 126);
+            this.grdSEARCH.Location = new System.Drawing.Point(5, 155);
             this.grdSEARCH.Name = "grdSEARCH";
             this.grdSEARCH.ReadOnly = true;
             this.grdSEARCH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdSEARCH.Size = new System.Drawing.Size(911, 150);
+            this.grdSEARCH.Size = new System.Drawing.Size(1062, 184);
             this.grdSEARCH.TabIndex = 221;
             this.grdSEARCH.TabStop = false;
             this.grdSEARCH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdSEARCH_CellClick);
@@ -181,9 +181,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSEARCH.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSEARCH.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtSEARCH.Location = new System.Drawing.Point(72, 95);
+            this.txtSEARCH.Location = new System.Drawing.Point(83, 116);
             this.txtSEARCH.Name = "txtSEARCH";
-            this.txtSEARCH.Size = new System.Drawing.Size(844, 25);
+            this.txtSEARCH.Size = new System.Drawing.Size(983, 29);
             this.txtSEARCH.TabIndex = 0;
             this.txtSEARCH.TextChanged += new System.EventHandler(this.txtSEARCH_TextChanged);
             // 
@@ -192,9 +192,9 @@
             this.lblSEARCH.AutoSize = true;
             this.lblSEARCH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSEARCH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSEARCH.Location = new System.Drawing.Point(9, 99);
+            this.lblSEARCH.Location = new System.Drawing.Point(10, 121);
             this.lblSEARCH.Name = "lblSEARCH";
-            this.lblSEARCH.Size = new System.Drawing.Size(57, 17);
+            this.lblSEARCH.Size = new System.Drawing.Size(74, 23);
             this.lblSEARCH.TabIndex = 219;
             this.lblSEARCH.Text = "SEARCH";
             // 
@@ -207,9 +207,9 @@
             this.btnCLEAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCLEAR.ImageIndex = 1;
             this.btnCLEAR.ImageList = this.imageList1;
-            this.btnCLEAR.Location = new System.Drawing.Point(261, 598);
+            this.btnCLEAR.Location = new System.Drawing.Point(304, 735);
             this.btnCLEAR.Name = "btnCLEAR";
-            this.btnCLEAR.Size = new System.Drawing.Size(124, 25);
+            this.btnCLEAR.Size = new System.Drawing.Size(144, 30);
             this.btnCLEAR.TabIndex = 10;
             this.btnCLEAR.Text = "CLEAR";
             this.btnCLEAR.UseVisualStyleBackColor = false;
@@ -231,9 +231,9 @@
             this.btnSAVE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSAVE.ImageIndex = 0;
             this.btnSAVE.ImageList = this.imageList1;
-            this.btnSAVE.Location = new System.Drawing.Point(118, 598);
+            this.btnSAVE.Location = new System.Drawing.Point(137, 735);
             this.btnSAVE.Name = "btnSAVE";
-            this.btnSAVE.Size = new System.Drawing.Size(124, 25);
+            this.btnSAVE.Size = new System.Drawing.Size(144, 30);
             this.btnSAVE.TabIndex = 9;
             this.btnSAVE.Text = "SAVE";
             this.btnSAVE.UseVisualStyleBackColor = false;
@@ -248,9 +248,9 @@
             this.cmbCustomer.Items.AddRange(new object[] {
             "--SELECT SUPPLIER--",
             "AUTOMART"});
-            this.cmbCustomer.Location = new System.Drawing.Point(118, 330);
+            this.cmbCustomer.Location = new System.Drawing.Point(137, 406);
             this.cmbCustomer.Name = "cmbCustomer";
-            this.cmbCustomer.Size = new System.Drawing.Size(267, 25);
+            this.cmbCustomer.Size = new System.Drawing.Size(310, 29);
             this.cmbCustomer.TabIndex = 226;
             this.cmbCustomer.SelectedIndexChanged += new System.EventHandler(this.cmbCustomer_SelectedIndexChanged);
             // 
@@ -259,18 +259,18 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(9, 335);
+            this.label9.Location = new System.Drawing.Point(10, 412);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 15);
+            this.label9.Size = new System.Drawing.Size(86, 20);
             this.label9.TabIndex = 227;
             this.label9.Text = "CUSTOMER";
             // 
             // dtp_DATE
             // 
             this.dtp_DATE.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-            this.dtp_DATE.Location = new System.Drawing.Point(118, 301);
+            this.dtp_DATE.Location = new System.Drawing.Point(137, 370);
             this.dtp_DATE.Name = "dtp_DATE";
-            this.dtp_DATE.Size = new System.Drawing.Size(267, 23);
+            this.dtp_DATE.Size = new System.Drawing.Size(310, 27);
             this.dtp_DATE.TabIndex = 295;
             // 
             // lblPRO
@@ -278,9 +278,9 @@
             this.lblPRO.AutoSize = true;
             this.lblPRO.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblPRO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(215)))));
-            this.lblPRO.Location = new System.Drawing.Point(115, 283);
+            this.lblPRO.Location = new System.Drawing.Point(134, 348);
             this.lblPRO.Name = "lblPRO";
-            this.lblPRO.Size = new System.Drawing.Size(70, 15);
+            this.lblPRO.Size = new System.Drawing.Size(86, 20);
             this.lblPRO.TabIndex = 298;
             this.lblPRO.Text = "PRO-1-2017";
             // 
@@ -289,9 +289,9 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDate.Location = new System.Drawing.Point(9, 305);
+            this.lblDate.Location = new System.Drawing.Point(10, 375);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(39, 15);
+            this.lblDate.Size = new System.Drawing.Size(49, 20);
             this.lblDate.TabIndex = 297;
             this.lblDate.Text = "DATE:";
             // 
@@ -300,9 +300,9 @@
             this.lblV.AutoSize = true;
             this.lblV.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblV.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblV.Location = new System.Drawing.Point(9, 283);
+            this.lblV.Location = new System.Drawing.Point(10, 348);
             this.lblV.Name = "lblV";
-            this.lblV.Size = new System.Drawing.Size(35, 15);
+            this.lblV.Size = new System.Drawing.Size(45, 20);
             this.lblV.TabIndex = 296;
             this.lblV.Text = "GP #:";
             // 
@@ -310,11 +310,11 @@
             // 
             this.txtDescript.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescript.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtDescript.Location = new System.Drawing.Point(118, 423);
+            this.txtDescript.Location = new System.Drawing.Point(137, 520);
             this.txtDescript.MaxLength = 100;
             this.txtDescript.Multiline = true;
             this.txtDescript.Name = "txtDescript";
-            this.txtDescript.Size = new System.Drawing.Size(267, 26);
+            this.txtDescript.Size = new System.Drawing.Size(310, 31);
             this.txtDescript.TabIndex = 299;
             // 
             // lblAcc
@@ -322,9 +322,9 @@
             this.lblAcc.AutoSize = true;
             this.lblAcc.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblAcc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAcc.Location = new System.Drawing.Point(9, 429);
+            this.lblAcc.Location = new System.Drawing.Point(10, 527);
             this.lblAcc.Name = "lblAcc";
-            this.lblAcc.Size = new System.Drawing.Size(83, 15);
+            this.lblAcc.Size = new System.Drawing.Size(102, 20);
             this.lblAcc.TabIndex = 300;
             this.lblAcc.Text = "DESCRIPTION";
             // 
@@ -333,11 +333,11 @@
             this.txtTotal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtTotal.Location = new System.Drawing.Point(728, 567);
+            this.txtTotal.Location = new System.Drawing.Point(849, 697);
             this.txtTotal.MaxLength = 11;
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(188, 25);
+            this.txtTotal.Size = new System.Drawing.Size(218, 29);
             this.txtTotal.TabIndex = 305;
             this.txtTotal.Text = "0";
             // 
@@ -346,9 +346,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(625, 573);
+            this.label3.Location = new System.Drawing.Point(729, 705);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 15);
+            this.label3.Size = new System.Drawing.Size(120, 20);
             this.label3.TabIndex = 306;
             this.label3.Text = "TOTAL AMOUNT";
             // 
@@ -356,10 +356,10 @@
             // 
             this.txtQuantity.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtQuantity.Location = new System.Drawing.Point(118, 536);
+            this.txtQuantity.Location = new System.Drawing.Point(137, 659);
             this.txtQuantity.MaxLength = 11;
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(267, 25);
+            this.txtQuantity.Size = new System.Drawing.Size(310, 29);
             this.txtQuantity.TabIndex = 309;
             this.txtQuantity.Text = "0";
             this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
@@ -369,9 +369,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(9, 541);
+            this.label5.Location = new System.Drawing.Point(10, 665);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 15);
+            this.label5.Size = new System.Drawing.Size(82, 20);
             this.label5.TabIndex = 310;
             this.label5.Text = "QUANTITY";
             // 
@@ -379,10 +379,10 @@
             // 
             this.txtRate.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRate.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtRate.Location = new System.Drawing.Point(118, 567);
+            this.txtRate.Location = new System.Drawing.Point(137, 697);
             this.txtRate.MaxLength = 11;
             this.txtRate.Name = "txtRate";
-            this.txtRate.Size = new System.Drawing.Size(187, 25);
+            this.txtRate.Size = new System.Drawing.Size(217, 29);
             this.txtRate.TabIndex = 318;
             this.txtRate.Text = "0";
             this.txtRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
@@ -392,9 +392,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(9, 572);
+            this.label10.Location = new System.Drawing.Point(10, 703);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(34, 15);
+            this.label10.Size = new System.Drawing.Size(43, 20);
             this.label10.TabIndex = 319;
             this.label10.Text = "RATE";
             // 
@@ -403,9 +403,9 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(9, 510);
+            this.label11.Location = new System.Drawing.Point(10, 627);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 15);
+            this.label11.Size = new System.Drawing.Size(95, 20);
             this.label11.TabIndex = 322;
             this.label11.Text = "SELECT ITEM";
             // 
@@ -419,9 +419,9 @@
             this.cmbItem.Items.AddRange(new object[] {
             "--SELECT SUPPLIER--",
             "AUTOMART"});
-            this.cmbItem.Location = new System.Drawing.Point(118, 505);
+            this.cmbItem.Location = new System.Drawing.Point(137, 621);
             this.cmbItem.Name = "cmbItem";
-            this.cmbItem.Size = new System.Drawing.Size(242, 25);
+            this.cmbItem.Size = new System.Drawing.Size(281, 29);
             this.cmbItem.TabIndex = 323;
             this.cmbItem.SelectedIndexChanged += new System.EventHandler(this.cmbItem_SelectedIndexChanged);
             // 
@@ -463,11 +463,11 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdItems.DefaultCellStyle = dataGridViewCellStyle6;
-            this.grdItems.Location = new System.Drawing.Point(388, 314);
+            this.grdItems.Location = new System.Drawing.Point(452, 386);
             this.grdItems.Name = "grdItems";
             this.grdItems.ReadOnly = true;
             this.grdItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdItems.Size = new System.Drawing.Size(528, 216);
+            this.grdItems.Size = new System.Drawing.Size(615, 265);
             this.grdItems.TabIndex = 324;
             this.grdItems.TabStop = false;
             this.grdItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdItems_CellClick);
@@ -486,35 +486,35 @@
             this.itemName.HeaderText = "PRODUCT";
             this.itemName.Name = "itemName";
             this.itemName.ReadOnly = true;
-            this.itemName.Width = 99;
+            this.itemName.Width = 124;
             // 
             // qty
             // 
             this.qty.HeaderText = "QUANTITY";
             this.qty.Name = "qty";
             this.qty.ReadOnly = true;
-            this.qty.Width = 103;
+            this.qty.Width = 129;
             // 
             // rate
             // 
             this.rate.HeaderText = "RATE";
             this.rate.Name = "rate";
             this.rate.ReadOnly = true;
-            this.rate.Width = 66;
+            this.rate.Width = 82;
             // 
             // weight
             // 
             this.weight.HeaderText = "WEIGHT";
             this.weight.Name = "weight";
             this.weight.ReadOnly = true;
-            this.weight.Width = 87;
+            this.weight.Width = 108;
             // 
             // UNIT
             // 
             this.UNIT.HeaderText = "UNIT";
             this.UNIT.Name = "UNIT";
             this.UNIT.ReadOnly = true;
-            this.UNIT.Width = 67;
+            this.UNIT.Width = 83;
             // 
             // total
             // 
@@ -523,7 +523,7 @@
             this.total.ReadOnly = true;
             this.total.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.total.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.total.Width = 55;
+            this.total.Width = 70;
             // 
             // itemType
             // 
@@ -538,6 +538,7 @@
             this.MaterialID.HeaderText = "MaterialID";
             this.MaterialID.Name = "MaterialID";
             this.MaterialID.ReadOnly = true;
+            this.MaterialID.Width = 128;
             // 
             // btnAdd
             // 
@@ -548,9 +549,9 @@
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.ImageIndex = 0;
             this.btnAdd.ImageList = this.imageList1;
-            this.btnAdd.Location = new System.Drawing.Point(311, 567);
+            this.btnAdd.Location = new System.Drawing.Point(362, 697);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(74, 25);
+            this.btnAdd.Size = new System.Drawing.Size(86, 30);
             this.btnAdd.TabIndex = 325;
             this.btnAdd.Text = "ADD";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -567,9 +568,9 @@
             this.cmbSO.Items.AddRange(new object[] {
             "--SELECT SUPPLIER--",
             "AUTOMART"});
-            this.cmbSO.Location = new System.Drawing.Point(118, 361);
+            this.cmbSO.Location = new System.Drawing.Point(137, 444);
             this.cmbSO.Name = "cmbSO";
-            this.cmbSO.Size = new System.Drawing.Size(267, 25);
+            this.cmbSO.Size = new System.Drawing.Size(310, 29);
             this.cmbSO.TabIndex = 326;
             this.cmbSO.SelectedIndexChanged += new System.EventHandler(this.cmbSO_SelectedIndexChanged);
             // 
@@ -578,9 +579,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(9, 366);
+            this.label1.Location = new System.Drawing.Point(10, 450);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 15);
+            this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 327;
             this.label1.Text = "SELECT S.O #";
             // 
@@ -589,11 +590,11 @@
             this.txtTotalWeight.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalWeight.Enabled = false;
             this.txtTotalWeight.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtTotalWeight.Location = new System.Drawing.Point(503, 598);
+            this.txtTotalWeight.Location = new System.Drawing.Point(586, 735);
             this.txtTotalWeight.MaxLength = 11;
             this.txtTotalWeight.Name = "txtTotalWeight";
             this.txtTotalWeight.ReadOnly = true;
-            this.txtTotalWeight.Size = new System.Drawing.Size(116, 25);
+            this.txtTotalWeight.Size = new System.Drawing.Size(134, 29);
             this.txtTotalWeight.TabIndex = 330;
             this.txtTotalWeight.Text = "0";
             // 
@@ -602,9 +603,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(391, 604);
+            this.label4.Location = new System.Drawing.Point(456, 743);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 15);
+            this.label4.Size = new System.Drawing.Size(109, 20);
             this.label4.TabIndex = 331;
             this.label4.Text = "TOTAL WEIGHT";
             // 
@@ -613,9 +614,9 @@
             this.rdbProduct.AutoSize = true;
             this.rdbProduct.Checked = true;
             this.rdbProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.rdbProduct.Location = new System.Drawing.Point(183, 484);
+            this.rdbProduct.Location = new System.Drawing.Point(213, 595);
             this.rdbProduct.Name = "rdbProduct";
-            this.rdbProduct.Size = new System.Drawing.Size(79, 19);
+            this.rdbProduct.Size = new System.Drawing.Size(98, 24);
             this.rdbProduct.TabIndex = 346;
             this.rdbProduct.TabStop = true;
             this.rdbProduct.Text = "PRODUCT";
@@ -626,9 +627,9 @@
             // 
             this.rdbRaw.AutoSize = true;
             this.rdbRaw.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.rdbRaw.Location = new System.Drawing.Point(118, 484);
+            this.rdbRaw.Location = new System.Drawing.Point(137, 595);
             this.rdbRaw.Name = "rdbRaw";
-            this.rdbRaw.Size = new System.Drawing.Size(52, 19);
+            this.rdbRaw.Size = new System.Drawing.Size(62, 24);
             this.rdbRaw.TabIndex = 345;
             this.rdbRaw.Text = "RAW";
             this.rdbRaw.UseVisualStyleBackColor = true;
@@ -639,9 +640,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(9, 486);
+            this.label6.Location = new System.Drawing.Point(10, 598);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 15);
+            this.label6.Size = new System.Drawing.Size(88, 20);
             this.label6.TabIndex = 344;
             this.label6.Text = "SALES TYPE";
             // 
@@ -650,11 +651,11 @@
             this.txtTQty.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTQty.Enabled = false;
             this.txtTQty.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtTQty.Location = new System.Drawing.Point(728, 536);
+            this.txtTQty.Location = new System.Drawing.Point(849, 659);
             this.txtTQty.MaxLength = 11;
             this.txtTQty.Name = "txtTQty";
             this.txtTQty.ReadOnly = true;
-            this.txtTQty.Size = new System.Drawing.Size(188, 25);
+            this.txtTQty.Size = new System.Drawing.Size(218, 29);
             this.txtTQty.TabIndex = 351;
             this.txtTQty.Text = "0";
             this.txtTQty.TextChanged += new System.EventHandler(this.txtTQty_TextChanged);
@@ -664,9 +665,9 @@
             this.lblTotalQty.AutoSize = true;
             this.lblTotalQty.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblTotalQty.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTotalQty.Location = new System.Drawing.Point(625, 541);
+            this.lblTotalQty.Location = new System.Drawing.Point(729, 665);
             this.lblTotalQty.Name = "lblTotalQty";
-            this.lblTotalQty.Size = new System.Drawing.Size(67, 15);
+            this.lblTotalQty.Size = new System.Drawing.Size(81, 20);
             this.lblTotalQty.TabIndex = 352;
             this.lblTotalQty.Text = "TOTAL QTY";
             // 
@@ -676,9 +677,9 @@
             this.btnADD_CITY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnADD_CITY.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnADD_CITY.Image = global::ERP_Maaz_Oil.Properties.Resources.plus;
-            this.btnADD_CITY.Location = new System.Drawing.Point(360, 505);
+            this.btnADD_CITY.Location = new System.Drawing.Point(419, 621);
             this.btnADD_CITY.Name = "btnADD_CITY";
-            this.btnADD_CITY.Size = new System.Drawing.Size(25, 25);
+            this.btnADD_CITY.Size = new System.Drawing.Size(28, 30);
             this.btnADD_CITY.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnADD_CITY.TabIndex = 355;
             this.btnADD_CITY.TabStop = false;
@@ -688,11 +689,11 @@
             // 
             this.txtMuandRateD.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMuandRateD.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtMuandRateD.Location = new System.Drawing.Point(118, 455);
+            this.txtMuandRateD.Location = new System.Drawing.Point(137, 559);
             this.txtMuandRateD.MaxLength = 100;
             this.txtMuandRateD.Multiline = true;
             this.txtMuandRateD.Name = "txtMuandRateD";
-            this.txtMuandRateD.Size = new System.Drawing.Size(267, 25);
+            this.txtMuandRateD.Size = new System.Drawing.Size(310, 29);
             this.txtMuandRateD.TabIndex = 356;
             // 
             // label7
@@ -700,9 +701,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(9, 460);
+            this.label7.Location = new System.Drawing.Point(10, 566);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 15);
+            this.label7.Size = new System.Drawing.Size(105, 20);
             this.label7.TabIndex = 357;
             this.label7.Text = "MUAND RATE";
             // 
@@ -719,9 +720,9 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(391, 572);
+            this.label12.Location = new System.Drawing.Point(456, 703);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(103, 15);
+            this.label12.Size = new System.Drawing.Size(127, 20);
             this.label12.TabIndex = 331;
             this.label12.Text = "CANOLA WEIGHT";
             // 
@@ -730,11 +731,11 @@
             this.txtCanolaWeight.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCanolaWeight.Enabled = false;
             this.txtCanolaWeight.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtCanolaWeight.Location = new System.Drawing.Point(503, 567);
+            this.txtCanolaWeight.Location = new System.Drawing.Point(586, 697);
             this.txtCanolaWeight.MaxLength = 11;
             this.txtCanolaWeight.Name = "txtCanolaWeight";
             this.txtCanolaWeight.ReadOnly = true;
-            this.txtCanolaWeight.Size = new System.Drawing.Size(116, 25);
+            this.txtCanolaWeight.Size = new System.Drawing.Size(134, 29);
             this.txtCanolaWeight.TabIndex = 330;
             this.txtCanolaWeight.Text = "0";
             // 
@@ -743,9 +744,9 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(391, 541);
+            this.label13.Location = new System.Drawing.Point(456, 665);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(90, 15);
+            this.label13.Size = new System.Drawing.Size(110, 20);
             this.label13.TabIndex = 352;
             this.label13.Text = "OLIEN WEIGHT";
             // 
@@ -754,11 +755,11 @@
             this.txtOlienWeight.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOlienWeight.Enabled = false;
             this.txtOlienWeight.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtOlienWeight.Location = new System.Drawing.Point(503, 536);
+            this.txtOlienWeight.Location = new System.Drawing.Point(586, 659);
             this.txtOlienWeight.MaxLength = 11;
             this.txtOlienWeight.Name = "txtOlienWeight";
             this.txtOlienWeight.ReadOnly = true;
-            this.txtOlienWeight.Size = new System.Drawing.Size(116, 25);
+            this.txtOlienWeight.Size = new System.Drawing.Size(134, 29);
             this.txtOlienWeight.TabIndex = 351;
             this.txtOlienWeight.Text = "0";
             this.txtOlienWeight.TextChanged += new System.EventHandler(this.txtTQty_TextChanged);
@@ -772,9 +773,9 @@
             this.btnSalesProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalesProgram.ImageIndex = 2;
             this.btnSalesProgram.ImageList = this.imageList3;
-            this.btnSalesProgram.Location = new System.Drawing.Point(728, 283);
+            this.btnSalesProgram.Location = new System.Drawing.Point(849, 348);
             this.btnSalesProgram.Name = "btnSalesProgram";
-            this.btnSalesProgram.Size = new System.Drawing.Size(188, 25);
+            this.btnSalesProgram.Size = new System.Drawing.Size(219, 30);
             this.btnSalesProgram.TabIndex = 367;
             this.btnSalesProgram.Text = "VIEW SALES INVOICE";
             this.btnSalesProgram.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -793,11 +794,11 @@
             // 
             this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.textBox1.Location = new System.Drawing.Point(118, 392);
+            this.textBox1.Location = new System.Drawing.Point(137, 482);
             this.textBox1.MaxLength = 100;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(267, 25);
+            this.textBox1.Size = new System.Drawing.Size(310, 29);
             this.textBox1.TabIndex = 368;
             // 
             // label8
@@ -805,9 +806,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(9, 397);
+            this.label8.Location = new System.Drawing.Point(10, 488);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 15);
+            this.label8.Size = new System.Drawing.Size(79, 20);
             this.label8.TabIndex = 369;
             this.label8.Text = "VEHICLE #";
             // 
@@ -820,9 +821,9 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.ImageIndex = 2;
             this.button1.ImageList = this.imageList3;
-            this.button1.Location = new System.Drawing.Point(534, 283);
+            this.button1.Location = new System.Drawing.Point(622, 348);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 25);
+            this.button1.Size = new System.Drawing.Size(219, 30);
             this.button1.TabIndex = 370;
             this.button1.Text = "VIEW GATE PASS";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -830,10 +831,10 @@
             // 
             // frmSalesDirect
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(922, 630);
+            this.ClientSize = new System.Drawing.Size(1075, 775);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label8);
@@ -880,7 +881,7 @@
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1314, 703);
+            this.MaximumSize = new System.Drawing.Size(1529, 854);
             this.Name = "frmSalesDirect";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SALES DIRECT";

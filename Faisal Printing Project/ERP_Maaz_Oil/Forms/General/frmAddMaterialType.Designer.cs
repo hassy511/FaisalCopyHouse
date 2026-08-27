@@ -61,16 +61,18 @@
             this.pnlHEADER.Controls.Add(this.lblHEADING);
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
+            this.pnlHEADER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(365, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(487, 108);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1787, 4);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(65, 25);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -79,11 +81,12 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 16.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(6, 25);
+            this.lblHEADING.Location = new System.Drawing.Point(8, 31);
+            this.lblHEADING.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(172, 52);
+            this.lblHEADING.Size = new System.Drawing.Size(236, 64);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "ADD \r\nMATERIAL TYPE";
             // 
@@ -115,11 +118,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdSEARCH.Location = new System.Drawing.Point(12, 125);
+            this.grdSEARCH.Location = new System.Drawing.Point(16, 154);
+            this.grdSEARCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdSEARCH.Name = "grdSEARCH";
             this.grdSEARCH.ReadOnly = true;
             this.grdSEARCH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdSEARCH.Size = new System.Drawing.Size(345, 257);
+            this.grdSEARCH.Size = new System.Drawing.Size(460, 316);
             this.grdSEARCH.TabIndex = 221;
             this.grdSEARCH.TabStop = false;
             this.grdSEARCH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdSEARCH_CellClick);
@@ -131,9 +135,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSEARCH.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSEARCH.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtSEARCH.Location = new System.Drawing.Point(75, 94);
+            this.txtSEARCH.Location = new System.Drawing.Point(100, 116);
+            this.txtSEARCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSEARCH.Name = "txtSEARCH";
-            this.txtSEARCH.Size = new System.Drawing.Size(282, 25);
+            this.txtSEARCH.Size = new System.Drawing.Size(375, 29);
             this.txtSEARCH.TabIndex = 0;
             this.txtSEARCH.TextChanged += new System.EventHandler(this.txtSEARCH_TextChanged);
             // 
@@ -142,9 +147,10 @@
             this.lblSEARCH.AutoSize = true;
             this.lblSEARCH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSEARCH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSEARCH.Location = new System.Drawing.Point(12, 97);
+            this.lblSEARCH.Location = new System.Drawing.Point(16, 119);
+            this.lblSEARCH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSEARCH.Name = "lblSEARCH";
-            this.lblSEARCH.Size = new System.Drawing.Size(57, 17);
+            this.lblSEARCH.Size = new System.Drawing.Size(74, 23);
             this.lblSEARCH.TabIndex = 219;
             this.lblSEARCH.Text = "SEARCH";
             // 
@@ -157,9 +163,10 @@
             this.btnCLEAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCLEAR.ImageIndex = 1;
             this.btnCLEAR.ImageList = this.imageList1;
-            this.btnCLEAR.Location = new System.Drawing.Point(242, 444);
+            this.btnCLEAR.Location = new System.Drawing.Point(323, 546);
+            this.btnCLEAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCLEAR.Name = "btnCLEAR";
-            this.btnCLEAR.Size = new System.Drawing.Size(115, 25);
+            this.btnCLEAR.Size = new System.Drawing.Size(153, 31);
             this.btnCLEAR.TabIndex = 4;
             this.btnCLEAR.Text = "CLEAR";
             this.btnCLEAR.UseVisualStyleBackColor = false;
@@ -181,9 +188,10 @@
             this.btnSAVE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSAVE.ImageIndex = 0;
             this.btnSAVE.ImageList = this.imageList1;
-            this.btnSAVE.Location = new System.Drawing.Point(108, 444);
+            this.btnSAVE.Location = new System.Drawing.Point(144, 546);
+            this.btnSAVE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSAVE.Name = "btnSAVE";
-            this.btnSAVE.Size = new System.Drawing.Size(128, 25);
+            this.btnSAVE.Size = new System.Drawing.Size(171, 31);
             this.btnSAVE.TabIndex = 3;
             this.btnSAVE.Text = "SAVE";
             this.btnSAVE.UseVisualStyleBackColor = false;
@@ -193,10 +201,11 @@
             // 
             this.txtMaterialType.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMaterialType.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtMaterialType.Location = new System.Drawing.Point(108, 388);
+            this.txtMaterialType.Location = new System.Drawing.Point(144, 478);
+            this.txtMaterialType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaterialType.MaxLength = 32000;
             this.txtMaterialType.Name = "txtMaterialType";
-            this.txtMaterialType.Size = new System.Drawing.Size(249, 25);
+            this.txtMaterialType.Size = new System.Drawing.Size(331, 29);
             this.txtMaterialType.TabIndex = 1;
             this.txtMaterialType.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPHONE_MouseClick);
             this.txtMaterialType.Enter += new System.EventHandler(this.txtPHONE_Enter);
@@ -207,9 +216,10 @@
             this.lblEMAIL.AutoSize = true;
             this.lblEMAIL.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.lblEMAIL.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEMAIL.Location = new System.Drawing.Point(12, 393);
+            this.lblEMAIL.Location = new System.Drawing.Point(16, 484);
+            this.lblEMAIL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEMAIL.Name = "lblEMAIL";
-            this.lblEMAIL.Size = new System.Drawing.Size(96, 15);
+            this.lblEMAIL.Size = new System.Drawing.Size(120, 20);
             this.lblEMAIL.TabIndex = 226;
             this.lblEMAIL.Text = "MATERIAL TYPE:";
             // 
@@ -217,9 +227,10 @@
             // 
             this.chkDeActive.AutoSize = true;
             this.chkDeActive.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.chkDeActive.Location = new System.Drawing.Point(271, 419);
+            this.chkDeActive.Location = new System.Drawing.Point(361, 516);
+            this.chkDeActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkDeActive.Name = "chkDeActive";
-            this.chkDeActive.Size = new System.Drawing.Size(86, 19);
+            this.chkDeActive.Size = new System.Drawing.Size(105, 24);
             this.chkDeActive.TabIndex = 2;
             this.chkDeActive.Text = "DE-ACTIVE";
             this.chkDeActive.UseVisualStyleBackColor = true;
@@ -228,19 +239,20 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.Location = new System.Drawing.Point(33, 520);
+            this.checkBox1.Location = new System.Drawing.Point(44, 640);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(86, 19);
+            this.checkBox1.Size = new System.Drawing.Size(105, 24);
             this.checkBox1.TabIndex = 235;
             this.checkBox1.Text = "DE-ACTIVE";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // frmAddMaterialType
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(365, 482);
+            this.ClientSize = new System.Drawing.Size(487, 593);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.chkDeActive);
             this.Controls.Add(this.txtMaterialType);
@@ -253,7 +265,8 @@
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1314, 703);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1746, 854);
             this.Name = "frmAddMaterialType";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADD MATERIAL TYPE";

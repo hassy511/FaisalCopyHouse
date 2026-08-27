@@ -53,9 +53,9 @@
             this.grpCASHBOOK.Controls.Add(this.txtFileName);
             this.grpCASHBOOK.Controls.Add(this.btnBackup);
             this.grpCASHBOOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpCASHBOOK.Location = new System.Drawing.Point(1, 93);
+            this.grpCASHBOOK.Location = new System.Drawing.Point(1, 114);
             this.grpCASHBOOK.Name = "grpCASHBOOK";
-            this.grpCASHBOOK.Size = new System.Drawing.Size(297, 87);
+            this.grpCASHBOOK.Size = new System.Drawing.Size(346, 107);
             this.grpCASHBOOK.TabIndex = 39;
             this.grpCASHBOOK.TabStop = false;
             this.grpCASHBOOK.Text = "BACKUP DATABASE";
@@ -65,9 +65,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(11, 26);
+            this.label9.Location = new System.Drawing.Point(12, 31);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 15);
+            this.label9.Size = new System.Drawing.Size(80, 20);
             this.label9.TabIndex = 344;
             this.label9.Text = "LOCATION";
             // 
@@ -80,9 +80,9 @@
             this.btnBrowse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBrowse.ImageIndex = 2;
             this.btnBrowse.ImageList = this.imageList1;
-            this.btnBrowse.Location = new System.Drawing.Point(261, 21);
+            this.btnBrowse.Location = new System.Drawing.Point(304, 25);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(30, 25);
+            this.btnBrowse.Size = new System.Drawing.Size(34, 30);
             this.btnBrowse.TabIndex = 343;
             this.btnBrowse.UseVisualStyleBackColor = false;
             this.btnBrowse.Click += new System.EventHandler(this.btnDetailReport_Click);
@@ -99,12 +99,12 @@
             // 
             this.txtFileName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFileName.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtFileName.Location = new System.Drawing.Point(88, 21);
+            this.txtFileName.Location = new System.Drawing.Point(102, 25);
             this.txtFileName.MaxLength = 100;
             this.txtFileName.Multiline = true;
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.ReadOnly = true;
-            this.txtFileName.Size = new System.Drawing.Size(171, 25);
+            this.txtFileName.Size = new System.Drawing.Size(198, 29);
             this.txtFileName.TabIndex = 300;
             // 
             // btnBackup
@@ -117,9 +117,9 @@
             this.btnBackup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBackup.ImageIndex = 0;
             this.btnBackup.ImageList = this.imageList1;
-            this.btnBackup.Location = new System.Drawing.Point(86, 52);
+            this.btnBackup.Location = new System.Drawing.Point(100, 63);
             this.btnBackup.Name = "btnBackup";
-            this.btnBackup.Size = new System.Drawing.Size(205, 25);
+            this.btnBackup.Size = new System.Drawing.Size(239, 30);
             this.btnBackup.TabIndex = 9;
             this.btnBackup.Text = "BACKUP";
             this.btnBackup.UseVisualStyleBackColor = false;
@@ -137,15 +137,15 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(302, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(349, 107);
             this.pnlHEADER.TabIndex = 38;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -153,9 +153,9 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(1285, 3);
+            this.pictureBox14.Location = new System.Drawing.Point(1499, 3);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(57, 24);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 24;
             this.pictureBox14.TabStop = false;
@@ -164,28 +164,27 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 10.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(11, 27);
+            this.lblHEADING.Location = new System.Drawing.Point(12, 33);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(80, 34);
+            this.lblHEADING.Size = new System.Drawing.Size(107, 44);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "BACKUP \r\nDATABASE";
             // 
             // frmBackUpDatabase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(302, 182);
+            this.ClientSize = new System.Drawing.Size(349, 214);
             this.Controls.Add(this.grpCASHBOOK);
             this.Controls.Add(this.pnlHEADER);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(318, 221);
+            this.MaximumSize = new System.Drawing.Size(367, 261);
             this.MinimizeBox = false;
             this.Name = "frmBackUpDatabase";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BACKUP DATABASE";
             this.grpCASHBOOK.ResumeLayout(false);

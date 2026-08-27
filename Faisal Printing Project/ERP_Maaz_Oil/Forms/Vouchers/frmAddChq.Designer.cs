@@ -65,15 +65,15 @@
             this.pnlHEADER.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHEADER.Location = new System.Drawing.Point(0, 0);
             this.pnlHEADER.Name = "pnlHEADER";
-            this.pnlHEADER.Size = new System.Drawing.Size(472, 88);
+            this.pnlHEADER.Size = new System.Drawing.Size(550, 107);
             this.pnlHEADER.TabIndex = 36;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(1340, 3);
+            this.pictureBox15.Location = new System.Drawing.Point(1563, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(49, 20);
+            this.pictureBox15.Size = new System.Drawing.Size(57, 24);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 25;
             this.pictureBox15.TabStop = false;
@@ -82,11 +82,11 @@
             // 
             this.lblHEADING.AutoSize = true;
             this.lblHEADING.BackColor = System.Drawing.Color.Transparent;
-            this.lblHEADING.Font = new System.Drawing.Font("Berlin Sans FB", 16.75F);
+            this.lblHEADING.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.75F);
             this.lblHEADING.ForeColor = System.Drawing.Color.White;
-            this.lblHEADING.Location = new System.Drawing.Point(6, 25);
+            this.lblHEADING.Location = new System.Drawing.Point(6, 30);
             this.lblHEADING.Name = "lblHEADING";
-            this.lblHEADING.Size = new System.Drawing.Size(138, 26);
+            this.lblHEADING.Size = new System.Drawing.Size(184, 32);
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "CHQ BOOKS";
             // 
@@ -118,11 +118,11 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdSEARCH.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdSEARCH.Location = new System.Drawing.Point(16, 126);
+            this.grdSEARCH.Location = new System.Drawing.Point(18, 155);
             this.grdSEARCH.Name = "grdSEARCH";
             this.grdSEARCH.ReadOnly = true;
             this.grdSEARCH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdSEARCH.Size = new System.Drawing.Size(443, 195);
+            this.grdSEARCH.Size = new System.Drawing.Size(516, 239);
             this.grdSEARCH.TabIndex = 221;
             this.grdSEARCH.TabStop = false;
             this.grdSEARCH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdSEARCH_CellClick);
@@ -134,9 +134,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSEARCH.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSEARCH.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtSEARCH.Location = new System.Drawing.Point(72, 95);
+            this.txtSEARCH.Location = new System.Drawing.Point(83, 116);
             this.txtSEARCH.Name = "txtSEARCH";
-            this.txtSEARCH.Size = new System.Drawing.Size(387, 25);
+            this.txtSEARCH.Size = new System.Drawing.Size(450, 29);
             this.txtSEARCH.TabIndex = 0;
             this.txtSEARCH.TextChanged += new System.EventHandler(this.txtSEARCH_TextChanged);
             // 
@@ -145,9 +145,9 @@
             this.lblSEARCH.AutoSize = true;
             this.lblSEARCH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSEARCH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSEARCH.Location = new System.Drawing.Point(9, 99);
+            this.lblSEARCH.Location = new System.Drawing.Point(10, 121);
             this.lblSEARCH.Name = "lblSEARCH";
-            this.lblSEARCH.Size = new System.Drawing.Size(57, 17);
+            this.lblSEARCH.Size = new System.Drawing.Size(74, 23);
             this.lblSEARCH.TabIndex = 219;
             this.lblSEARCH.Text = "SEARCH";
             // 
@@ -160,9 +160,9 @@
             this.btnCLEAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCLEAR.ImageIndex = 1;
             this.btnCLEAR.ImageList = this.imageList1;
-            this.btnCLEAR.Location = new System.Drawing.Point(302, 448);
+            this.btnCLEAR.Location = new System.Drawing.Point(352, 551);
             this.btnCLEAR.Name = "btnCLEAR";
-            this.btnCLEAR.Size = new System.Drawing.Size(116, 25);
+            this.btnCLEAR.Size = new System.Drawing.Size(135, 30);
             this.btnCLEAR.TabIndex = 6;
             this.btnCLEAR.Text = "CLEAR";
             this.btnCLEAR.UseVisualStyleBackColor = false;
@@ -184,9 +184,9 @@
             this.btnSAVE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSAVE.ImageIndex = 0;
             this.btnSAVE.ImageList = this.imageList1;
-            this.btnSAVE.Location = new System.Drawing.Point(187, 448);
+            this.btnSAVE.Location = new System.Drawing.Point(218, 551);
             this.btnSAVE.Name = "btnSAVE";
-            this.btnSAVE.Size = new System.Drawing.Size(114, 25);
+            this.btnSAVE.Size = new System.Drawing.Size(132, 30);
             this.btnSAVE.TabIndex = 5;
             this.btnSAVE.Text = "SAVE";
             this.btnSAVE.UseVisualStyleBackColor = false;
@@ -196,9 +196,9 @@
             // 
             this.chkDeActive.AutoSize = true;
             this.chkDeActive.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.chkDeActive.Location = new System.Drawing.Point(16, 454);
+            this.chkDeActive.Location = new System.Drawing.Point(18, 558);
             this.chkDeActive.Name = "chkDeActive";
-            this.chkDeActive.Size = new System.Drawing.Size(86, 19);
+            this.chkDeActive.Size = new System.Drawing.Size(105, 24);
             this.chkDeActive.TabIndex = 4;
             this.chkDeActive.Text = "DE-ACTIVE";
             this.chkDeActive.UseVisualStyleBackColor = true;
@@ -208,9 +208,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(16, 342);
+            this.label1.Location = new System.Drawing.Point(18, 420);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 15);
+            this.label1.Size = new System.Drawing.Size(131, 20);
             this.label1.TabIndex = 212;
             this.label1.Text = "BANK ACCOUNTS";
             // 
@@ -220,9 +220,9 @@
             this.cmbBA.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbBA.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbBA.FormattingEnabled = true;
-            this.cmbBA.Location = new System.Drawing.Point(178, 338);
+            this.cmbBA.Location = new System.Drawing.Point(207, 415);
             this.cmbBA.Name = "cmbBA";
-            this.cmbBA.Size = new System.Drawing.Size(264, 25);
+            this.cmbBA.Size = new System.Drawing.Size(307, 29);
             this.cmbBA.TabIndex = 1;
             this.cmbBA.DropDown += new System.EventHandler(this.cmbCITY_DropDown);
             this.cmbBA.SelectedIndexChanged += new System.EventHandler(this.cmbPACCOUNT_SelectedIndexChanged);
@@ -233,10 +233,10 @@
             // 
             this.txtCHQ.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCHQ.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtCHQ.Location = new System.Drawing.Point(175, 408);
+            this.txtCHQ.Location = new System.Drawing.Point(204, 502);
             this.txtCHQ.MaxLength = 11;
             this.txtCHQ.Name = "txtCHQ";
-            this.txtCHQ.Size = new System.Drawing.Size(267, 25);
+            this.txtCHQ.Size = new System.Drawing.Size(310, 29);
             this.txtCHQ.TabIndex = 3;
             // 
             // label2
@@ -244,9 +244,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(16, 413);
+            this.label2.Location = new System.Drawing.Point(18, 508);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 15);
+            this.label2.Size = new System.Drawing.Size(138, 20);
             this.label2.TabIndex = 212;
             this.label2.Text = "NUMBER OF CHQS";
             // 
@@ -255,9 +255,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(16, 377);
+            this.label3.Location = new System.Drawing.Point(18, 463);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 15);
+            this.label3.Size = new System.Drawing.Size(189, 20);
             this.label3.TabIndex = 212;
             this.label3.Text = "BOOK FIRST SLIP NUMBER";
             // 
@@ -265,18 +265,18 @@
             // 
             this.txtSP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSP.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtSP.Location = new System.Drawing.Point(175, 372);
+            this.txtSP.Location = new System.Drawing.Point(204, 457);
             this.txtSP.MaxLength = 11;
             this.txtSP.Name = "txtSP";
-            this.txtSP.Size = new System.Drawing.Size(267, 25);
+            this.txtSP.Size = new System.Drawing.Size(310, 29);
             this.txtSP.TabIndex = 2;
             // 
             // frmAddChq
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(472, 510);
+            this.ClientSize = new System.Drawing.Size(550, 627);
             this.Controls.Add(this.txtSP);
             this.Controls.Add(this.txtCHQ);
             this.Controls.Add(this.chkDeActive);
@@ -292,7 +292,7 @@
             this.Controls.Add(this.pnlHEADER);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1314, 703);
+            this.MaximumSize = new System.Drawing.Size(1529, 854);
             this.Name = "frmAddChq";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CHQ BOOKS";
