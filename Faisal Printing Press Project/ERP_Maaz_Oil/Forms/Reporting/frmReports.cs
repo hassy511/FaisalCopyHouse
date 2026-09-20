@@ -28,6 +28,18 @@ namespace ERP_Maaz_Oil.Forms.Reporting
 
                 crystalReportViewer1.ReportSource = rptPO;
             }
+            else if (reportName == "SalesInvoiceOriginal")
+            {
+                Reports.rptSaleInvoice_Orignal rpt = new Reports.rptSaleInvoice_Orignal();
+                rpt.SetDataSource(ds.Tables["SaleInvoice"]);
+                crystalReportViewer1.ReportSource = rpt;
+            }
+            else if (reportName == "SalesInvoiceDuplicate")
+            {
+                Reports.rptSaleInvoice_Duplicate rpt = new Reports.rptSaleInvoice_Duplicate();
+                rpt.SetDataSource(ds.Tables["SaleInvoice"]);
+                crystalReportViewer1.ReportSource = rpt;
+            }
             else if (reportName == "ReceivablesSummary")
             {
                 Reports.rptAccountsSummary rpt = new Reports.rptAccountsSummary();

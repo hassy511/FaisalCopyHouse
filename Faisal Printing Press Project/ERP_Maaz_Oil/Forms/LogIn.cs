@@ -15,7 +15,7 @@ namespace ERP_Maaz_Oil.Forms
         {
             if (keyData == (Keys.Enter))
             {
-                if (DateTime.Now > Convert.ToDateTime("2026-01-01"))
+                if (DateTime.Now > Convert.ToDateTime("2026-11-01"))
                 {
                     MessageBox.Show("Software has been expired, please contact support!");
                 }
@@ -49,7 +49,7 @@ namespace ERP_Maaz_Oil.Forms
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            if (DateTime.Now > Convert.ToDateTime("2026-01-01"))
+            if (DateTime.Now > Convert.ToDateTime("2026-11-01"))
             {
                 MessageBox.Show("Software has been expired, please contact support!");
             }

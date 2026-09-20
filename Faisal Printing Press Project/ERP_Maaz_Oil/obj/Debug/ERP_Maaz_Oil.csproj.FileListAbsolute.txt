@@ -516,7 +516,6 @@ D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\bin\Debug
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\bin\Debug\System.ValueTuple.xml
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.xml
-D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.csprojAssemblyReference.cache
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.exe.config
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmCustomerAccount.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmBackUpDatabase.resources

@@ -99,11 +99,11 @@ namespace ERP_Maaz_Oil.Forms
 
                     // Determinetype based on selected radio button
                     char term = '0';
-                    char isPaid = '1';
+                    //char isPaid = '1';
                     if (rdbCredit.Checked == true)
                     {
                         term = '1';
-                        isPaid = '0';
+                        //isPaid = '0';
                     }
 
 
@@ -112,31 +112,37 @@ namespace ERP_Maaz_Oil.Forms
 
                     classHelper.query += @"IF EXISTS (select SALE_MASTER_ID from SALE_MASTER WHERE SALE_MASTER_ID ='" + id + @"') 
                  BEGIN
-                     UPDATE SALE_MASTER SET DATE = '" + dtpDate.Value.ToString() + @"',  
-                     CUSTOMER_ID = '" + cmbCustomer.SelectedValue.ToString() + @"',
-                     DESCRIPTION = '" + classHelper.AvoidInjection(txtDescription.Text) + @"',
-                     CREDIT_DAYS = '" + classHelper.AvoidInjection(txtCreditDays.Text) + @"',
-                     TERM = '" + term + @"',
-                     IS_PAID = '" + isPaid + @"',
-                     MODIFICATION_DATE = GETDATE(),MODIFIED_BY = '" + Classes.Helper.userId + @"'
-                     WHERE SALE_MASTER_ID = '" + id + @"';
+                    UPDATE SALE_MASTER SET DATE = '" + dtpDate.Value.ToString() + @"',  
+                    DESCRIPTION = '" + classHelper.AvoidInjection(txtDescription.Text) + @"',                     
+                    CUSTOMER_ID = '" + cmbCustomer.SelectedValue.ToString() + @"',
+                    CUSTOMER_ADDRESS = '" + classHelper.AvoidInjection(txtCustomerAddress.Text) + @"',                     
+                    CREDIT_DAYS = '" + classHelper.AvoidInjection(txtCreditDays.Text) + @"',
+                    SHIP_TO = '" + classHelper.AvoidInjection(txtShipTo.Text) + @"',             
+                    SHIPPING_ADDRESS = '" + classHelper.AvoidInjection(txtShippingAddress.Text) + @"',             
+                    TERM = '" + term + @"',
+                    IS_PAID = '0',
+                    BORI_EXPENSE = '" + classHelper.AvoidInjection(txtBoriExpense.Text) + @"',   
+                    CARTON_EXPENSE = '" + classHelper.AvoidInjection(txtCartonExpense.Text) + @"',   
+                    MODIFICATION_DATE = GETDATE(),MODIFIED_BY = '" + Classes.Helper.userId + @"'
+                    WHERE SALE_MASTER_ID = '" + id + @"';
                  END
                  ELSE
                  BEGIN
-                     INSERT INTO SALE_MASTER (DATE,CUSTOMER_ID,DESCRIPTION,CREDIT_DAYS,TERM,CREATION_DATE,CREATED_BY,INVOICE_NO,IS_PAID) 
+                     INSERT INTO SALE_MASTER (DATE,CUSTOMER_ID,DESCRIPTION,CREDIT_DAYS,TERM,CREATION_DATE,CREATED_BY,INVOICE_NO,IS_PAID,
+                    CUSTOMER_ADDRESS,SHIP_TO,SHIPPING_ADDRESS,BORI_EXPENSE,CARTON_EXPENSE) 
                      VALUES ('" + dtpDate.Value.ToString() + "','" + cmbCustomer.SelectedValue.ToString() + @"',
                      '" + classHelper.AvoidInjection(txtDescription.Text) + @"',
                      '" + classHelper.AvoidInjection(txtCreditDays.Text) + "', '" + term + @"', GETDATE(),'" + Classes.Helper.userId + @"',
-                     '" + lblInvoice.Text + @"','" + isPaid + @"');
+                     '" + lblInvoice.Text + @"','0','" + classHelper.AvoidInjection(txtCustomerAddress.Text) + @"','" + classHelper.AvoidInjection(txtShipTo.Text) + @"','" + classHelper.AvoidInjection(txtShippingAddress.Text) + @"','" + classHelper.AvoidInjection(txtBoriExpense.Text) + @"','" + classHelper.AvoidInjection(txtCartonExpense.Text) + @"');
                  END";
 
                 classHelper.query += @" DELETE FROM SALE_DETAIL WHERE SALE_MASTER_ID = '" + id + @"'";
 
                     foreach (DataGridViewRow rows in gridProducts.Rows)
                     {
-                        classHelper.query += @" INSERT INTO SALE_DETAIL (SALE_MASTER_ID,ITEM_ID,QTY,RATE) 
+                        classHelper.query += @" INSERT INTO SALE_DETAIL (SALE_MASTER_ID,ITEM_ID,QTY,RATE,GST,COST_RATE) 
                             VALUES (" + masterId + ",'" + rows.Cells["productId"].Value.ToString() + "','"
-                        + rows.Cells["qty"].Value.ToString() + @"','" + rows.Cells["rate"].Value.ToString() + @"');";
+                        + rows.Cells["qty"].Value.ToString() + @"','" + rows.Cells["rate"].Value.ToString() + @"','" + rows.Cells["totalBundle"].Value.ToString() + @"','" + rows.Cells["bundlePcs"].Value.ToString() + @"');";
                     }
 
                 classHelper.query += @" DELETE FROM LEDGERS WHERE REF_ID = " + id + @" AND ENTRY_OF = 'SALES'";
@@ -144,22 +150,22 @@ namespace ERP_Maaz_Oil.Forms
                         classHelper.query += @" 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                             VALUES('" + dtpDate.Value.ToString() + "','" + Classes.Helper.salesId +
-                                        "'," + masterId + ",'SALES','" + lblInvoice.Text + @"', 0,'" + txtTotal.Text + "','S.I # " + lblInvoice.Text + " /" + txtCreditDays.Text + " DAYS PAYMENT)','" + Classes.Helper.userId + @"',GETDATE(),1);
+                                        "'," + masterId + ",'SALES','" + lblInvoice.Text + @"', 0,'" + txtTotal.Text + "','S.I # " + lblInvoice.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);
 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                             VALUES('" + dtpDate.Value.ToString() + "','" + cmbCustomer.SelectedValue.ToString() +
-                                        "'," + masterId + ",'SALES','" + lblInvoice.Text + @"', '" + txtTotal.Text + "',0,'S.I # " + lblInvoice.Text + " /" + txtCreditDays.Text + " DAYS PAYMENT)','" + Classes.Helper.userId + @"',GETDATE(),1);"; 
+                                        "'," + masterId + ",'SALES','" + lblInvoice.Text + @"', '" + txtTotal.Text + "',0,'S.I # " + lblInvoice.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);"; 
 
-                        if (rdbCash.Checked == true)
-                        {
-                            classHelper.query += @" INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
-                            VALUES('" + dtpDate.Value.ToString() + "','" + cmbCustomer.SelectedValue.ToString() +
-                            "'," + masterId + ",'SALES','" + lblInvoice.Text + @"', 0,'" + txtTotal.Text + "','S.I # " + lblInvoice.Text + " /" + txtCreditDays.Text + " DAYS PAYMENT)','" + Classes.Helper.userId + @"',GETDATE(),1);
+                        //if (rdbCash.Checked == true)
+                        //{
+                        //    classHelper.query += @" INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
+                        //    VALUES('" + dtpDate.Value.ToString() + "','" + cmbCustomer.SelectedValue.ToString() +
+                        //    "'," + masterId + ",'SALES','" + lblInvoice.Text + @"', 0,'" + txtTotal.Text + "','S.I # " + lblInvoice.Text + " /" + txtCreditDays.Text + " DAYS PAYMENT)','" + Classes.Helper.userId + @"',GETDATE(),1);
 
-                            INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
-                            VALUES('" + dtpDate.Value.ToString() + "','" + Classes.Helper.cashId +
-                            "'," + masterId + ",'SALES','" + lblInvoice.Text + @"', '" + txtTotal.Text + "',0,'S.I # " + lblInvoice.Text + " /" + txtCreditDays.Text + " DAYS PAYMENT)','" + Classes.Helper.userId + @"',GETDATE(),1);";
-                        }
+                        //    INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
+                        //    VALUES('" + dtpDate.Value.ToString() + "','" + Classes.Helper.cashId +
+                        //    "'," + masterId + ",'SALES','" + lblInvoice.Text + @"', '" + txtTotal.Text + "',0,'S.I # " + lblInvoice.Text + " /" + txtCreditDays.Text + " DAYS PAYMENT)','" + Classes.Helper.userId + @"',GETDATE(),1);";
+                        //}
                     
 
                     classHelper.query += @" COMMIT TRANSACTION 
@@ -173,19 +179,20 @@ namespace ERP_Maaz_Oil.Forms
                     {
                         classHelper.ShowMessageBox("Record Saved Successfully.", "Information");
 
-                        //DialogResult dialogResult = MessageBox.Show("Print Invoice?", "Purchases Invoice", MessageBoxButtons.YesNo);
-                        //if (dialogResult == DialogResult.Yes)
-                        //{
-                        //    PrintSalesInvoice();
-                        //}
-                        PrintSalesInvoice();
+                        DialogResult dialogResult = MessageBox.Show("Print Invoice?", "Purchases Invoice", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            PrintSalesInvoiceOriginal();
+                            PrintSalesInvoiceDuplicate();
+                        }
+                        //PrintSalesInvoice();
                         Clear();
                     }
                 }
             }
         }
 
-        private void PrintSalesInvoice()
+        private void PrintSalesInvoiceDuplicate()
         {
             classHelper.mds.Tables["SaleInvoice"].Clear();
             foreach (DataGridViewRow rows in gridProducts.Rows)
@@ -194,48 +201,61 @@ namespace ERP_Maaz_Oil.Forms
                 classHelper.dataR = classHelper.mds.Tables["SaleInvoice"].NewRow();
                 classHelper.dataR["InvoiceNo"] = lblInvoice.Text;
                 classHelper.dataR["date"] = dtpDate.Value.ToShortDateString();
+                classHelper.dataR["dueDate"] = dtpDate.Value.AddDays(Convert.ToInt32(txtCreditDays.Text));
                 classHelper.dataR["customer"] = cmbCustomer.Text;
+                classHelper.dataR["customerAddress"] = txtCustomerAddress.Text;
+                classHelper.dataR["shipTo"] = txtShipTo.Text;
+                classHelper.dataR["shipAddress"] = txtShippingAddress.Text;
+                classHelper.dataR["description"] = txtDescription.Text;
+
                 classHelper.dataR["product"] = rows.Cells["productName"].Value.ToString();
-                classHelper.dataR["qty"] = Convert.ToDouble(rows.Cells["qty"].Value.ToString());
-                classHelper.dataR["rate"] = Convert.ToDouble(rows.Cells["rate"].Value.ToString());
-                classHelper.dataR["amount"] = Convert.ToDouble(rows.Cells["total"].Value.ToString());
-                //classHelper.dataR["vehicleNo"] = classHelper.dr["VEHICLE_NO"].ToString();
-                //classHelper.dataR["salePerson"] = classHelper.dr["NAME"].ToString();
-                //classHelper.dataR["dueDate"] = Convert.ToDateTime(classHelper.dr["due"].ToString());
-                //classHelper.dataR["description"] = classHelper.dr["DESCRIPTION"].ToString();
-                //classHelper.dataR["muandRate"] = classHelper.dr["MUAND_RATE"].ToString();
-                //classHelper.dataR["totalWeight"] = Convert.ToDouble(classHelper.dr["WEIGHT"].ToString());
-                //classHelper.dataR["contactNo"] = classHelper.dr["MOBILE"].ToString();
+                classHelper.dataR["bundle"] = Convert.ToDecimal(rows.Cells["totalBundle"].Value.ToString());
+                classHelper.dataR["bundlePcs"] = Convert.ToDecimal(rows.Cells["bundlePcs"].Value.ToString());
+                classHelper.dataR["qty"] = Convert.ToDecimal(rows.Cells["qty"].Value.ToString());
+                classHelper.dataR["rate"] = Convert.ToDecimal(rows.Cells["rate"].Value.ToString());
+                classHelper.dataR["amount"] = Convert.ToDecimal(rows.Cells["total"].Value.ToString());
+                classHelper.dataR["transportation"] = Convert.ToDecimal(txtBoriExpense.Text) + Convert.ToDecimal(txtCartonExpense.Text);
+                classHelper.dataR["vehicleNo"] = Classes.Helper.GetUserName(Classes.Helper.userId);
+
+                classHelper.mds.Tables["SaleInvoice"].Rows.Add(classHelper.dataR);
+            }
+
+            classHelper.rpt = new ERP_Maaz_Oil.Forms.Reporting.frmReports();
+            classHelper.rpt.GenerateReport("SalesInvoiceDuplicate", classHelper.mds);
+            classHelper.rpt.ShowDialog();
+        }
+
+        private void PrintSalesInvoiceOriginal()
+        {
+            classHelper.mds.Tables["SaleInvoice"].Clear();
+            foreach (DataGridViewRow rows in gridProducts.Rows)
+            {
+
+                classHelper.dataR = classHelper.mds.Tables["SaleInvoice"].NewRow();
+                classHelper.dataR["InvoiceNo"] = lblInvoice.Text;
+                classHelper.dataR["date"] = dtpDate.Value.ToShortDateString();
+                classHelper.dataR["dueDate"] = dtpDate.Value.AddDays(Convert.ToInt32(txtCreditDays.Text));
+                classHelper.dataR["customer"] = cmbCustomer.Text;
+                classHelper.dataR["customerAddress"] = txtCustomerAddress.Text;
+                classHelper.dataR["shipTo"] = txtShipTo.Text;
+                classHelper.dataR["shipAddress"] = txtShippingAddress.Text;
+                classHelper.dataR["description"] = txtDescription.Text;
+
+                classHelper.dataR["product"] = rows.Cells["productName"].Value.ToString();
+                classHelper.dataR["bundle"] = Convert.ToDecimal(rows.Cells["totalBundle"].Value.ToString());
+                classHelper.dataR["bundlePcs"] = Convert.ToDecimal(rows.Cells["bundlePcs"].Value.ToString());
+                classHelper.dataR["qty"] = Convert.ToDecimal(rows.Cells["qty"].Value.ToString());
+                classHelper.dataR["rate"] = Convert.ToDecimal(rows.Cells["rate"].Value.ToString());
+                classHelper.dataR["amount"] = Convert.ToDecimal(rows.Cells["total"].Value.ToString());
+                classHelper.dataR["transportation"] = Convert.ToDecimal(txtBoriExpense.Text)+ Convert.ToDecimal(txtCartonExpense.Text);
+                classHelper.dataR["vehicleNo"] = Classes.Helper.GetUserName(Classes.Helper.userId);
 
                 classHelper.mds.Tables["SaleInvoice"].Rows.Add(classHelper.dataR);
             }
             
             classHelper.rpt = new ERP_Maaz_Oil.Forms.Reporting.frmReports();
-            classHelper.rpt.GenerateReport("SalesInvoice", classHelper.mds);
-            //classHelper.rpt.ShowDialog();
-
-        //    classHelper.mds.Tables["SaleInvoice"].Clear();
-        //    while (classHelper.dr.Read())
-        //    {
-
-        //        classHelper.dataR = classHelper.mds.Tables["SaleInvoice"].NewRow();
-        //        classHelper.dataR["InvoiceNo"] = classHelper.dr["INVOICE_NO"].ToString();
-        //        classHelper.dataR["date"] = Convert.ToDateTime(classHelper.dr["DATE"].ToString());
-        //        classHelper.dataR["customer"] = classHelper.dr["customer"].ToString();
-        //        classHelper.dataR["vehicleNo"] = classHelper.dr["VEHICLE_NO"].ToString();
-        //        classHelper.dataR["itemName"] = classHelper.dr["PRODUCT_NAME"].ToString();
-        //        classHelper.dataR["qty"] = Convert.ToDouble(classHelper.dr["QTY"].ToString());
-        //        classHelper.dataR["rate"] = Convert.ToDouble(classHelper.dr["RATE"].ToString());
-        //        classHelper.dataR["amount"] = Convert.ToDouble(classHelper.dr["total"].ToString());
-        //        classHelper.dataR["salePerson"] = classHelper.dr["NAME"].ToString();
-        //        classHelper.dataR["dueDate"] = Convert.ToDateTime(classHelper.dr["due"].ToString());
-        //        classHelper.dataR["description"] = classHelper.dr["DESCRIPTION"].ToString();
-        //        classHelper.dataR["muandRate"] = classHelper.dr["MUAND_RATE"].ToString();
-        //        classHelper.dataR["totalWeight"] = Convert.ToDouble(classHelper.dr["WEIGHT"].ToString());
-        //        classHelper.dataR["contactNo"] = classHelper.dr["MOBILE"].ToString();
-
-        //        classHelper.mds.Tables["SaleInvoice"].Rows.Add(classHelper.dataR);
-        //    }
+            classHelper.rpt.GenerateReport("SalesInvoiceOriginal", classHelper.mds);
+            classHelper.rpt.ShowDialog();
         }
 
         //private void PrintDeliveryChallan()
@@ -370,6 +390,8 @@ namespace ERP_Maaz_Oil.Forms
                 txtTotal.Text = gridProducts.Rows.Cast<DataGridViewRow>()
                     .Sum(t => Convert.ToDecimal(t.Cells["total"].Value)).ToString();
 
+                txtTotal.Text = (Convert.ToDecimal(txtTotal.Text) + Convert.ToDecimal(txtBoriExpense.Text) + Convert.ToDecimal(txtCartonExpense.Text)).ToString();
+
             }
             catch (Exception ex)
             {
@@ -453,7 +475,7 @@ namespace ERP_Maaz_Oil.Forms
             try
             {
                 if (id != 0)
-                { PrintSalesInvoice(); }
+                { PrintSalesInvoiceOriginal(); }
                 else
                 {
                     MessageBox.Show("Invoice not found in record or save the invoice first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -546,10 +568,10 @@ namespace ERP_Maaz_Oil.Forms
             {
                 DataGridViewRow row = this.gridProducts.Rows[e.RowIndex];
                 cmbProducts.SelectedValue = row.Cells["productId"].Value.ToString();
+                txtRate.Text = row.Cells["rate"].Value.ToString();
+                txtBundle.Text = row.Cells["totalBundle"].Value.ToString();
+                txtBundlePcs.Text = row.Cells["bundlePcs"].Value.ToString();
                 txtQty.Text = row.Cells["qty"].Value.ToString();
-                txtRate.Text = (Convert.ToDecimal(row.Cells["netTotal"].Value.ToString()) / Convert.ToDecimal(row.Cells["qty"].Value.ToString())).ToString();
-                //txtGST.Text = row.Cells["gstValue"].Value.ToString();
-                //txtCostRate.Text = row.Cells["costRate"].Value.ToString();
                 gridProducts.Rows.RemoveAt(e.RowIndex);
                 TotalSum();
             }
@@ -701,6 +723,21 @@ namespace ERP_Maaz_Oil.Forms
         private void txtBundle_TextChanged(object sender, EventArgs e)
         {
             QtyCalculation();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (id != 0)
+                { PrintSalesInvoiceDuplicate(); }
+                else
+                {
+                    MessageBox.Show("Invoice not found in record or save the invoice first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
     }
 }

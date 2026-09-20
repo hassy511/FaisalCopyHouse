@@ -4176,6 +4176,16 @@ namespace ERP_Maaz_Oil.DataSets {
             
             private global::System.Data.DataColumn columntransportation;
             
+            private global::System.Data.DataColumn columncustomerAddress;
+            
+            private global::System.Data.DataColumn columnshipTo;
+            
+            private global::System.Data.DataColumn columnshipAddress;
+            
+            private global::System.Data.DataColumn columnbundle;
+            
+            private global::System.Data.DataColumn columnbundlePcs;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public SaleInvoiceDataTable() {
@@ -4323,6 +4333,46 @@ namespace ERP_Maaz_Oil.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn customerAddressColumn {
+                get {
+                    return this.columncustomerAddress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn shipToColumn {
+                get {
+                    return this.columnshipTo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn shipAddressColumn {
+                get {
+                    return this.columnshipAddress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn bundleColumn {
+                get {
+                    return this.columnbundle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn bundlePcsColumn {
+                get {
+                    return this.columnbundlePcs;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4358,7 +4408,26 @@ namespace ERP_Maaz_Oil.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public SaleInvoiceRow AddSaleInvoiceRow(string InvoiceNo, System.DateTime date, string customer, string vehicleNo, string product, decimal qty, decimal rate, decimal amount, System.DateTime dueDate, string description, string creditDays, decimal balance, string code, decimal transportation) {
+            public SaleInvoiceRow AddSaleInvoiceRow(
+                        string InvoiceNo, 
+                        System.DateTime date, 
+                        string customer, 
+                        string vehicleNo, 
+                        string product, 
+                        decimal qty, 
+                        decimal rate, 
+                        decimal amount, 
+                        System.DateTime dueDate, 
+                        string description, 
+                        string creditDays, 
+                        decimal balance, 
+                        string code, 
+                        decimal transportation, 
+                        string customerAddress, 
+                        string shipTo, 
+                        string shipAddress, 
+                        decimal bundle, 
+                        decimal bundlePcs) {
                 SaleInvoiceRow rowSaleInvoiceRow = ((SaleInvoiceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         InvoiceNo,
@@ -4374,7 +4443,12 @@ namespace ERP_Maaz_Oil.DataSets {
                         creditDays,
                         balance,
                         code,
-                        transportation};
+                        transportation,
+                        customerAddress,
+                        shipTo,
+                        shipAddress,
+                        bundle,
+                        bundlePcs};
                 rowSaleInvoiceRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSaleInvoiceRow);
                 return rowSaleInvoiceRow;
@@ -4411,6 +4485,11 @@ namespace ERP_Maaz_Oil.DataSets {
                 this.columnbalance = base.Columns["balance"];
                 this.columncode = base.Columns["code"];
                 this.columntransportation = base.Columns["transportation"];
+                this.columncustomerAddress = base.Columns["customerAddress"];
+                this.columnshipTo = base.Columns["shipTo"];
+                this.columnshipAddress = base.Columns["shipAddress"];
+                this.columnbundle = base.Columns["bundle"];
+                this.columnbundlePcs = base.Columns["bundlePcs"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4444,6 +4523,16 @@ namespace ERP_Maaz_Oil.DataSets {
                 base.Columns.Add(this.columncode);
                 this.columntransportation = new global::System.Data.DataColumn("transportation", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntransportation);
+                this.columncustomerAddress = new global::System.Data.DataColumn("customerAddress", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncustomerAddress);
+                this.columnshipTo = new global::System.Data.DataColumn("shipTo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnshipTo);
+                this.columnshipAddress = new global::System.Data.DataColumn("shipAddress", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnshipAddress);
+                this.columnbundle = new global::System.Data.DataColumn("bundle", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbundle);
+                this.columnbundlePcs = new global::System.Data.DataColumn("bundlePcs", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbundlePcs);
                 this.columnInvoiceNo.Caption = "Date";
                 this.columndate.Caption = "vendor";
                 this.columncustomer.Caption = "refno";
@@ -12903,6 +12992,86 @@ namespace ERP_Maaz_Oil.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string customerAddress {
+                get {
+                    try {
+                        return ((string)(this[this.tableSaleInvoice.customerAddressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'customerAddress\' in table \'SaleInvoice\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleInvoice.customerAddressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string shipTo {
+                get {
+                    try {
+                        return ((string)(this[this.tableSaleInvoice.shipToColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'shipTo\' in table \'SaleInvoice\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleInvoice.shipToColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string shipAddress {
+                get {
+                    try {
+                        return ((string)(this[this.tableSaleInvoice.shipAddressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'shipAddress\' in table \'SaleInvoice\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleInvoice.shipAddressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal bundle {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSaleInvoice.bundleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'bundle\' in table \'SaleInvoice\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleInvoice.bundleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal bundlePcs {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSaleInvoice.bundlePcsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'bundlePcs\' in table \'SaleInvoice\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleInvoice.bundlePcsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsInvoiceNoNull() {
                 return this.IsNull(this.tableSaleInvoice.InvoiceNoColumn);
             }
@@ -13067,6 +13236,66 @@ namespace ERP_Maaz_Oil.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SettransportationNull() {
                 this[this.tableSaleInvoice.transportationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IscustomerAddressNull() {
+                return this.IsNull(this.tableSaleInvoice.customerAddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetcustomerAddressNull() {
+                this[this.tableSaleInvoice.customerAddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsshipToNull() {
+                return this.IsNull(this.tableSaleInvoice.shipToColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetshipToNull() {
+                this[this.tableSaleInvoice.shipToColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsshipAddressNull() {
+                return this.IsNull(this.tableSaleInvoice.shipAddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetshipAddressNull() {
+                this[this.tableSaleInvoice.shipAddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsbundleNull() {
+                return this.IsNull(this.tableSaleInvoice.bundleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetbundleNull() {
+                this[this.tableSaleInvoice.bundleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsbundlePcsNull() {
+                return this.IsNull(this.tableSaleInvoice.bundlePcsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetbundlePcsNull() {
+                this[this.tableSaleInvoice.bundlePcsColumn] = global::System.Convert.DBNull;
             }
         }
         

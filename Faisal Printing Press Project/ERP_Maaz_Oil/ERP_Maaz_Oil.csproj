@@ -893,14 +893,14 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Forms\Reporting\Reports\rptSaleInvoice-Duplicate.cs">
-      <DependentUpon>rptSaleInvoice-Duplicate.rpt</DependentUpon>
+    <Compile Include="Forms\Reporting\Reports\rptJobOrder.cs">
+      <DependentUpon>rptJobOrder.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Forms\Reporting\Reports\rptJobOrder.cs">
-      <DependentUpon>rptJobOrder.rpt</DependentUpon>
+    <Compile Include="Forms\Reporting\Reports\rptSaleInvoice-Duplicate.cs">
+      <DependentUpon>rptSaleInvoice-Duplicate.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
@@ -2077,13 +2077,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptSaleInvoice-GatePass.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Reporting\Reports\rptSaleInvoice-Duplicate.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptSaleInvoice-Duplicate.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reporting\Reports\rptJobOrder.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptJobOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reporting\Reports\rptSaleInvoice-Duplicate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSaleInvoice-Duplicate.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reporting\Reports\rptVoucherReportThermal.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

@@ -1,5 +1,8 @@
 --alter table coa add CITY_NAME nvarchar(max)
+--truncate table ledgers
 --update coa set mobile = '',[address] = '', credit_days = 0, city_name = ''
+--delete from sale_master where sale_master_id = 1
+--delete FROM SALE_DETAIL where sale_master_id = 1
 --ALTER TABLE SALE_MASTER ADD CUSTOMER_ADDRESS NVARCHAR(MAX) NOT NULL DEFAULT ''
 --ALTER TABLE SALE_MASTER ADD SHIP_TO NVARCHAR(MAX) NOT NULL DEFAULT ''
 --ALTER TABLE SALE_MASTER ADD SHIPPING_ADDRESS NVARCHAR(MAX) NOT NULL DEFAULT ''
