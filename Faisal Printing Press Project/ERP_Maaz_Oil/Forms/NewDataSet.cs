@@ -1,0 +1,27 @@
+﻿namespace ERP_Maaz_Oil.Forms
+{
+
+
+    partial class NewDataSet
+    {
+        partial class ReceiptPaymentVoucherDataTable
+        {
+        }
+
+        partial class GeneralOrderSupplyDataTable
+        {
+        }
+
+        partial class CustomerProfileDataTable
+        {
+        }
+
+        partial class AgingReportDataTable
+        {
+        }
+
+        partial class CashBookDataTable
+        {
+        }
+    }
+}
