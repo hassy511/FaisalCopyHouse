@@ -306,6 +306,57 @@ namespace ERP_Maaz_Oil.Classes
             }
         }
 
+        public void GetCustomerDetails(TextBox customerAddress, TextBox creditDays,int customerId)
+        {
+            query = @" SELECT [ADDRESS],CREDIT_DAYS FROM COA WHERE COA_ID = '" + customerId + "'";
+            try
+            {
+                if (conn1.State == System.Data.ConnectionState.Closed) { conn1.Open(); }
+                cmd = new SqlCommand(query, conn1);
+                cmd.CommandTimeout = 0;
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows == true)
+                {
+                    if (dr.Read())
+                    {
+                        customerAddress.Text = dr["ADDRESS"].ToString();
+                        creditDays.Text = dr["CREDIT_DAYS"].ToString();
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), ":: Error ::", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn1.Close();
+            }
+        }
+
+
+        public decimal GetProductBundlePcs(int productId)
+        {
+            try
+            {
+                query = @" SELECT GROSS_WEIGHT FROM PRODUCT_MASTER WHERE PM_ID = '"+productId+"'";
+                if (conn.State == System.Data.ConnectionState.Closed) { conn.Open(); }
+                cmd = new SqlCommand(query, conn);
+                cmd.CommandTimeout = 0;
+                return Convert.ToDecimal(cmd.ExecuteScalar());
+            }
+            catch (Exception ex)
+            {
+                ShowMessageBox(ex.ToString(), "Exception");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return 0;
+        }
+
         public decimal GetProductRate(int productId)
         {
             try
@@ -3362,7 +3413,7 @@ namespace ERP_Maaz_Oil.Classes
             {
                 query = @"SELECT '0' AS [id],'--SELECT CUSTOMER--' AS [name]
                 UNION
-                SELECT COA_ID AS [id],COA_NAME AS [name] FROM COA WHERE STAT = 0";
+                SELECT COA_ID AS [id],COA_NAME AS [name] FROM COA WHERE STAT = 0 AND CA_ID = 21";
                 LoadComboData(cmbCustomer, query);
             }
             catch (Exception ex) { ShowMessageBox(ex.ToString(), "Exception"); }
@@ -3788,18 +3839,18 @@ namespace ERP_Maaz_Oil.Classes
             {
                    try
                         {
-                                dgv.Rows.Clear();
+                    dgv.Rows.Clear();
 
-
-                                                    query = @"	SELECT A.ITEM_ID,   
-                                                    B.PRODUCT_NAME AS [PRODUCT], 
-                                                    A.QTY,
-                                                    A.RATE, 
-                                                    (A.QTY * A.RATE) AS [TOTAL]
-                                                    FROM SALE_DETAIL A
-                                                    INNER JOIN PRODUCT_MASTER B ON A.ITEM_ID = B.PM_ID
-                                                   WHERE A.SALE_MASTER_ID = '" + rawId + @"'";
-
+                    query = @"	SELECT A.ITEM_ID,   
+                    B.PRODUCT_NAME AS [PRODUCT], 
+                    A.GST AS [TOTAL BUNDLES],
+                    A.COST_RATE AS [PCS PER BUNDLES],
+                    A.QTY,
+                    A.RATE, 
+                    (A.QTY * A.RATE) AS [TOTAL]
+                    FROM SALE_DETAIL A
+                    INNER JOIN PRODUCT_MASTER B ON A.ITEM_ID = B.PM_ID
+                    WHERE A.SALE_MASTER_ID = '" + rawId + @"'";
 
                 if (conn.State == System.Data.ConnectionState.Closed) { conn.Open(); }
                 cmd = new SqlCommand(query, conn);
@@ -3812,8 +3863,14 @@ namespace ERP_Maaz_Oil.Classes
                     while (dr.Read())
                     {
                         // Add TOTAL_WITH_GST to the DataGridView
-                        dgv.Rows.Add(dr["ITEM_ID"].ToString(),dr["PRODUCT"].ToString(),dr["QTY"].ToString(),
-                        dr["RATE"].ToString(),dr["TOTAL"].ToString());
+                        dgv.Rows.Add(
+                            dr["ITEM_ID"].ToString(),
+                            dr["PRODUCT"].ToString(), 
+                            dr["TOTAL BUNDLES"].ToString(), 
+                            dr["PCS PER BUNDLES"].ToString(), 
+                            dr["QTY"].ToString(),
+                            dr["RATE"].ToString(),
+                            dr["TOTAL"].ToString());
                     }
                 }
             }

@@ -13,7 +13,7 @@ namespace ERP_Maaz_Oil.Forms
     {
         Classes.Helper classHelper = new Classes.Helper();
         int id = 0;
-        bool isEdit = false;
+        //bool isEdit = false;
         public frm_Sales()
         {
             InitializeComponent();
@@ -29,7 +29,8 @@ namespace ERP_Maaz_Oil.Forms
         {
             classHelper.query = @" 	SELECT A.SALE_MASTER_ID AS [ID],A.INVOICE_NO AS [INVOICE #],
             A.[DATE],B.COA_NAME AS [CUSTOMER],A.[DESCRIPTION],
-            A.CREDIT_DAYS,A.CUSTOMER_ID,TERM
+            A.CREDIT_DAYS,A.CUSTOMER_ID,TERM,A.CUSTOMER_ADDRESS,A.SHIP_TO,
+            A.SHIPPING_ADDRESS,A.BORI_EXPENSE,A.CARTON_EXPENSE
             FROM SALE_MASTER A
             INNER JOIN COA B ON A.CUSTOMER_ID = B.COA_ID
             ORDER BY SALE_MASTER_ID DESC";
@@ -49,18 +50,24 @@ namespace ERP_Maaz_Oil.Forms
         {
             GenerateSINumber();
             dtpDate.Value = DateTime.Now;
-            cmbCustomer.SelectedIndex = 0;
-            txtCreditDays.Text = "0";
             txtDescription.Clear();
+            cmbCustomer.SelectedIndex = 0;
+            txtCustomerAddress.Clear();
+            txtCreditDays.Text = "0";
+            txtShipTo.Clear();
+            txtShippingAddress.Clear();
+            rdbCredit.Checked = true;
+            txtBoriExpense.Text = "0";
+            txtCartonExpense.Text = "0";
             cmbProducts.SelectedIndex = 0;
+            txtBundle.Text = "0";
+            txtBundlePcs.Text = "0";
             txtQty.Text = "0";
             txtRate.Text = "0";
             txtTotal.Text = "0";
             txtSearch.Clear();
             id = 0;
-            isEdit = false;
             gridProducts.Rows.Clear();
-            rdbCredit.Checked = true;
             LoadGrid();
         }
 
@@ -285,33 +292,13 @@ namespace ERP_Maaz_Oil.Forms
                 DataGridViewRow row = this.grdSearch.Rows[e.RowIndex];
                 id = Convert.ToInt32(row.Cells["ID"].Value.ToString());
                 lblInvoice.Text = row.Cells["INVOICE #"].Value.ToString();
-                isEdit = true;
                 dtpDate.Text = row.Cells["DATE"].Value.ToString();
-                cmbCustomer.SelectedValue = row.Cells["CUSTOMER_ID"].Value.ToString();
                 txtDescription.Text = row.Cells["DESCRIPTION"].Value.ToString();
-                //cmbReference.Text = row.Cells["REFERENCE"].Value.ToString();
+                cmbCustomer.SelectedValue = row.Cells["CUSTOMER_ID"].Value.ToString();
+                txtCustomerAddress.Text = row.Cells["CUSTOMER_ADDRESS"].Value.ToString();
                 txtCreditDays.Text = row.Cells["CREDIT_DAYS"].Value.ToString();
-                //txtBillNo.Text = row.Cells["BILL_NO"].Value.ToString();
-                
-                //if (row.Cells["IS_POSTED"].Value.ToString().Equals("Y"))
-                //{
-                //    chkPosted.Checked = true;
-                //}
-                //else
-                //{
-                //    chkPosted.Checked = false;
-                //}
-
-                //if (row.Cells["SO_ID"].Value.ToString().Equals("0"))
-                //{
-                //    chkSO.Checked = false;
-                //}
-                //else
-                //{
-                //    chkSO.Checked = true;
-                //    cmbSO.SelectedValue = row.Cells["SO_ID"].Value.ToString();
-                //}
-
+                txtShipTo.Text = row.Cells["SHIP_TO"].Value.ToString();
+                txtShippingAddress.Text = row.Cells["SHIPPING_ADDRESS"].Value.ToString();
                 if (row.Cells["TERM"].Value.ToString().Equals("0"))
                 {
                     rdbCash.Checked = true;
@@ -320,7 +307,8 @@ namespace ERP_Maaz_Oil.Forms
                 {
                     rdbCredit.Checked = true;
                 }
-
+                txtBoriExpense.Text = row.Cells["BORI_EXPENSE"].Value.ToString();
+                txtCartonExpense.Text = row.Cells["CARTON_EXPENSE"].Value.ToString();
                 LoadSalesDetail(id);
                 TotalSum();
             }
@@ -370,7 +358,10 @@ namespace ERP_Maaz_Oil.Forms
         }
         private void cmbSupplier_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (cmbCustomer.SelectedIndex > 0)
+            {
+                classHelper.GetCustomerDetails(txtCustomerAddress,txtCreditDays,Convert.ToInt32(cmbProducts.SelectedValue.ToString()));
+            }
         }
         private void TotalSum()
         {
@@ -387,13 +378,29 @@ namespace ERP_Maaz_Oil.Forms
         }
 
 
-        //private decimal CalculateTotalWithGST(decimal quantity, decimal rate, decimal gst)
-        //{
-        //    decimal total = quantity * rate;
-        //    decimal totalWithGST = total * (1 + gst / 100);
-        //    return totalWithGST;
+        private void QtyCalculation()
+        {
+            try
+            {
+                decimal bundles = 0;
+                if (!txtBundle.Text.Equals(""))
+                {
+                    bundles = Convert.ToDecimal(txtBundle.Text);
+                }
 
-        //}
+                decimal bundlesPcs = 0;
+                if (!txtBundlePcs.Text.Equals(""))
+                {
+                    bundlesPcs = Convert.ToDecimal(txtBundlePcs.Text);
+                }
+
+                txtQty.Text = Math.Round((bundles * bundlesPcs)).ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
 
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -402,6 +409,16 @@ namespace ERP_Maaz_Oil.Forms
             {
                 classHelper.ShowMessageBox("Product is not selected, please select Material.", "Warning");
                 cmbProducts.Focus();
+            }
+            else if (txtBundle.Text.Equals("") || txtBundle.Text.Equals("0"))
+            {
+                classHelper.ShowMessageBox("Please add Total Bundles.", "Warning");
+                txtBundle.Focus();
+            }
+            else if (txtBundlePcs.Text.Equals("") || txtBundlePcs.Text.Equals("0"))
+            {
+                classHelper.ShowMessageBox("Please add Pcs Per Bundle.", "Warning");
+                txtBundlePcs.Focus();
             }
             else if (txtQty.Text.Equals("") || txtQty.Text.Equals("0"))
             {
@@ -415,15 +432,17 @@ namespace ERP_Maaz_Oil.Forms
             }
             else
             {
-                gridProducts.Rows.Add(cmbProducts.SelectedValue.ToString(), cmbProducts.Text, classHelper.AvoidInjection(txtQty.Text),
+                gridProducts.Rows.Add(cmbProducts.SelectedValue.ToString(), cmbProducts.Text, classHelper.AvoidInjection(txtBundle.Text), 
+                    classHelper.AvoidInjection(txtBundlePcs.Text), classHelper.AvoidInjection(txtQty.Text),
                 Math.Round(Convert.ToDecimal(classHelper.AvoidInjection(txtRate.Text)),2),
                 (Math.Round(Convert.ToDecimal(classHelper.AvoidInjection(txtQty.Text)),2) * Math.Round(Convert.ToDecimal(classHelper.AvoidInjection(txtRate.Text)),2)));
-
                 TotalSum();
                 cmbProducts.SelectedIndex = 0;
+                txtBundle.Text = "0";
+                txtBundlePcs.Text = "0";
                 txtQty.Text = "0";
                 txtRate.Text = "0";
-             //   cmbProducts.Focus();
+                cmbProducts.Focus();
             }
         }
 
@@ -493,19 +512,14 @@ namespace ERP_Maaz_Oil.Forms
 
         private void cmbMaterials_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (id == 0) {
-            //    if (cmbProducts.SelectedIndex > 0)
-            //    {
-            //        txtCostRate.Text = classHelper.GetProductRate(Convert.ToInt32(cmbProducts.SelectedValue.ToString())).ToString();
-            //        if (classHelper.LoadStockBalance(Convert.ToInt32(cmbProducts.SelectedValue.ToString())) < 0) {
-            //            MessageBox.Show("Stock Quantity is not available.", "Error");
-            //        }
-            //    }
-            //    else
-            //    {
-            //        txtCostRate.Text = "0";
-            //    }
-            //}
+            if (cmbProducts.SelectedIndex > 0)
+            {
+                txtBundlePcs.Text = classHelper.GetProductBundlePcs(Convert.ToInt32(cmbProducts.SelectedValue.ToString())).ToString();
+            }
+            else
+            {
+                txtBundlePcs.Text = "0";
+            }
         }
 
         private void cmbProduct_SelectedIndexChanged(object sender, EventArgs e)
@@ -682,6 +696,11 @@ namespace ERP_Maaz_Oil.Forms
             //        cmbProducts.Focus();
             //    }
             //}
+        }
+
+        private void txtBundle_TextChanged(object sender, EventArgs e)
+        {
+            QtyCalculation();
         }
     }
 }
