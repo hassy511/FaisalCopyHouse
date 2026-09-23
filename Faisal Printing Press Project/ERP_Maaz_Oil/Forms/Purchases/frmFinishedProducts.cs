@@ -79,7 +79,7 @@ namespace ERP_Maaz_Oil.Forms
         private void LoadGrid()
         {
             classHelper.query = @"SELECT A.BRAND_ID,B.P_CATEEGORY_NAME AS [BRAND],A.PM_ID,A.PRODUCT_CODE AS [PRODUCT CODE],A.PRODUCT_NAME AS [PRODUCT NAME],
-            A.OPENING_QTY AS [OPENING_QUANTITY],A.OPENING_RATE AS RATE,ISNULL(A.GROSS_WEIGHT,0) AS [BUNDLE PCS],ISNULL(A.NET_WEIGHT,0) AS [TOTAL BUNDLES]
+            A.OPENING_QTY AS [OPENING_QUANTITY],A.OPENING_RATE AS RATE,ISNULL(A.GROSS_WEIGHT,0) AS [BUNDLE PCS],ISNULL(A.NET_WEIGHT,0) AS [TOTAL BUNDLES],A.OPENING_QTY * A.OPENING_RATE AS [TOTAL AMOUNT]
             FROM PRODUCT_MASTER A
             INNER JOIN PRODUCT_CATEGORY B ON A.BRAND_ID = B.P_CATEGORY_ID
             ORDER BY A.PM_ID DESC";
@@ -372,18 +372,18 @@ namespace ERP_Maaz_Oil.Forms
                 txtQty.Focus();
                 return;
             }
-            else if (txtBundles.Text.Equals(""))
-            {
-                classHelper.ShowMessageBox("Bundle is Blank, please add value.", "Warning");
-                txtBundles.Focus();
-                return;
-            }
-            else if (txtBundlePcs.Text.Equals(""))
-            {
-                classHelper.ShowMessageBox("Bundle Pcs is Blank, please add value.", "Warning");
-                txtBundlePcs.Focus();
-                return;
-            }
+            //else if (txtBundles.Text.Equals(""))
+            //{
+            //    classHelper.ShowMessageBox("Bundle is Blank, please add value.", "Warning");
+            //    txtBundles.Focus();
+            //    return;
+            //}
+            //else if (txtBundlePcs.Text.Equals(""))
+            //{
+            //    classHelper.ShowMessageBox("Bundle Pcs is Blank, please add value.", "Warning");
+            //    txtBundlePcs.Focus();
+            //    return;
+            //}
             else if (txtRate.Text.Equals(""))
             {
                 classHelper.ShowMessageBox("Rate is Blank, please add value.", "Warning");
@@ -517,6 +517,35 @@ namespace ERP_Maaz_Oil.Forms
                 classHelper.AllowNumbers(e);
             }
             catch (Exception ex) { classHelper.ShowMessageBox(ex.ToString(), "Exception"); }
+        }
+
+        private void QtyCalculation()
+        {
+            try
+            {
+                decimal bundles = 0;
+                if (!txtBundles.Text.Equals(""))
+                {
+                    bundles = Convert.ToDecimal(txtBundles.Text);
+                }
+
+                decimal bundlesPcs = 0;
+                if (!txtBundlePcs.Text.Equals(""))
+                {
+                    bundlesPcs = Convert.ToDecimal(txtBundlePcs.Text);
+                }
+
+                txtQty.Text = Math.Round((bundles * bundlesPcs)).ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
+        private void txtBundles_TextChanged(object sender, EventArgs e)
+        {
+            QtyCalculation();
         }
     }
 

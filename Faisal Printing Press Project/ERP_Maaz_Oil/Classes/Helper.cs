@@ -3884,6 +3884,55 @@ namespace ERP_Maaz_Oil.Classes
             }
         }
 
+        public void LoadProductionDetail(DataGridView dgv, int id)
+        {
+            try
+            {
+                dgv.Rows.Clear();
+
+                query = @"	SELECT A.PRODUCT_MASTER_ID AS ITEM_ID,   
+                B.PRODUCT_NAME AS [PRODUCT], 
+                A.TOTAL_BUNDLE AS [TOTAL BUNDLES],
+                A.BUNDLE_PCS AS [PCS PER BUNDLES],
+                A.QTY,
+                A.RATE, 
+                (A.QTY * A.RATE) AS [TOTAL]
+                FROM PRODUCTION_DETAIL A
+                INNER JOIN PRODUCT_MASTER B ON A.PRODUCT_MASTER_ID = B.PM_ID
+                WHERE A.PRODUCTION_MASTER_ID = '" + id + @"'";
+
+                if (conn.State == System.Data.ConnectionState.Closed) { conn.Open(); }
+                cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@rawId", id);  // Use parameterized query to prevent SQL injection
+                cmd.CommandTimeout = 0;
+                dr = cmd.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        // Add TOTAL_WITH_GST to the DataGridView
+                        dgv.Rows.Add(
+                            dr["ITEM_ID"].ToString(),
+                            dr["PRODUCT"].ToString(),
+                            dr["TOTAL BUNDLES"].ToString(),
+                            dr["PCS PER BUNDLES"].ToString(),
+                            dr["QTY"].ToString(),
+                            dr["RATE"].ToString(),
+                            dr["TOTAL"].ToString());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowMessageBox(ex.ToString(), ":: Error ::");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         public void LoadSalesExpenses(DataGridView dgv, int id)
         {
             try

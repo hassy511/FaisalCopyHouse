@@ -48,6 +48,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>budget.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
@@ -1277,6 +1280,12 @@
     <Compile Include="Forms\Sales\frmSalesReturn_New.Designer.cs">
       <DependentUpon>frmSalesReturn_New.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Sales\frm_ProductionStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sales\frm_ProductionStock.Designer.cs">
+      <DependentUpon>frm_ProductionStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Sales\frm_SalesInvoiceClear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2330,6 +2339,9 @@
     <EmbeddedResource Include="Forms\Sales\frmSalesReturn_New.resx">
       <DependentUpon>frmSalesReturn_New.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sales\frm_ProductionStock.resx">
+      <DependentUpon>frm_ProductionStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sales\frm_SalesInvoiceClear.resx">
       <DependentUpon>frm_SalesInvoiceClear.cs</DependentUpon>
     </EmbeddedResource>
@@ -2666,6 +2678,7 @@
     <Content Include="bin\Release\ERP_Maaz_Oil.exe" />
     <Content Include="bin\Release\ERP_Maaz_Oil.pdb" />
     <Content Include="bin\Release\ERP_Maaz_Oil.vshost.exe" />
+    <Content Include="budget.ico" />
     <Content Include="obj\Release\ERP_Maaz_Oil.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Release\ERP_Maaz_Oil.exe" />
     <Content Include="obj\Release\ERP_Maaz_Oil.pdb" />

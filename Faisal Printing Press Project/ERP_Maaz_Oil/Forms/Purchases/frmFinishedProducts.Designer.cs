@@ -522,6 +522,7 @@
             this.txtBundles.Size = new System.Drawing.Size(213, 25);
             this.txtBundles.TabIndex = 363;
             this.txtBundles.Text = "0";
+            this.txtBundles.TextChanged += new System.EventHandler(this.txtBundles_TextChanged);
             this.txtBundles.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQty_KeyPress);
             // 
             // label9
@@ -543,6 +544,7 @@
             this.txtBundlePcs.Size = new System.Drawing.Size(213, 25);
             this.txtBundlePcs.TabIndex = 365;
             this.txtBundlePcs.Text = "0";
+            this.txtBundlePcs.TextChanged += new System.EventHandler(this.txtBundles_TextChanged);
             this.txtBundlePcs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQty_KeyPress);
             // 
             // frmFinishedProducts

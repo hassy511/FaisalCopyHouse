@@ -276,7 +276,8 @@ namespace ERP_Maaz_Oil.Forms
 
         private void purchasesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            frm_ProductionStock frm = new frm_ProductionStock();
+            frm.Show();
         }
 
         private void pURCHASESORDERToolStripMenuItem_Click_1(object sender, EventArgs e)

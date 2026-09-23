@@ -350,9 +350,8 @@
             this.purchaseReturnToolStripMenuItem});
             this.purchasesToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.purchasesToolStripMenuItem1.Name = "purchasesToolStripMenuItem1";
-            this.purchasesToolStripMenuItem1.Size = new System.Drawing.Size(83, 23);
-            this.purchasesToolStripMenuItem1.Text = "Purchases";
-            this.purchasesToolStripMenuItem1.Visible = false;
+            this.purchasesToolStripMenuItem1.Size = new System.Drawing.Size(126, 23);
+            this.purchasesToolStripMenuItem1.Text = "Daily Production";
             this.purchasesToolStripMenuItem1.Click += new System.EventHandler(this.purchasesToolStripMenuItem1_Click);
             // 
             // pURCHASESORDERToolStripMenuItem
@@ -368,6 +367,7 @@
             this.pURCHASESToolStripMenuItem.Name = "pURCHASESToolStripMenuItem";
             this.pURCHASESToolStripMenuItem.Size = new System.Drawing.Size(231, 24);
             this.pURCHASESToolStripMenuItem.Text = "Purchases";
+            this.pURCHASESToolStripMenuItem.Visible = false;
             this.pURCHASESToolStripMenuItem.Click += new System.EventHandler(this.pURCHASESToolStripMenuItem_Click_1);
             // 
             // purchasesSalesTransferToolStripMenuItem
@@ -407,6 +407,7 @@
             this.purchaseReturnToolStripMenuItem.Name = "purchaseReturnToolStripMenuItem";
             this.purchaseReturnToolStripMenuItem.Size = new System.Drawing.Size(231, 24);
             this.purchaseReturnToolStripMenuItem.Text = "Purchase Return";
+            this.purchaseReturnToolStripMenuItem.Visible = false;
             this.purchaseReturnToolStripMenuItem.Click += new System.EventHandler(this.purchaseReturnToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
@@ -488,7 +489,6 @@
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(69, 23);
             this.reportsToolStripMenuItem.Text = "Reports";
-            this.reportsToolStripMenuItem.Visible = false;
             // 
             // accountsLedgerToolStripMenuItem
             // 

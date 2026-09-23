@@ -214,7 +214,8 @@ namespace ERP_Maaz_Oil.Forms
                 classHelper.dataR["qty"] = Convert.ToDecimal(rows.Cells["qty"].Value.ToString());
                 classHelper.dataR["rate"] = Convert.ToDecimal(rows.Cells["rate"].Value.ToString());
                 classHelper.dataR["amount"] = Convert.ToDecimal(rows.Cells["total"].Value.ToString());
-                classHelper.dataR["transportation"] = Convert.ToDecimal(txtBoriExpense.Text) + Convert.ToDecimal(txtCartonExpense.Text);
+                classHelper.dataR["transportation"] = Convert.ToDecimal(txtBoriExpense.Text);
+                classHelper.dataR["balance"] = Convert.ToDecimal(txtCartonExpense.Text);
                 classHelper.dataR["vehicleNo"] = Classes.Helper.GetUserName(Classes.Helper.userId);
 
                 classHelper.mds.Tables["SaleInvoice"].Rows.Add(classHelper.dataR);
@@ -247,7 +248,8 @@ namespace ERP_Maaz_Oil.Forms
                 classHelper.dataR["qty"] = Convert.ToDecimal(rows.Cells["qty"].Value.ToString());
                 classHelper.dataR["rate"] = Convert.ToDecimal(rows.Cells["rate"].Value.ToString());
                 classHelper.dataR["amount"] = Convert.ToDecimal(rows.Cells["total"].Value.ToString());
-                classHelper.dataR["transportation"] = Convert.ToDecimal(txtBoriExpense.Text)+ Convert.ToDecimal(txtCartonExpense.Text);
+                classHelper.dataR["transportation"] = Convert.ToDecimal(txtBoriExpense.Text);
+                classHelper.dataR["balance"] = Convert.ToDecimal(txtCartonExpense.Text);
                 classHelper.dataR["vehicleNo"] = Classes.Helper.GetUserName(Classes.Helper.userId);
 
                 classHelper.mds.Tables["SaleInvoice"].Rows.Add(classHelper.dataR);
@@ -432,16 +434,16 @@ namespace ERP_Maaz_Oil.Forms
                 classHelper.ShowMessageBox("Product is not selected, please select Material.", "Warning");
                 cmbProducts.Focus();
             }
-            else if (txtBundle.Text.Equals("") || txtBundle.Text.Equals("0"))
-            {
-                classHelper.ShowMessageBox("Please add Total Bundles.", "Warning");
-                txtBundle.Focus();
-            }
-            else if (txtBundlePcs.Text.Equals("") || txtBundlePcs.Text.Equals("0"))
-            {
-                classHelper.ShowMessageBox("Please add Pcs Per Bundle.", "Warning");
-                txtBundlePcs.Focus();
-            }
+            //else if (txtBundle.Text.Equals("") || txtBundle.Text.Equals("0"))
+            //{
+            //    classHelper.ShowMessageBox("Please add Total Bundles.", "Warning");
+            //    txtBundle.Focus();
+            //}
+            //else if (txtBundlePcs.Text.Equals("") || txtBundlePcs.Text.Equals("0"))
+            //{
+            //    classHelper.ShowMessageBox("Please add Pcs Per Bundle.", "Warning");
+            //    txtBundlePcs.Focus();
+            //}
             else if (txtQty.Text.Equals("") || txtQty.Text.Equals("0"))
             {
                 classHelper.ShowMessageBox("Please add Product Qty.", "Warning");
