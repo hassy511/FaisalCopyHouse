@@ -3424,8 +3424,10 @@ namespace ERP_Maaz_Oil.Classes
             {
                 query = @"SELECT '0' AS [id],'--SELECT PRODUCT--' AS [name]
                 UNION ALL
-                SELECT PM_ID AS [id],PRODUCT_NAME AS [name] 
-                FROM PRODUCT_MASTER";
+                SELECT A.PM_ID AS [id],b.P_CATEEGORY_NAME AS [name] 
+                FROM PRODUCT_MASTER A
+                INNER JOIN PRODUCT_CATEGORY B ON A.BRAND_ID = B.P_CATEGORY_ID
+                ORDER BY [name]";
                 LoadComboData(cmbItems, query);
             }
             catch (Exception ex) { ShowMessageBox(ex.ToString(), "Exception"); }

@@ -48,62 +48,47 @@ namespace ERP_Maaz_Oil.Forms.Reporting
         {
             char hasRows = 'N';
 
-            classHelper.query = @" SELECT B.PRODUCT_CODE,C.P_CATEEGORY_NAME AS [BRAND],B.PRODUCT_NAME AS [PRODUCT],
-            B.OPENING_QTY +
+            classHelper.query = @" WITH ABC AS (
+            SELECT B.PM_ID,C.P_CATEEGORY_NAME AS [BRAND],
+            B.OPENING_QTY,(B.OPENING_QTY * B.OPENING_RATE) AS [OPENING AMOUNT],
             ISNULL((
-	            SELECT SUM(QTY) 
-	            FROM SALE_RETURN_MASTER X
-	            INNER JOIN SALE_RETURN_DETAIL Y ON X.SALE_RETURN_MASTER_ID = Y.SALE_RETURN_MASTER_ID
-	            INNER JOIN PRODUCT_MASTER Z ON Y.ITEM_ID = Z.PM_ID
-	            WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.ITEM_ID = B.PM_ID 
-            ),0) +
+	            SELECT SUM(QTY)
+	            FROM PRODUCTION_MASTER X
+	            INNER JOIN PRODUCTION_DETAIL Y ON X.ID = Y.PRODUCTION_MASTER_ID
+	            INNER JOIN PRODUCT_MASTER Z ON Y.PRODUCT_MASTER_ID = Z.PM_ID
+	            WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.PRODUCT_MASTER_ID = B.PM_ID 
+            ),0) AS [PRODUCTION QTY],
             ISNULL((
-		        SELECT SUM(QTY) 
-		        FROM PURCHASE_MASTER X
-		        INNER JOIN PURCHASE_DETAIL Y ON X.PURCHASE_MASTER_ID = Y.PURCHASE_MASTER_ID
-		        INNER JOIN PRODUCT_MASTER Z ON Y.MATERIAL_ID = Z.PM_ID
-		        WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.MATERIAL_ID = B.PM_ID 
-	        ),0) +
-	        ISNULL((
-		        SELECT SUM(QTY) 
-		        FROM PRODUCTION_MASTER X
-		        INNER JOIN PRODUCTION_DETAIL Y ON X.ID = Y.PRODUCTION_MASTER_ID
-		        INNER JOIN PRODUCT_MASTER Z ON Y.PRODUCT_MASTER_ID = Z.PM_ID
-		        WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.PRODUCT_MASTER_ID = B.PM_ID 
-	        ),0) +
-	        ISNULL((
-		        SELECT SUM(X.QTY) 
-				FROM INVENTORY_ADJUSTMENTS X
-				INNER JOIN PRODUCT_MASTER Z ON X.MATERIAL_ID = Z.PM_ID
-				WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND X.MATERIAL_ID = B.PM_ID 
-				AND X.ADD_LESS = 'A'
-	        ),0) AS [IN],
+	            SELECT SUM(QTY * RATE)
+	            FROM PRODUCTION_MASTER X
+	            INNER JOIN PRODUCTION_DETAIL Y ON X.ID = Y.PRODUCTION_MASTER_ID
+	            INNER JOIN PRODUCT_MASTER Z ON Y.PRODUCT_MASTER_ID = Z.PM_ID
+	            WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.PRODUCT_MASTER_ID = B.PM_ID 
+            ),0) AS [PRODUCTION AMOUNT],
             ISNULL((
 	            SELECT SUM(QTY) 
 	            FROM SALE_MASTER X
 	            INNER JOIN SALE_DETAIL Y ON X.SALE_MASTER_ID = Y.SALE_MASTER_ID
 	            INNER JOIN PRODUCT_MASTER Z ON Y.ITEM_ID = Z.PM_ID
 	            WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.ITEM_ID = B.PM_ID 
-            ),0)  +
+            ),0) AS [SALES QTY],
             ISNULL((
-		        SELECT SUM(QTY) 
-		        FROM PURCHASE_RETURN_MASTER X
-		        INNER JOIN PURCHASE_RETURN_DETAIL Y ON X.ID = Y.PURCHASE_RETURN_MASTER_ID
-		        INNER JOIN PRODUCT_MASTER Z ON Y.MATERIAL_ID = Z.PM_ID
-		        WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.MATERIAL_ID = B.PM_ID 
-	        ),0) +
-            ISNULL((
-		        SELECT SUM(X.QTY) 
-				FROM INVENTORY_ADJUSTMENTS X
-				INNER JOIN PRODUCT_MASTER Z ON X.MATERIAL_ID = Z.PM_ID
-				WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND X.MATERIAL_ID = B.PM_ID 
-				AND X.ADD_LESS = 'D'
-	        ),0) AS [OUT]
+	            SELECT SUM(QTY * RATE) 
+	            FROM SALE_MASTER X
+	            INNER JOIN SALE_DETAIL Y ON X.SALE_MASTER_ID = Y.SALE_MASTER_ID
+	            INNER JOIN PRODUCT_MASTER Z ON Y.ITEM_ID = Z.PM_ID
+	            WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.ITEM_ID = B.PM_ID 
+            ),0) AS [SALES AMOUNT]
             FROM PRODUCT_MASTER B
-            INNER JOIN PRODUCT_CATEGORY C ON C.P_CATEGORY_ID = B.BRAND_ID ";
+            INNER JOIN PRODUCT_CATEGORY C ON C.P_CATEGORY_ID = B.BRAND_ID  
+            )
+            SELECT *,
+            OPENING_QTY + [PRODUCTION QTY] - [SALES QTY] AS [BALANCE QTY],
+            [OPENING AMOUNT] + [PRODUCTION AMOUNT] - [SALES AMOUNT] AS [BALANCE AMOUNT]
+            FROM ABC ";
             if (cmbItem.SelectedIndex > 0)
             {
-                classHelper.query += @" WHERE B.PM_ID = '" + cmbItem.SelectedValue.ToString() + "' ";
+                classHelper.query += @" WHERE ABC.PM_ID = '" + cmbItem.SelectedValue.ToString() + "' ";
             }
             classHelper.query += @" ORDER BY [BRAND]";
 
@@ -122,15 +107,15 @@ namespace ERP_Maaz_Oil.Forms.Reporting
 
                         classHelper.dataR["fromDate"] = dtpFrom.Value.Date;
                         //classHelper.dataR["toDate"] = dtpTo.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
-                        classHelper.dataR["brand"] = classHelper.dr["BRAND"].ToString();
-                        classHelper.dataR["code"] = classHelper.dr["PRODUCT_CODE"].ToString();
-                        classHelper.dataR["product"] = classHelper.dr["PRODUCT"].ToString();
-                        //classHelper.dataR["opening"] = Convert.ToDecimal(classHelper.dr["OPENING"].ToString());
-                        classHelper.dataR["in"] = Convert.ToDecimal(classHelper.dr["IN"].ToString());
-                        classHelper.dataR["out"] = Convert.ToDecimal(classHelper.dr["OUT"].ToString());
-                        classHelper.dataR["balance"] = Convert.ToDecimal(classHelper.dr["IN"].ToString()) - Convert.ToDecimal(classHelper.dr["OUT"].ToString());
-                        //classHelper.dataR["rate"] = Convert.ToDecimal(classHelper.dr["RATE"].ToString());
-                        //classHelper.dataR["amount"] = (Convert.ToDecimal(classHelper.dr["OPENING"].ToString()) + Convert.ToDecimal(classHelper.dr["IN"].ToString()) - Convert.ToDecimal(classHelper.dr["OUT"].ToString())) * Convert.ToDecimal(classHelper.dr["RATE"].ToString()); 
+                        classHelper.dataR["product"] = classHelper.dr["BRAND"].ToString();
+                        //classHelper.dataR["code"] = classHelper.dr["PRODUCT_CODE"].ToString();
+                        //classHelper.dataR["product"] = classHelper.dr["PRODUCT"].ToString();
+                        classHelper.dataR["opening"] = Convert.ToDecimal(classHelper.dr["OPENING_QTY"].ToString());
+                        classHelper.dataR["in"] = Convert.ToDecimal(classHelper.dr["PRODUCTION QTY"].ToString());
+                        classHelper.dataR["out"] = Convert.ToDecimal(classHelper.dr["SALES QTY"].ToString());
+                        classHelper.dataR["balance"] = Convert.ToDecimal(classHelper.dr["BALANCE QTY"].ToString());
+                        classHelper.dataR["rate"] = Convert.ToDecimal(classHelper.dr["BALANCE AMOUNT"].ToString()) / Convert.ToDecimal(classHelper.dr["BALANCE QTY"].ToString());
+                        classHelper.dataR["amount"] = Convert.ToDecimal(classHelper.dr["BALANCE AMOUNT"].ToString()); 
 
                         classHelper.nds.Tables["StockReport"].Rows.Add(classHelper.dataR);
                     }

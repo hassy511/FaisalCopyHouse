@@ -426,6 +426,24 @@ namespace ERP_Maaz_Oil.Forms
             }
         }
 
+        private void RateCalculation()
+        {
+            try
+            {
+                decimal rate = 0;
+                if (!txtRate.Text.Equals(""))
+                {
+                    rate = Convert.ToDecimal(txtRate.Text);
+                }
+
+                txtDozenRate.Text = Math.Round((rate * 12)).ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -740,6 +758,16 @@ namespace ERP_Maaz_Oil.Forms
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+        }
+
+        private void txtRate_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+               RateCalculation();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            
         }
     }
 }

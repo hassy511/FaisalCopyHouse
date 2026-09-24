@@ -742,7 +742,6 @@
             this.stockReportToolStripMenuItem.Name = "stockReportToolStripMenuItem";
             this.stockReportToolStripMenuItem.Size = new System.Drawing.Size(322, 24);
             this.stockReportToolStripMenuItem.Text = "Stock Report";
-            this.stockReportToolStripMenuItem.Visible = false;
             this.stockReportToolStripMenuItem.Click += new System.EventHandler(this.stockReportToolStripMenuItem_Click);
             // 
             // dailyReportsToolStripMenuItem
