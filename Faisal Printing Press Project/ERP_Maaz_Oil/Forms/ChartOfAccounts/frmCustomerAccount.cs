@@ -302,7 +302,7 @@ namespace ERP_Maaz_Oil.Forms
             try
             {
                 (grdSEARCH.DataSource as DataTable).DefaultView.RowFilter = string.Format(@"
-                [" + grdSEARCH.Columns["ACCOUNT NAME"].Name.ToString() + "] LIKE '%" + classHelper.AvoidInjection(txtSearch.Text) + "%'");
+                [" + grdSEARCH.Columns["ACCOUNT NAME"].Name.ToString() + "] LIKE '%" + classHelper.AvoidInjection(txtSearching.Text) + "%'");
                 grdSEARCH.ClearSelection();
             }
             catch (Exception ex) { classHelper.ShowMessageBox(ex.ToString(), "Exception"); }

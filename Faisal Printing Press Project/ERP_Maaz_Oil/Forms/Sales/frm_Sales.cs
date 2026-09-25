@@ -223,7 +223,7 @@ namespace ERP_Maaz_Oil.Forms
 
             classHelper.rpt = new ERP_Maaz_Oil.Forms.Reporting.frmReports();
             classHelper.rpt.GenerateReport("SalesInvoiceDuplicate", classHelper.mds);
-            classHelper.rpt.ShowDialog();
+            classHelper.rpt.Show();
         }
 
         private void PrintSalesInvoiceOriginal()
@@ -257,7 +257,7 @@ namespace ERP_Maaz_Oil.Forms
             
             classHelper.rpt = new ERP_Maaz_Oil.Forms.Reporting.frmReports();
             classHelper.rpt.GenerateReport("SalesInvoiceOriginal", classHelper.mds);
-            classHelper.rpt.ShowDialog();
+            classHelper.rpt.Show();
         }
 
         //private void PrintDeliveryChallan()

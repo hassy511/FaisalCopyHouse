@@ -154,6 +154,41 @@ namespace ERP_Maaz_Oil.Classes
             return "";
         }
 
+        public bool CheckBrandRecordsExists(int brandId)
+        {
+            if (conn3.State == System.Data.ConnectionState.Closed) { conn3.Open(); }
+            try
+            {
+                string query = @"SELECT dbo.CheckBrandRecords("+brandId+")";
+                SqlCommand cmd = new SqlCommand(query, conn3);
+                cmd.CommandTimeout = 0;
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    if (dr.Read())
+                    {
+                        if (dr[0].ToString().Equals("Y"))
+                        {
+                            return true;
+                        }
+                        else {
+                            return false;
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            finally
+            {
+                conn3.Close();
+            }
+            return false;
+        }
+
         public bool CheckProductExists(string productName)
         {
             if (conn3.State == System.Data.ConnectionState.Closed) { conn3.Open(); }
@@ -3844,7 +3879,7 @@ namespace ERP_Maaz_Oil.Classes
                     dgv.Rows.Clear();
 
                     query = @"	SELECT A.ITEM_ID,   
-                    B.PRODUCT_NAME AS [PRODUCT], 
+                    C.P_CATEEGORY_NAME AS [PRODUCT], 
                     A.GST AS [TOTAL BUNDLES],
                     A.COST_RATE AS [PCS PER BUNDLES],
                     A.QTY,
@@ -3852,6 +3887,7 @@ namespace ERP_Maaz_Oil.Classes
                     (A.QTY * A.RATE) AS [TOTAL]
                     FROM SALE_DETAIL A
                     INNER JOIN PRODUCT_MASTER B ON A.ITEM_ID = B.PM_ID
+                    INNER JOIN PRODUCT_CATEGORY C ON B.BRAND_ID = C.P_CATEGORY_ID
                     WHERE A.SALE_MASTER_ID = '" + rawId + @"'";
 
                 if (conn.State == System.Data.ConnectionState.Closed) { conn.Open(); }
@@ -3893,7 +3929,7 @@ namespace ERP_Maaz_Oil.Classes
                 dgv.Rows.Clear();
 
                 query = @"	SELECT A.PRODUCT_MASTER_ID AS ITEM_ID,   
-                B.PRODUCT_NAME AS [PRODUCT], 
+                C.P_CATEEGORY_NAME AS [PRODUCT], 
                 A.TOTAL_BUNDLE AS [TOTAL BUNDLES],
                 A.BUNDLE_PCS AS [PCS PER BUNDLES],
                 A.QTY,
@@ -3901,6 +3937,7 @@ namespace ERP_Maaz_Oil.Classes
                 (A.QTY * A.RATE) AS [TOTAL]
                 FROM PRODUCTION_DETAIL A
                 INNER JOIN PRODUCT_MASTER B ON A.PRODUCT_MASTER_ID = B.PM_ID
+                INNER JOIN PRODUCT_CATEGORY C ON B.BRAND_ID = C.P_CATEGORY_ID
                 WHERE A.PRODUCTION_MASTER_ID = '" + id + @"'";
 
                 if (conn.State == System.Data.ConnectionState.Closed) { conn.Open(); }

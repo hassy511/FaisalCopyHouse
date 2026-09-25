@@ -12,7 +12,7 @@ namespace ERP_Maaz_Oil.Forms
     public partial class frmAddCategory : Form
     {
         Classes.Helper classHelper = new Classes.Helper();
-        string id = "";
+        int id = 0;
         int is_edit = 0;
 
         public frmAddCategory()
@@ -25,7 +25,7 @@ namespace ERP_Maaz_Oil.Forms
         //clear fields in form
         private void clear() {
             txtSEARCH.Clear();
-            id = "";
+            id = 0;
             txtBrand.Clear();
             is_edit = 0;
             classHelper.LoadGrid(grdSEARCH, query);
@@ -38,7 +38,7 @@ namespace ERP_Maaz_Oil.Forms
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.grdSEARCH.Rows[e.RowIndex];
-                id = row.Cells["P_CATEGORY_ID"].Value.ToString();
+                id = Convert.ToInt32(row.Cells["P_CATEGORY_ID"].Value.ToString());
                 is_edit = 1;
                 txtBrand.Text = row.Cells["BRAND NAME"].Value.ToString();
             }
@@ -52,6 +52,34 @@ namespace ERP_Maaz_Oil.Forms
         private void txtSEARCH_TextChanged(object sender, EventArgs e)
         {
            classHelper.Brand_search(txtSEARCH, grdSEARCH);
+        }
+
+        private void Delete()
+        {
+            if (classHelper.CheckBrandRecordsExists(id))
+            {
+                classHelper.ShowMessageBox("You cannot delete this brand, production or sales record exists against this brand.", "Information");
+            }
+            else {
+                classHelper.query = @" BEGIN TRY 
+                             BEGIN TRANSACTION ";
+
+                classHelper.query += @" DELETE FROM PRODUCT_MASTER WHERE BRAND_ID = '" + id + @"';
+                DELETE FROM PRODUCT_CATEGORY WHERE P_CATEGORY_ID = '" + id + @"';";
+
+                classHelper.query += @" COMMIT TRANSACTION 
+                        END TRY 
+                    BEGIN CATCH 
+                            IF @@TRANCOUNT > 0 
+                            ROLLBACK TRANSACTION 
+                    END CATCH";
+
+                if (classHelper.InsertUpdateDelete(classHelper.query) >= 1)
+                {
+                    classHelper.ShowMessageBox("Record Deleted Sucessfully.", "Information");
+                    clear();
+                }
+            }
         }
 
         private void btnSAVE_Click(object sender, EventArgs e)
@@ -99,6 +127,18 @@ namespace ERP_Maaz_Oil.Forms
         private void grdSEARCH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            load_data_fromGrid(e); 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (id > 0)
+            {
+                Delete();
+            }
+            else
+            {
+                MessageBox.Show("Please Select any brand to delete.", "Error");
+            }
         }
     }
 }

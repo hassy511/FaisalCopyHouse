@@ -328,7 +328,7 @@ A.BANK_NAME+' CHQ DATE: '+CONVERT(VARCHAR(50),FORMAT(A.CHQ_DATE,'dd/MM/yyyy'))+'
 
             classHelper.rptLedger = new frmLedgerReports();
             classHelper.rptLedger.GenerateReport("AL", classHelper.mds);
-            classHelper.rptLedger.ShowDialog();
+            classHelper.rptLedger.Show();
         }
 
         private void generate()

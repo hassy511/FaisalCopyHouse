@@ -244,7 +244,7 @@ namespace ERP_Maaz_Oil.Forms
         private void accountsLedgerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Reporting.frm_Account_Ledger frmLedger = new Reporting.frm_Account_Ledger();
-            frmLedger.ShowDialog();
+            frmLedger.Show();
         }
 
         private void purchasesOrderReportToolStripMenuItem_Click(object sender, EventArgs e)
@@ -734,7 +734,7 @@ namespace ERP_Maaz_Oil.Forms
         private void stockReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Reporting.frm_StockReport frm = new Reporting.frm_StockReport();
-            frm.ShowDialog();
+            frm.Show();
         }
 
         private void finishedStockReportToolStripMenuItem_Click(object sender, EventArgs e)
@@ -830,7 +830,7 @@ namespace ERP_Maaz_Oil.Forms
         private void salesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Forms.frm_Sales frm = new Forms.frm_Sales();
-            frm.ShowDialog();
+            frm.Show();
         }
 
         private void salesReturnToolStripMenuItem2_Click(object sender, EventArgs e)

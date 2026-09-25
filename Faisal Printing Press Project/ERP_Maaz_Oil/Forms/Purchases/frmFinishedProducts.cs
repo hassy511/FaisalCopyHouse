@@ -85,6 +85,8 @@ namespace ERP_Maaz_Oil.Forms
             INNER JOIN PRODUCT_CATEGORY B ON A.BRAND_ID = B.P_CATEGORY_ID
             ORDER BY A.PM_ID DESC";
             classHelper.LoadGrid(grdSearch, classHelper.query);
+            grdSearch.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //grdSearch.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         /*   private void LoadMaterialDetails(int productMasterId) {
@@ -164,7 +166,7 @@ namespace ERP_Maaz_Oil.Forms
         private void grdSEARCH_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             grdSearch.Columns["PM_ID"].Visible = false;
-            grdSearch.Columns["BRAND_ID"].Visible = false;
+            grdSearch.Columns["BRAND_ID"].Visible = false;        
         }
 
         private void btnCLEAR_Click(object sender, EventArgs e)

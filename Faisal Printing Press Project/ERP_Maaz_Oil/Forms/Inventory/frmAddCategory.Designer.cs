@@ -43,6 +43,7 @@
             this.btnSAVE = new System.Windows.Forms.Button();
             this.pnlHEADER = new System.Windows.Forms.Panel();
             this.lblHEADING = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdSEARCH)).BeginInit();
             this.pnlHEADER.SuspendLayout();
             this.SuspendLayout();
@@ -145,7 +146,7 @@
             this.btnCLEAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCLEAR.ImageIndex = 1;
             this.btnCLEAR.ImageList = this.imageList1;
-            this.btnCLEAR.Location = new System.Drawing.Point(270, 357);
+            this.btnCLEAR.Location = new System.Drawing.Point(140, 357);
             this.btnCLEAR.Name = "btnCLEAR";
             this.btnCLEAR.Size = new System.Drawing.Size(116, 25);
             this.btnCLEAR.TabIndex = 9;
@@ -162,7 +163,7 @@
             this.btnSAVE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSAVE.ImageIndex = 0;
             this.btnSAVE.ImageList = this.imageList1;
-            this.btnSAVE.Location = new System.Drawing.Point(155, 357);
+            this.btnSAVE.Location = new System.Drawing.Point(20, 357);
             this.btnSAVE.Name = "btnSAVE";
             this.btnSAVE.Size = new System.Drawing.Size(114, 25);
             this.btnSAVE.TabIndex = 8;
@@ -195,12 +196,31 @@
             this.lblHEADING.TabIndex = 23;
             this.lblHEADING.Text = "ADD BRAND";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(24)))), ((int)(((byte)(38)))));
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.ImageIndex = 1;
+            this.btnDelete.ImageList = this.imageList1;
+            this.btnDelete.Location = new System.Drawing.Point(262, 357);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(124, 25);
+            this.btnDelete.TabIndex = 223;
+            this.btnDelete.TabStop = false;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // frmAddCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(398, 389);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtBrand);
             this.Controls.Add(this.btnCLEAR);
             this.Controls.Add(this.btnSAVE);
@@ -236,5 +256,6 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.TextBox txtBrand;
         private System.Windows.Forms.Label lblBrand;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

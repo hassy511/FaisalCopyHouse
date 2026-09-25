@@ -56,28 +56,28 @@ namespace ERP_Maaz_Oil.Forms.Reporting
 	            FROM PRODUCTION_MASTER X
 	            INNER JOIN PRODUCTION_DETAIL Y ON X.ID = Y.PRODUCTION_MASTER_ID
 	            INNER JOIN PRODUCT_MASTER Z ON Y.PRODUCT_MASTER_ID = Z.PM_ID
-	            WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.PRODUCT_MASTER_ID = B.PM_ID 
+	            WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.PRODUCT_MASTER_ID = B.PM_ID 
             ),0) AS [PRODUCTION QTY],
             ISNULL((
 	            SELECT SUM(QTY * RATE)
 	            FROM PRODUCTION_MASTER X
 	            INNER JOIN PRODUCTION_DETAIL Y ON X.ID = Y.PRODUCTION_MASTER_ID
 	            INNER JOIN PRODUCT_MASTER Z ON Y.PRODUCT_MASTER_ID = Z.PM_ID
-	            WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.PRODUCT_MASTER_ID = B.PM_ID 
+	            WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.PRODUCT_MASTER_ID = B.PM_ID 
             ),0) AS [PRODUCTION AMOUNT],
             ISNULL((
 	            SELECT SUM(QTY) 
 	            FROM SALE_MASTER X
 	            INNER JOIN SALE_DETAIL Y ON X.SALE_MASTER_ID = Y.SALE_MASTER_ID
 	            INNER JOIN PRODUCT_MASTER Z ON Y.ITEM_ID = Z.PM_ID
-	            WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.ITEM_ID = B.PM_ID 
+	            WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.ITEM_ID = B.PM_ID 
             ),0) AS [SALES QTY],
             ISNULL((
 	            SELECT SUM(QTY * RATE) 
 	            FROM SALE_MASTER X
 	            INNER JOIN SALE_DETAIL Y ON X.SALE_MASTER_ID = Y.SALE_MASTER_ID
 	            INNER JOIN PRODUCT_MASTER Z ON Y.ITEM_ID = Z.PM_ID
-	            WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.ITEM_ID = B.PM_ID 
+	            WHERE X.[DATE] <= '" + Classes.Helper.ConvertDatetime(dtpFrom.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59)) + @"' AND Y.ITEM_ID = B.PM_ID 
             ),0) AS [SALES AMOUNT]
             FROM PRODUCT_MASTER B
             INNER JOIN PRODUCT_CATEGORY C ON C.P_CATEGORY_ID = B.BRAND_ID  
@@ -114,7 +114,13 @@ namespace ERP_Maaz_Oil.Forms.Reporting
                         classHelper.dataR["in"] = Convert.ToDecimal(classHelper.dr["PRODUCTION QTY"].ToString());
                         classHelper.dataR["out"] = Convert.ToDecimal(classHelper.dr["SALES QTY"].ToString());
                         classHelper.dataR["balance"] = Convert.ToDecimal(classHelper.dr["BALANCE QTY"].ToString());
-                        classHelper.dataR["rate"] = Convert.ToDecimal(classHelper.dr["BALANCE AMOUNT"].ToString()) / Convert.ToDecimal(classHelper.dr["BALANCE QTY"].ToString());
+                        if (Convert.ToDecimal(classHelper.dr["BALANCE QTY"].ToString()) > 0)
+                        {
+                            classHelper.dataR["rate"] = Convert.ToDecimal(classHelper.dr["BALANCE AMOUNT"].ToString()) / Convert.ToDecimal(classHelper.dr["BALANCE QTY"].ToString());
+                        }
+                        else {
+                            classHelper.dataR["rate"] = 0;
+                        }
                         classHelper.dataR["amount"] = Convert.ToDecimal(classHelper.dr["BALANCE AMOUNT"].ToString()); 
 
                         classHelper.nds.Tables["StockReport"].Rows.Add(classHelper.dataR);
@@ -134,7 +140,7 @@ namespace ERP_Maaz_Oil.Forms.Reporting
             {
                 classHelper.rpt = new frmReports();
                 classHelper.rpt.GenerateReport("StockReport", classHelper.nds);
-                classHelper.rpt.ShowDialog();
+                classHelper.rpt.Show();
             }
             else {
                 MessageBox.Show("No Record Found.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
