@@ -17,9 +17,27 @@ namespace ERP_Maaz_Oil.Forms.Reporting
         //Helper.cls_validations cls_valid = new Helper.cls_validations();
         //Helper.cls_database cls_db = new Helper.cls_database();
         char accountType = '0';
+
         public frm_Account_Ledger()
         {
             InitializeComponent();
+        }
+
+        public frm_Account_Ledger(int accountId)
+        {
+            InitializeComponent();
+            LoadDirectReport(accountId);
+        }
+
+        private void LoadDirectReport(int accountId) {
+            generate(accountId);
+            if (grdSEARCH.Rows.Count > 0)
+            {
+                dtp_FROM.Value = Convert.ToDateTime("2026-07-01");
+                dtp_TO.Value = DateTime.Now;
+                cmbACCOUNT.SelectedValue = accountId.ToString();
+                show_report(accountId);
+            }
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -164,6 +182,77 @@ namespace ERP_Maaz_Oil.Forms.Reporting
             //}
         }
 
+        private void opening_bal(int accountId)
+        {
+
+            //var fdate = dtp_FROM.Value.AddDays(-1);
+            //DateTime fdt = fdate;
+            //string fd = string.Format("{0:yyyy-MM-dd}", fdt);
+
+            classHelper.query = @"SELECT
+                CASE WHEN A.DR_CR = 'D' THEN A.OPEN_BAL ELSE -A.OPEN_BAL END,C.AN_ID
+            FROM COA A
+            INNER JOIN CONTROL_ACCOUNT B ON A.CA_ID = B.CA_ID
+            INNER JOIN ACCOUNT_NATURE C ON B.AN_ID = C.AN_ID
+            WHERE A.COA_ID = '" + accountId + @"'
+            UNION ALL
+            SELECT ISNULL(SUM(A.DEBIT - A.CREDIT),0)
+               -- CASE WHEN D.AN_ID IN(2,4) THEN ISNULL(SUM(A.CREDIT -A.DEBIT),0)
+		         --   ELSE ISNULL(SUM(A.DEBIT -A.CREDIT),0) END
+            ,d.AN_ID
+            FROM LEDGERS A
+            INNER JOIN COA B ON A.COA_ID = B.COA_ID
+            INNER JOIN CONTROL_ACCOUNT C ON B.CA_ID = C.CA_ID
+            INNER JOIN ACCOUNT_NATURE D ON C.AN_ID = D.AN_ID
+            WHERE A.COA_ID = '" + accountId + @"' AND cast(A.[DATE] as date) BETWEEN cast('2017-01-01' as date) AND cast('2017-01-01' as date)
+            GROUP BY D.AN_ID";
+
+            Classes.Helper.conn.Open();
+            decimal value = 0;
+            try
+            {
+                classHelper.cmd = new SqlCommand(classHelper.query, Classes.Helper.conn);
+                classHelper.dr = classHelper.cmd.ExecuteReader();
+                if (classHelper.dr.HasRows == true)
+                {
+                    while (classHelper.dr.Read())
+                    {
+                        if (classHelper.dr[0].ToString().Equals(""))
+                        {
+
+                        }
+                        else
+                        {
+                            value = value + Math.Round(Convert.ToDecimal(classHelper.dr[0].ToString()));
+                            accountType = Convert.ToChar(classHelper.dr[1].ToString());
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                Classes.Helper.conn.Close();
+            }
+
+            var datestrings = DateTime.Parse("2026-07-01");
+            DateTime dt = datestrings;
+            string d = string.Format("{0:dd-MM-yyyy}", dt);
+
+            if (value < 0)
+            {
+                //-1
+                grdSEARCH.Rows.Add("", "Opeing As on " + d + "", "", "", (value * (-1)), "Cr", "", accountType);
+            }
+            else
+            {
+                grdSEARCH.Rows.Add("", "Opeing As on " + d + "", "", "", value.ToString(), "Dr", "", accountType);
+            }
+        }
+
         public void ledger_Entry()
         {
             var fdate = dtp_FROM.Value;
@@ -234,6 +323,78 @@ namespace ERP_Maaz_Oil.Forms.Reporting
             {
                 Classes.Helper.conn.Close();
             }   
+        }
+
+        public void ledger_Entry(int accountId)
+        {
+            //var fdate = dtp_FROM.Value;
+            //DateTime fdt = fdate;
+            string fd = "2026-07-01";//string.Format("{0:yyyy-MM-dd}", fdt);
+
+            //var tdate = dtp_TO.Value;
+            DateTime tdt = DateTime.Now;
+            string td = string.Format("{0:yyyy-MM-dd}", tdt);
+
+            decimal deb = 0;
+            decimal cre = 0;
+            classHelper.query = @"SELECT A.[DATE],A.DESCRIPTIONS,A.DEBIT,A.CREDIT,A.FOLIO,D.AN_ID
+            FROM LEDGERS A
+            INNER JOIN COA B ON A.COA_ID = B.COA_ID
+            INNER JOIN CONTROL_ACCOUNT C ON B.CA_ID = C.CA_ID
+            INNER JOIN ACCOUNT_NATURE D ON C.AN_ID = D.AN_ID
+            WHERE A.COA_ID = '" + accountId + "' AND CONVERT(date,A.[DATE]) BETWEEN '" + fd + "' AND '" + td + @"'
+            ORDER BY A.[DATE]";
+            Classes.Helper.conn.Open();
+            try
+            {
+                classHelper.cmd = new SqlCommand(classHelper.query, Classes.Helper.conn);
+                classHelper.dr = classHelper.cmd.ExecuteReader();
+                if (classHelper.dr.HasRows == true)
+                {
+                    while (classHelper.dr.Read())
+                    {
+                        decimal debit = 0;
+                        decimal credit = 0;
+                        decimal balance = 0;
+                        for (int i = 0; i < grdSEARCH.Rows.Count; ++i)
+                        {
+                            string type = grdSEARCH.Rows[i].Cells[5].Value.ToString();
+                            balance = Math.Round(Convert.ToDecimal(grdSEARCH.Rows[i].Cells[4].Value));
+                            if (type.Equals("Cr"))
+                            {
+                                balance = -balance;
+                            }
+                            debit = Math.Round(Convert.ToDecimal(classHelper.dr[2].ToString()));
+                            credit = Math.Round(Convert.ToDecimal(classHelper.dr[3].ToString()));
+                        }
+                        decimal n = balance + debit - credit;
+                        var datestrings = DateTime.Parse(classHelper.dr[0].ToString());
+                        DateTime dt = datestrings;
+                        string d = string.Format("{0:dd-MM-yyyy}", dt);
+
+                        if (n < 0)
+                        {
+                            grdSEARCH.Rows.Add(d, classHelper.dr[1].ToString(), classHelper.dr[2].ToString(), classHelper.dr[3].ToString(), (n * (-1)), "Cr", classHelper.dr[4].ToString(), accountType);
+                            deb = deb + Math.Round(Convert.ToDecimal(classHelper.dr[2].ToString()));
+                            cre = cre + Math.Round(Convert.ToDecimal(classHelper.dr[3].ToString()));
+                        }
+                        else
+                        {
+                            grdSEARCH.Rows.Add(d, classHelper.dr[1].ToString(), classHelper.dr[2].ToString(), classHelper.dr[3].ToString(), n, "Dr", classHelper.dr[4].ToString(), accountType);
+                            deb = deb + Math.Round(Convert.ToDecimal(classHelper.dr[2].ToString()));
+                            cre = cre + Math.Round(Convert.ToDecimal(classHelper.dr[3].ToString()));
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                Classes.Helper.conn.Close();
+            }
         }
 
         private void show_report()
@@ -331,6 +492,56 @@ A.BANK_NAME+' CHQ DATE: '+CONVERT(VARCHAR(50),FORMAT(A.CHQ_DATE,'dd/MM/yyyy'))+'
             classHelper.rptLedger.Show();
         }
 
+        private void show_report(int accountId)
+        {
+            DataGridView dg = grdSEARCH;
+            classHelper.mds.Tables["ACCOUNTS_LEDGER"].Clear();
+            for (int i = 0; i < dg.Rows.Count; i++)
+            {
+                classHelper.dataR = classHelper.mds.Tables["ACCOUNTS_LEDGER"].NewRow();
+                classHelper.dataR[0] = cmbACCOUNT.Text;
+                classHelper.dataR[1] = Convert.ToDateTime("2026-07-01");
+                classHelper.dataR[2] = DateTime.Now;
+                classHelper.dataR[3] = dg.Rows[i].Cells[0].Value.ToString();
+                classHelper.dataR[4] = dg.Rows[i].Cells[1].Value.ToString();
+                classHelper.dataR[9] = (dg.Rows[i].Cells["FOLIO"].Value ?? "-").ToString();
+
+                if (dg.Rows[i].Cells[2].Value.ToString().Equals(""))
+                {
+                    classHelper.dataR[5] = 0;
+                }
+                else
+                {
+                    classHelper.dataR[5] = Convert.ToDouble(dg.Rows[i].Cells[2].Value.ToString());
+                }
+
+                if (dg.Rows[i].Cells[3].Value.ToString().Equals(""))
+                {
+                    classHelper.dataR[6] = 0;
+                }
+                else
+                {
+                    classHelper.dataR[6] = Convert.ToDouble(dg.Rows[i].Cells[3].Value.ToString());
+                }
+
+                if (dg.Rows[i].Cells[4].Value.ToString().Equals(""))
+                {
+                    classHelper.dataR[7] = 0;
+                }
+                else
+                {
+                    classHelper.dataR[7] = Convert.ToDouble(dg.Rows[i].Cells[4].Value.ToString());
+                }
+                classHelper.dataR[8] = dg.Rows[i].Cells[5].Value.ToString();
+                classHelper.dataR["accountNature"] = dg.Rows[i].Cells["accountNature"].Value.ToString();
+                classHelper.mds.Tables["ACCOUNTS_LEDGER"].Rows.Add(classHelper.dataR);
+            }
+
+            classHelper.rptLedger = new frmLedgerReports();
+            classHelper.rptLedger.GenerateReport("AL", classHelper.mds);
+            classHelper.rptLedger.Show();
+        }
+
         private void generate()
         {
             if (cmbACCOUNT.SelectedIndex == 0)
@@ -343,6 +554,13 @@ A.BANK_NAME+' CHQ DATE: '+CONVERT(VARCHAR(50),FORMAT(A.CHQ_DATE,'dd/MM/yyyy'))+'
                 opening_bal();
                 ledger_Entry();
             }
+        }
+
+        private void generate(int accountId)
+        {
+            grdSEARCH.Rows.Clear();
+            opening_bal(accountId);
+            ledger_Entry(accountId);
         }
 
         private void grpSALES_Enter(object sender, EventArgs e)

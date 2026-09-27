@@ -101,6 +101,8 @@
             this.salesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sRReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vouchersReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockReportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerBalanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vouchersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cashBookToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.paymentTransferToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -146,8 +148,8 @@
             this.inventoryToolStripMenuItem,
             this.purchasesToolStripMenuItem1,
             this.toolStripMenuItem4,
-            this.reportsToolStripMenuItem,
             this.vouchersToolStripMenuItem,
+            this.reportsToolStripMenuItem,
             this.salesToolStripMenuItem,
             this.financialStatementsToolStripMenuItem,
             this.toolStripMenuItem1,
@@ -484,7 +486,9 @@
             this.salesInvoiceHIstoryToolStripMenuItem,
             this.payablesSummaryToolStripMenuItem,
             this.stockReportToolStripMenuItem,
-            this.dailyReportsToolStripMenuItem});
+            this.dailyReportsToolStripMenuItem,
+            this.stockReportToolStripMenuItem1,
+            this.customerBalanceToolStripMenuItem});
             this.reportsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(69, 23);
@@ -742,6 +746,7 @@
             this.stockReportToolStripMenuItem.Name = "stockReportToolStripMenuItem";
             this.stockReportToolStripMenuItem.Size = new System.Drawing.Size(322, 24);
             this.stockReportToolStripMenuItem.Text = "Stock Report";
+            this.stockReportToolStripMenuItem.Visible = false;
             this.stockReportToolStripMenuItem.Click += new System.EventHandler(this.stockReportToolStripMenuItem_Click);
             // 
             // dailyReportsToolStripMenuItem
@@ -776,6 +781,20 @@
             this.vouchersReportToolStripMenuItem.Text = "Vouchers Report";
             this.vouchersReportToolStripMenuItem.Click += new System.EventHandler(this.vouchersReportToolStripMenuItem_Click);
             // 
+            // stockReportToolStripMenuItem1
+            // 
+            this.stockReportToolStripMenuItem1.Name = "stockReportToolStripMenuItem1";
+            this.stockReportToolStripMenuItem1.Size = new System.Drawing.Size(322, 24);
+            this.stockReportToolStripMenuItem1.Text = "Stock Report";
+            this.stockReportToolStripMenuItem1.Click += new System.EventHandler(this.stockReportToolStripMenuItem1_Click);
+            // 
+            // customerBalanceToolStripMenuItem
+            // 
+            this.customerBalanceToolStripMenuItem.Name = "customerBalanceToolStripMenuItem";
+            this.customerBalanceToolStripMenuItem.Size = new System.Drawing.Size(322, 24);
+            this.customerBalanceToolStripMenuItem.Text = "Customer Balance";
+            this.customerBalanceToolStripMenuItem.Click += new System.EventHandler(this.customerBalanceToolStripMenuItem_Click);
+            // 
             // vouchersToolStripMenuItem
             // 
             this.vouchersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -790,9 +809,9 @@
             this.invoicePaymentToolStripMenuItem});
             this.vouchersToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.vouchersToolStripMenuItem.Name = "vouchersToolStripMenuItem";
-            this.vouchersToolStripMenuItem.Size = new System.Drawing.Size(78, 23);
-            this.vouchersToolStripMenuItem.Text = "Vouchers";
-            this.vouchersToolStripMenuItem.Visible = false;
+            this.vouchersToolStripMenuItem.Size = new System.Drawing.Size(130, 23);
+            this.vouchersToolStripMenuItem.Text = "Payment Register";
+            this.vouchersToolStripMenuItem.Click += new System.EventHandler(this.vouchersToolStripMenuItem_Click);
             // 
             // cashBookToolStrip
             // 
@@ -839,6 +858,7 @@
             this.journalVoucherToolStripMenuItem.Name = "journalVoucherToolStripMenuItem";
             this.journalVoucherToolStripMenuItem.Size = new System.Drawing.Size(247, 24);
             this.journalVoucherToolStripMenuItem.Text = "Journal Voucher";
+            this.journalVoucherToolStripMenuItem.Visible = false;
             this.journalVoucherToolStripMenuItem.Click += new System.EventHandler(this.journalVoucherToolStripMenuItem_Click);
             // 
             // cashPaymentReceiveToolStripMenuItem
@@ -1196,5 +1216,7 @@
         private System.Windows.Forms.ToolStripMenuItem customerAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vendorAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem otherAccountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stockReportToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem customerBalanceToolStripMenuItem;
     }
 }

@@ -35,7 +35,7 @@ namespace ERP_Maaz_Oil
 
             //Classes.Helper.userId = 1;
             //Application.Run(new Forms.frmDashboard());
-            //Application.Run(new Forms.frmAddServiceTypes());
+            //Application.Run(new Forms.Reporting.frm_StockReport());
             //Application.Run(new Forms.frmGatePass_New());
 
 

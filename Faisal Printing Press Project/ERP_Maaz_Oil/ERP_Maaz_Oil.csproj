@@ -323,6 +323,18 @@
     <Compile Include="Forms\LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Purchases\frmCustomerBalanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchases\frmCustomerBalanceReport.Designer.cs">
+      <DependentUpon>frmCustomerBalanceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchases\frmFinishedProductsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchases\frmFinishedProductsReport.Designer.cs">
+      <DependentUpon>frmFinishedProductsReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Purchases\frmPurchasesReturn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1286,6 +1298,12 @@
     <Compile Include="Forms\Sales\frm_ProductionStock.Designer.cs">
       <DependentUpon>frm_ProductionStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Sales\frm_PaymentRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sales\frm_PaymentRegister.Designer.cs">
+      <DependentUpon>frm_PaymentRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Sales\frm_SalesInvoiceClear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1755,6 +1773,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchases\frmCustomerBalanceReport.resx">
+      <DependentUpon>frmCustomerBalanceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchases\frmFinishedProductsReport.resx">
+      <DependentUpon>frmFinishedProductsReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Purchases\frmPurchasesReturn.resx">
       <DependentUpon>frmPurchasesReturn.cs</DependentUpon>
@@ -2341,6 +2365,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sales\frm_ProductionStock.resx">
       <DependentUpon>frm_ProductionStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sales\frm_PaymentRegister.resx">
+      <DependentUpon>frm_PaymentRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sales\frm_SalesInvoiceClear.resx">
       <DependentUpon>frm_SalesInvoiceClear.cs</DependentUpon>

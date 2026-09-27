@@ -914,5 +914,23 @@ namespace ERP_Maaz_Oil.Forms
             frmOtherAccounts frm = new frmOtherAccounts();
             frm.Show();
         }
+
+        private void stockReportToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmFinishedProductsReport frm = new frmFinishedProductsReport();
+            frm.Show();
+        }
+
+        private void customerBalanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCustomerBalanceReport frm = new frmCustomerBalanceReport();
+            frm.Show();
+        }
+
+        private void vouchersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_PaymentRegister frm = new frm_PaymentRegister();
+            frm.Show();
+        }
     }
 }

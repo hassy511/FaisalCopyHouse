@@ -516,7 +516,10 @@ D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\bin\Debug
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\bin\Debug\System.ValueTuple.xml
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.xml
+D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.csprojAssemblyReference.cache
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.exe.config
+D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmOtherAccounts.resources
+D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmVendorAccount.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmCustomerAccount.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmBackUpDatabase.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmBackUpRestoreDatabase.resources
@@ -535,6 +538,8 @@ D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.Job.frmJobOrderMaterialExpenses.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.Job.frmJobProductMatrialExpenses.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.LogIn.resources
+D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmCustomerBalanceReport.resources
+D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmFinishedProductsReport.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmPurchasesReturn.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmPurchases_Order.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmPurchases_New.resources
@@ -588,6 +593,8 @@ D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmAASales.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmGatePass_New.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmSalesReturn_New.resources
+D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frm_ProductionStock.resources
+D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frm_PaymentRegister.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frm_SalesInvoiceClear.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frm_SalesServices.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frm_Sales.resources
@@ -651,6 +658,3 @@ D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.csproj.CopyComplete
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.exe
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.pdb
-D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmOtherAccounts.resources
-D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmVendorAccount.resources
-D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frm_ProductionStock.resources
