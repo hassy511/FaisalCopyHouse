@@ -38,8 +38,13 @@
             this.grdSearch = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnViewInvoice = new System.Windows.Forms.Button();
             this.pnlHEADER.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHEADER
@@ -96,7 +101,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdSearch.DefaultCellStyle = dataGridViewCellStyle3;
             this.grdSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdSearch.Location = new System.Drawing.Point(0, 69);
+            this.grdSearch.Location = new System.Drawing.Point(0, 0);
             this.grdSearch.Name = "grdSearch";
             this.grdSearch.ReadOnly = true;
             this.grdSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -126,13 +131,50 @@
             this.imageList1.Images.SetKeyName(0, "icons8-Save as Filled-100.png");
             this.imageList1.Images.SetKeyName(1, "icons8-Cancel Filled-100.png");
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.grdSearch);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 69);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1284, 542);
+            this.panel1.TabIndex = 222;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnViewInvoice);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 583);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1284, 28);
+            this.panel2.TabIndex = 223;
+            // 
+            // btnViewInvoice
+            // 
+            this.btnViewInvoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(24)))), ((int)(((byte)(38)))));
+            this.btnViewInvoice.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnViewInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnViewInvoice.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnViewInvoice.ForeColor = System.Drawing.Color.White;
+            this.btnViewInvoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewInvoice.ImageIndex = 2;
+            this.btnViewInvoice.Location = new System.Drawing.Point(1134, 0);
+            this.btnViewInvoice.Name = "btnViewInvoice";
+            this.btnViewInvoice.Size = new System.Drawing.Size(150, 28);
+            this.btnViewInvoice.TabIndex = 224;
+            this.btnViewInvoice.TabStop = false;
+            this.btnViewInvoice.Text = "PRINT";
+            this.btnViewInvoice.UseVisualStyleBackColor = false;
+            this.btnViewInvoice.Click += new System.EventHandler(this.btnViewInvoice_Click);
+            // 
             // frmFinishedProductsReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1284, 611);
-            this.Controls.Add(this.grdSearch);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.pnlHEADER);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -145,6 +187,8 @@
             this.pnlHEADER.ResumeLayout(false);
             this.pnlHEADER.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,5 +201,8 @@
         private System.Windows.Forms.DataGridView grdSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnViewInvoice;
     }
 }

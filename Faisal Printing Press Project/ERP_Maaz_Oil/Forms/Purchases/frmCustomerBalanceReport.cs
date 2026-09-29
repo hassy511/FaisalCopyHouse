@@ -43,6 +43,27 @@ namespace ERP_Maaz_Oil.Forms
             //grdSearch.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
+        private void PrintReport()
+        {
+            classHelper.nds2.Tables["CustomerBalanceReport"].Clear();
+            foreach (DataGridViewRow rows in grdSearch.Rows)
+            {
+
+                classHelper.dataR = classHelper.nds2.Tables["CustomerBalanceReport"].NewRow();
+                classHelper.dataR["customer"] = rows.Cells["CUSTOMER NAME"].Value.ToString();
+                classHelper.dataR["mobile"] = rows.Cells["MOBILE"].Value.ToString();
+                classHelper.dataR["city"] = rows.Cells["CITY NAME"].Value.ToString();
+                classHelper.dataR["address"] = rows.Cells["ADDRESS"].Value.ToString();
+                classHelper.dataR["amount"] = Convert.ToDecimal(rows.Cells["CUSTOMER BALANCE"].Value.ToString());
+
+                classHelper.nds2.Tables["CustomerBalanceReport"].Rows.Add(classHelper.dataR);
+            }
+
+            classHelper.rpt = new ERP_Maaz_Oil.Forms.Reporting.frmReports();
+            classHelper.rpt.GenerateReport("CustomerBalanceReport", classHelper.nds2);
+            classHelper.rpt.Show();
+        }
+
         //get data from grid on click
         private void load_data_fromGrid(DataGridViewCellEventArgs e)
         {
@@ -466,6 +487,11 @@ namespace ERP_Maaz_Oil.Forms
         private void txtBundles_TextChanged(object sender, EventArgs e)
         {
             //QtyCalculation();
+        }
+
+        private void btnViewInvoice_Click(object sender, EventArgs e)
+        {
+            PrintReport();
         }
     }
 

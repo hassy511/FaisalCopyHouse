@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PaymentRegister));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHEADER = new System.Windows.Forms.Panel();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -47,21 +47,29 @@
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
             this.grpCashPayment = new System.Windows.Forms.GroupBox();
-            this.grpAccountPayment = new System.Windows.Forms.GroupBox();
-            this.cmbReceiving = new SergeUtils.EasyCompletionComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnAccountSave = new System.Windows.Forms.Button();
-            this.cmbPayment = new SergeUtils.EasyCompletionComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtCashAmount = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.rdbPayment = new System.Windows.Forms.RadioButton();
             this.rdbReceive = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
+            this.grpAccountPayment = new System.Windows.Forms.GroupBox();
+            this.txtAccountAmount = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cmbPayment = new SergeUtils.EasyCompletionComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbReceiving = new SergeUtils.EasyCompletionComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnAccountSave = new System.Windows.Forms.Button();
             this.txtPaymentTotal = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCashClosing = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCashOpening = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtAccountDescription = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtCashDescription = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.receiveAccountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.receivingAccountName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,10 +77,7 @@
             this.paymentAccountName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCashAmount = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtAccountAmount = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlHEADER.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -147,7 +152,7 @@
             this.btnCashSave.ForeColor = System.Drawing.Color.White;
             this.btnCashSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCashSave.ImageIndex = 5;
-            this.btnCashSave.Location = new System.Drawing.Point(448, 115);
+            this.btnCashSave.Location = new System.Drawing.Point(448, 148);
             this.btnCashSave.Name = "btnCashSave";
             this.btnCashSave.Size = new System.Drawing.Size(93, 25);
             this.btnCashSave.TabIndex = 124;
@@ -186,9 +191,9 @@
             this.cmbCashAccount.Items.AddRange(new object[] {
             "--SELECT SUPPLIER--",
             "AUTOMART"});
-            this.cmbCashAccount.Location = new System.Drawing.Point(78, 22);
+            this.cmbCashAccount.Location = new System.Drawing.Point(99, 22);
             this.cmbCashAccount.Name = "cmbCashAccount";
-            this.cmbCashAccount.Size = new System.Drawing.Size(463, 25);
+            this.cmbCashAccount.Size = new System.Drawing.Size(439, 25);
             this.cmbCashAccount.TabIndex = 359;
             // 
             // label9
@@ -206,20 +211,20 @@
             // 
             this.gridData.AllowUserToAddRows = false;
             this.gridData.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.gridData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.gridData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gridData.BackgroundColor = System.Drawing.Color.White;
             this.gridData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -228,20 +233,21 @@
             this.paymentAccountId,
             this.paymentAccountName,
             this.amount,
-            this.type});
+            this.type,
+            this.description});
             this.gridData.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridData.DefaultCellStyle = dataGridViewCellStyle6;
-            this.gridData.Location = new System.Drawing.Point(6, 238);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridData.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridData.Location = new System.Drawing.Point(6, 272);
             this.gridData.Name = "gridData";
             this.gridData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.gridData.Size = new System.Drawing.Size(1122, 315);
+            this.gridData.Size = new System.Drawing.Size(1122, 281);
             this.gridData.TabIndex = 361;
             this.gridData.TabStop = false;
             this.gridData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridData_CellClick);
@@ -268,6 +274,8 @@
             // 
             // grpCashPayment
             // 
+            this.grpCashPayment.Controls.Add(this.txtCashDescription);
+            this.grpCashPayment.Controls.Add(this.label12);
             this.grpCashPayment.Controls.Add(this.txtCashAmount);
             this.grpCashPayment.Controls.Add(this.label1);
             this.grpCashPayment.Controls.Add(this.rdbPayment);
@@ -279,13 +287,73 @@
             this.grpCashPayment.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.grpCashPayment.Location = new System.Drawing.Point(6, 83);
             this.grpCashPayment.Name = "grpCashPayment";
-            this.grpCashPayment.Size = new System.Drawing.Size(554, 149);
+            this.grpCashPayment.Size = new System.Drawing.Size(554, 183);
             this.grpCashPayment.TabIndex = 364;
             this.grpCashPayment.TabStop = false;
             this.grpCashPayment.Text = "CASH PAYMENT";
             // 
+            // txtCashAmount
+            // 
+            this.txtCashAmount.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCashAmount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtCashAmount.Location = new System.Drawing.Point(99, 53);
+            this.txtCashAmount.MaxLength = 32000;
+            this.txtCashAmount.Name = "txtCashAmount";
+            this.txtCashAmount.Size = new System.Drawing.Size(439, 25);
+            this.txtCashAmount.TabIndex = 372;
+            this.txtCashAmount.Text = "0";
+            this.txtCashAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCashAmount_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(10, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 15);
+            this.label1.TabIndex = 373;
+            this.label1.Text = "AMOUNT";
+            // 
+            // rdbPayment
+            // 
+            this.rdbPayment.AutoSize = true;
+            this.rdbPayment.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.rdbPayment.Location = new System.Drawing.Point(186, 87);
+            this.rdbPayment.Name = "rdbPayment";
+            this.rdbPayment.Size = new System.Drawing.Size(78, 19);
+            this.rdbPayment.TabIndex = 362;
+            this.rdbPayment.Text = "PAYMENT";
+            this.rdbPayment.UseVisualStyleBackColor = true;
+            // 
+            // rdbReceive
+            // 
+            this.rdbReceive.AutoSize = true;
+            this.rdbReceive.Checked = true;
+            this.rdbReceive.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.rdbReceive.Location = new System.Drawing.Point(104, 87);
+            this.rdbReceive.Name = "rdbReceive";
+            this.rdbReceive.Size = new System.Drawing.Size(69, 19);
+            this.rdbReceive.TabIndex = 361;
+            this.rdbReceive.TabStop = true;
+            this.rdbReceive.Text = "RECEIVE";
+            this.rdbReceive.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(10, 89);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 15);
+            this.label4.TabIndex = 363;
+            this.label4.Text = "PAYMENT";
+            // 
             // grpAccountPayment
             // 
+            this.grpAccountPayment.Controls.Add(this.txtAccountDescription);
+            this.grpAccountPayment.Controls.Add(this.label11);
             this.grpAccountPayment.Controls.Add(this.txtAccountAmount);
             this.grpAccountPayment.Controls.Add(this.label10);
             this.grpAccountPayment.Controls.Add(this.cmbPayment);
@@ -296,10 +364,56 @@
             this.grpAccountPayment.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.grpAccountPayment.Location = new System.Drawing.Point(566, 83);
             this.grpAccountPayment.Name = "grpAccountPayment";
-            this.grpAccountPayment.Size = new System.Drawing.Size(562, 149);
+            this.grpAccountPayment.Size = new System.Drawing.Size(562, 183);
             this.grpAccountPayment.TabIndex = 365;
             this.grpAccountPayment.TabStop = false;
             this.grpAccountPayment.Text = "ACCOUNT PAYMENT";
+            // 
+            // txtAccountAmount
+            // 
+            this.txtAccountAmount.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtAccountAmount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtAccountAmount.Location = new System.Drawing.Point(96, 84);
+            this.txtAccountAmount.MaxLength = 32000;
+            this.txtAccountAmount.Name = "txtAccountAmount";
+            this.txtAccountAmount.Size = new System.Drawing.Size(460, 25);
+            this.txtAccountAmount.TabIndex = 374;
+            this.txtAccountAmount.Text = "0";
+            this.txtAccountAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCashAmount_KeyPress);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(7, 89);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 15);
+            this.label10.TabIndex = 375;
+            this.label10.Text = "AMOUNT";
+            // 
+            // cmbPayment
+            // 
+            this.cmbPayment.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cmbPayment.FormattingEnabled = true;
+            this.cmbPayment.Items.AddRange(new object[] {
+            "--SELECT SUPPLIER--",
+            "AUTOMART"});
+            this.cmbPayment.Location = new System.Drawing.Point(96, 53);
+            this.cmbPayment.Name = "cmbPayment";
+            this.cmbPayment.Size = new System.Drawing.Size(460, 25);
+            this.cmbPayment.TabIndex = 364;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(7, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 15);
+            this.label3.TabIndex = 365;
+            this.label3.Text = "PAYMENT";
             // 
             // cmbReceiving
             // 
@@ -308,9 +422,9 @@
             this.cmbReceiving.Items.AddRange(new object[] {
             "--SELECT SUPPLIER--",
             "AUTOMART"});
-            this.cmbReceiving.Location = new System.Drawing.Point(78, 22);
+            this.cmbReceiving.Location = new System.Drawing.Point(96, 22);
             this.cmbReceiving.Name = "cmbReceiving";
-            this.cmbReceiving.Size = new System.Drawing.Size(478, 25);
+            this.cmbReceiving.Size = new System.Drawing.Size(460, 25);
             this.cmbReceiving.TabIndex = 362;
             // 
             // label2
@@ -332,71 +446,13 @@
             this.btnAccountSave.ForeColor = System.Drawing.Color.White;
             this.btnAccountSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccountSave.ImageIndex = 5;
-            this.btnAccountSave.Location = new System.Drawing.Point(463, 115);
+            this.btnAccountSave.Location = new System.Drawing.Point(463, 148);
             this.btnAccountSave.Name = "btnAccountSave";
             this.btnAccountSave.Size = new System.Drawing.Size(93, 25);
             this.btnAccountSave.TabIndex = 361;
             this.btnAccountSave.Text = "SAVE";
             this.btnAccountSave.UseVisualStyleBackColor = false;
             this.btnAccountSave.Click += new System.EventHandler(this.btnAccountSave_Click);
-            // 
-            // cmbPayment
-            // 
-            this.cmbPayment.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.cmbPayment.FormattingEnabled = true;
-            this.cmbPayment.Items.AddRange(new object[] {
-            "--SELECT SUPPLIER--",
-            "AUTOMART"});
-            this.cmbPayment.Location = new System.Drawing.Point(78, 53);
-            this.cmbPayment.Name = "cmbPayment";
-            this.cmbPayment.Size = new System.Drawing.Size(478, 25);
-            this.cmbPayment.TabIndex = 364;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(7, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 15);
-            this.label3.TabIndex = 365;
-            this.label3.Text = "PAYMENT";
-            // 
-            // rdbPayment
-            // 
-            this.rdbPayment.AutoSize = true;
-            this.rdbPayment.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.rdbPayment.Location = new System.Drawing.Point(181, 87);
-            this.rdbPayment.Name = "rdbPayment";
-            this.rdbPayment.Size = new System.Drawing.Size(78, 19);
-            this.rdbPayment.TabIndex = 362;
-            this.rdbPayment.Text = "PAYMENT";
-            this.rdbPayment.UseVisualStyleBackColor = true;
-            // 
-            // rdbReceive
-            // 
-            this.rdbReceive.AutoSize = true;
-            this.rdbReceive.Checked = true;
-            this.rdbReceive.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.rdbReceive.Location = new System.Drawing.Point(82, 87);
-            this.rdbReceive.Name = "rdbReceive";
-            this.rdbReceive.Size = new System.Drawing.Size(69, 19);
-            this.rdbReceive.TabIndex = 361;
-            this.rdbReceive.TabStop = true;
-            this.rdbReceive.Text = "RECEIVE";
-            this.rdbReceive.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(10, 89);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 15);
-            this.label4.TabIndex = 363;
-            this.label4.Text = "PAYMENT";
             // 
             // txtPaymentTotal
             // 
@@ -470,6 +526,48 @@
             this.label8.TabIndex = 371;
             this.label8.Text = "CASH OPENING";
             // 
+            // txtAccountDescription
+            // 
+            this.txtAccountDescription.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtAccountDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtAccountDescription.Location = new System.Drawing.Point(96, 115);
+            this.txtAccountDescription.MaxLength = 32000;
+            this.txtAccountDescription.Name = "txtAccountDescription";
+            this.txtAccountDescription.Size = new System.Drawing.Size(460, 25);
+            this.txtAccountDescription.TabIndex = 376;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(7, 120);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 15);
+            this.label11.TabIndex = 377;
+            this.label11.Text = "DESCRIPTION";
+            // 
+            // txtCashDescription
+            // 
+            this.txtCashDescription.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCashDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtCashDescription.Location = new System.Drawing.Point(99, 115);
+            this.txtCashDescription.MaxLength = 32000;
+            this.txtCashDescription.Name = "txtCashDescription";
+            this.txtCashDescription.Size = new System.Drawing.Size(439, 25);
+            this.txtCashDescription.TabIndex = 378;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(10, 120);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(83, 15);
+            this.label12.TabIndex = 379;
+            this.label12.Text = "DESCRIPTION";
+            // 
             // id
             // 
             this.id.HeaderText = "ID";
@@ -516,51 +614,11 @@
             this.type.ReadOnly = true;
             this.type.Visible = false;
             // 
-            // txtCashAmount
+            // description
             // 
-            this.txtCashAmount.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCashAmount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtCashAmount.Location = new System.Drawing.Point(78, 53);
-            this.txtCashAmount.MaxLength = 32000;
-            this.txtCashAmount.Name = "txtCashAmount";
-            this.txtCashAmount.Size = new System.Drawing.Size(463, 25);
-            this.txtCashAmount.TabIndex = 372;
-            this.txtCashAmount.Text = "0";
-            this.txtCashAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCashAmount_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(10, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 15);
-            this.label1.TabIndex = 373;
-            this.label1.Text = "AMOUNT";
-            // 
-            // txtAccountAmount
-            // 
-            this.txtAccountAmount.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtAccountAmount.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtAccountAmount.Location = new System.Drawing.Point(78, 84);
-            this.txtAccountAmount.MaxLength = 32000;
-            this.txtAccountAmount.Name = "txtAccountAmount";
-            this.txtAccountAmount.Size = new System.Drawing.Size(478, 25);
-            this.txtAccountAmount.TabIndex = 374;
-            this.txtAccountAmount.Text = "0";
-            this.txtAccountAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCashAmount_KeyPress);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(7, 89);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 15);
-            this.label10.TabIndex = 375;
-            this.label10.Text = "AMOUNT";
+            this.description.HeaderText = "DESCRIPTION";
+            this.description.Name = "description";
+            this.description.ReadOnly = true;
             // 
             // frm_PaymentRegister
             // 
@@ -635,6 +693,14 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCashOpening;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtCashAmount;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtAccountAmount;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtAccountDescription;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtCashDescription;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn receiveAccountId;
         private System.Windows.Forms.DataGridViewTextBoxColumn receivingAccountName;
@@ -642,9 +708,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn paymentAccountName;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn type;
-        private System.Windows.Forms.TextBox txtCashAmount;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtAccountAmount;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn description;
     }
 }

@@ -51,11 +51,11 @@ namespace ERP_Maaz_Oil.Forms
         private void GetData()
         {
             classHelper.query = @" SELECT A.ID,A.[DATE],A.RECEIVING_ACCOUNT_ID,B.COA_NAME AS [RECEIVING ACCOUNT],
-            A.PAYMENT_ACCOUNT_ID,C.COA_NAME AS [PAYMENT ACCOUNT],A.AMOUNT,A.TRANSACTION_TYPE
+            A.PAYMENT_ACCOUNT_ID,C.COA_NAME AS [PAYMENT ACCOUNT],A.AMOUNT,A.TRANSACTION_TYPE,A.[DESCRIPTION]
             FROM PAYMENT_REGISTER A
             INNER JOIN COA B ON A.RECEIVING_ACCOUNT_ID = B.COA_ID
             INNER JOIN COA C ON A.PAYMENT_ACCOUNT_ID = C.COA_ID
-            WHERE A.[DATE] = '"+ Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + @"'
+            WHERE A.[DATE] = '" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + @"'
             ORDER BY A.ID";
 
             if (Classes.Helper.conn.State == System.Data.ConnectionState.Closed) { Classes.Helper.conn.Open(); }
@@ -69,7 +69,7 @@ namespace ERP_Maaz_Oil.Forms
                 {
                     while (classHelper.dr.Read())
                     {
-                        gridData.Rows.Add(classHelper.dr["ID"].ToString(), classHelper.dr["RECEIVING_ACCOUNT_ID"].ToString(), classHelper.dr["RECEIVING ACCOUNT"].ToString(), classHelper.dr["PAYMENT_ACCOUNT_ID"].ToString(), classHelper.dr["PAYMENT ACCOUNT"].ToString(), classHelper.dr["AMOUNT"].ToString(), classHelper.dr["TRANSACTION_TYPE"].ToString());
+                        gridData.Rows.Add(classHelper.dr["ID"].ToString(), classHelper.dr["RECEIVING_ACCOUNT_ID"].ToString(), classHelper.dr["RECEIVING ACCOUNT"].ToString(), classHelper.dr["PAYMENT_ACCOUNT_ID"].ToString(), classHelper.dr["PAYMENT ACCOUNT"].ToString(), classHelper.dr["AMOUNT"].ToString(), classHelper.dr["TRANSACTION_TYPE"].ToString(), classHelper.dr["DESCRIPTION"].ToString());
                     }
                 }
             }
@@ -108,6 +108,7 @@ namespace ERP_Maaz_Oil.Forms
                         RECEIVING_ACCOUNT_ID = '" + Classes.Helper.cashId + @"',
                         PAYMENT_ACCOUNT_ID = '" + cmbCashAccount.SelectedValue.ToString() + @"',
                         AMOUNT = '" + classHelper.AvoidInjection(txtCashAmount.Text) + @"',
+                        [DESCRIPTION] = '" + classHelper.AvoidInjection(txtCashDescription.Text) + @"',
                         TRANSACTION_TYPE = 'C',      
                         MODIFICATION_DATE = GETDATE(),
                         MODIFIED_BY = '" + Classes.Helper.userId + @"'
@@ -115,13 +116,13 @@ namespace ERP_Maaz_Oil.Forms
                  END
                  ELSE
                  BEGIN
-                     INSERT INTO PAYMENT_REGISTER (DATE,RECEIVING_ACCOUNT_ID,PAYMENT_ACCOUNT_ID,AMOUNT,TRANSACTION_TYPE,CREATION_DATE,CREATED_BY) 
+                     INSERT INTO PAYMENT_REGISTER (DATE,RECEIVING_ACCOUNT_ID,PAYMENT_ACCOUNT_ID,AMOUNT,TRANSACTION_TYPE,CREATION_DATE,CREATED_BY,[DESCRIPTION]) 
                      VALUES (
                     '" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + @"',
                     '" + Classes.Helper.cashId + @"',
                     '" + cmbCashAccount.SelectedValue.ToString() + @"',
                     '" + classHelper.AvoidInjection(txtCashAmount.Text) + @"',
-                    'C', GETDATE(),'" + Classes.Helper.userId + @"');
+                    'C', GETDATE(),'" + Classes.Helper.userId + @"','" + classHelper.AvoidInjection(txtCashDescription.Text) + @"');
                  END";
 
                     classHelper.query += @" DELETE FROM LEDGERS WHERE REF_ID = " + recordId + @" AND ENTRY_OF = 'PAYMENT REGISTER'";
@@ -129,11 +130,11 @@ namespace ERP_Maaz_Oil.Forms
                     classHelper.query += @" 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                             VALUES('" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + "','" + Classes.Helper.cashId +
-                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR,"+masterId+ ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), '" + txtCashAmount.Text + "',0,'PAYMENT VOUCHER','" + Classes.Helper.userId + @"',GETDATE(),1);
+                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR,"+masterId+ ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), '" + txtCashAmount.Text + "',0,'PAYMENT VOUCHER / "+txtCashDescription.Text+"','" + Classes.Helper.userId + @"',GETDATE(),1);
 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                             VALUES('" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + "','" + cmbCashAccount.SelectedValue.ToString() +
-                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), 0,'" + txtCashAmount.Text + "','PAYMENT VOUCHER','" + Classes.Helper.userId + @"',GETDATE(),1);";
+                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), 0,'" + txtCashAmount.Text + "','PAYMENT VOUCHER / " + txtCashDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);";
 
                     classHelper.query += @" COMMIT TRANSACTION 
                      END TRY 
@@ -147,6 +148,7 @@ namespace ERP_Maaz_Oil.Forms
                         classHelper.ShowMessageBox("Record Saved Successfully.", "Information");
                         cmbCashAccount.SelectedIndex = 0;
                         txtCashAmount.Text = "0";
+                        txtCashDescription.Clear();
                         GetData();
                         TotalSum();
                         recordId = 0;
@@ -169,6 +171,7 @@ namespace ERP_Maaz_Oil.Forms
                         RECEIVING_ACCOUNT_ID = '" + cmbCashAccount.SelectedValue.ToString() + @"',
                         PAYMENT_ACCOUNT_ID = '" + Classes.Helper.cashId + @"',
                         AMOUNT = '" + classHelper.AvoidInjection(txtCashAmount.Text) + @"',
+                        [DESCRIPTION] = '" + classHelper.AvoidInjection(txtCashDescription.Text) + @"',
                         TRANSACTION_TYPE = 'C',      
                         MODIFICATION_DATE = GETDATE(),
                         MODIFIED_BY = '" + Classes.Helper.userId + @"'
@@ -176,13 +179,13 @@ namespace ERP_Maaz_Oil.Forms
                  END
                  ELSE
                  BEGIN
-                     INSERT INTO PAYMENT_REGISTER (DATE,RECEIVING_ACCOUNT_ID,PAYMENT_ACCOUNT_ID,AMOUNT,TRANSACTION_TYPE,CREATION_DATE,CREATED_BY) 
+                     INSERT INTO PAYMENT_REGISTER (DATE,RECEIVING_ACCOUNT_ID,PAYMENT_ACCOUNT_ID,AMOUNT,TRANSACTION_TYPE,CREATION_DATE,CREATED_BY,[DESCRIPTION]) 
                      VALUES (
                     '" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + @"',
                     '" + cmbCashAccount.SelectedValue.ToString() + @"',
                     '" + Classes.Helper.cashId + @"',
                     '" + classHelper.AvoidInjection(txtCashAmount.Text) + @"',
-                    'C', GETDATE(),'" + Classes.Helper.userId + @"');
+                    'C', GETDATE(),'" + Classes.Helper.userId + @"','" + classHelper.AvoidInjection(txtCashDescription.Text) + @"');
                  END";
 
                     classHelper.query += @" DELETE FROM LEDGERS WHERE REF_ID = " + recordId + @" AND ENTRY_OF = 'PAYMENT REGISTER'";
@@ -190,11 +193,11 @@ namespace ERP_Maaz_Oil.Forms
                     classHelper.query += @" 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                             VALUES('" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + "','" + cmbCashAccount.SelectedValue.ToString() +
-                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), '" + txtCashAmount.Text + "',0,'PAYMENT VOUCHER','" + Classes.Helper.userId + @"',GETDATE(),1);
+                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), '" + txtCashAmount.Text + "',0,'PAYMENT VOUCHER / " + txtCashDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);
 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                             VALUES('" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + "','" + Classes.Helper.cashId +
-                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), 0,'" + txtCashAmount.Text + "','PAYMENT VOUCHER','" + Classes.Helper.userId + @"',GETDATE(),1);";
+                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), 0,'" + txtCashAmount.Text + "','PAYMENT VOUCHER / " + txtCashDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);";
 
                     classHelper.query += @" COMMIT TRANSACTION 
                      END TRY 
@@ -208,6 +211,7 @@ namespace ERP_Maaz_Oil.Forms
                         classHelper.ShowMessageBox("Record Saved Successfully.", "Information");
                         cmbCashAccount.SelectedIndex = 0;
                         txtCashAmount.Text = "0";
+                        txtCashDescription.Clear();
                         GetData();
                         TotalSum();
                         recordId = 0;
@@ -246,6 +250,7 @@ namespace ERP_Maaz_Oil.Forms
                         RECEIVING_ACCOUNT_ID = '" + cmbReceiving.SelectedValue.ToString() + @"',
                         PAYMENT_ACCOUNT_ID = '" + cmbPayment.SelectedValue.ToString() + @"',
                         AMOUNT = '" + classHelper.AvoidInjection(txtAccountAmount.Text) + @"',
+                        [DESCRIPTION] = '" + classHelper.AvoidInjection(txtAccountDescription.Text) + @"',
                         TRANSACTION_TYPE = 'A',      
                         MODIFICATION_DATE = GETDATE(),
                         MODIFIED_BY = '" + Classes.Helper.userId + @"'
@@ -253,13 +258,13 @@ namespace ERP_Maaz_Oil.Forms
                  END
                  ELSE
                  BEGIN
-                     INSERT INTO PAYMENT_REGISTER (DATE,RECEIVING_ACCOUNT_ID,PAYMENT_ACCOUNT_ID,AMOUNT,TRANSACTION_TYPE,CREATION_DATE,CREATED_BY) 
+                     INSERT INTO PAYMENT_REGISTER (DATE,RECEIVING_ACCOUNT_ID,PAYMENT_ACCOUNT_ID,AMOUNT,TRANSACTION_TYPE,CREATION_DATE,CREATED_BY,[DESCRIPTION]) 
                      VALUES (
                     '" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + @"',
                     '" + cmbReceiving.SelectedValue.ToString() + @"',
                     '" + cmbPayment.SelectedValue.ToString() + @"',
                     '" + classHelper.AvoidInjection(txtAccountAmount.Text) + @"',
-                    'A', GETDATE(),'" + Classes.Helper.userId + @"');
+                    'A', GETDATE(),'" + Classes.Helper.userId + @"','" + classHelper.AvoidInjection(txtAccountDescription.Text) + @"');
                  END";
 
                 classHelper.query += @" DELETE FROM LEDGERS WHERE REF_ID = " + recordId + @" AND ENTRY_OF = 'PAYMENT REGISTER'";
@@ -267,11 +272,11 @@ namespace ERP_Maaz_Oil.Forms
                 classHelper.query += @" 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                             VALUES('" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + "','" + cmbReceiving.SelectedValue.ToString() +
-                                "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), '" + txtAccountAmount.Text + "',0,'PAYMENT VOUCHER','" + Classes.Helper.userId + @"',GETDATE(),1);
+                                "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), '" + txtAccountAmount.Text + "',0,'PAYMENT VOUCHER / " + txtAccountDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);
 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                             VALUES('" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + "','" + cmbPayment.SelectedValue.ToString() +
-                                "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), 0,'" + txtAccountAmount.Text + "','PAYMENT VOUCHER','" + Classes.Helper.userId + @"',GETDATE(),1);";
+                                "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), 0,'" + txtAccountAmount.Text + "','PAYMENT VOUCHER / " + txtAccountDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);";
 
                 classHelper.query += @" COMMIT TRANSACTION 
                      END TRY 
@@ -286,6 +291,7 @@ namespace ERP_Maaz_Oil.Forms
                     cmbReceiving.SelectedIndex = 0;
                     cmbPayment.SelectedIndex = 0;
                     txtAccountAmount.Text = "0";
+                    txtAccountDescription.Clear();
                     GetData();
                     TotalSum();
                     recordId = 0;
@@ -334,12 +340,14 @@ namespace ERP_Maaz_Oil.Forms
                     {
                         cmbCashAccount.SelectedValue = row.Cells["paymentAccountId"].Value.ToString();
                         txtCashAmount.Text = row.Cells["amount"].Value.ToString();
+                        txtCashDescription.Text = row.Cells["description"].Value.ToString();
                         rdbReceive.Checked = true;
                     }
                     else
                     {
                         cmbCashAccount.SelectedValue = row.Cells["receiveAccountId"].Value.ToString();
                         txtCashAmount.Text = row.Cells["amount"].Value.ToString();
+                        txtCashDescription.Text = row.Cells["description"].Value.ToString();
                         rdbPayment.Checked = true;
                     }
                 }
@@ -347,6 +355,7 @@ namespace ERP_Maaz_Oil.Forms
                     cmbReceiving.SelectedValue = row.Cells["receiveAccountId"].Value.ToString();
                     cmbPayment.SelectedValue = row.Cells["paymentAccountId"].Value.ToString();
                     txtAccountAmount.Text = row.Cells["amount"].Value.ToString();
+                    txtAccountDescription.Text = row.Cells["description"].Value.ToString();
                 }
                 gridData.Rows.RemoveAt(e.RowIndex);
                 TotalSum();

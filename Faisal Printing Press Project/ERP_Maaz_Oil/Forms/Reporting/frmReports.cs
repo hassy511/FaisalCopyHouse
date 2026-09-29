@@ -27,6 +27,18 @@ namespace ERP_Maaz_Oil.Forms.Reporting
                 rptPO.SetDataSource(ds.Tables["PO_M"]);
 
                 crystalReportViewer1.ReportSource = rptPO;
+            }            
+            else if (reportName == "CustomerBalanceReport")
+            {
+                Reports.CustomerBalanceReport rpt = new Reports.CustomerBalanceReport();
+                rpt.SetDataSource(ds.Tables["CustomerBalanceReport"]);
+                crystalReportViewer1.ReportSource = rpt;
+            }
+            else if (reportName == "FinishedStockReport")
+            {
+                Reports.FinishedStockReport rpt = new Reports.FinishedStockReport();
+                rpt.SetDataSource(ds.Tables["FinishedStockReport"]);
+                crystalReportViewer1.ReportSource = rpt;
             }
             else if (reportName == "SalesInvoiceOriginal")
             {

@@ -36,6 +36,36 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="FinishedStockReport" msprop:Generator_TableClassName="FinishedStockReportDataTable" msprop:Generator_TableVarName="tableFinishedStockReport" msprop:Generator_RowChangedName="FinishedStockReportRowChanged" msprop:Generator_TablePropName="FinishedStockReport" msprop:Generator_RowDeletingName="FinishedStockReportRowDeleting" msprop:Generator_RowChangingName="FinishedStockReportRowChanging" msprop:Generator_RowEvHandlerName="FinishedStockReportRowChangeEventHandler" msprop:Generator_RowDeletedName="FinishedStockReportRowDeleted" msprop:Generator_RowClassName="FinishedStockReportRow" msprop:Generator_UserTableName="FinishedStockReport" msprop:Generator_RowEvArgName="FinishedStockReportRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="brand" msprop:Generator_ColumnVarNameInTable="columnbrand" msprop:Generator_ColumnPropNameInRow="brand" msprop:Generator_ColumnPropNameInTable="brandColumn" msprop:Generator_UserColumnName="brand" type="xs:string" minOccurs="0" />
+              <xs:element name="openingQty" msprop:Generator_ColumnVarNameInTable="columnopeningQty" msprop:Generator_ColumnPropNameInRow="openingQty" msprop:Generator_ColumnPropNameInTable="openingQtyColumn" msprop:Generator_UserColumnName="openingQty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="openingAmount" msprop:Generator_ColumnVarNameInTable="columnopeningAmount" msprop:Generator_ColumnPropNameInRow="openingAmount" msprop:Generator_ColumnPropNameInTable="openingAmountColumn" msprop:Generator_UserColumnName="openingAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="productionQty" msprop:Generator_ColumnVarNameInTable="columnproductionQty" msprop:Generator_ColumnPropNameInRow="productionQty" msprop:Generator_ColumnPropNameInTable="productionQtyColumn" msprop:Generator_UserColumnName="productionQty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="productionAmount" msprop:Generator_ColumnVarNameInTable="columnproductionAmount" msprop:Generator_ColumnPropNameInRow="productionAmount" msprop:Generator_ColumnPropNameInTable="productionAmountColumn" msprop:Generator_UserColumnName="productionAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="salesQty" msprop:Generator_ColumnVarNameInTable="columnsalesQty" msprop:Generator_ColumnPropNameInRow="salesQty" msprop:Generator_ColumnPropNameInTable="salesQtyColumn" msprop:Generator_UserColumnName="salesQty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="salesAmount" msprop:Generator_ColumnVarNameInTable="columnsalesAmount" msprop:Generator_ColumnPropNameInRow="salesAmount" msprop:Generator_ColumnPropNameInTable="salesAmountColumn" msprop:Generator_UserColumnName="salesAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="pcsPerBundle" msprop:Generator_ColumnVarNameInTable="columnpcsPerBundle" msprop:Generator_ColumnPropNameInRow="pcsPerBundle" msprop:Generator_ColumnPropNameInTable="pcsPerBundleColumn" msprop:Generator_UserColumnName="pcsPerBundle" type="xs:decimal" minOccurs="0" />
+              <xs:element name="balanceBundle" msprop:Generator_ColumnVarNameInTable="columnbalanceBundle" msprop:Generator_ColumnPropNameInRow="balanceBundle" msprop:Generator_ColumnPropNameInTable="balanceBundleColumn" msprop:Generator_UserColumnName="balanceBundle" type="xs:decimal" minOccurs="0" />
+              <xs:element name="looseQty" msprop:Generator_ColumnVarNameInTable="columnlooseQty" msprop:Generator_ColumnPropNameInRow="looseQty" msprop:Generator_ColumnPropNameInTable="looseQtyColumn" msprop:Generator_UserColumnName="looseQty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="balanceQty" msprop:Generator_ColumnVarNameInTable="columnbalanceQty" msprop:Generator_ColumnPropNameInRow="balanceQty" msprop:Generator_ColumnPropNameInTable="balanceQtyColumn" msprop:Generator_UserColumnName="balanceQty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="rate" msprop:Generator_ColumnVarNameInTable="columnrate" msprop:Generator_ColumnPropNameInRow="rate" msprop:Generator_ColumnPropNameInTable="rateColumn" msprop:Generator_UserColumnName="rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="balanceAmount" msprop:Generator_ColumnVarNameInTable="columnbalanceAmount" msprop:Generator_ColumnPropNameInRow="balanceAmount" msprop:Generator_ColumnPropNameInTable="balanceAmountColumn" msprop:Generator_UserColumnName="balanceAmount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CustomerBalanceReport" msprop:Generator_TableClassName="CustomerBalanceReportDataTable" msprop:Generator_TableVarName="tableCustomerBalanceReport" msprop:Generator_TablePropName="CustomerBalanceReport" msprop:Generator_RowDeletingName="CustomerBalanceReportRowDeleting" msprop:Generator_RowChangingName="CustomerBalanceReportRowChanging" msprop:Generator_RowEvHandlerName="CustomerBalanceReportRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerBalanceReportRowDeleted" msprop:Generator_UserTableName="CustomerBalanceReport" msprop:Generator_RowChangedName="CustomerBalanceReportRowChanged" msprop:Generator_RowEvArgName="CustomerBalanceReportRowChangeEvent" msprop:Generator_RowClassName="CustomerBalanceReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="customer" msprop:Generator_ColumnVarNameInTable="columncustomer" msprop:Generator_ColumnPropNameInRow="customer" msprop:Generator_ColumnPropNameInTable="customerColumn" msprop:Generator_UserColumnName="customer" type="xs:string" minOccurs="0" />
+              <xs:element name="mobile" msprop:Generator_ColumnVarNameInTable="columnmobile" msprop:Generator_ColumnPropNameInRow="mobile" msprop:Generator_ColumnPropNameInTable="mobileColumn" msprop:Generator_UserColumnName="mobile" type="xs:string" minOccurs="0" />
+              <xs:element name="city" msprop:Generator_ColumnVarNameInTable="columncity" msprop:Generator_ColumnPropNameInRow="city" msprop:Generator_ColumnPropNameInTable="cityColumn" msprop:Generator_UserColumnName="city" type="xs:string" minOccurs="0" />
+              <xs:element name="address" msprop:Generator_ColumnVarNameInTable="columnaddress" msprop:Generator_ColumnPropNameInRow="address" msprop:Generator_ColumnPropNameInTable="addressColumn" msprop:Generator_UserColumnName="address" type="xs:string" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

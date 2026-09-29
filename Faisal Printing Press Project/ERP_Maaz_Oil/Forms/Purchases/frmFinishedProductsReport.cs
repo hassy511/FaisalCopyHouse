@@ -56,8 +56,8 @@ namespace ERP_Maaz_Oil.Forms
             FROM PRODUCT_MASTER B
             INNER JOIN PRODUCT_CATEGORY C ON C.P_CATEGORY_ID = B.BRAND_ID  
         )
-        SELECT PM_ID,BRAND,[OPENING_QTY],[OPENING AMOUNT],
-        [PRODUCTION QTY],[PRODUCTION AMOUNT],[SALES QTY],[SALES AMOUNT],
+        SELECT PM_ID,BRAND,[OPENING_QTY],ROUND([OPENING AMOUNT],0) AS [OPENING AMOUNT],
+        [PRODUCTION QTY],ROUND([PRODUCTION AMOUNT],0) AS [PRODUCTION AMOUNT],[SALES QTY],ROUND([SALES AMOUNT],0) AS [SALES AMOUNT],
         [PCS PER BUNDLE],
 
         CASE WHEN [PCS PER BUNDLE] = 0 THEN 0 ELSE 
@@ -75,6 +75,35 @@ namespace ERP_Maaz_Oil.Forms
             classHelper.LoadGrid(grdSearch, classHelper.query);
             grdSearch.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //grdSearch.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
+
+        private void PrintReport()
+        {
+            classHelper.nds2.Tables["FinishedStockReport"].Clear();
+            foreach (DataGridViewRow rows in grdSearch.Rows)
+            {
+
+                classHelper.dataR = classHelper.nds2.Tables["FinishedStockReport"].NewRow();
+                classHelper.dataR["brand"] = rows.Cells["BRAND"].Value.ToString();
+                classHelper.dataR["openingQty"] = Convert.ToDecimal(rows.Cells["OPENING_QTY"].Value.ToString());
+                classHelper.dataR["openingAmount"] = Convert.ToDecimal(rows.Cells["OPENING AMOUNT"].Value.ToString());
+                classHelper.dataR["productionQty"] = Convert.ToDecimal(rows.Cells["PRODUCTION QTY"].Value.ToString());
+                classHelper.dataR["productionAmount"] = Convert.ToDecimal(rows.Cells["PRODUCTION AMOUNT"].Value.ToString());
+                classHelper.dataR["salesQty"] = Convert.ToDecimal(rows.Cells["SALES QTY"].Value.ToString());
+                classHelper.dataR["salesAmount"] = Convert.ToDecimal(rows.Cells["SALES AMOUNT"].Value.ToString());
+                classHelper.dataR["pcsPerBundle"] = Convert.ToDecimal(rows.Cells["PCS PER BUNDLE"].Value.ToString());
+                classHelper.dataR["balanceBundle"] = Convert.ToDecimal(rows.Cells["BALANCE BUNDLE"].Value.ToString());
+                classHelper.dataR["looseQty"] = Convert.ToDecimal(rows.Cells["LOOSE QTY"].Value.ToString());
+                classHelper.dataR["balanceQty"] = Convert.ToDecimal(rows.Cells["BALANCE QTY"].Value.ToString());
+                classHelper.dataR["rate"] = Convert.ToDecimal(rows.Cells["RATE"].Value.ToString());
+                classHelper.dataR["balanceAmount"] = Convert.ToDecimal(rows.Cells["BALANCE AMOUNT"].Value.ToString());
+
+                classHelper.nds2.Tables["FinishedStockReport"].Rows.Add(classHelper.dataR);
+            }
+
+            classHelper.rpt = new ERP_Maaz_Oil.Forms.Reporting.frmReports();
+            classHelper.rpt.GenerateReport("FinishedStockReport", classHelper.nds2);
+            classHelper.rpt.Show();
         }
 
         //get data from grid on click
@@ -498,6 +527,11 @@ namespace ERP_Maaz_Oil.Forms
         private void txtBundles_TextChanged(object sender, EventArgs e)
         {
             //QtyCalculation();
+        }
+
+        private void btnViewInvoice_Click(object sender, EventArgs e)
+        {
+            PrintReport();
         }
     }
 
