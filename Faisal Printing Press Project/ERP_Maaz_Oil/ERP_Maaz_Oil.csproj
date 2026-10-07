@@ -323,6 +323,18 @@
     <Compile Include="Forms\LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Purchases\frmOtherAccountBalanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchases\frmOtherAccountBalanceReport.Designer.cs">
+      <DependentUpon>frmOtherAccountBalanceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchases\frmVendorBalanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchases\frmVendorBalanceReport.Designer.cs">
+      <DependentUpon>frmVendorBalanceReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Purchases\frmCustomerBalanceReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -661,6 +673,18 @@
     </Compile>
     <Compile Include="Forms\Reporting\frm_JournalVoucherReport.Designer.cs">
       <DependentUpon>frm_JournalVoucherReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reporting\Reports\OtherAccountBalanceReport.cs">
+      <DependentUpon>OtherAccountBalanceReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Forms\Reporting\Reports\VendorBalanceReport.cs">
+      <DependentUpon>VendorBalanceReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Forms\Reporting\Reports\CustomerProfileReport.cs">
       <AutoGen>True</AutoGen>
@@ -1786,6 +1810,12 @@
     <EmbeddedResource Include="Forms\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchases\frmOtherAccountBalanceReport.resx">
+      <DependentUpon>frmOtherAccountBalanceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchases\frmVendorBalanceReport.resx">
+      <DependentUpon>frmVendorBalanceReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Purchases\frmCustomerBalanceReport.resx">
       <DependentUpon>frmCustomerBalanceReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -1957,6 +1987,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reporting\frm_JournalVoucherReport.resx">
       <DependentUpon>frm_JournalVoucherReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reporting\Reports\OtherAccountBalanceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OtherAccountBalanceReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reporting\Reports\VendorBalanceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VendorBalanceReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reporting\Reports\CustomerProfileReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

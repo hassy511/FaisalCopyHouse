@@ -658,3 +658,5 @@ D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.csproj.CopyComplete
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.exe
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.pdb
+D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmOtherAccountBalanceReport.resources
+D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmVendorBalanceReport.resources

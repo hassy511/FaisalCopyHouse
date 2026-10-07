@@ -27,7 +27,19 @@ namespace ERP_Maaz_Oil.Forms.Reporting
                 rptPO.SetDataSource(ds.Tables["PO_M"]);
 
                 crystalReportViewer1.ReportSource = rptPO;
-            }            
+            }
+            else if (reportName == "OtherAccountBalanceReport")
+            {
+                Reports.OtherAccountBalanceReport rpt = new Reports.OtherAccountBalanceReport();
+                rpt.SetDataSource(ds.Tables["CustomerBalanceReport"]);
+                crystalReportViewer1.ReportSource = rpt;
+            }
+            else if (reportName == "VendorBalanceReport")
+            {
+                Reports.VendorBalanceReport rpt = new Reports.VendorBalanceReport();
+                rpt.SetDataSource(ds.Tables["CustomerBalanceReport"]);
+                crystalReportViewer1.ReportSource = rpt;
+            }
             else if (reportName == "CustomerBalanceReport")
             {
                 Reports.CustomerBalanceReport rpt = new Reports.CustomerBalanceReport();

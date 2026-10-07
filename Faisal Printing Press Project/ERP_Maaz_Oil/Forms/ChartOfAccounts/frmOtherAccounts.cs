@@ -102,7 +102,7 @@ namespace ERP_Maaz_Oil.Forms
             try
             {
                 LoadGrid();
-                classHelper.LoadControlAccount(cmbControlAccount, "5,6,10");
+                classHelper.LoadControlAccount(cmbControlAccount, "5,6,10,27");
                 //cmbControlAccount.SelectedValue = 21;
                 classHelper.LoadCoaCities(cmbCity);
             }
