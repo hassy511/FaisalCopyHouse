@@ -328,6 +328,7 @@
             this.txtTotal.Size = new System.Drawing.Size(275, 25);
             this.txtTotal.TabIndex = 360;
             this.txtTotal.Text = "0";
+            this.txtTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotal_KeyPress);
             // 
             // frm_Purchases
             // 

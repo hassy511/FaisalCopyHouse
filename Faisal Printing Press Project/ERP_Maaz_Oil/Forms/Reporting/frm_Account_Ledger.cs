@@ -444,47 +444,47 @@ namespace ERP_Maaz_Oil.Forms.Reporting
 
             //QTY@Rate/Material Name/Payment days/Vehicle#
 
-            classHelper.query = @"SELECT C.[DATE] AS [DATE],
-A.BANK_NAME+' CHQ DATE: '+CONVERT(VARCHAR(50),FORMAT(A.CHQ_DATE,'dd/MM/yyyy'))+' CHQ #'+A.CHQ_NO+' '+C.[DESCRIPTION] AS [DESCRIPTION],A.AMOUNT,'PDC CHQ' AS [TYPE]
-            FROM CHQ A 
-            INNER JOIN DAY_BOOK_CHQ B ON A.CHQ_ID = B.CHQ_ID and [TYPE] = 'R'
-            INNER JOIN DAY_BOOK C ON B.DAY_BOOK_ID = C.DAY_BOOK_ID
-            WHERE A.[REC_AC] = '" + cmbACCOUNT.SelectedValue.ToString() + @"' AND A.[STATUS] = 1
-            UNION ALL
-            SELECT [DATE],PV_NO+'/'+BANK+'/'+BR_CODE+'/'+REF_AC+'/'+INSTRUMENT_NO AS [DESCRIPTION],AMOUNT,'PENDING PAYMENT' AS [TYPE]
-            FROM PAYMENT_TRANSFER
-            WHERE REC_AC = '" + cmbACCOUNT.SelectedValue.ToString() + @"' AND [STATUS] = 0
-            UNION ALL
-            SELECT [DATE],PV_NO+'/'+BANK+'/'+BR_CODE+'/'+REF_AC+'/'+INSTRUMENT_NO AS [DESCRIPTION],AMOUNT,'PENDING PAYMENT' AS [TYPE]
-            FROM PAYMENT_TRANSFER
-            WHERE PAY_AC = '" + cmbACCOUNT.SelectedValue.ToString() + @"' AND [STATUS] = 0";
-            Classes.Helper.conn.Open();
-            try
-            {
-                classHelper.cmd = new SqlCommand(classHelper.query, Classes.Helper.conn);
-                classHelper.dr = classHelper.cmd.ExecuteReader();
-                classHelper.mds.Tables["LedgerPendingEntries"].Clear();
-                if (classHelper.dr.HasRows == true)
-                {
-                    while (classHelper.dr.Read())
-                    {
-                        classHelper.dataR = classHelper.mds.Tables["LedgerPendingEntries"].NewRow();
-                        classHelper.dataR["date"] = Convert.ToDateTime(classHelper.dr["DATE"].ToString());
-                        classHelper.dataR["description"] = classHelper.dr["DESCRIPTION"].ToString();
-                        classHelper.dataR["amount"] = Convert.ToDouble(classHelper.dr["AMOUNT"].ToString());
-                        classHelper.dataR["type"] = classHelper.dr["TYPE"].ToString();
-                        classHelper.mds.Tables["LedgerPendingEntries"].Rows.Add(classHelper.dataR);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            finally
-            {
-                Classes.Helper.conn.Close();
-            }
+//            classHelper.query = @"SELECT C.[DATE] AS [DATE],
+//A.BANK_NAME+' CHQ DATE: '+CONVERT(VARCHAR(50),FORMAT(A.CHQ_DATE,'dd/MM/yyyy'))+' CHQ #'+A.CHQ_NO+' '+C.[DESCRIPTION] AS [DESCRIPTION],A.AMOUNT,'PDC CHQ' AS [TYPE]
+//            FROM CHQ A 
+//            INNER JOIN DAY_BOOK_CHQ B ON A.CHQ_ID = B.CHQ_ID and [TYPE] = 'R'
+//            INNER JOIN DAY_BOOK C ON B.DAY_BOOK_ID = C.DAY_BOOK_ID
+//            WHERE A.[REC_AC] = '" + cmbACCOUNT.SelectedValue.ToString() + @"' AND A.[STATUS] = 1
+//            UNION ALL
+//            SELECT [DATE],PV_NO+'/'+BANK+'/'+BR_CODE+'/'+REF_AC+'/'+INSTRUMENT_NO AS [DESCRIPTION],AMOUNT,'PENDING PAYMENT' AS [TYPE]
+//            FROM PAYMENT_TRANSFER
+//            WHERE REC_AC = '" + cmbACCOUNT.SelectedValue.ToString() + @"' AND [STATUS] = 0
+//            UNION ALL
+//            SELECT [DATE],PV_NO+'/'+BANK+'/'+BR_CODE+'/'+REF_AC+'/'+INSTRUMENT_NO AS [DESCRIPTION],AMOUNT,'PENDING PAYMENT' AS [TYPE]
+//            FROM PAYMENT_TRANSFER
+//            WHERE PAY_AC = '" + cmbACCOUNT.SelectedValue.ToString() + @"' AND [STATUS] = 0";
+//            Classes.Helper.conn.Open();
+//            try
+//            {
+//                classHelper.cmd = new SqlCommand(classHelper.query, Classes.Helper.conn);
+//                classHelper.dr = classHelper.cmd.ExecuteReader();
+//                classHelper.mds.Tables["LedgerPendingEntries"].Clear();
+//                if (classHelper.dr.HasRows == true)
+//                {
+//                    while (classHelper.dr.Read())
+//                    {
+//                        classHelper.dataR = classHelper.mds.Tables["LedgerPendingEntries"].NewRow();
+//                        classHelper.dataR["date"] = Convert.ToDateTime(classHelper.dr["DATE"].ToString());
+//                        classHelper.dataR["description"] = classHelper.dr["DESCRIPTION"].ToString();
+//                        classHelper.dataR["amount"] = Convert.ToDouble(classHelper.dr["AMOUNT"].ToString());
+//                        classHelper.dataR["type"] = classHelper.dr["TYPE"].ToString();
+//                        classHelper.mds.Tables["LedgerPendingEntries"].Rows.Add(classHelper.dataR);
+//                    }
+//                }
+//            }
+//            catch (Exception ex)
+//            {
+//                MessageBox.Show(ex.Message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+//            }
+//            finally
+//            {
+//                Classes.Helper.conn.Close();
+//            }
 
 
             classHelper.rptLedger = new frmLedgerReports();

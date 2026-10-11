@@ -137,6 +137,7 @@
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,6 +149,7 @@
             this.accountsToolStripMenuItem,
             this.toolStripMenuItem3,
             this.inventoryToolStripMenuItem,
+            this.toolStripMenuItem7,
             this.purchasesToolStripMenuItem1,
             this.toolStripMenuItem4,
             this.vouchersToolStripMenuItem,
@@ -1100,6 +1102,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "FAISAL COPY HOUSE";
             // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(83, 23);
+            this.toolStripMenuItem7.Text = "Purchases";
+            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1238,5 +1247,6 @@
         private System.Windows.Forms.ToolStripMenuItem customerBalanceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vendorBalanceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem otherAccountsBalanceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
     }
 }

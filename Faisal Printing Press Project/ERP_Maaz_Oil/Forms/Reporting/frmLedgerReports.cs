@@ -513,10 +513,10 @@ namespace ERP_Maaz_Oil.Forms.Reporting
                 if (e.ObjectInfo.Text.Contains("SI")) {
                     classHelper.PrintSalesInvoice(e.ObjectInfo.Text);
                 }
-                else if (e.ObjectInfo.Text.Contains("PSI"))
-                {
-                    classHelper.PrintServiceSalesInvoice(e.ObjectInfo.Text);
-                }
+                //else if (e.ObjectInfo.Text.Contains("PSI"))
+                //{
+                //    classHelper.PrintServiceSalesInvoice(e.ObjectInfo.Text);
+                //}
                 //else if(e.ObjectInfo.Text.Contains("PI") || e.ObjectInfo.Text.Contains("PST")) {
                 //    PurchasesInvoiceReport(e.ObjectInfo.Text);
                 //}

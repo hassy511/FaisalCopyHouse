@@ -4099,16 +4099,17 @@ namespace ERP_Maaz_Oil.Classes
         {
            try
             {
-                nds.Tables["GeneralOrderSupply"].Clear();
-
-                query = @" SELECT A.DATE,A.BILL_NO,D.COA_NAME AS [CUSTOMER],C.PRODUCT_NAME,
-                B.QTY,B.RATE,B.GST,
-                (B.QTY * B.RATE) + ((B.QTY * B.RATE) / 100) AS [NET TOTAL]
+                mds.Tables["SaleInvoice"].Clear();
+                query = @" SELECT A.INVOICE_NO,A.DATE,DATEADD(DAY,A.CREDIT_DAYS,A.DATE) AS [DUE DATE],
+                D.COA_NAME AS [CUSTOMER],A.CUSTOMER_ADDRESS,A.SHIP_TO,A.SHIPPING_ADDRESS,
+                A.DESCRIPTION,E.P_CATEEGORY_NAME AS PRODUCT_NAME,B.GST AS [BUNDLE],B.COST_RATE AS [BUNDLE PCS],
+                B.QTY,B.RATE,(B.QTY*B.RATE) AS [AMOUNT],A.BORI_EXPENSE,A.CARTON_EXPENSE,A.VEHICLE_NO
                 FROM SALE_MASTER A
                 INNER JOIN SALE_DETAIL B ON A.SALE_MASTER_ID = B.SALE_MASTER_ID
                 INNER JOIN PRODUCT_MASTER C ON B.ITEM_ID = C.PM_ID
                 INNER JOIN COA D ON A.CUSTOMER_ID = D.COA_ID
-                WHERE A.INVOICE_NO = '"+invoiceNo+"'";
+                INNER JOIN PRODUCT_CATEGORY E ON C.BRAND_ID = E.P_CATEGORY_ID
+                WHERE A.INVOICE_NO = '" + invoiceNo + "'";
 
                 if (conn.State == System.Data.ConnectionState.Closed) { conn.Open(); }
                 cmd = new SqlCommand(query, conn);
@@ -4118,23 +4119,32 @@ namespace ERP_Maaz_Oil.Classes
                 {
                     while (dr.Read())
                     {
-                        dataR = nds.Tables["GeneralOrderSupply"].NewRow();
-                        dataR["qty"] = Convert.ToDecimal(dr["QTY"].ToString());
-                        dataR["invoice"] = dr["BILL_NO"].ToString();
-                        dataR["deliveryChallan"] = dr["BILL_NO"].ToString();
-                        dataR["rate"] = Convert.ToDecimal(dr["RATE"].ToString());
-                        dataR["fromDate"] = Convert.ToDateTime(dr["DATE"].ToString());
-                        dataR["particulars"] = dr["PRODUCT_NAME"].ToString();
-                        dataR["gstPercentage"] = Convert.ToDecimal(dr["GST"].ToString());
-                        dataR["gstAmount"] = (((Convert.ToDecimal(dr["QTY"].ToString()) * Convert.ToDecimal(dr["RATE"].ToString()))) * (Convert.ToDecimal(dr["GST"].ToString()) / 100));
-                        dataR["amount"] = Convert.ToDecimal(dr["NET TOTAL"].ToString());
+                        dataR = mds.Tables["SaleInvoice"].NewRow();
+
+                        dataR["InvoiceNo"] = dr["INVOICE_NO"].ToString();
+                        dataR["date"] = Convert.ToDateTime(dr["DATE"].ToString());
+                        dataR["dueDate"] = Convert.ToDateTime(dr["DUE DATE"].ToString());
                         dataR["customer"] = dr["CUSTOMER"].ToString();
-                        nds.Tables["GeneralOrderSupply"].Rows.Add(dataR);
+                        dataR["customerAddress"] = dr["CUSTOMER_ADDRESS"].ToString();
+                        dataR["shipTo"] = dr["SHIP_TO"].ToString();
+                        dataR["shipAddress"] = dr["SHIPPING_ADDRESS"].ToString();
+                        dataR["description"] = dr["DESCRIPTION"].ToString();
+                        dataR["product"] = dr["PRODUCT_NAME"].ToString();
+                        dataR["bundle"] = Convert.ToDecimal(dr["BUNDLE"].ToString());
+                        dataR["bundlePcs"] = Convert.ToDecimal(dr["BUNDLE PCS"].ToString());
+                        dataR["qty"] = Convert.ToDecimal(dr["QTY"].ToString());
+                        dataR["rate"] = Convert.ToDecimal(dr["RATE"].ToString());
+                        dataR["amount"] = Convert.ToDecimal(dr["AMOUNT"].ToString());
+                        dataR["transportation"] = Convert.ToDecimal(dr["BORI_EXPENSE"].ToString());
+                        dataR["balance"] = Convert.ToDecimal(dr["CARTON_EXPENSE"].ToString());
+                        dataR["vehicleNo"] = Classes.Helper.GetUserName(Classes.Helper.userId);
+
+                        mds.Tables["SaleInvoice"].Rows.Add(dataR);
                     }
 
                     rpt = new ERP_Maaz_Oil.Forms.Reporting.frmReports();
-                    rpt.GenerateReport("SalesInvoice", nds);
-                    rpt.ShowDialog();
+                    rpt.GenerateReport("SalesInvoiceOriginal", mds);
+                    rpt.Show();
                 }
             }
             catch (Exception ex)

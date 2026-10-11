@@ -300,7 +300,7 @@ namespace ERP_Maaz_Oil.Forms
 
         private void pURCHASESToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            frmPurchases_New frmpi = new frmPurchases_New();
+            frm_Purchases frmpi = new frm_Purchases();
             frmpi.Show();
         }
 
@@ -942,6 +942,12 @@ namespace ERP_Maaz_Oil.Forms
         private void vendorBalanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmVendorBalanceReport frm = new frmVendorBalanceReport();
+            frm.Show();
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            frm_Purchases frm = new frm_Purchases();
             frm.Show();
         }
     }

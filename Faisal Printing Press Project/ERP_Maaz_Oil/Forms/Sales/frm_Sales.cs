@@ -35,6 +35,7 @@ namespace ERP_Maaz_Oil.Forms
             INNER JOIN COA B ON A.CUSTOMER_ID = B.COA_ID
             ORDER BY SALE_MASTER_ID DESC";
             classHelper.LoadGrid(grdSearch, classHelper.query);
+            grdSearch.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void LoadCustomer()
@@ -241,7 +242,6 @@ namespace ERP_Maaz_Oil.Forms
                 classHelper.dataR["shipTo"] = txtShipTo.Text;
                 classHelper.dataR["shipAddress"] = txtShippingAddress.Text;
                 classHelper.dataR["description"] = txtDescription.Text;
-
                 classHelper.dataR["product"] = rows.Cells["productName"].Value.ToString();
                 classHelper.dataR["bundle"] = Convert.ToDecimal(rows.Cells["totalBundle"].Value.ToString());
                 classHelper.dataR["bundlePcs"] = Convert.ToDecimal(rows.Cells["bundlePcs"].Value.ToString());

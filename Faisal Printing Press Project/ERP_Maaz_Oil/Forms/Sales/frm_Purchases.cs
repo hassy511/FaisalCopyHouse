@@ -34,6 +34,7 @@ namespace ERP_Maaz_Oil.Forms
             INNER JOIN COA B ON A.SUPPLIER_ID = B.COA_ID
             ORDER BY PI_ID DESC";
             classHelper.LoadGrid(grdSearch, classHelper.query);
+            grdSearch.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void LoadVendors()
@@ -58,97 +59,59 @@ namespace ERP_Maaz_Oil.Forms
             {
                 if (cmbVendor.SelectedIndex == 0)
                 {
-                    classHelper.ShowMessageBox("Customer is not selected, please select Customer.", "Warning");
+                    classHelper.ShowMessageBox("Vendor is not selected, please select Vendor.", "Warning");
                     cmbVendor.Focus();
                 }
-                else if (txtCreditDays.Text.Trim().Equals(""))
+                else if (txtDescription.Text.Trim().Equals(""))
                 {
-                    classHelper.ShowMessageBox("Enter Credit Days.", "Warning");
-                    txtCreditDays.Focus();
+                    classHelper.ShowMessageBox("Enter Description.", "Warning");
+                    txtDescription.Focus();
                 }
-                else if (gridProducts.Rows.Count <= 0)
+                else if (txtTotal.Text.Trim().Equals("") || txtTotal.Text.Trim().Equals("0"))
                 {
-                    classHelper.ShowMessageBox("Add Products.", "Warning");
-                    cmbProducts.Focus();
+                    classHelper.ShowMessageBox("Enter Total Amount.", "Warning");
+                    txtTotal.Focus();
                 }
                 else
                 {
                     string masterId = id.ToString();
                     if (id.ToString().Equals("0"))
                     {
-                        masterId = "(SELECT MAX(SALE_MASTER_ID) FROM SALE_MASTER)";
+                        masterId = "(SELECT MAX(PI_ID) FROM PURCHASES)";
                     }
 
-                    // Determinetype based on selected radio button
-                    char term = '0';
-                    //char isPaid = '1';
-                    if (rdbCredit.Checked == true)
-                    {
-                        term = '1';
-                        //isPaid = '0';
-                    }
-
-
+                    
                     classHelper.query = @"BEGIN TRY 
                     BEGIN TRANSACTION ";
 
-                    classHelper.query += @"IF EXISTS (select SALE_MASTER_ID from SALE_MASTER WHERE SALE_MASTER_ID ='" + id + @"') 
+                    classHelper.query += @"IF EXISTS (select PI_ID from PURCHASES WHERE PI_ID ='" + id + @"') 
                  BEGIN
-                    UPDATE SALE_MASTER SET DATE = '" + dtpDate.Value.ToString() + @"',  
-                    DESCRIPTION = '" + classHelper.AvoidInjection(txtDescription.Text) + @"',                     
-                    CUSTOMER_ID = '" + cmbVendor.SelectedValue.ToString() + @"',
-                    CUSTOMER_ADDRESS = '" + classHelper.AvoidInjection(txtCustomerAddress.Text) + @"',                     
-                    CREDIT_DAYS = '" + classHelper.AvoidInjection(txtCreditDays.Text) + @"',
-                    SHIP_TO = '" + classHelper.AvoidInjection(txtShipTo.Text) + @"',             
-                    SHIPPING_ADDRESS = '" + classHelper.AvoidInjection(txtShippingAddress.Text) + @"',             
-                    TERM = '" + term + @"',
-                    IS_PAID = '0',
-                    BORI_EXPENSE = '" + classHelper.AvoidInjection(txtBoriExpense.Text) + @"',   
-                    CARTON_EXPENSE = '" + classHelper.AvoidInjection(txtCartonExpense.Text) + @"',   
+                    UPDATE PURCHASES SET DATE = '" + dtpDate.Value.ToString() + @"',  
+                    DESCRIPTION = '" + classHelper.AvoidInjection(txtDescription.Text) + @"',
+                    SUPPLIER_ID = '" + cmbVendor.SelectedValue.ToString() + @"',
+                    NET_WEIGHT = '" + classHelper.AvoidInjection(txtTotal.Text) + @"',  
                     MODIFICATION_DATE = GETDATE(),MODIFIED_BY = '" + Classes.Helper.userId + @"'
-                    WHERE SALE_MASTER_ID = '" + id + @"';
+                    WHERE PI_ID = '" + id + @"';
                  END
                  ELSE
                  BEGIN
-                     INSERT INTO SALE_MASTER (DATE,CUSTOMER_ID,DESCRIPTION,CREDIT_DAYS,TERM,CREATION_DATE,CREATED_BY,INVOICE_NO,IS_PAID,
-                    CUSTOMER_ADDRESS,SHIP_TO,SHIPPING_ADDRESS,BORI_EXPENSE,CARTON_EXPENSE) 
+                     INSERT INTO PURCHASES (DATE,SUPPLIER_ID,DESCRIPTION,NET_WEIGHT,CREATION_DATE,CREATED_BY,INVOICE_NO) 
                      VALUES ('" + dtpDate.Value.ToString() + "','" + cmbVendor.SelectedValue.ToString() + @"',
                      '" + classHelper.AvoidInjection(txtDescription.Text) + @"',
-                     '" + classHelper.AvoidInjection(txtCreditDays.Text) + "', '" + term + @"', GETDATE(),'" + Classes.Helper.userId + @"',
-                     '" + lblInvoice.Text + @"','0','" + classHelper.AvoidInjection(txtCustomerAddress.Text) + @"','" + classHelper.AvoidInjection(txtShipTo.Text) + @"','" + classHelper.AvoidInjection(txtShippingAddress.Text) + @"','" + classHelper.AvoidInjection(txtBoriExpense.Text) + @"','" + classHelper.AvoidInjection(txtCartonExpense.Text) + @"');
+                     '" + classHelper.AvoidInjection(txtTotal.Text) + "',GETDATE(),'" + Classes.Helper.userId + @"',
+                     '" + lblInvoice.Text + @"');
                  END";
 
-                classHelper.query += @" DELETE FROM SALE_DETAIL WHERE SALE_MASTER_ID = '" + id + @"'";
-
-                    foreach (DataGridViewRow rows in gridProducts.Rows)
-                    {
-                        classHelper.query += @" INSERT INTO SALE_DETAIL (SALE_MASTER_ID,ITEM_ID,QTY,RATE,GST,COST_RATE) 
-                            VALUES (" + masterId + ",'" + rows.Cells["productId"].Value.ToString() + "','"
-                        + rows.Cells["qty"].Value.ToString() + @"','" + rows.Cells["rate"].Value.ToString() + @"','" + rows.Cells["totalBundle"].Value.ToString() + @"','" + rows.Cells["bundlePcs"].Value.ToString() + @"');";
-                    }
-
-                classHelper.query += @" DELETE FROM LEDGERS WHERE REF_ID = " + id + @" AND ENTRY_OF = 'SALES'";
+                classHelper.query += @" DELETE FROM LEDGERS WHERE REF_ID = " + id + @" AND ENTRY_OF = 'PURCHASES'";
 
                         classHelper.query += @" 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
-                            VALUES('" + dtpDate.Value.ToString() + "','" + Classes.Helper.salesId +
-                                        "'," + masterId + ",'SALES','" + lblInvoice.Text + @"', 0,'" + txtTotal.Text + "','S.I # " + lblInvoice.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);
+                            VALUES('" + dtpDate.Value.ToString() + "','" + Classes.Helper.purchasesId +
+                                        "'," + masterId + ",'PURCHASES','" + lblInvoice.Text + @"','" + txtTotal.Text + "', 0,'" + txtDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);
 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                             VALUES('" + dtpDate.Value.ToString() + "','" + cmbVendor.SelectedValue.ToString() +
-                                        "'," + masterId + ",'SALES','" + lblInvoice.Text + @"', '" + txtTotal.Text + "',0,'S.I # " + lblInvoice.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);"; 
-
-                        //if (rdbCash.Checked == true)
-                        //{
-                        //    classHelper.query += @" INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
-                        //    VALUES('" + dtpDate.Value.ToString() + "','" + cmbCustomer.SelectedValue.ToString() +
-                        //    "'," + masterId + ",'SALES','" + lblInvoice.Text + @"', 0,'" + txtTotal.Text + "','S.I # " + lblInvoice.Text + " /" + txtCreditDays.Text + " DAYS PAYMENT)','" + Classes.Helper.userId + @"',GETDATE(),1);
-
-                        //    INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
-                        //    VALUES('" + dtpDate.Value.ToString() + "','" + Classes.Helper.cashId +
-                        //    "'," + masterId + ",'SALES','" + lblInvoice.Text + @"', '" + txtTotal.Text + "',0,'S.I # " + lblInvoice.Text + " /" + txtCreditDays.Text + " DAYS PAYMENT)','" + Classes.Helper.userId + @"',GETDATE(),1);";
-                        //}
-                    
+                                        "'," + masterId + ",'PURCHASES','" + lblInvoice.Text + @"',0, '" + txtTotal.Text + "','" + txtDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);"; 
 
                     classHelper.query += @" COMMIT TRANSACTION 
                      END TRY 
@@ -160,14 +123,6 @@ namespace ERP_Maaz_Oil.Forms
                     if (classHelper.InsertUpdateDelete(classHelper.query) >= 1)
                     {
                         classHelper.ShowMessageBox("Record Saved Successfully.", "Information");
-
-                        DialogResult dialogResult = MessageBox.Show("Print Invoice?", "Purchases Invoice", MessageBoxButtons.YesNo);
-                        if (dialogResult == DialogResult.Yes)
-                        {
-                            PrintSalesInvoiceOriginal();
-                            PrintSalesInvoiceDuplicate();
-                        }
-                        //PrintSalesInvoice();
                         Clear();
                     }
                 }
@@ -183,23 +138,8 @@ namespace ERP_Maaz_Oil.Forms
                 lblInvoice.Text = row.Cells["INVOICE #"].Value.ToString();
                 dtpDate.Text = row.Cells["DATE"].Value.ToString();
                 txtDescription.Text = row.Cells["DESCRIPTION"].Value.ToString();
-                cmbVendor.SelectedValue = row.Cells["CUSTOMER_ID"].Value.ToString();
-                txtCustomerAddress.Text = row.Cells["CUSTOMER_ADDRESS"].Value.ToString();
-                txtCreditDays.Text = row.Cells["CREDIT_DAYS"].Value.ToString();
-                txtShipTo.Text = row.Cells["SHIP_TO"].Value.ToString();
-                txtShippingAddress.Text = row.Cells["SHIPPING_ADDRESS"].Value.ToString();
-                if (row.Cells["TERM"].Value.ToString().Equals("0"))
-                {
-                    rdbCash.Checked = true;
-                }
-                else
-                {
-                    rdbCredit.Checked = true;
-                }
-                txtBoriExpense.Text = row.Cells["BORI_EXPENSE"].Value.ToString();
-                txtCartonExpense.Text = row.Cells["CARTON_EXPENSE"].Value.ToString();
-                LoadSalesDetail(id);
-                TotalSum();
+                cmbVendor.SelectedValue = row.Cells["SUPPLIER_ID"].Value.ToString();
+                txtTotal.Text = row.Cells["TOTAL"].Value.ToString();
             }
         }
 
@@ -256,11 +196,10 @@ namespace ERP_Maaz_Oil.Forms
             classHelper.query = @" BEGIN TRY 
                              BEGIN TRANSACTION ";
 
-            classHelper.query += @" DELETE FROM LEDGERS WHERE REF_ID = '" + id + @"' AND ENTRY_OF = 'SALES ';
-            DELETE FROM MATERIAL_ITEM_LEDGER WHERE REF_NO = '" + id + @"' AND ENTRY_FROM = 'SALES ';
-            DELETE FROM PRODUCT_ITEM_LEDGER WHERE REF_NO = '" + id + @"' AND ENTRY_FROM = 'SALES ';
-            DELETE FROM SALE_DETAIL WHERE SALE_MASTER_ID = '" + id + @"';            
-            DELETE FROM SALE_MASTER WHERE SALE_MASTER_ID = '" + id + @"'";
+            classHelper.query += @" DELETE FROM LEDGERS WHERE REF_ID = '" + id + @"' AND ENTRY_OF = 'PURCHASES ';
+            DELETE FROM MATERIAL_ITEM_LEDGER WHERE REF_NO = '" + id + @"' AND ENTRY_FROM = 'PURCHASES ';
+            DELETE FROM PRODUCT_ITEM_LEDGER WHERE REF_NO = '" + id + @"' AND ENTRY_FROM = 'PURCHASES ';
+            DELETE FROM PURCHASES WHERE PI_ID = '" + id + @"';  ";
 
             classHelper.query += @" COMMIT TRANSACTION 
                         END TRY 
@@ -308,6 +247,11 @@ namespace ERP_Maaz_Oil.Forms
         private void cmbCustomer_Leave(object sender, EventArgs e)
         {
             
+        }
+
+        private void txtTotal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            classHelper.CheckNumber(e);
         }
     }
 }

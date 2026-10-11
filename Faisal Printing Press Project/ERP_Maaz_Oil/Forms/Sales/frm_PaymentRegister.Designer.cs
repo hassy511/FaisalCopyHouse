@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PaymentRegister));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHEADER = new System.Windows.Forms.Panel();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -44,15 +44,27 @@
             this.cmbCashAccount = new SergeUtils.EasyCompletionComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.gridData = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.receiveAccountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.receivingAccountName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentAccountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentAccountName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
             this.grpCashPayment = new System.Windows.Forms.GroupBox();
+            this.txtCashDescription = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.txtCashAmount = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rdbPayment = new System.Windows.Forms.RadioButton();
             this.rdbReceive = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.grpAccountPayment = new System.Windows.Forms.GroupBox();
+            this.txtAccountDescription = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtAccountAmount = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cmbPayment = new SergeUtils.EasyCompletionComboBox();
@@ -66,18 +78,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtCashOpening = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtAccountDescription = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtCashDescription = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.receiveAccountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.receivingAccountName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paymentAccountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paymentAccountName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCashDelete = new System.Windows.Forms.Button();
+            this.btnCCashlear = new System.Windows.Forms.Button();
+            this.btnAccountDelete = new System.Windows.Forms.Button();
+            this.btnAccountClear = new System.Windows.Forms.Button();
             this.pnlHEADER.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -152,7 +156,7 @@
             this.btnCashSave.ForeColor = System.Drawing.Color.White;
             this.btnCashSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCashSave.ImageIndex = 5;
-            this.btnCashSave.Location = new System.Drawing.Point(448, 148);
+            this.btnCashSave.Location = new System.Drawing.Point(247, 146);
             this.btnCashSave.Name = "btnCashSave";
             this.btnCashSave.Size = new System.Drawing.Size(93, 25);
             this.btnCashSave.TabIndex = 124;
@@ -211,20 +215,20 @@
             // 
             this.gridData.AllowUserToAddRows = false;
             this.gridData.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gridData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.gridData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.gridData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gridData.BackgroundColor = System.Drawing.Color.White;
             this.gridData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.gridData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -236,14 +240,14 @@
             this.type,
             this.description});
             this.gridData.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridData.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridData.DefaultCellStyle = dataGridViewCellStyle15;
             this.gridData.Location = new System.Drawing.Point(6, 272);
             this.gridData.Name = "gridData";
             this.gridData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -251,6 +255,58 @@
             this.gridData.TabIndex = 361;
             this.gridData.TabStop = false;
             this.gridData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridData_CellClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // receiveAccountId
+            // 
+            this.receiveAccountId.HeaderText = "RECEIVING ACCOUNT ID";
+            this.receiveAccountId.Name = "receiveAccountId";
+            this.receiveAccountId.ReadOnly = true;
+            this.receiveAccountId.Visible = false;
+            // 
+            // receivingAccountName
+            // 
+            this.receivingAccountName.HeaderText = "RECEIVING ACCOUNT";
+            this.receivingAccountName.Name = "receivingAccountName";
+            this.receivingAccountName.ReadOnly = true;
+            // 
+            // paymentAccountId
+            // 
+            this.paymentAccountId.HeaderText = "PAYMENT ACCOUNT ID";
+            this.paymentAccountId.Name = "paymentAccountId";
+            this.paymentAccountId.ReadOnly = true;
+            this.paymentAccountId.Visible = false;
+            // 
+            // paymentAccountName
+            // 
+            this.paymentAccountName.HeaderText = "PAYMENT ACCOUNT";
+            this.paymentAccountName.Name = "paymentAccountName";
+            this.paymentAccountName.ReadOnly = true;
+            // 
+            // amount
+            // 
+            this.amount.HeaderText = "AMOUNT";
+            this.amount.Name = "amount";
+            this.amount.ReadOnly = true;
+            // 
+            // type
+            // 
+            this.type.HeaderText = "TYPE";
+            this.type.Name = "type";
+            this.type.ReadOnly = true;
+            this.type.Visible = false;
+            // 
+            // description
+            // 
+            this.description.HeaderText = "DESCRIPTION";
+            this.description.Name = "description";
+            this.description.ReadOnly = true;
             // 
             // dtpDate
             // 
@@ -274,6 +330,8 @@
             // 
             // grpCashPayment
             // 
+            this.grpCashPayment.Controls.Add(this.btnCashDelete);
+            this.grpCashPayment.Controls.Add(this.btnCCashlear);
             this.grpCashPayment.Controls.Add(this.txtCashDescription);
             this.grpCashPayment.Controls.Add(this.label12);
             this.grpCashPayment.Controls.Add(this.txtCashAmount);
@@ -291,6 +349,27 @@
             this.grpCashPayment.TabIndex = 364;
             this.grpCashPayment.TabStop = false;
             this.grpCashPayment.Text = "CASH PAYMENT";
+            // 
+            // txtCashDescription
+            // 
+            this.txtCashDescription.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCashDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtCashDescription.Location = new System.Drawing.Point(99, 115);
+            this.txtCashDescription.MaxLength = 32000;
+            this.txtCashDescription.Name = "txtCashDescription";
+            this.txtCashDescription.Size = new System.Drawing.Size(439, 25);
+            this.txtCashDescription.TabIndex = 378;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(10, 120);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(83, 15);
+            this.label12.TabIndex = 379;
+            this.label12.Text = "DESCRIPTION";
             // 
             // txtCashAmount
             // 
@@ -352,6 +431,8 @@
             // 
             // grpAccountPayment
             // 
+            this.grpAccountPayment.Controls.Add(this.btnAccountDelete);
+            this.grpAccountPayment.Controls.Add(this.btnAccountClear);
             this.grpAccountPayment.Controls.Add(this.txtAccountDescription);
             this.grpAccountPayment.Controls.Add(this.label11);
             this.grpAccountPayment.Controls.Add(this.txtAccountAmount);
@@ -368,6 +449,27 @@
             this.grpAccountPayment.TabIndex = 365;
             this.grpAccountPayment.TabStop = false;
             this.grpAccountPayment.Text = "ACCOUNT PAYMENT";
+            // 
+            // txtAccountDescription
+            // 
+            this.txtAccountDescription.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtAccountDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtAccountDescription.Location = new System.Drawing.Point(96, 115);
+            this.txtAccountDescription.MaxLength = 32000;
+            this.txtAccountDescription.Name = "txtAccountDescription";
+            this.txtAccountDescription.Size = new System.Drawing.Size(460, 25);
+            this.txtAccountDescription.TabIndex = 376;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(7, 120);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 15);
+            this.label11.TabIndex = 377;
+            this.label11.Text = "DESCRIPTION";
             // 
             // txtAccountAmount
             // 
@@ -446,7 +548,7 @@
             this.btnAccountSave.ForeColor = System.Drawing.Color.White;
             this.btnAccountSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccountSave.ImageIndex = 5;
-            this.btnAccountSave.Location = new System.Drawing.Point(463, 148);
+            this.btnAccountSave.Location = new System.Drawing.Point(265, 146);
             this.btnAccountSave.Name = "btnAccountSave";
             this.btnAccountSave.Size = new System.Drawing.Size(93, 25);
             this.btnAccountSave.TabIndex = 361;
@@ -526,99 +628,73 @@
             this.label8.TabIndex = 371;
             this.label8.Text = "CASH OPENING";
             // 
-            // txtAccountDescription
+            // btnCashDelete
             // 
-            this.txtAccountDescription.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtAccountDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtAccountDescription.Location = new System.Drawing.Point(96, 115);
-            this.txtAccountDescription.MaxLength = 32000;
-            this.txtAccountDescription.Name = "txtAccountDescription";
-            this.txtAccountDescription.Size = new System.Drawing.Size(460, 25);
-            this.txtAccountDescription.TabIndex = 376;
+            this.btnCashDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(24)))), ((int)(((byte)(38)))));
+            this.btnCashDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCashDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnCashDelete.ForeColor = System.Drawing.Color.White;
+            this.btnCashDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCashDelete.ImageIndex = 1;
+            this.btnCashDelete.Location = new System.Drawing.Point(445, 146);
+            this.btnCashDelete.Name = "btnCashDelete";
+            this.btnCashDelete.Size = new System.Drawing.Size(93, 25);
+            this.btnCashDelete.TabIndex = 381;
+            this.btnCashDelete.TabStop = false;
+            this.btnCashDelete.Text = "DELETE";
+            this.btnCashDelete.UseVisualStyleBackColor = false;
+            this.btnCashDelete.Click += new System.EventHandler(this.btnCashDelete_Click);
             // 
-            // label11
+            // btnCCashlear
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(7, 120);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 15);
-            this.label11.TabIndex = 377;
-            this.label11.Text = "DESCRIPTION";
+            this.btnCCashlear.BackColor = System.Drawing.Color.DimGray;
+            this.btnCCashlear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCCashlear.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnCCashlear.ForeColor = System.Drawing.Color.White;
+            this.btnCCashlear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCCashlear.ImageIndex = 1;
+            this.btnCCashlear.Location = new System.Drawing.Point(346, 146);
+            this.btnCCashlear.Name = "btnCCashlear";
+            this.btnCCashlear.Size = new System.Drawing.Size(93, 25);
+            this.btnCCashlear.TabIndex = 380;
+            this.btnCCashlear.TabStop = false;
+            this.btnCCashlear.Text = "CLEAR";
+            this.btnCCashlear.UseVisualStyleBackColor = false;
+            this.btnCCashlear.Click += new System.EventHandler(this.btnCCashlear_Click);
             // 
-            // txtCashDescription
+            // btnAccountDelete
             // 
-            this.txtCashDescription.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCashDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtCashDescription.Location = new System.Drawing.Point(99, 115);
-            this.txtCashDescription.MaxLength = 32000;
-            this.txtCashDescription.Name = "txtCashDescription";
-            this.txtCashDescription.Size = new System.Drawing.Size(439, 25);
-            this.txtCashDescription.TabIndex = 378;
+            this.btnAccountDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(24)))), ((int)(((byte)(38)))));
+            this.btnAccountDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAccountDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAccountDelete.ForeColor = System.Drawing.Color.White;
+            this.btnAccountDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccountDelete.ImageIndex = 1;
+            this.btnAccountDelete.Location = new System.Drawing.Point(463, 146);
+            this.btnAccountDelete.Name = "btnAccountDelete";
+            this.btnAccountDelete.Size = new System.Drawing.Size(93, 25);
+            this.btnAccountDelete.TabIndex = 383;
+            this.btnAccountDelete.TabStop = false;
+            this.btnAccountDelete.Text = "DELETE";
+            this.btnAccountDelete.UseVisualStyleBackColor = false;
+            this.btnAccountDelete.Click += new System.EventHandler(this.btnAccountDelete_Click);
             // 
-            // label12
+            // btnAccountClear
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(10, 120);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 15);
-            this.label12.TabIndex = 379;
-            this.label12.Text = "DESCRIPTION";
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // receiveAccountId
-            // 
-            this.receiveAccountId.HeaderText = "RECEIVING ACCOUNT ID";
-            this.receiveAccountId.Name = "receiveAccountId";
-            this.receiveAccountId.ReadOnly = true;
-            this.receiveAccountId.Visible = false;
-            // 
-            // receivingAccountName
-            // 
-            this.receivingAccountName.HeaderText = "RECEIVING ACCOUNT";
-            this.receivingAccountName.Name = "receivingAccountName";
-            this.receivingAccountName.ReadOnly = true;
-            // 
-            // paymentAccountId
-            // 
-            this.paymentAccountId.HeaderText = "PAYMENT ACCOUNT ID";
-            this.paymentAccountId.Name = "paymentAccountId";
-            this.paymentAccountId.ReadOnly = true;
-            this.paymentAccountId.Visible = false;
-            // 
-            // paymentAccountName
-            // 
-            this.paymentAccountName.HeaderText = "PAYMENT ACCOUNT";
-            this.paymentAccountName.Name = "paymentAccountName";
-            this.paymentAccountName.ReadOnly = true;
-            // 
-            // amount
-            // 
-            this.amount.HeaderText = "AMOUNT";
-            this.amount.Name = "amount";
-            this.amount.ReadOnly = true;
-            // 
-            // type
-            // 
-            this.type.HeaderText = "TYPE";
-            this.type.Name = "type";
-            this.type.ReadOnly = true;
-            this.type.Visible = false;
-            // 
-            // description
-            // 
-            this.description.HeaderText = "DESCRIPTION";
-            this.description.Name = "description";
-            this.description.ReadOnly = true;
+            this.btnAccountClear.BackColor = System.Drawing.Color.DimGray;
+            this.btnAccountClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAccountClear.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAccountClear.ForeColor = System.Drawing.Color.White;
+            this.btnAccountClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccountClear.ImageIndex = 1;
+            this.btnAccountClear.Location = new System.Drawing.Point(364, 146);
+            this.btnAccountClear.Name = "btnAccountClear";
+            this.btnAccountClear.Size = new System.Drawing.Size(93, 25);
+            this.btnAccountClear.TabIndex = 382;
+            this.btnAccountClear.TabStop = false;
+            this.btnAccountClear.Text = "CLEAR";
+            this.btnAccountClear.UseVisualStyleBackColor = false;
+            this.btnAccountClear.Click += new System.EventHandler(this.btnAccountClear_Click);
             // 
             // frm_PaymentRegister
             // 
@@ -709,5 +785,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn type;
         private System.Windows.Forms.DataGridViewTextBoxColumn description;
+        private System.Windows.Forms.Button btnCashDelete;
+        private System.Windows.Forms.Button btnCCashlear;
+        private System.Windows.Forms.Button btnAccountDelete;
+        private System.Windows.Forms.Button btnAccountClear;
     }
 }

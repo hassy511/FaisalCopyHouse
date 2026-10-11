@@ -1340,6 +1340,12 @@
     <Compile Include="Forms\Sales\frm_PaymentRegister.Designer.cs">
       <DependentUpon>frm_PaymentRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Sales\frm_Purchases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sales\frm_Purchases.Designer.cs">
+      <DependentUpon>frm_Purchases.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Sales\frm_SalesInvoiceClear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2426,6 +2432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sales\frm_PaymentRegister.resx">
       <DependentUpon>frm_PaymentRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sales\frm_Purchases.resx">
+      <DependentUpon>frm_Purchases.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sales\frm_SalesInvoiceClear.resx">
       <DependentUpon>frm_SalesInvoiceClear.cs</DependentUpon>

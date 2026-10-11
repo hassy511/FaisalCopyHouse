@@ -83,6 +83,26 @@ namespace ERP_Maaz_Oil.Forms
             }
         }
 
+        private void CashClear() {
+            cmbCashAccount.SelectedIndex = 0;
+            txtCashAmount.Text = "0";
+            txtCashDescription.Clear();
+            GetData();
+            TotalSum();
+            recordId = 0;
+        }
+
+        private void AccountClear()
+        {
+            cmbReceiving.SelectedIndex = 0;
+            cmbPayment.SelectedIndex = 0;
+            txtAccountAmount.Text = "0";
+            txtAccountDescription.Clear();
+            GetData();
+            TotalSum();
+            recordId = 0;
+        }
+
         private void SaveCashPayment() {
             if (cmbCashAccount.SelectedIndex == 0)
             {
@@ -130,11 +150,11 @@ namespace ERP_Maaz_Oil.Forms
                     classHelper.query += @" 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                             VALUES('" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + "','" + Classes.Helper.cashId +
-                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR,"+masterId+ ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), '" + txtCashAmount.Text + "',0,'PAYMENT VOUCHER / "+txtCashDescription.Text+"','" + Classes.Helper.userId + @"',GETDATE(),1);
+                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR,"+masterId+ ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), '" + txtCashAmount.Text + "',0,'"+txtCashDescription.Text+"','" + Classes.Helper.userId + @"',GETDATE(),1);
 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                             VALUES('" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + "','" + cmbCashAccount.SelectedValue.ToString() +
-                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), 0,'" + txtCashAmount.Text + "','PAYMENT VOUCHER / " + txtCashDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);";
+                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), 0,'" + txtCashAmount.Text + "','" + txtCashDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);";
 
                     classHelper.query += @" COMMIT TRANSACTION 
                      END TRY 
@@ -146,12 +166,7 @@ namespace ERP_Maaz_Oil.Forms
                     if (classHelper.InsertUpdateDelete(classHelper.query) >= 1)
                     {
                         classHelper.ShowMessageBox("Record Saved Successfully.", "Information");
-                        cmbCashAccount.SelectedIndex = 0;
-                        txtCashAmount.Text = "0";
-                        txtCashDescription.Clear();
-                        GetData();
-                        TotalSum();
-                        recordId = 0;
+                        CashClear();
                     }
                 }
                 else {
@@ -193,11 +208,11 @@ namespace ERP_Maaz_Oil.Forms
                     classHelper.query += @" 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                             VALUES('" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + "','" + cmbCashAccount.SelectedValue.ToString() +
-                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), '" + txtCashAmount.Text + "',0,'PAYMENT VOUCHER / " + txtCashDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);
+                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), '" + txtCashAmount.Text + "',0,'" + txtCashDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);
 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                             VALUES('" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + "','" + Classes.Helper.cashId +
-                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), 0,'" + txtCashAmount.Text + "','PAYMENT VOUCHER / " + txtCashDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);";
+                                    "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), 0,'" + txtCashAmount.Text + "','" + txtCashDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);";
 
                     classHelper.query += @" COMMIT TRANSACTION 
                      END TRY 
@@ -209,12 +224,7 @@ namespace ERP_Maaz_Oil.Forms
                     if (classHelper.InsertUpdateDelete(classHelper.query) >= 1)
                     {
                         classHelper.ShowMessageBox("Record Saved Successfully.", "Information");
-                        cmbCashAccount.SelectedIndex = 0;
-                        txtCashAmount.Text = "0";
-                        txtCashDescription.Clear();
-                        GetData();
-                        TotalSum();
-                        recordId = 0;
+                        CashClear();
                     }
                 }
             }
@@ -272,11 +282,11 @@ namespace ERP_Maaz_Oil.Forms
                 classHelper.query += @" 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                             VALUES('" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + "','" + cmbReceiving.SelectedValue.ToString() +
-                                "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), '" + txtAccountAmount.Text + "',0,'PAYMENT VOUCHER / " + txtAccountDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);
+                                "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), '" + txtAccountAmount.Text + "',0,'" + txtAccountDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);
 
                             INSERT INTO LEDGERS(DATE, COA_ID, REF_ID, ENTRY_OF, FOLIO, DEBIT, CREDIT, DESCRIPTIONS, CREATED_BY, CREATION_DATE, COMPANY_ID)
                             VALUES('" + Classes.Helper.ConvertDatetime(dtpDate.Value.Date) + "','" + cmbPayment.SelectedValue.ToString() +
-                                "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), 0,'" + txtAccountAmount.Text + "','PAYMENT VOUCHER / " + txtAccountDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);";
+                                "'," + masterId + ",'PAYMENT REGISTER','VOUCHER-'+CONVERT(NVARCHAR," + masterId + ")+'-'+CONVERT(NVARCHAR,YEAR(GETDATE())), 0,'" + txtAccountAmount.Text + "','" + txtAccountDescription.Text + "','" + Classes.Helper.userId + @"',GETDATE(),1);";
 
                 classHelper.query += @" COMMIT TRANSACTION 
                      END TRY 
@@ -288,13 +298,7 @@ namespace ERP_Maaz_Oil.Forms
                 if (classHelper.InsertUpdateDelete(classHelper.query) >= 1)
                 {
                     classHelper.ShowMessageBox("Record Saved Successfully.", "Information");
-                    cmbReceiving.SelectedIndex = 0;
-                    cmbPayment.SelectedIndex = 0;
-                    txtAccountAmount.Text = "0";
-                    txtAccountDescription.Clear();
-                    GetData();
-                    TotalSum();
-                    recordId = 0;
+                    AccountClear();
                 }
             }
         }
@@ -406,6 +410,62 @@ namespace ERP_Maaz_Oil.Forms
             GetCashOpeningBalance();
             GetData();
             TotalSum();
+        }
+
+        private void btnCCashlear_Click(object sender, EventArgs e)
+        {
+            CashClear();
+        }
+
+        private void btnAccountClear_Click(object sender, EventArgs e)
+        {
+            AccountClear();
+        }
+
+        private void Delete() {
+            classHelper.query = @" BEGIN TRY 
+                             BEGIN TRANSACTION ";
+
+            classHelper.query += @" DELETE FROM LEDGERS WHERE REF_ID = " + recordId + @" AND ENTRY_OF = 'PAYMENT REGISTER';
+            DELETE FROM PAYMENT_REGISTER WHERE ID ='" + recordId + @"';";
+
+            classHelper.query += @" COMMIT TRANSACTION 
+                        END TRY 
+                    BEGIN CATCH 
+                            IF @@TRANCOUNT > 0 
+                            ROLLBACK TRANSACTION 
+                    END CATCH";
+
+            if (classHelper.InsertUpdateDelete(classHelper.query) >= 1)
+            {
+                classHelper.ShowMessageBox("Record Deleted Sucessfully.", "Information");
+            }
+        }
+
+        private void btnCashDelete_Click(object sender, EventArgs e)
+        {
+            if (recordId > 0)
+            {
+                Delete();
+                CashClear();
+            }
+            else
+            {
+                MessageBox.Show("Please Select any cash voucher to delete.", "Error");
+            }
+        }
+
+        private void btnAccountDelete_Click(object sender, EventArgs e)
+        {
+            if (recordId > 0)
+            {
+                Delete();
+                AccountClear();
+            }
+            else
+            {
+                MessageBox.Show("Please Select any account voucher to delete.", "Error");
+            }
         }
     }
 }
