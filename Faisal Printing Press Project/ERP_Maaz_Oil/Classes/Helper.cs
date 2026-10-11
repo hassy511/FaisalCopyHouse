@@ -3345,9 +3345,9 @@ namespace ERP_Maaz_Oil.Classes
             {
 
 
-                query = @"    SELECT '0' AS[id],'--SELECT SUPPLIER--' AS[name]
-                UNION
-                SELECT COA_ID AS[id], COA_NAME AS[name] FROM COA";
+                query = @"    SELECT '0' AS [id],'--SELECT VENDOR--' AS [name]
+                UNION ALL
+                SELECT COA_ID AS [id], COA_NAME AS [name] FROM COA WHERE CA_ID = 20";
                 LoadComboData(cmbSupplier, query);
 
                 // query = @"SELECT '0' AS [id],'--SELECT SUPPLIER--' AS [name]
