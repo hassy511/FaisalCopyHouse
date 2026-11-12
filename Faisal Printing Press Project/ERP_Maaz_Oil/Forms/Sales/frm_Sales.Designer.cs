@@ -93,6 +93,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtDozenRate = new System.Windows.Forms.TextBox();
+            this.txtBoriQty = new System.Windows.Forms.TextBox();
+            this.lblBoriQty = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridProducts)).BeginInit();
@@ -290,7 +292,7 @@
             this.txtRate.MaxLength = 11;
             this.txtRate.Name = "txtRate";
             this.txtRate.Size = new System.Drawing.Size(280, 25);
-            this.txtRate.TabIndex = 15;
+            this.txtRate.TabIndex = 16;
             this.txtRate.Text = "0";
             this.txtRate.TextChanged += new System.EventHandler(this.txtRate_TextChanged);
             this.txtRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCreditDays_KeyPress);
@@ -314,7 +316,7 @@
             this.txtQty.MaxLength = 11;
             this.txtQty.Name = "txtQty";
             this.txtQty.Size = new System.Drawing.Size(280, 25);
-            this.txtQty.TabIndex = 14;
+            this.txtQty.TabIndex = 15;
             this.txtQty.Text = "0";
             this.txtQty.TextChanged += new System.EventHandler(this.txtQty_TextChanged);
             this.txtQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCreditDays_KeyPress);
@@ -340,7 +342,7 @@
             this.cmbProducts.Location = new System.Drawing.Point(100, 372);
             this.cmbProducts.Name = "cmbProducts";
             this.cmbProducts.Size = new System.Drawing.Size(280, 25);
-            this.cmbProducts.TabIndex = 11;
+            this.cmbProducts.TabIndex = 12;
             this.cmbProducts.SelectedIndexChanged += new System.EventHandler(this.cmbMaterials_SelectedIndexChanged);
             this.cmbProducts.Leave += new System.EventHandler(this.cmbProducts_Leave);
             // 
@@ -396,7 +398,7 @@
             this.gridProducts.ReadOnly = true;
             this.gridProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridProducts.Size = new System.Drawing.Size(1193, 178);
-            this.gridProducts.TabIndex = 16;
+            this.gridProducts.TabIndex = 17;
             this.gridProducts.TabStop = false;
             this.gridProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProducts_CellClick);
             this.gridProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProducts_CellClick);
@@ -456,7 +458,7 @@
             this.btnAdd.Location = new System.Drawing.Point(925, 403);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(280, 25);
-            this.btnAdd.TabIndex = 16;
+            this.btnAdd.TabIndex = 17;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -472,7 +474,7 @@
             this.btnViewInvoice.Location = new System.Drawing.Point(402, 623);
             this.btnViewInvoice.Name = "btnViewInvoice";
             this.btnViewInvoice.Size = new System.Drawing.Size(150, 25);
-            this.btnViewInvoice.TabIndex = 20;
+            this.btnViewInvoice.TabIndex = 21;
             this.btnViewInvoice.TabStop = false;
             this.btnViewInvoice.Text = "ORIGINAL INVOICE";
             this.btnViewInvoice.UseVisualStyleBackColor = false;
@@ -490,7 +492,7 @@
             this.btnClear.Location = new System.Drawing.Point(142, 623);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(124, 25);
-            this.btnClear.TabIndex = 18;
+            this.btnClear.TabIndex = 19;
             this.btnClear.TabStop = false;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -508,7 +510,7 @@
             this.btnSave.Location = new System.Drawing.Point(12, 623);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(124, 25);
-            this.btnSave.TabIndex = 17;
+            this.btnSave.TabIndex = 18;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSAVE_Click);
@@ -562,7 +564,7 @@
             this.btnDelete.Location = new System.Drawing.Point(272, 623);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(124, 25);
-            this.btnDelete.TabIndex = 19;
+            this.btnDelete.TabIndex = 20;
             this.btnDelete.TabStop = false;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -638,7 +640,7 @@
             this.txtBundle.MaxLength = 11;
             this.txtBundle.Name = "txtBundle";
             this.txtBundle.Size = new System.Drawing.Size(280, 25);
-            this.txtBundle.TabIndex = 12;
+            this.txtBundle.TabIndex = 13;
             this.txtBundle.Text = "0";
             this.txtBundle.TextChanged += new System.EventHandler(this.txtBundle_TextChanged);
             this.txtBundle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCreditDays_KeyPress);
@@ -662,7 +664,7 @@
             this.txtBundlePcs.MaxLength = 11;
             this.txtBundlePcs.Name = "txtBundlePcs";
             this.txtBundlePcs.Size = new System.Drawing.Size(280, 25);
-            this.txtBundlePcs.TabIndex = 13;
+            this.txtBundlePcs.TabIndex = 14;
             this.txtBundlePcs.Text = "0";
             this.txtBundlePcs.TextChanged += new System.EventHandler(this.txtBundle_TextChanged);
             this.txtBundlePcs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCreditDays_KeyPress);
@@ -748,13 +750,35 @@
             this.txtBoriExpense.Location = new System.Drawing.Point(100, 341);
             this.txtBoriExpense.MaxLength = 11;
             this.txtBoriExpense.Name = "txtBoriExpense";
-            this.txtBoriExpense.Size = new System.Drawing.Size(280, 25);
+            this.txtBoriExpense.Size = new System.Drawing.Size(110, 25);
             this.txtBoriExpense.TabIndex = 9;
             this.txtBoriExpense.Text = "0";
             this.txtBoriExpense.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCreditDays_KeyPress);
-            // 
+            //
+            // txtBoriQty
+            //
+            this.txtBoriQty.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtBoriQty.Location = new System.Drawing.Point(285, 341);
+            this.txtBoriQty.MaxLength = 11;
+            this.txtBoriQty.Name = "txtBoriQty";
+            this.txtBoriQty.Size = new System.Drawing.Size(95, 25);
+            this.txtBoriQty.TabIndex = 10;
+            this.txtBoriQty.Text = "0";
+            this.txtBoriQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCreditDays_KeyPress);
+            //
+            // lblBoriQty
+            //
+            this.lblBoriQty.AutoSize = true;
+            this.lblBoriQty.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
+            this.lblBoriQty.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBoriQty.Location = new System.Drawing.Point(218, 346);
+            this.lblBoriQty.Name = "lblBoriQty";
+            this.lblBoriQty.Size = new System.Drawing.Size(58, 15);
+            this.lblBoriQty.TabIndex = 379;
+            this.lblBoriQty.Text = "BORI QTY";
+            //
             // label13
-            // 
+            //
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -772,7 +796,7 @@
             this.txtCartonExpense.MaxLength = 11;
             this.txtCartonExpense.Name = "txtCartonExpense";
             this.txtCartonExpense.Size = new System.Drawing.Size(280, 25);
-            this.txtCartonExpense.TabIndex = 10;
+            this.txtCartonExpense.TabIndex = 11;
             this.txtCartonExpense.Text = "0";
             this.txtCartonExpense.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCreditDays_KeyPress);
             // 
@@ -837,6 +861,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtCartonExpense);
             this.Controls.Add(this.label14);
+            this.Controls.Add(this.lblBoriQty);
+            this.Controls.Add(this.txtBoriQty);
             this.Controls.Add(this.txtBoriExpense);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtCustomerAddress);
@@ -950,6 +976,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rate;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.TextBox txtBoriExpense;
+        private System.Windows.Forms.TextBox txtBoriQty;
+        private System.Windows.Forms.Label lblBoriQty;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtCartonExpense;
         private System.Windows.Forms.Label label14;

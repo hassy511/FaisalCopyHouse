@@ -4186,6 +4186,14 @@ namespace ERP_Maaz_Oil.DataSets {
             
             private global::System.Data.DataColumn columnbundlePcs;
             
+            private global::System.Data.DataColumn columnboriQty;
+            
+            private global::System.Data.DataColumn columninvoiceTotal;
+            
+            private global::System.Data.DataColumn columnpreviousBalance;
+            
+            private global::System.Data.DataColumn columntotalBalance;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public SaleInvoiceDataTable() {
@@ -4373,6 +4381,38 @@ namespace ERP_Maaz_Oil.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn boriQtyColumn {
+                get {
+                    return this.columnboriQty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn invoiceTotalColumn {
+                get {
+                    return this.columninvoiceTotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn previousBalanceColumn {
+                get {
+                    return this.columnpreviousBalance;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn totalBalanceColumn {
+                get {
+                    return this.columntotalBalance;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4490,6 +4530,10 @@ namespace ERP_Maaz_Oil.DataSets {
                 this.columnshipAddress = base.Columns["shipAddress"];
                 this.columnbundle = base.Columns["bundle"];
                 this.columnbundlePcs = base.Columns["bundlePcs"];
+                this.columnboriQty = base.Columns["boriQty"];
+                this.columninvoiceTotal = base.Columns["invoiceTotal"];
+                this.columnpreviousBalance = base.Columns["previousBalance"];
+                this.columntotalBalance = base.Columns["totalBalance"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4533,6 +4577,14 @@ namespace ERP_Maaz_Oil.DataSets {
                 base.Columns.Add(this.columnbundle);
                 this.columnbundlePcs = new global::System.Data.DataColumn("bundlePcs", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbundlePcs);
+                this.columnboriQty = new global::System.Data.DataColumn("boriQty", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnboriQty);
+                this.columninvoiceTotal = new global::System.Data.DataColumn("invoiceTotal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninvoiceTotal);
+                this.columnpreviousBalance = new global::System.Data.DataColumn("previousBalance", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpreviousBalance);
+                this.columntotalBalance = new global::System.Data.DataColumn("totalBalance", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotalBalance);
                 this.columnInvoiceNo.Caption = "Date";
                 this.columndate.Caption = "vendor";
                 this.columncustomer.Caption = "refno";
@@ -13072,6 +13124,70 @@ namespace ERP_Maaz_Oil.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal boriQty {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSaleInvoice.boriQtyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'boriQty\' in table \'SaleInvoice\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleInvoice.boriQtyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal invoiceTotal {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSaleInvoice.invoiceTotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'invoiceTotal\' in table \'SaleInvoice\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleInvoice.invoiceTotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal previousBalance {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSaleInvoice.previousBalanceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'previousBalance\' in table \'SaleInvoice\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleInvoice.previousBalanceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal totalBalance {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSaleInvoice.totalBalanceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'totalBalance\' in table \'SaleInvoice\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleInvoice.totalBalanceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsInvoiceNoNull() {
                 return this.IsNull(this.tableSaleInvoice.InvoiceNoColumn);
             }
@@ -13296,6 +13412,54 @@ namespace ERP_Maaz_Oil.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetbundlePcsNull() {
                 this[this.tableSaleInvoice.bundlePcsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsboriQtyNull() {
+                return this.IsNull(this.tableSaleInvoice.boriQtyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetboriQtyNull() {
+                this[this.tableSaleInvoice.boriQtyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsinvoiceTotalNull() {
+                return this.IsNull(this.tableSaleInvoice.invoiceTotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetinvoiceTotalNull() {
+                this[this.tableSaleInvoice.invoiceTotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IspreviousBalanceNull() {
+                return this.IsNull(this.tableSaleInvoice.previousBalanceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetpreviousBalanceNull() {
+                this[this.tableSaleInvoice.previousBalanceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IstotalBalanceNull() {
+                return this.IsNull(this.tableSaleInvoice.totalBalanceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SettotalBalanceNull() {
+                this[this.tableSaleInvoice.totalBalanceColumn] = global::System.Convert.DBNull;
             }
         }
         

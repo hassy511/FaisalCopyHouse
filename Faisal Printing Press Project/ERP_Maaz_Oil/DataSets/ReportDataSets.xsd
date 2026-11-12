@@ -164,6 +164,10 @@
               <xs:element name="shipAddress" msprop:Generator_ColumnVarNameInTable="columnshipAddress" msprop:Generator_ColumnPropNameInRow="shipAddress" msprop:Generator_ColumnPropNameInTable="shipAddressColumn" msprop:Generator_UserColumnName="shipAddress" type="xs:string" minOccurs="0" />
               <xs:element name="bundle" msprop:Generator_ColumnVarNameInTable="columnbundle" msprop:Generator_ColumnPropNameInRow="bundle" msprop:Generator_ColumnPropNameInTable="bundleColumn" msprop:Generator_UserColumnName="bundle" type="xs:decimal" minOccurs="0" />
               <xs:element name="bundlePcs" msprop:Generator_ColumnVarNameInTable="columnbundlePcs" msprop:Generator_ColumnPropNameInRow="bundlePcs" msprop:Generator_ColumnPropNameInTable="bundlePcsColumn" msprop:Generator_UserColumnName="bundlePcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="boriQty" msprop:Generator_ColumnVarNameInTable="columnboriQty" msprop:Generator_ColumnPropNameInRow="boriQty" msprop:Generator_ColumnPropNameInTable="boriQtyColumn" msprop:Generator_UserColumnName="boriQty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="invoiceTotal" msprop:Generator_ColumnVarNameInTable="columninvoiceTotal" msprop:Generator_ColumnPropNameInRow="invoiceTotal" msprop:Generator_ColumnPropNameInTable="invoiceTotalColumn" msprop:Generator_UserColumnName="invoiceTotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="previousBalance" msprop:Generator_ColumnVarNameInTable="columnpreviousBalance" msprop:Generator_ColumnPropNameInRow="previousBalance" msprop:Generator_ColumnPropNameInTable="previousBalanceColumn" msprop:Generator_UserColumnName="previousBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="totalBalance" msprop:Generator_ColumnVarNameInTable="columntotalBalance" msprop:Generator_ColumnPropNameInRow="totalBalance" msprop:Generator_ColumnPropNameInTable="totalBalanceColumn" msprop:Generator_UserColumnName="totalBalance" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

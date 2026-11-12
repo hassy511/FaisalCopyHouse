@@ -4095,65 +4095,127 @@ namespace ERP_Maaz_Oil.Classes
             }
         }
 
+        // Prints a sales invoice by invoice number (used by ledger drill-down).
         public void PrintSalesInvoice(string invoiceNo)
         {
-           try
+            int saleMasterId = GetSaleMasterId(invoiceNo);
+            if (saleMasterId != 0)
             {
-                mds.Tables["SaleInvoice"].Clear();
-                query = @" SELECT A.INVOICE_NO,A.DATE,DATEADD(DAY,A.CREDIT_DAYS,A.DATE) AS [DUE DATE],
-                D.COA_NAME AS [CUSTOMER],A.CUSTOMER_ADDRESS,A.SHIP_TO,A.SHIPPING_ADDRESS,
-                A.DESCRIPTION,E.P_CATEEGORY_NAME AS PRODUCT_NAME,B.GST AS [BUNDLE],B.COST_RATE AS [BUNDLE PCS],
-                B.QTY,B.RATE,(B.QTY*B.RATE) AS [AMOUNT],A.BORI_EXPENSE,A.CARTON_EXPENSE,A.VEHICLE_NO
-                FROM SALE_MASTER A
-                INNER JOIN SALE_DETAIL B ON A.SALE_MASTER_ID = B.SALE_MASTER_ID
-                INNER JOIN PRODUCT_MASTER C ON B.ITEM_ID = C.PM_ID
-                INNER JOIN COA D ON A.CUSTOMER_ID = D.COA_ID
-                INNER JOIN PRODUCT_CATEGORY E ON C.BRAND_ID = E.P_CATEGORY_ID
-                WHERE A.INVOICE_NO = '" + invoiceNo + "'";
+                PrintSalesInvoice(saleMasterId, "SalesInvoiceOriginal");
+            }
+        }
 
-                if (conn.State == System.Data.ConnectionState.Closed) { conn.Open(); }
-                cmd = new SqlCommand(query, conn);
-                cmd.CommandTimeout = 0;
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows == true)
+        public int GetSaleMasterId(string invoiceNo)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings["ConnectionString"]))
+                using (SqlCommand command = new SqlCommand("SELECT ISNULL(MAX(SALE_MASTER_ID),0) FROM SALE_MASTER WHERE INVOICE_NO = @invoiceNo", con))
                 {
-                    while (dr.Read())
-                    {
-                        dataR = mds.Tables["SaleInvoice"].NewRow();
-
-                        dataR["InvoiceNo"] = dr["INVOICE_NO"].ToString();
-                        dataR["date"] = Convert.ToDateTime(dr["DATE"].ToString());
-                        dataR["dueDate"] = Convert.ToDateTime(dr["DUE DATE"].ToString());
-                        dataR["customer"] = dr["CUSTOMER"].ToString();
-                        dataR["customerAddress"] = dr["CUSTOMER_ADDRESS"].ToString();
-                        dataR["shipTo"] = dr["SHIP_TO"].ToString();
-                        dataR["shipAddress"] = dr["SHIPPING_ADDRESS"].ToString();
-                        dataR["description"] = dr["DESCRIPTION"].ToString();
-                        dataR["product"] = dr["PRODUCT_NAME"].ToString();
-                        dataR["bundle"] = Convert.ToDecimal(dr["BUNDLE"].ToString());
-                        dataR["bundlePcs"] = Convert.ToDecimal(dr["BUNDLE PCS"].ToString());
-                        dataR["qty"] = Convert.ToDecimal(dr["QTY"].ToString());
-                        dataR["rate"] = Convert.ToDecimal(dr["RATE"].ToString());
-                        dataR["amount"] = Convert.ToDecimal(dr["AMOUNT"].ToString());
-                        dataR["transportation"] = Convert.ToDecimal(dr["BORI_EXPENSE"].ToString());
-                        dataR["balance"] = Convert.ToDecimal(dr["CARTON_EXPENSE"].ToString());
-                        dataR["vehicleNo"] = Classes.Helper.GetUserName(Classes.Helper.userId);
-
-                        mds.Tables["SaleInvoice"].Rows.Add(dataR);
-                    }
-
-                    rpt = new ERP_Maaz_Oil.Forms.Reporting.frmReports();
-                    rpt.GenerateReport("SalesInvoiceOriginal", mds);
-                    rpt.Show();
+                    command.Parameters.AddWithValue("@invoiceNo", invoiceNo);
+                    con.Open();
+                    return Convert.ToInt32(command.ExecuteScalar());
                 }
             }
             catch (Exception ex)
             {
                 ShowMessageBox(ex.ToString(), ":: Error ::");
+                return 0;
             }
-            finally
+        }
+
+        // Prints a sales invoice entirely from saved database records.
+        // reportName: "SalesInvoiceOriginal" or "SalesInvoiceDuplicate".
+        // Previous balance = customer's ledger balance up to the invoice date, excluding this invoice.
+        public void PrintSalesInvoice(int saleMasterId, string reportName)
+        {
+            try
             {
-                conn.Close();
+                string sql = @" SELECT A.INVOICE_NO, A.DATE, DATEADD(DAY, ISNULL(A.CREDIT_DAYS,0), A.DATE) AS DUE_DATE,
+                D.COA_NAME AS CUSTOMER, A.CUSTOMER_ADDRESS, A.SHIP_TO, A.SHIPPING_ADDRESS, A.DESCRIPTION,
+                E.P_CATEEGORY_NAME AS PRODUCT_NAME, ISNULL(B.GST,0) AS BUNDLE, ISNULL(B.COST_RATE,0) AS BUNDLE_PCS,
+                ISNULL(B.QTY,0) AS QTY, ISNULL(B.RATE,0) AS RATE, ISNULL(B.QTY,0) * ISNULL(B.RATE,0) AS AMOUNT,
+                ISNULL(A.BORI_EXPENSE,0) AS BORI_EXPENSE, ISNULL(A.CARTON_EXPENSE,0) AS CARTON_EXPENSE,
+                ISNULL(A.BORI_QTY,0) AS BORI_QTY, U.USERS_NAME AS PREPARED_BY,
+                T.INVOICE_TOTAL, P.PREVIOUS_BALANCE
+                FROM SALE_MASTER A
+                INNER JOIN SALE_DETAIL B ON A.SALE_MASTER_ID = B.SALE_MASTER_ID
+                INNER JOIN PRODUCT_MASTER C ON B.ITEM_ID = C.PM_ID
+                INNER JOIN COA D ON A.CUSTOMER_ID = D.COA_ID
+                INNER JOIN PRODUCT_CATEGORY E ON C.BRAND_ID = E.P_CATEGORY_ID
+                LEFT JOIN USERS U ON A.CREATED_BY = U.USERS_ID
+                CROSS APPLY (
+                    SELECT ISNULL(SUM(ISNULL(X.QTY,0) * ISNULL(X.RATE,0)),0)
+                           + ISNULL(A.BORI_EXPENSE,0) + ISNULL(A.CARTON_EXPENSE,0) AS INVOICE_TOTAL
+                    FROM SALE_DETAIL X WHERE X.SALE_MASTER_ID = A.SALE_MASTER_ID
+                ) T
+                CROSS APPLY (
+                    SELECT ISNULL(CASE WHEN D.DR_CR = 'D' THEN D.OPEN_BAL ELSE -D.OPEN_BAL END,0)
+                           + ISNULL((SELECT SUM(ISNULL(L.DEBIT,0) - ISNULL(L.CREDIT,0)) FROM LEDGERS L
+                                     WHERE L.COA_ID = A.CUSTOMER_ID AND L.DATE <= A.DATE
+                                     AND NOT (L.REF_ID = A.SALE_MASTER_ID AND L.ENTRY_OF = 'SALES' AND L.FOLIO = A.INVOICE_NO)),0)
+                           AS PREVIOUS_BALANCE
+                ) P
+                WHERE A.SALE_MASTER_ID = @saleMasterId
+                ORDER BY B.SALE_DETAIL";
+
+                DataTable invoice = new DataTable();
+                using (SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings["ConnectionString"]))
+                using (SqlDataAdapter adapter = new SqlDataAdapter(sql, con))
+                {
+                    adapter.SelectCommand.CommandTimeout = 0;
+                    adapter.SelectCommand.Parameters.AddWithValue("@saleMasterId", saleMasterId);
+                    adapter.Fill(invoice);
+                }
+
+                if (invoice.Rows.Count == 0)
+                {
+                    ShowMessageBox("Invoice not found in record or save the invoice first.", "Warning");
+                    return;
+                }
+
+                mds.Tables["SaleInvoice"].Clear();
+                foreach (DataRow row in invoice.Rows)
+                {
+                    decimal invoiceTotal = Math.Round(Convert.ToDecimal(row["INVOICE_TOTAL"]), 2);
+                    decimal previousBalance = Math.Round(Convert.ToDecimal(row["PREVIOUS_BALANCE"]), 2);
+
+                    dataR = mds.Tables["SaleInvoice"].NewRow();
+
+                    dataR["InvoiceNo"] = row["INVOICE_NO"].ToString();
+                    dataR["date"] = Convert.ToDateTime(row["DATE"]);
+                    dataR["dueDate"] = Convert.ToDateTime(row["DUE_DATE"]);
+                    dataR["customer"] = row["CUSTOMER"].ToString();
+                    dataR["customerAddress"] = row["CUSTOMER_ADDRESS"].ToString();
+                    dataR["shipTo"] = row["SHIP_TO"].ToString();
+                    dataR["shipAddress"] = row["SHIPPING_ADDRESS"].ToString();
+                    dataR["description"] = row["DESCRIPTION"].ToString();
+                    dataR["product"] = row["PRODUCT_NAME"].ToString();
+                    dataR["bundle"] = Convert.ToDecimal(row["BUNDLE"]);
+                    dataR["bundlePcs"] = Convert.ToDecimal(row["BUNDLE_PCS"]);
+                    dataR["qty"] = Convert.ToDecimal(row["QTY"]);
+                    dataR["rate"] = Convert.ToDecimal(row["RATE"]);
+                    dataR["amount"] = Convert.ToDecimal(row["AMOUNT"]);
+                    dataR["transportation"] = Convert.ToDecimal(row["BORI_EXPENSE"]);
+                    dataR["balance"] = Convert.ToDecimal(row["CARTON_EXPENSE"]);
+                    dataR["vehicleNo"] = row["PREPARED_BY"] == DBNull.Value
+                        ? Classes.Helper.GetUserName(Classes.Helper.userId)
+                        : row["PREPARED_BY"].ToString();
+                    dataR["boriQty"] = Convert.ToDecimal(row["BORI_QTY"]);
+                    dataR["invoiceTotal"] = invoiceTotal;
+                    dataR["previousBalance"] = previousBalance;
+                    dataR["totalBalance"] = previousBalance + invoiceTotal;
+
+                    mds.Tables["SaleInvoice"].Rows.Add(dataR);
+                }
+
+                rpt = new ERP_Maaz_Oil.Forms.Reporting.frmReports();
+                rpt.GenerateReport(reportName, mds);
+                rpt.Show();
+            }
+            catch (Exception ex)
+            {
+                ShowMessageBox(ex.ToString(), ":: Error ::");
             }
         }
 
