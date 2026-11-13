@@ -660,3 +660,4 @@ D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmOtherAccountBalanceReport.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frmVendorBalanceReport.resources
 D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.Forms.frm_Purchases.resources
+D:\Projects\FaisalCopyHouse\Faisal Printing Press Project\ERP_Maaz_Oil\obj\Debug\ERP_Maaz_Oil.csprojAssemblyReference.cache
